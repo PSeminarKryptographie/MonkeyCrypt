@@ -1,0 +1,4 @@
+﻿Caesar-Verschlüsselung 
+
+Der Schlüssel der Caesar-Verschlüsselung ist ein Buchstabe deines Alphabets.
+Achte auch darauf, dass deine Eingabe vom Alphabet abgedeckt ist, ansonsten werden manche Zeichen nicht chiffriert!

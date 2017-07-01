@@ -1,0 +1,5 @@
+Codierungen
+
+Codierungen besitzen in der Regel keinen Schlüssel.
+Solltest du etwas eingeben, was für eine Codierung nicht überführbar ist, so wird dir der Fehler angezeigt.
+Die einzige Ausnahme stellt die ADFGX-Verschlüsselung dar, deren Tabelle du mit Buchstaben deines Alphabet ausfüllen sollst.

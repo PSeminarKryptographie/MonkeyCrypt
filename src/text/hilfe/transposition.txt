@@ -1,0 +1,13 @@
+Transposition
+
+Die Schlüssel der Transpositionen gestalten sich unterschiedlich:
+
+Die Spaltentransposition erfordert ein Schlüsselwort, welches aus den Zeichen deines Alphabets bestehen. Die Anordnung der Buchstaben und deren Position im Alphabet bestimmen die Transposition.
+
+Die Gartenzaun-Transposition benötigt ebenfalls ein Schlüsselwort. Dieses gibt allerdings nur durch sein Zeichenanzahl zur Verschlüsselung bei und ist nicht weiter aussagekräftig.
+
+Ein Anagramm wird durch die Durchmischung von Buchstaben erreicht. Es benötigt keinen Schlüssel
+
+Der Doppelwürfel benötigt zwei Schlüsselwörter, mit denen doppelt die Spaltentransposition durchgeführt wird.
+
+Die Transposition mittels Permutationsmatrix ...

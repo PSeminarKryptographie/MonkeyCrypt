@@ -1,0 +1,4 @@
+﻿Vigenere-Chiffre
+
+Der Schlüssel der Vignere-Chiffre ist eine Zeichenkette, die von deinem Alphabet abgedeckt werden sollte!
+Beachte wiederum, dass auch deine Eingabe im Alphabet enthalten ist, ansonsten werden manche Zeichen nicht verschlüsselt!

@@ -1,0 +1,6 @@
+Multiplikative-Chiffre
+
+Die Multiplikative-Chiffre hat ein Einzelzeichen deines Alphabets als Schlüssel.
+Es ist zu beachten, dass dieser eine Coprim innerhalb deines Alphabets sein muss!
+
+Die Eingabe sollte vom Alphabet abgedeckt werden!
