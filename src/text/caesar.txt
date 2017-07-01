@@ -1,0 +1,23 @@
+Ave! Ich bin der Iulius Caesar, berühmter römischer Feldherr. Du hast sicher schon von mir gehört, immerhin habe ich ganz Gallien erobert - Na gut, mit der Ausnahme eines Dorfes, das nicht aufhört, mir Widerstand zu leisten, ich gebe es zu. Aber das ist auch unfair, sie haben einen geheimen Zaubertrank! Doch auch ich habe eine Geheimwaffe: Die nach mir benannte Caesar-Verschlüsselung. Damit schicke ich meinen Legionen geheime Nachrichten.
+Das hat folgendermaßen funktioniert:
+
+A -> E
+B -> F
+...
+Z -> D
+	
+Könnt ihr erraten, was folgender Geheimtext bedeutet?
+Geheimtext:	Hiv Jimrh peyivx mq Aeph
+Klartext:	Der Feind lauert im ____ [Wald]
+
+[Da muss dir ein Fehler untergelaufen sein. Versuche es nochmals!]
+
+[evtl. ein Knopf "auflösen"]
+
+Super! Wie du siehst wird bei der Caesar-Verschlüsselung ein Buchstabe immer mit genau einem anderen ersetzt. Deswegen wird dieses Verfahren als Monoalphabetische Substitution. Man kann das Ersetzen veranschulichen, indem man das normale Alphabet aufschreibt, und darunter ein Geheimalphabet, der mit einem beliebigen Buchstaben angefängt und entsprechend fortgesetzt wird. Dieser erste Buchstabe ist dann der "Schlüssel" des Geheimtexts.
+Hier ein Beispiel mit dem Schlüssel D: [][]
+[evtl. kleine Beispielübung verschlüsseln mit Schlüssel D]
+
+Das ist eine Caesar-scheibe. Das Klartextalphabet ist außen (Großbuchstaben), der Geheimtextalphabet innen. Den Schlüssel siehst du immer unterhalb vom Klartext "A". Drückst du den [oder die] Pfeil[e], so verändert sich der Schlüssel.
+[evtl. Beispielübung mit beliebigem Schlüssel]
+Basteltipp: So kannst du selbst eine Caesar-scheibe basteln: Drucke unter [Druckvorlagen] des Dokument [Caesar-scheibe] aus. Klebe das Blatt auf ein Stück Pappe und schneide die beiden Scheiben dann sorgfältig aus. Lege die beiden Scheiben auf einen Korken und befestige sie mit einer Reißzwecke in ihrem Mittelpunkt. Fertig sind die Caesar-Scheiben!

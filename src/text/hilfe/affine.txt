@@ -1,0 +1,5 @@
+Affine Chiffre
+
+Die Affine-Chiffre besitzt zwei Schlüssel.
+Beide sind jeweils ein Buchstabe deines Alphabets.
+Es ist zu beachten, dass der erste Schlüssel eine Coprim deines Alphabets sein sollte.

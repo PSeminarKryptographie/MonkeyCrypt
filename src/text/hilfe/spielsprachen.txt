@@ -1,0 +1,3 @@
+Spielsprachen
+
+Spielsprachen funktionieren, ähnlich wie die Codierungen, ohne Schlüssel.

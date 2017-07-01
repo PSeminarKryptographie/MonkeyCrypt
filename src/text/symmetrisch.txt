@@ -1,0 +1,2 @@
+Da bin ich wieder, Bob, Experte in der Geheimhaltung von Nachrichten. Über Symmetrische Verschlüsselungen zu lernen ist ein toller Weg, um in die Kryptographie einzusteigen. Vielleicht hast du unter KRYPTOGRAPHIE schon gelernt was eine Verschlüsselung ist, und was sie braucht, nämlich einen Kryptographischen Algorithmus und ein Protokoll. Dadurch kann ein Text in einem geregelten Verfahren verändert und unverständlich gemacht werden.
+
