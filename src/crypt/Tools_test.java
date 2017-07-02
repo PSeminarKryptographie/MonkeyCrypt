@@ -19,7 +19,7 @@ public class Tools_test {
 	public static void main(String [ ] args){	
 		myAlphabet = Alphabet.getInstance();
 		String currentAlphabet = myAlphabet.getAlphabet();
-		int [][] newMatrix = Tools.modMatrix(hillKey, currentAlphabet);
+		int [][] newMatrix = MatrixTools.modMatrix(hillKey, currentAlphabet);
 		System.out.println(Arrays.deepToString(newMatrix));
 		String textMatrix = Tools.matrix2string(hillKey, currentAlphabet);
 		System.out.println(textMatrix);
@@ -29,7 +29,7 @@ public class Tools_test {
 		else{
 			System.out.printf("false \n\n");
 		}
-		Tools.mulMatrix(hillKey, hillKey);
+		MatrixTools.mulMatrix(hillKey, hillKey);
 	}
 	
 }
