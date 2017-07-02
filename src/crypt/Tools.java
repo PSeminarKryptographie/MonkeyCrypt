@@ -189,4 +189,30 @@ public class Tools {
 			 
 		 }
 	 }
+	 
+	 public static String onlyAlphabet(String text, String alpha){
+		 String newText = "";
+		 text = text.toLowerCase();
+		 for (int i = 0; i < text.length(); i++){
+			 if(alpha.contains(String.valueOf(text.charAt(i)))){
+				 newText += text.charAt(i);
+			 }
+		 }
+		 return newText;
+	 }
+	 private String cleanup(String text, String newText, String alpha){
+			String correctText = "";
+			for (int i = 0; i<newText.length(); i++  ){
+				if (!alpha.contains(String.valueOf(text.charAt(i)).toLowerCase())){
+					correctText += text.charAt(i);
+				}
+				else if(Character.isUpperCase(text.charAt(i))){
+					correctText += Character.toUpperCase(newText.charAt(i));
+				}
+				else{
+					correctText += newText.charAt(i);
+				}
+			}
+			return correctText;
+		}
 }
