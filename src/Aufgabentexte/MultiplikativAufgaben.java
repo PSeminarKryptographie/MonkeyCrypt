@@ -9,19 +9,23 @@ package aufgabentexte;
  *
  * @author simon
  */
-public class VigenereAufgaben extends Aufgaben {
+public class MultiplikativAufgaben extends Aufgaben {
     
-    
-    public VigenereAufgaben()
+    public MultiplikativAufgaben()
     {
-        super(2);
+        super(3);
         
         anweisungstext[0] = "Hallo Welt";
-        schlüssel[0] = "abc";
+        schlüssel[0] = "f";
         aufgabentyp[0] = 1;
         
-        anweisungstext[1] = "Wir entschlüsseln eine sehr kompakten, langen Text mit der Vigenere Verschlüsselung!";
-        schlüssel[1] = "vigenere";
+        anweisungstext[1] = "Das ist der entschlüsselte Text";
+        schlüssel[1] = "h";
         aufgabentyp[1] = 2;
+        
+        anweisungstext[2] = "Multiplikativ";
+        schlüssel[2] = "x";
+        aufgabentyp[2] = 3;
     }
+    
 }

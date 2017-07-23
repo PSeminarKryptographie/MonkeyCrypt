@@ -10,6 +10,23 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="MoCr_SteganoMP_Grouper">
     </Component>
+    <Component class="javax.swing.JTable" name="MoCr_HillSub_PseudoTable">
+      <Properties>
+        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+          <Table columnCount="6" rowCount="4">
+            <Column editable="true" title="Title 1" type="java.lang.String"/>
+            <Column editable="true" title="Title 2" type="java.lang.String"/>
+            <Column editable="true" title="Title 3" type="java.lang.String"/>
+            <Column editable="true" title="Title 4" type="java.lang.String"/>
+            <Column editable="true" title="Title 5" type="java.lang.String"/>
+            <Column editable="true" title="Title 6" type="java.lang.String"/>
+          </Table>
+        </Property>
+        <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+          <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+        </Property>
+      </Properties>
+    </Component>
     <Menu class="javax.swing.JMenuBar" name="MoCr_Gen_Choicebar">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="MoCr_Gen_Choicemenu1">
@@ -87,7 +104,7 @@
         <Container class="javax.swing.JPanel" name="MoCr_MainPro_cardPanel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="ff" red="99" type="rgb"/>
+              <Color blue="0" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
           <Constraints>
@@ -1333,20 +1350,24 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="MoCr_HillSub_Matrix" max="32767" attributes="0"/>
-                                  <Component id="MoCr_HillSub_Slider" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="MoCr_HillSub_MinLab" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="MoCr_HillSub_MaxLab" min="-2" max="-2" attributes="0"/>
-                                  </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="MoCr_HillSub_SizeLab" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="MoCr_HillSub_Size" min="-2" pref="148" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="MoCr_HillSub_Slider" max="32767" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="MoCr_HillSub_MinLab" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="MoCr_HillSub_MaxLab" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="MoCr_HillSub_SizeLab" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="MoCr_HillSub_Size" min="-2" pref="148" max="-2" attributes="0"/>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1395,22 +1416,22 @@
                         </Property>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                           <TableColumnModel selectionModel="0">
-                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
                               <Renderer/>
                             </Column>
-                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
                               <Renderer/>
                             </Column>
-                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
                               <Renderer/>
                             </Column>
-                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
                               <Renderer/>
@@ -1867,9 +1888,9 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="MoCr_Gen_Sidelist" min="-2" pref="252" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="MoCr_MPButtonpanel_Decrypter" min="-2" max="-2" attributes="0"/>
-                          <Component id="MoCr_MPButtonpanel_Crypter" min="-2" pref="105" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="MoCr_MPButtonpanel_Decrypter" max="32767" attributes="0"/>
+                          <Component id="MoCr_MPButtonpanel_Crypter" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="MoCr_MPButtonpanel_LearnButton" min="-2" max="-2" attributes="0"/>
@@ -1879,7 +1900,7 @@
                       <Component id="MoCr_MPButtonpanel_IOChange" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="94" max="32767" attributes="0"/>
+                      <EmptySpace pref="86" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1935,7 +1956,7 @@
                   <Font name="Constantia" size="12" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/img/graphics/Geschlossenes Schloss.png"/>
+                  <Image iconType="3" name="/img/graphics/Angepasstes geschlossenes Schloss.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -1951,7 +1972,7 @@
                   <Font name="Constantia" size="12" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/img/graphics/Offenes Schloss.png"/>
+                  <Image iconType="3" name="/img/graphics/Angepasstes geschlossenes Schloss 2.png"/>
                 </Property>
               </Properties>
               <Events>
