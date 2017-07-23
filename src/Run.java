@@ -16,7 +16,6 @@ public class Run {
 
 	public static void main(String[] args) {
 		MoCr_Frame.main(args);
-
 	}
 
 }
