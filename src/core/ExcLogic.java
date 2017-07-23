@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package core;
+import Aufgabentexte.*;
 
 /**
  *
@@ -12,10 +13,13 @@ package core;
 public class ExcLogic {
     
     String anweisungstext;
+    String lösung;
     int aufgabentyp;
     int aufgabenNummer;
     String schlüssel;
     Core core;
+    Aufgaben[] aufgaben;
+    int verschlüsselung;
     
     public ExcLogic()
     {
@@ -24,6 +28,11 @@ public class ExcLogic {
         anweisungstext = "";
         schlüssel = "";
         core = new Core();
+        lösung = "";
+        aufgaben = new Aufgaben[3];
+        aufgaben[0] = new CaesarAufgaben();
+        aufgaben[1] = new MultiplikativAufgaben();
+        aufgaben[2] = new VigenereAufgaben();
     }
     
     public void aufgabenNummerSetzen(int nummer)
@@ -50,50 +59,51 @@ public class ExcLogic {
     {
         return schlüssel;
     }
+    
+    public String LösungGeben()
+    {
+        return lösung;
+    }
  
     /**
   * Schaltet in die nächtse Aufgabe weiter
   */   
     public void AufgabeWeiterschalten()
     {
-        switch(aufgabenNummer)
+        if(aufgabenNummer <= aufgaben[verschlüsselung].aufgabenzahlGeben())
         {
-            case 0:
-                aufgabenNummer = 1;
-                aufgabentyp = 1;
-                anweisungstext = "Hallo Welt";
-                schlüssel = "c";
-                break;
-            case 1:
-                aufgabenNummer = 2;
-                aufgabentyp = 1;
-                anweisungstext = "Ave Caesar";
-                schlüssel ="f";
-                break;
-            case 2:
-                aufgabenNummer = 3;
-                aufgabentyp = 2;
-                anweisungstext = "Efbo fpq Xrcdxyb aobf";
-                schlüssel = "x";
-                break;
-            case 3:
-                aufgabenNummer = 4;
-                aufgabentyp = 3;
-                anweisungstext = "Knacken macht Spaß";
-                schlüssel = "s";
-                break;
-            default:
-                aufgabenNummer = 0;
-                aufgabentyp = 0;
-                anweisungstext = "";
-                schlüssel = "";
+            anweisungstext = aufgaben[verschlüsselung].anweisungstextGeben(aufgabenNummer);
+            schlüssel = aufgaben[verschlüsselung].schlüsselGeben(aufgabenNummer);
+            aufgabentyp = aufgaben[verschlüsselung].aufgabentypGeben(aufgabenNummer);
+            
+            aufgabenNummer = aufgabenNummer + 1;
         }
+        else
+        {
+            anweisungstext = "";
+            schlüssel = "";
+            aufgabentyp = 0;
+            aufgabenNummer = 0;
+        }
+        lösung = LösungErstellen(anweisungstext, schlüssel);
                 
     }
     
-    public String caesarEncrypt(String text, String schlüssel)
+    public String LösungErstellen(String text, String schlüssel)
     {
-        return core.caesarEntschlüsseln(text, schlüssel);
+        switch(verschlüsselung)
+        {
+            case 0:
+                lösung =  core.caesarVerschlüsseln(text, schlüssel);
+                break;
+            case 1:
+                lösung = core.multiplikativVerschlüsseln(text, schlüssel);
+                break;
+            case 2:
+                lösung = core.vigenereVerschlüsseln(text, schlüssel);
+        }
+        
+        return lösung;
     }
     
     /**
@@ -104,11 +114,11 @@ public class ExcLogic {
         String ausgabe = "";
         if(aufgabentyp == 1)
         {
-            ausgabe = core.caesarVerschlüsseln(anweisungstext, schlüssel);
+            ausgabe = lösung;
         }
         else if(aufgabentyp == 2)
         {
-            ausgabe = core.caesarEntschlüsseln(anweisungstext, schlüssel);
+            ausgabe = anweisungstext;
         }
         else if(aufgabentyp == 3)
         {
@@ -125,5 +135,12 @@ public class ExcLogic {
     public boolean EingabePrüfen(String eingabe)
     {
         return eingabe.equals(LösungGenerieren());
+    }
+    
+    
+    public void VerschlüsselungSetzen(int zahl)
+    {
+        verschlüsselung = zahl;
+        aufgabenNummer = 0;
     }
 }
