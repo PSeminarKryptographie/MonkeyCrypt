@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package core;
-import javax.swing.table.DefaultTableModel;
+import javax.swing.table.*;
 
 /**
  *
@@ -132,14 +132,6 @@ public class WindowLogic {
     }
     
     public void alterJTable(javax.swing.JTable t, int s) {
-        DefaultTableModel d = (DefaultTableModel) t.getModel();
-        int n = d.getColumnCount();
-        if(n < s) {
-            for(int i = 1; i <= n-s; i++) {
-                d.addColumn(new String[n]);
-                d.addRow(new String[n+1]);
-            }
-        }
-        t.setModel(d);
+        
     }
 }

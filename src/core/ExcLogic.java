@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package core;
-import Aufgabentexte.*;
+import aufgabentexte.*;
 
 /**
  *

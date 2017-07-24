@@ -51,6 +51,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_CodierungenMp_Grouper = new javax.swing.ButtonGroup();
         MoCr_TranspositionMP_Grouper = new javax.swing.ButtonGroup();
         MoCr_SteganoMP_Grouper = new javax.swing.ButtonGroup();
+        MoCr_HillSub_PseudoTable = new javax.swing.JTable();
         MoCr_Gen_DynamicPanel = new javax.swing.JPanel();
         MoCr_MainPro_cardPanel = new javax.swing.JPanel();
         MoCr_MainPro_static_IOpanel = new javax.swing.JPanel();
@@ -170,6 +171,27 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_Gen_Choicemenu1 = new javax.swing.JMenu();
         MoCr_Gen_Choicemenu2 = new javax.swing.JMenu();
 
+        MoCr_HillSub_PseudoTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        MoCr_HillSub_PseudoTable.getTableHeader().setReorderingAllowed(false);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMinimumSize(new java.awt.Dimension(870, 600));
@@ -179,7 +201,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
         MoCr_Gen_DynamicPanel.setLayout(new java.awt.CardLayout());
 
-        MoCr_MainPro_cardPanel.setBackground(new java.awt.Color(153, 255, 204));
+        MoCr_MainPro_cardPanel.setBackground(new java.awt.Color(255, 255, 0));
 
         MoCr_MainPro_static_IOpanel.setOpaque(false);
 
@@ -977,17 +999,19 @@ public class MoCr_Frame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(MoCr_MPSub_HillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(MoCr_HillSub_Matrix, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MoCr_HillSub_Slider, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(MoCr_MPSub_HillLayout.createSequentialGroup()
-                        .addComponent(MoCr_HillSub_MinLab)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(MoCr_HillSub_MaxLab))
-                    .addGroup(MoCr_MPSub_HillLayout.createSequentialGroup()
-                        .addComponent(MoCr_HillSub_SizeLab)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(MoCr_HillSub_Size, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGroup(MoCr_MPSub_HillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(MoCr_HillSub_Slider, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(MoCr_MPSub_HillLayout.createSequentialGroup()
+                                .addComponent(MoCr_HillSub_MinLab)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(MoCr_HillSub_MaxLab))
+                            .addGroup(MoCr_MPSub_HillLayout.createSequentialGroup()
+                                .addComponent(MoCr_HillSub_SizeLab)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(MoCr_HillSub_Size, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())))
         );
         MoCr_MPSub_HillLayout.setVerticalGroup(
             MoCr_MPSub_HillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1007,13 +1031,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
                     .addComponent(MoCr_HillSub_Size, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(265, Short.MAX_VALUE))
         );
-
-        if (MoCr_HillSub_Matrix.getColumnModel().getColumnCount() > 0) {
-            MoCr_HillSub_Matrix.getColumnModel().getColumn(0).setResizable(false);
-            MoCr_HillSub_Matrix.getColumnModel().getColumn(1).setResizable(false);
-            MoCr_HillSub_Matrix.getColumnModel().getColumn(2).setResizable(false);
-            MoCr_HillSub_Matrix.getColumnModel().getColumn(3).setResizable(false);
-        }
 
         MoCr_MainPro_changeable.add(MoCr_MPSub_Hill, "card10");
 
@@ -1263,7 +1280,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
         MoCr_MPButtonpanel_Crypter.setBackground(new java.awt.Color(255, 255, 255));
         MoCr_MPButtonpanel_Crypter.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
-        MoCr_MPButtonpanel_Crypter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/Geschlossenes Schloss.png"))); // NOI18N
+        MoCr_MPButtonpanel_Crypter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/Angepasstes geschlossenes Schloss.png"))); // NOI18N
         MoCr_MPButtonpanel_Crypter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MoCr_MPButtonpanel_CrypterActionPerformed(evt);
@@ -1272,7 +1289,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
         MoCr_MPButtonpanel_Decrypter.setBackground(new java.awt.Color(255, 255, 255));
         MoCr_MPButtonpanel_Decrypter.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
-        MoCr_MPButtonpanel_Decrypter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/Offenes Schloss.png"))); // NOI18N
+        MoCr_MPButtonpanel_Decrypter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/Angepasstes geschlossenes Schloss 2.png"))); // NOI18N
         MoCr_MPButtonpanel_Decrypter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MoCr_MPButtonpanel_DecrypterActionPerformed(evt);
@@ -1330,9 +1347,9 @@ public class MoCr_Frame extends javax.swing.JFrame {
             .addGroup(MoCr_GenDyn_MainProListLayout.createSequentialGroup()
                 .addComponent(MoCr_Gen_Sidelist, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(MoCr_GenDyn_MainProListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(MoCr_MPButtonpanel_Decrypter)
-                    .addComponent(MoCr_MPButtonpanel_Crypter, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(MoCr_GenDyn_MainProListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(MoCr_MPButtonpanel_Decrypter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MoCr_MPButtonpanel_Crypter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MoCr_MPButtonpanel_LearnButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1341,7 +1358,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
                 .addComponent(MoCr_MPButtonpanel_IOChange)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
 
         MoCr_Gen_ListPanel.add(MoCr_GenDyn_MainProList, "card3");
@@ -1719,7 +1736,9 @@ public class MoCr_Frame extends javax.swing.JFrame {
             case 7: break;
             case 8: localLogic.clearTable(MoCr_HillSub_Matrix, 0); break;
             case 9: MoCr_SteganoSub_BaconKey.setText(""); break;
-            case 10: break;
+            case 10:MoCr_AffChiffSub_Key1.setText("");
+                    MoCr_AffChiffSub_Key2.setText(""); break;
+            case 11: break;
         }
     }
 
@@ -1808,6 +1827,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private javax.swing.JTable MoCr_HillSub_Matrix;
     private javax.swing.JLabel MoCr_HillSub_MaxLab;
     private javax.swing.JLabel MoCr_HillSub_MinLab;
+    private javax.swing.JTable MoCr_HillSub_PseudoTable;
     private javax.swing.JLabel MoCr_HillSub_Size;
     private javax.swing.JLabel MoCr_HillSub_SizeLab;
     private javax.swing.JSlider MoCr_HillSub_Slider;
