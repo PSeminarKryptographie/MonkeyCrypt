@@ -131,7 +131,7 @@ public class WindowLogic {
         }
     }
     
-    public void alterJTable(javax.swing.JTable t, int s) {
-        
+    public void alterJTable(javax.swing.JTable t, int r) {
+        t.setModel(new DefaultTableModel(r, r));
     }
 }
