@@ -51,7 +51,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_CodierungenMp_Grouper = new javax.swing.ButtonGroup();
         MoCr_TranspositionMP_Grouper = new javax.swing.ButtonGroup();
         MoCr_SteganoMP_Grouper = new javax.swing.ButtonGroup();
-        MoCr_HillSub_PseudoTable = new javax.swing.JTable();
         MoCr_Gen_DynamicPanel = new javax.swing.JPanel();
         MoCr_MainPro_cardPanel = new javax.swing.JPanel();
         MoCr_MainPro_static_IOpanel = new javax.swing.JPanel();
@@ -170,27 +169,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_Gen_Choicebar = new javax.swing.JMenuBar();
         MoCr_Gen_Choicemenu1 = new javax.swing.JMenu();
         MoCr_Gen_Choicemenu2 = new javax.swing.JMenu();
-
-        MoCr_HillSub_PseudoTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        MoCr_HillSub_PseudoTable.getTableHeader().setReorderingAllowed(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -1827,7 +1805,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private javax.swing.JTable MoCr_HillSub_Matrix;
     private javax.swing.JLabel MoCr_HillSub_MaxLab;
     private javax.swing.JLabel MoCr_HillSub_MinLab;
-    private javax.swing.JTable MoCr_HillSub_PseudoTable;
     private javax.swing.JLabel MoCr_HillSub_Size;
     private javax.swing.JLabel MoCr_HillSub_SizeLab;
     private javax.swing.JSlider MoCr_HillSub_Slider;
