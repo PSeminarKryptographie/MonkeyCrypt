@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class MatrixTools {
 	public static int[][] mulMatrix(int[][] a, int[][] b) {
-        int rows1 = a.length;
+		
+		int rows1 = a.length;
         int columns1 = a[0].length;
         int rows2 = b.length;
         int columns2 = b[0].length;
@@ -15,6 +16,7 @@ public class MatrixTools {
                 for (int k = 0; k < columns1; k++)
                     c[i][j] += a[i][k] * b[k][j];
         return c;
+        
     }
 	
  public static int[][] modMatrix (int [][] matrix, String alpha){
@@ -74,7 +76,7 @@ public class MatrixTools {
 				inverse[j][i] = temp * determinant;
 			}
 		}
-		//System.out.println(determinant(matrix));
+		System.out.println(determinant);
 
 		return modMatrix(inverse, alpha);
 	}

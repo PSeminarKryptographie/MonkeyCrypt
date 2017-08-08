@@ -24,8 +24,5 @@ Nach der ganzen Bastelei wird es Zeit zu klären, wie jetzt der kryptographische
 Fällt dir eine Regelmäßigkeit auf? Genau! Es wird immer eine 5 dazuaddieren! Warum gerade 5? Weil 5 (= D) genau unserem Schlüssel entspricht. Einzige Ausnahme bilden die hohen Zahlen, bei ihnen wird eine Regel angewendet, die Modulo genannt wird. Unter MATHEMATIK kannst du mehr darüber erfahren. Umgekehrt muss man dann zum Entschlüsseln einfach den Schlüssel wieder subtrahieren.
 
 MERKE:
-Bei der Caesar-Verschlüsselung, die man auch Verschiebechiffre nennt, wird jedes Klartextzeichen m durch ein um K im Alphabet verschobenes Zeichen c ersetzt. Nummeriert man alle Zeichen nach ihrer Stelle im ALphabet mit der Länge n, so gilt:
+Bei der Caesar-Verschlüsselung, die man auch Verschiebechiffre nennt, wird jedes Klartextzeichen m durch ein um K im Alphabet verschobenes Zeichen c ersetzt. Nummeriert man alle Zeichen nach ihrer Stelle im Alphabet mit der Länge n, so gilt:
 Ek(m) = (m+k) mod n = c
-
-
-

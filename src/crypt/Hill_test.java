@@ -7,8 +7,8 @@ public class Hill_test {
 	public static void main(String [ ] args){	
 		myAlphabet = Alphabet.getInstance();
 		myAlphabet.setAlphabet("abcdefghijklmnopqrstuvwxyz.,?");
-		String key = "GYBNJKzhg";
-		String text = "hallojonas";
+		String key = "qaywsxedcrfvtgbnhzujmkiol";
+		String text = "bbbbhhhhjjjjmmmm";
 		String encrypted = h.encrypt(text, key);
 		System.out.println(encrypted);
 		String decrypted = h.decrypt(encrypted, key);

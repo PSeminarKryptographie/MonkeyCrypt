@@ -178,9 +178,19 @@ public class Tools {
 	 
 	 public static int modInverse(int key, String alpha){
 		 int n = 1;
+		 boolean negative = key < 0;
+		 if (negative){
+			 key = -key;
+		 }
 		 while(true){
 			 if ((key*n)%alpha.length() == 1){
-				 return n;
+				 if (negative){
+					 return alpha.length() - n;
+				 }
+				 else{
+					 return n;
+				 }
+				 
 			 }
 			 else if ((key*n)%alpha.length() == 0){
 				 return 0;
