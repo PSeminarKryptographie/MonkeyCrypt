@@ -60,7 +60,7 @@ public class Hill extends Chiffre{
 		String verified = verify(key, currentAlphabet);
 		key = key.toLowerCase();
 		String shortText = Tools.onlyAlphabet(text, currentAlphabet);
-		System.out.println(shortText);
+		//System.out.println(shortText);
 		if (verified == null){
 			int dimension = (int) Math.sqrt(key.length());
 
@@ -68,13 +68,13 @@ public class Hill extends Chiffre{
 				shortText += currentAlphabet.charAt(0);
 
 			}
-			System.out.println(shortText);
+			//System.out.println(shortText);
 			int [][] keyMatrix = Tools.makeMatrix(key, dimension, dimension, currentAlphabet);
 			
 						
 			String newText = algorithm(shortText, keyMatrix, currentAlphabet, dimension);
 			
-			System.out.println(newText);
+			//System.out.println(newText);
 
 			return newText;
 		}
@@ -105,7 +105,7 @@ public class Hill extends Chiffre{
 				text += currentAlphabet.charAt(0);
 				count ++;
 			}
-			System.out.println(text);
+			//System.out.println(text);
 			int [][] keyMatrix = Tools.makeMatrix(key, dimension, dimension, currentAlphabet);
 			int [][] invKeyMatrix = MatrixTools.inverse(keyMatrix, currentAlphabet);
 			System.out.println(Arrays.deepToString(invKeyMatrix));
