@@ -12,23 +12,58 @@ import java.util.List;
  */
 public class Permutation extends Chiffre{
 	private String currentAlphabet;
-	private List<Integer> length = Arrays.asList(0);
+	private List<Integer> length = Arrays.asList(4, 9, 16, 25);
+	private Hill h = new Hill();
+	
+	private String binary2String(String text){
+		currentAlphabet = myAlphabet.getAlphabet();
+		String newText = "";
+		for (int i = 0; i < text.length(); i++){
+			if (text.charAt(i)== '0'){	
+				newText += currentAlphabet.charAt(0);
+			}
+			else{
+				newText += currentAlphabet.charAt(1);
+			}
+		}
+		return newText;
+	}
+	
 	@Override
 	public String encrypt(String text, String key) {
-		// TODO Auto-generated method stub
-		return "Noch zu implementieren";
+		String verified = verify(key, "01");
+		if (verified == null){
+			String stringKey = binary2String(key);
+			return h.encrypt(text, stringKey);
+		}
+		else{
+			return verified;
+		}
 	}
 
 	@Override
 	public String decrypt(String text, String key) {
-		// TODO Auto-generated method stub
-		return "Noch zu implementieren";
+		String verified = verify(key, "01");
+		if (verified == null){
+			String stringKey = binary2String(key);
+			return h.decrypt(text, stringKey);
+		}
+		else{
+			return verified;
+		}
 	}
 
 	@Override
 	protected String verify(String key, String alphabet) {
-		// TODO Auto-generated method stub
-		return null;
+		if (!checkLength(key, length)){
+			return "Vorsicht! Fülle die Permutationsmatrix vollständig mit je einer 1 oder einer 0 aus!";
+		}
+		else if(!checkCharacter(key, alphabet)){
+			return "Vorsicht! Die Permutationsmatrix darf nur die Zeichen 1 oder 0 enthalten!";
+		}
+		else{
+			return null;
+		}
 	}
 
 }
