@@ -39,7 +39,7 @@ public abstract class Chiffre {
 	}
 	final boolean checkDeterminant(int [][] Matrix){
 		if (MatrixTools.determinant(Matrix) == 0){
-			return false;
+			return false;	
 		}
 		else{
 			return true;
