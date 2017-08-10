@@ -112,22 +112,22 @@ public class Tools {
 		char [] cArray = text.toCharArray();
 		int counter = 0;
 		int[][] newMatrix = new int[rows][columns];
-			for(int r = 0; r <= rows-1; r++){
-				for(int c = 0; c <= columns-1; c++){
-					if (counter < text.length()){
-						
-						int currentNum = Tools.string2int(String.valueOf(cArray[counter]), alpha);
-						//System.out.println(currentNum);
-						if (currentNum != -1){
-							newMatrix[r][c] = currentNum;
-						}
-						else{
-							newMatrix[r][c] = 0;
-						}
-						counter++;
+		for(int r = 0; r <= rows-1; r++){
+			for(int c = 0; c <= columns-1; c++){
+				if (counter < text.length()){
+					
+					int currentNum = Tools.string2int(String.valueOf(cArray[counter]), alpha);
+					//System.out.println(currentNum);
+					if (currentNum != -1){
+						newMatrix[r][c] = currentNum;
 					}
+					else{
+						newMatrix[r][c] = 0;
+					}
+					counter++;
 				}
-			
+			}
+		
 		}
 		return newMatrix;
 	}
@@ -210,7 +210,7 @@ public class Tools {
 		 }
 		 return newText;
 	 }
-	 private String cleanup(String text, String newText, String alpha){
+	 /*private String cleanup(String text, String newText, String alpha){
 			String correctText = "";
 			for (int i = 0; i<newText.length(); i++  ){
 				if (!alpha.contains(String.valueOf(text.charAt(i)).toLowerCase())){
@@ -224,5 +224,5 @@ public class Tools {
 				}
 			}
 			return correctText;
-		}
+		}*/
 }

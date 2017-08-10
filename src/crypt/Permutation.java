@@ -61,8 +61,18 @@ public class Permutation extends Chiffre{
 		else if(!checkCharacter(key, alphabet)){
 			return "Vorsicht! Die Permutationsmatrix darf nur die Zeichen 1 oder 0 enthalten!";
 		}
+		else if((key.length() - ((key.replaceAll("1","")).length())) != Math.sqrt(key.length())){
+			return "Vorsicht! In jeder Zeil und Spalte der Permutationsmatrix muss genau eine 1 stehen";
+		}
 		else{
-			return null;
+			int dimension = (int) Math.sqrt(key.length());
+			int [][] keyMatrix = Tools.makeMatrix(binary2String(key), dimension, dimension, currentAlphabet);
+			if (!checkDeterminant(keyMatrix)){
+				return "Vorsicht! In jeder Zeile und Spalte der Permutationsmatrix muss genau eine 1 stehen";
+			}
+			else{
+				return null;
+			}
 		}
 	}
 

@@ -113,7 +113,7 @@ public class Hill extends Chiffre{
 	@Override
 	protected String verify(String key, String alphabet) {
 		if (!checkLength(key, length)){
-			return "Vorsicht! Fülle die Matrix vollständig mit je einem Zeichen aus!";
+			return "Vorsicht! Fülle die Schlüsselmatrix vollständig mit je einem Zeichen aus!";
 		}
 		else if(!checkCharacter(key, alphabet)){
 			return "Vorsicht! Die Schlüsselmatrix darf nur Zeichen enthalten, die auch im Alphabet enthalten sind!";
@@ -122,7 +122,7 @@ public class Hill extends Chiffre{
 			int dimension = (int) Math.sqrt(key.length());
 			int [][] keyMatrix = Tools.makeMatrix(key, dimension, dimension, currentAlphabet);
 			if (!checkDeterminant(keyMatrix)){
-				return "Vorsicht! Die Determinante deiner Matrix ist nicht Coprim zum Alphabet. Dein Text kann daher nicht eindeutig entschlüsselt werden!";
+				return "Vorsicht! Die Determinante der Schlüsselmatrix ist 0. Dein Text kann daher nicht eindeutig entschlüsselt werden!";
 			}
 			else{
 				return null;
