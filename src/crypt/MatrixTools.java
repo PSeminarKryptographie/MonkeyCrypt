@@ -76,7 +76,6 @@ public class MatrixTools {
 				inverse[j][i] = temp * determinant;
 			}
 		}
-		System.out.println(determinant);
 
 		return modMatrix(inverse, alpha);
 	}

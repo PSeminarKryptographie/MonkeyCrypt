@@ -25,13 +25,9 @@ public class Hill extends Chiffre{
 		for (int i = 0; i<text.length()+1; i++  ){
 			if (group.length() == dimension){
 				int [][] groupMatrix = Tools.makeMatrix(group, dimension, (group.length()/dimension), currentAlphabet);
-				//System.out.println(Arrays.deepToString(groupMatrix));
 				int [][] newMatrix = MatrixTools.mulMatrix(key, groupMatrix);
-				//System.out.println(Arrays.deepToString(newMatrix));
 				newMatrix = MatrixTools.modMatrix(newMatrix, alpha);
-				//System.out.println(Arrays.deepToString(newMatrix));
 				newText += Tools.matrix2string(newMatrix, alpha);
-				//System.out.println(newText);
 				group = "";
 				
 				try{group += text.charAt(i);}
@@ -60,21 +56,15 @@ public class Hill extends Chiffre{
 		String verified = verify(key, currentAlphabet);
 		key = key.toLowerCase();
 		String shortText = Tools.onlyAlphabet(text, currentAlphabet);
-		//System.out.println(shortText);
 		if (verified == null){
 			int dimension = (int) Math.sqrt(key.length());
 
 			while (shortText.length()%(dimension) != 0){
 				shortText += currentAlphabet.charAt(0);
-
 			}
-			//System.out.println(shortText);
-			int [][] keyMatrix = Tools.makeMatrix(key, dimension, dimension, currentAlphabet);
 			
-						
+			int [][] keyMatrix = Tools.makeMatrix(key, dimension, dimension, currentAlphabet);			
 			String newText = algorithm(shortText, keyMatrix, currentAlphabet, dimension);
-			
-			//System.out.println(newText);
 
 			return newText;
 		}
@@ -105,10 +95,8 @@ public class Hill extends Chiffre{
 				text += currentAlphabet.charAt(0);
 				count ++;
 			}
-			//System.out.println(text);
 			int [][] keyMatrix = Tools.makeMatrix(key, dimension, dimension, currentAlphabet);
 			int [][] invKeyMatrix = MatrixTools.inverse(keyMatrix, currentAlphabet);
-			System.out.println(Arrays.deepToString(invKeyMatrix));
 			
 			String newText = algorithm(text, invKeyMatrix, currentAlphabet, dimension);
 			
