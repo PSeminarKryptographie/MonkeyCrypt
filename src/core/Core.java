@@ -9,15 +9,15 @@ import crypt.*;
 public class Core
 {
     /**Feld f�r die Chiffrierungen*/
-    Chiffre[] chiffre;
+    Chiffre[] chiffre = {new Caesar(), new Multiplikativ(), new Vigenere(), new OneTimePad(), new Spaltentransposition(), new Gartenzaun(), new ADFGX(), new Hill(), new Permutation(), new Affine()};
     /**Feld f�r Spielsprachen*/
-    Spielsprache[] spielsprache;
+    Spielsprache[] spielsprache = {new Anagramm(), new Morse(), new Ascii(), new BinaerCode(), new AlphaIndex(), new BI_language(), new Bobsprache(), new Loeffelsprache(), new BinHex(), new NATO_Alphabet(), new Pseudo_Text()}
     
-    public Tools tool;
+    //public Tools tool;
     
     public Core()
     {
-        chiffre = new Chiffre[11];
+        /*chiffre = new Chiffre[11];
         chiffre[0] = new Caesar();
         chiffre[1] = new Multiplikativ();
         chiffre[2] = new Vigenere();
@@ -43,8 +43,10 @@ public class Core
         //spielsprache[8] = new BinHex();
         spielsprache[9] = new NATO_Alphabet();
         //spielsprache[10] = new Pseudo_Text();
+         * 
+         */
         
-        tool = new Tools();
+        //tool = new Tools();
         
         
     }

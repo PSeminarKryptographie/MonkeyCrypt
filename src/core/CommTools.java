@@ -72,7 +72,7 @@ public class CommTools {
             boolean notfound = true;
             int counter = 0;
             while(notfound) {
-                String testable = alpha.valueOf(alpha.charAt(counter));
+                String testable = String.valueOf(alpha.charAt(counter));
                 if(testable.equals(t)) {
                     notfound = false;
                 }
