@@ -8,16 +8,18 @@ import crypt.*;
 
 public class Core
 {
-    /**Feld f�r die Chiffrierungen*/
-    Chiffre[] chiffre = {new Caesar(), new Multiplikativ(), new Vigenere(), new OneTimePad(), new Spaltentransposition(), new Gartenzaun(), new ADFGX(), new Hill(), new Permutation(), new Affine()};
-    /**Feld f�r Spielsprachen*/
-    Spielsprache[] spielsprache = {new Anagramm(), new Morse(), new Ascii(), new BinaerCode(), new AlphaIndex(), new BI_language(), new Bobsprache(), new Loeffelsprache(), new BinHex(), new NATO_Alphabet(), new Pseudo_Text()}
+    /**Feld für die Chiffrierungen*/
+    Chiffre[] chiffre = {new Caesar(), new Multiplikativ(), new Vigenere(), new OneTimePad(), new Spaltentransposition(), new Gartenzaun(), new ADFGX(), new Hill(), new Permutation(), new Bacon(), new Affine()};
+    /**Feld für Spielsprachen*/
+    Spielsprache[] spielsprache = {new Anagramm(), new Morse(), new Ascii(), new BinaerCode(), new AlphaIndex(), new BI_language(), new Bobsprache(), new Loeffelsprache(), new BinHex(), new NATO_Alphabet(), new Pseudo_Text()};
     
     //public Tools tool;
     
     public Core()
     {
-        /*chiffre = new Chiffre[11];
+        /*
+         * nicht notwendig da schon inizialisiert!
+        chiffre = new Chiffre[11];
         chiffre[0] = new Caesar();
         chiffre[1] = new Multiplikativ();
         chiffre[2] = new Vigenere();
