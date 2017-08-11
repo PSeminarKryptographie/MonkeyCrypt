@@ -21,6 +21,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
     MoCr_Frame_exc localExc;
     Core localCore;                         //lokale Core-Instanz
     static CommTools localTools = new CommTools();
+    FrameTools localFraTools = new FrameTools();
     WindowLogic localLogic = new WindowLogic();
     HtmlReader localDidViewer;
     
@@ -1490,16 +1491,16 @@ public class MoCr_Frame extends javax.swing.JFrame {
    
     private void MoCr_MPButtonpanel_LearnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_MPButtonpanel_LearnButtonActionPerformed
         // TODO add your handling code here:    
-        localTools.adjustCards(MoCr_Gen_DynamicPanel, MoCr_Did_cardPanel);
-        localTools.adjustCards(MoCr_Gen_ListPanel, MoCr_GenDyn_DidListPanel);
+        localFraTools.adjustCards(MoCr_Gen_DynamicPanel, MoCr_Did_cardPanel);
+        localFraTools.adjustCards(MoCr_Gen_ListPanel, MoCr_GenDyn_DidListPanel);
         localLogic.setMode(false);
     }//GEN-LAST:event_MoCr_MPButtonpanel_LearnButtonActionPerformed
 
     private void MoCr_Did_ReturnerbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_Did_ReturnerbuttonActionPerformed
         // TODO add your handling code here:
-        localTools.adjustCards(MoCr_Gen_DynamicPanel, MoCr_MainPro_cardPanel);        
-        localTools.adjustCards(MoCr_MainPro_changeable, getValidChiffrePanel(localLogic.getState()) );
-        localTools.adjustCards(MoCr_Gen_ListPanel, MoCr_GenDyn_MainProList);       
+        localFraTools.adjustCards(MoCr_Gen_DynamicPanel, MoCr_MainPro_cardPanel);        
+        localFraTools.adjustCards(MoCr_MainPro_changeable, getValidChiffrePanel(localLogic.getState()) );
+        localFraTools.adjustCards(MoCr_Gen_ListPanel, MoCr_GenDyn_MainProList);       
         localLogic.setMode(true);
     }//GEN-LAST:event_MoCr_Did_ReturnerbuttonActionPerformed
 
@@ -1525,14 +1526,14 @@ public class MoCr_Frame extends javax.swing.JFrame {
                     case 3: k = MoCr_OTPSub_Area.getText(); break;
                     case 4: k = MoCr_TranspositionKey_1KeyField.getText(); break;
                     case 5: k = MoCr_TranspositionKey_1KeyField.getText(); break;
-                    case 6: k = localLogic.dismantleJTable(MoCr_ADFGX_Matrix, 1); break;
-                    case 7: k = localLogic.dismantleJTable(MoCr_HillSub_Matrix, 0); break;
-                    case 8: k = localLogic.dismantleJTable(MoCr_TranspositionSub_MatrixKeyField, 0); break;                       
+                    case 6: k = localFraTools.dismantleJTable(MoCr_ADFGX_Matrix, 1); break;
+                    case 7: k = localFraTools.dismantleJTable(MoCr_HillSub_Matrix, 0); break;
+                    case 8: k = localFraTools.dismantleJTable(MoCr_TranspositionSub_MatrixKeyField, 0); break;                       
                     case 9: k = MoCr_SteganoSub_BaconKey.getText(); break;
                     case 10:    String k1 = MoCr_AffChiffSub_Key1.getText();
                                 String k2 = MoCr_AffChiffSub_Key2.getText();
                                 k = new StringBuffer(k1).append(k2).toString(); 
-                                MoCr_AffChiffSub_Function.setText(localLogic.createFunction(k));   break;
+                                MoCr_AffChiffSub_Function.setText(localFraTools.createFunction(k));   break;
                 }
                 out = localCore.verschlüsseln(c, in, k);    break;
             case 1: out = localCore.spielsprache_verschlüsseln(c, in);
@@ -1557,9 +1558,9 @@ public class MoCr_Frame extends javax.swing.JFrame {
                     case 3: k = MoCr_OTPSub_Area.getText(); break;
                     case 4: k = MoCr_TranspositionKey_1KeyField.getText(); break;
                     case 5: k = MoCr_TranspositionKey_1KeyField.getText(); break;
-                    case 6: k = localLogic.dismantleJTable(MoCr_ADFGX_Matrix, 1); break;
-                    case 7: k = localLogic.dismantleJTable(MoCr_HillSub_Matrix, 0); break;
-                    case 8: k = localLogic.dismantleJTable(MoCr_TranspositionSub_MatrixKeyField, 0); break;
+                    case 6: k = localFraTools.dismantleJTable(MoCr_ADFGX_Matrix, 1); break;
+                    case 7: k = localFraTools.dismantleJTable(MoCr_HillSub_Matrix, 0); break;
+                    case 8: k = localFraTools.dismantleJTable(MoCr_TranspositionSub_MatrixKeyField, 0); break;
                     case 9: k = MoCr_SteganoSub_BaconKey.getText(); break;
                     case 10:    String k1 = MoCr_AffChiffSub_Key1.getText();
                                 String k2 = MoCr_AffChiffSub_Key2.getText();
@@ -1595,9 +1596,9 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
     private void MoCr_CodierungenSub_ADFGXFillerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_CodierungenSub_ADFGXFillerActionPerformed
         // TODO add your handling code here:
-        String seq = localLogic.ADFGX_SpecialCheck(MoCr_ADFGX_Matrix);
-        String out = localTools.fillTable(seq);
-        localLogic.writeTable(MoCr_ADFGX_Matrix, out);        
+        String seq = localFraTools.ADFGX_SpecialCheck(MoCr_ADFGX_Matrix);
+        String out = localFraTools.fillTable(seq);
+        localFraTools.writeTable(MoCr_ADFGX_Matrix, out);        
     }//GEN-LAST:event_MoCr_CodierungenSub_ADFGXFillerActionPerformed
 
     private void MoCr_MPButtonpanel_ExerciseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_MPButtonpanel_ExerciseButtonActionPerformed
@@ -1613,7 +1614,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private void MoCr_Gen_SidelisterMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MoCr_Gen_SidelisterMousePressed
         // TODO add your handling code here:
         localLogic.setSwitchState(MoCr_Gen_Sidelister.getSelectedIndex());
-        localTools.adjustCards(MoCr_MainPro_changeable, getValidChiffrePanel(localLogic.getState())); 
+        localFraTools.adjustCards(MoCr_MainPro_changeable, getValidChiffrePanel(localLogic.getState())); 
         localDidViewer.insertHTML(localLogic.getState(), true);
     }//GEN-LAST:event_MoCr_Gen_SidelisterMousePressed
 
@@ -1715,14 +1716,14 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private void MoCr_HillSub_SliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_MoCr_HillSub_SliderStateChanged
         // TODO add your handling code here:
         int t = MoCr_HillSub_Slider.getValue();
-        localLogic.alterJTable(MoCr_HillSub_Matrix, t);
+        localFraTools.alterJTable(MoCr_HillSub_Matrix, t);
         MoCr_HillSub_Size.setText(Integer.toString(t));
     }//GEN-LAST:event_MoCr_HillSub_SliderStateChanged
 
     private void MoCr_PermSub_SliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_MoCr_PermSub_SliderStateChanged
         // TODO add your handling code here:
         int t = MoCr_PermSub_Slider.getValue();
-        localLogic.alterJTable(MoCr_TranspositionSub_MatrixKeyField, t);
+        localFraTools.alterJTable(MoCr_TranspositionSub_MatrixKeyField, t);
         MoCr_PermSub_ValueLabel.setText(Integer.toString(t));
     }//GEN-LAST:event_MoCr_PermSub_SliderStateChanged
         
@@ -1734,7 +1735,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
                 case 1: l = MoCr_TranspositionSub_2Key; break;
                 case 2: l = MoCr_TranspositionSub_MatrixKey; break;
             }
-        localTools.adjustCards(MoCr_TranspositionSub_KeyPanel, l);
+        localFraTools.adjustCards(MoCr_TranspositionSub_KeyPanel, l);
     }
     
     public void clearAll() {
@@ -1761,10 +1762,10 @@ public class MoCr_Frame extends javax.swing.JFrame {
             case 5: MoCr_TranspositionKey_1KeyField.setText("");
                     MoCr_TranspositionSub_2KeyField1.setText("");
                     MoCr_TranspositionSub_2KeyField2.setText("");
-                    localLogic.clearTable(MoCr_TranspositionSub_MatrixKeyField, 0); break;
-            case 6: localLogic.clearTable(MoCr_ADFGX_Matrix, 1); break;
+                    localFraTools.clearTable(MoCr_TranspositionSub_MatrixKeyField, 0); break;
+            case 6: localFraTools.clearTable(MoCr_ADFGX_Matrix, 1); break;
             case 7: break;
-            case 8: localLogic.clearTable(MoCr_HillSub_Matrix, 0); break;
+            case 8: localFraTools.clearTable(MoCr_HillSub_Matrix, 0); break;
             case 9: MoCr_SteganoSub_BaconKey.setText(""); break;
             case 10:MoCr_AffChiffSub_Key1.setText("");
                     MoCr_AffChiffSub_Key2.setText(""); break;
