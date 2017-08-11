@@ -11,7 +11,6 @@ import java.util.List;
  *
  */
 public class Gartenzaun extends Chiffre{
-	private List<Integer> length = Arrays.asList(0);
 	@Override
 	public String encrypt(String text, String key) {
 		String verified = verify(key, "");
@@ -21,20 +20,12 @@ public class Gartenzaun extends Chiffre{
 			if (depth > text.length()){
 				depth = text.length();
 			}
-			System.out.println(depth);
-			int counter = 0;
+			int counter = depth;
 			String[] newTextArray = new String[depth];
+			Arrays.fill(newTextArray, "");
 			for (int i = 0; i<text.length(); i++){
-				if (i<depth){
-					newTextArray[counter] = "";
-				}
-				newTextArray[counter] += text.charAt(i);
-				if (counter == depth-1){
-					counter = 0;
-				}	
-				else{
-					counter++;
-				}	
+				newTextArray[counter%depth] += text.charAt(i);
+				counter++;
 			}
 			StringBuilder builder = new StringBuilder();
 			for(String s : newTextArray) {
