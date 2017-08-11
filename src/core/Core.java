@@ -8,10 +8,10 @@ import crypt.*;
 
 public class Core
 {
-    /**Feld f�r die Chiffrierungen*/
+    /**Feld für die Chiffrierungen*/
     Chiffre[] chiffre = {new Caesar(), new Multiplikativ(), new Vigenere(), new OneTimePad(), new Spaltentransposition(), new Gartenzaun(), new ADFGX(), new Hill(), new Permutation(), new Affine()};
-    /**Feld f�r Spielsprachen*/
-    Spielsprache[] spielsprache = {new Anagramm(), new Morse(), new Ascii(), new BinaerCode(), new AlphaIndex(), new BI_language(), new Bobsprache(), new Loeffelsprache(), new BinHex(), new NATO_Alphabet(), new Pseudo_Text()}
+    /**Feld für Spielsprachen*/
+    Spielsprache[] spielsprache = {new Anagramm(), new Morse(), new Ascii(), new BinaerCode(), new AlphaIndex(), new BI_language(), new Bobsprache(), new Loeffelsprache(), new BinHex(), new NATO_Alphabet(), new Pseudo_Text()};
     
     //public Tools tool;
     

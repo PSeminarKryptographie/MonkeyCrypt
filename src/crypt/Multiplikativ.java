@@ -24,11 +24,10 @@ public class Multiplikativ extends Chiffre{
 	 */
 	private String algorithm(String text, int key, String alpha){
 		String newtext = "";
-		for (int n = 0; n<text.length(); n++)
-		{	
+		for (int n = 0; n<text.length(); n++){	
 			char newChar = text.charAt(n);
 			char lowerChar = Character.toLowerCase(newChar);
-				for (int i = 0; i<alpha.length(); i++){
+			for (int i = 0; i<alpha.length(); i++){
 				if (alpha.charAt(i) == lowerChar){
 					if (decrypt == false){
 						newChar = alpha.charAt((i*key)%alpha.length());
@@ -39,12 +38,11 @@ public class Multiplikativ extends Chiffre{
 							
 							tmpi = alpha.length()+tmpi;
 							
-							}
+						}
 						
 						newChar = alpha.charAt((tmpi/key)%alpha.length());
 						
 					}
-					
 					if (Character.isUpperCase(text.charAt(n))){	
 						newChar = Character.toUpperCase(newChar);
 					}
