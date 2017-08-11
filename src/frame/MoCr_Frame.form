@@ -862,12 +862,24 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="MoCr_TranspositionSub_MatrixKeyLabel" alignment="0" pref="500" max="32767" attributes="0"/>
-                                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace pref="37" max="32767" attributes="0"/>
-                                          <Component id="MoCr_TranspositionSub_MatrixKeyField" min="-2" pref="453" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="MoCr_PermSub_Slider" max="32767" attributes="0"/>
+                                          <Component id="MoCr_TranspositionSub_MatrixKeyField" max="32767" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Component id="MoCr_PermSub_Label" min="-2" pref="165" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="MoCr_PermSub_ValueLabel" min="-2" pref="130" max="-2" attributes="0"/>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="MoCr_PermSub_MinVal" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="MoCr_PermSub_MaxVal" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -875,14 +887,21 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="MoCr_TranspositionSub_MatrixKeyLabel" min="-2" pref="25" max="-2" attributes="0"/>
-                                      <EmptySpace pref="305" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace pref="149" max="32767" attributes="0"/>
-                                          <Component id="MoCr_TranspositionSub_MatrixKeyField" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="MoCr_TranspositionSub_MatrixKeyField" min="-2" pref="108" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="MoCr_PermSub_MinVal" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="MoCr_PermSub_MaxVal" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="MoCr_PermSub_Slider" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="MoCr_PermSub_Label" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                          <Component id="MoCr_PermSub_ValueLabel" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace pref="83" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -925,9 +944,43 @@
                                     </Column>
                                   </TableColumnModel>
                                 </Property>
+                                <Property name="opaque" type="boolean" value="false"/>
                                 <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                                   <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
                                 </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="MoCr_PermSub_MinVal">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="2"/>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="MoCr_PermSub_MaxVal">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="6"/>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JSlider" name="MoCr_PermSub_Slider">
+                              <Properties>
+                                <Property name="maximum" type="int" value="6"/>
+                                <Property name="minimum" type="int" value="2"/>
+                                <Property name="toolTipText" type="java.lang.String" value=""/>
+                                <Property name="value" type="int" value="4"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="MoCr_PermSub_SliderStateChanged"/>
+                              </Events>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="MoCr_PermSub_Label">
+                              <Properties>
+                                <Property name="horizontalAlignment" type="int" value="0"/>
+                                <Property name="text" type="java.lang.String" value="Momentane Matrixgr&#xf6;&#xdf;e"/>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="MoCr_PermSub_ValueLabel">
+                              <Properties>
+                                <Property name="horizontalAlignment" type="int" value="0"/>
+                                <Property name="text" type="java.lang.String" value="4"/>
                               </Properties>
                             </Component>
                           </SubComponents>
@@ -1336,16 +1389,16 @@
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="MoCr_HillSub_Slider" max="32767" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="MoCr_HillSub_MinLab" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="MoCr_HillSub_MaxLab" min="-2" max="-2" attributes="0"/>
-                                          </Group>
                                           <Group type="102" attributes="0">
                                               <Component id="MoCr_HillSub_SizeLab" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="MoCr_HillSub_Size" min="-2" pref="148" max="-2" attributes="0"/>
                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="MoCr_HillSub_MinLab" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="MoCr_HillSub_MaxLab" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -1359,11 +1412,11 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="MoCr_HillSub_Heading" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="MoCr_HillSub_Matrix" min="-2" pref="139" max="-2" attributes="0"/>
+                              <Component id="MoCr_HillSub_Matrix" min="-2" pref="113" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="MoCr_HillSub_MinLab" pref="30" max="32767" attributes="0"/>
-                                  <Component id="MoCr_HillSub_MaxLab" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="MoCr_HillSub_MinLab" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="MoCr_HillSub_MaxLab" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="MoCr_HillSub_Slider" min="-2" max="-2" attributes="0"/>
@@ -1372,7 +1425,7 @@
                                   <Component id="MoCr_HillSub_SizeLab" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                                   <Component id="MoCr_HillSub_Size" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="265" max="32767" attributes="0"/>
+                              <EmptySpace pref="291" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1420,6 +1473,13 @@
                               <Renderer/>
                             </Column>
                           </TableColumnModel>
+                        </Property>
+                        <Property name="gridColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="0" type="rgb"/>
+                        </Property>
+                        <Property name="opaque" type="boolean" value="false"/>
+                        <Property name="selectionBackground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="99" red="ff" type="rgb"/>
                         </Property>
                         <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                           <TableHeader reorderingAllowed="false" resizingAllowed="true"/>

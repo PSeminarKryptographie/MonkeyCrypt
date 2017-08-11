@@ -63,12 +63,11 @@ public class WindowLogic {
                 for(int i = 0; i < r; i++){
                     for(int w = 1; w < c; w++){
                         try{
-                            testable = (String) internTable.getValueAt(i, w);
+                            testable = internTable.getValueAt(i, w).toString();
                 
                             if(testable.length() == 1){    
                                 out = new StringBuffer(out).append(testable).toString();
                             }
-                    
                         }
                         catch(Exception e) {}
                     }
@@ -103,23 +102,40 @@ public class WindowLogic {
         int r = internTable.getRowCount();
         int c = internTable.getColumnCount();
         String out = "";
+        boolean correctInput = verifyInput(internTable, mis);
         
+        if(correctInput == true) {
         for(int i = 0; i < r; i++){
             for(int w = mis; w < c; w++){
                out = new StringBuffer(out).append(internTable.getValueAt(i, w)).toString();
             }
         }
-        
-        int l = out.length();
-        int reallength = r * (c-mis);
-        
-        if(l == reallength){
-            return out;
+        return out;
         }
-        else{
+        else {
             return "F";
-        }           
+        }
     }
+    
+    public boolean verifyInput(javax.swing.JTable internTable, int mis) {
+        try {
+        int r = internTable.getRowCount();
+        int c = internTable.getColumnCount();
+        boolean correctInput = true;
+        
+        for(int i = 0; i < r; i++){
+            for(int w = mis; w < c; w++){
+               String cell = internTable.getValueAt(i, w).toString();
+               if(cell.length() != 1) {
+                   correctInput = false;
+               }
+            }
+        }
+        
+        return correctInput;
+        } catch(Exception e) {return false;}
+    }
+    
     
     public String createFunction(String c) {
         if(c.length() == 2) {
@@ -131,7 +147,7 @@ public class WindowLogic {
         }
     }
     
-    public void alterJTable(javax.swing.JTable t, int r) {
-        t.setModel(new DefaultTableModel(r, r));
+    public void alterJTable(javax.swing.JTable t, int l) {
+        t.setModel(new DefaultTableModel(l, l));
     }
 }
