@@ -103,6 +103,11 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_TranspositionSub_MatrixKey = new javax.swing.JPanel();
         MoCr_TranspositionSub_MatrixKeyLabel = new javax.swing.JLabel();
         MoCr_TranspositionSub_MatrixKeyField = new javax.swing.JTable();
+        MoCr_PermSub_MinVal = new javax.swing.JLabel();
+        MoCr_PermSub_MaxVal = new javax.swing.JLabel();
+        MoCr_PermSub_Slider = new javax.swing.JSlider();
+        MoCr_PermSub_Label = new javax.swing.JLabel();
+        MoCr_PermSub_ValueLabel = new javax.swing.JLabel();
         MoCr_TranspositionSub_NoKey = new javax.swing.JPanel();
         MoCr_MPSub_Codierungen = new javax.swing.JPanel();
         MoCr_CodierungenSub_Heading = new javax.swing.JLabel();
@@ -596,29 +601,67 @@ public class MoCr_Frame extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        MoCr_TranspositionSub_MatrixKeyField.setOpaque(false);
         MoCr_TranspositionSub_MatrixKeyField.getTableHeader().setReorderingAllowed(false);
+
+        MoCr_PermSub_MinVal.setText("2");
+
+        MoCr_PermSub_MaxVal.setText("6");
+
+        MoCr_PermSub_Slider.setMaximum(6);
+        MoCr_PermSub_Slider.setMinimum(2);
+        MoCr_PermSub_Slider.setToolTipText("");
+        MoCr_PermSub_Slider.setValue(4);
+        MoCr_PermSub_Slider.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                MoCr_PermSub_SliderStateChanged(evt);
+            }
+        });
+
+        MoCr_PermSub_Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        MoCr_PermSub_Label.setText("Momentane Matrixgröße");
+
+        MoCr_PermSub_ValueLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        MoCr_PermSub_ValueLabel.setText("4");
 
         javax.swing.GroupLayout MoCr_TranspositionSub_MatrixKeyLayout = new javax.swing.GroupLayout(MoCr_TranspositionSub_MatrixKey);
         MoCr_TranspositionSub_MatrixKey.setLayout(MoCr_TranspositionSub_MatrixKeyLayout);
         MoCr_TranspositionSub_MatrixKeyLayout.setHorizontalGroup(
             MoCr_TranspositionSub_MatrixKeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(MoCr_TranspositionSub_MatrixKeyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
-            .addGroup(MoCr_TranspositionSub_MatrixKeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MoCr_TranspositionSub_MatrixKeyLayout.createSequentialGroup()
-                    .addContainerGap(37, Short.MAX_VALUE)
-                    .addComponent(MoCr_TranspositionSub_MatrixKeyField, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap()))
+            .addGroup(MoCr_TranspositionSub_MatrixKeyLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(MoCr_TranspositionSub_MatrixKeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MoCr_PermSub_Slider, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MoCr_TranspositionSub_MatrixKeyField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(MoCr_TranspositionSub_MatrixKeyLayout.createSequentialGroup()
+                        .addComponent(MoCr_PermSub_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(MoCr_PermSub_ValueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(MoCr_TranspositionSub_MatrixKeyLayout.createSequentialGroup()
+                        .addComponent(MoCr_PermSub_MinVal)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(MoCr_PermSub_MaxVal)))
+                .addContainerGap())
         );
         MoCr_TranspositionSub_MatrixKeyLayout.setVerticalGroup(
             MoCr_TranspositionSub_MatrixKeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MoCr_TranspositionSub_MatrixKeyLayout.createSequentialGroup()
                 .addComponent(MoCr_TranspositionSub_MatrixKeyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(305, Short.MAX_VALUE))
-            .addGroup(MoCr_TranspositionSub_MatrixKeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MoCr_TranspositionSub_MatrixKeyLayout.createSequentialGroup()
-                    .addContainerGap(149, Short.MAX_VALUE)
-                    .addComponent(MoCr_TranspositionSub_MatrixKeyField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(133, 133, 133)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MoCr_TranspositionSub_MatrixKeyField, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(MoCr_TranspositionSub_MatrixKeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MoCr_PermSub_MinVal)
+                    .addComponent(MoCr_PermSub_MaxVal))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MoCr_PermSub_Slider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(MoCr_TranspositionSub_MatrixKeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MoCr_PermSub_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MoCr_PermSub_ValueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         if (MoCr_TranspositionSub_MatrixKeyField.getColumnModel().getColumnCount() > 0) {
@@ -942,6 +985,9 @@ public class MoCr_Frame extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        MoCr_HillSub_Matrix.setGridColor(new java.awt.Color(0, 0, 0));
+        MoCr_HillSub_Matrix.setOpaque(false);
+        MoCr_HillSub_Matrix.setSelectionBackground(new java.awt.Color(255, 153, 0));
         MoCr_HillSub_Matrix.getTableHeader().setReorderingAllowed(false);
 
         MoCr_HillSub_Slider.setMaximum(6);
@@ -981,14 +1027,14 @@ public class MoCr_Frame extends javax.swing.JFrame {
                         .addGroup(MoCr_MPSub_HillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(MoCr_HillSub_Slider, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(MoCr_MPSub_HillLayout.createSequentialGroup()
-                                .addComponent(MoCr_HillSub_MinLab)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(MoCr_HillSub_MaxLab))
-                            .addGroup(MoCr_MPSub_HillLayout.createSequentialGroup()
                                 .addComponent(MoCr_HillSub_SizeLab)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(MoCr_HillSub_Size, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(MoCr_MPSub_HillLayout.createSequentialGroup()
+                                .addComponent(MoCr_HillSub_MinLab)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(MoCr_HillSub_MaxLab)))
                         .addContainerGap())))
         );
         MoCr_MPSub_HillLayout.setVerticalGroup(
@@ -996,18 +1042,18 @@ public class MoCr_Frame extends javax.swing.JFrame {
             .addGroup(MoCr_MPSub_HillLayout.createSequentialGroup()
                 .addComponent(MoCr_HillSub_Heading, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(MoCr_HillSub_Matrix, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MoCr_HillSub_Matrix, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(MoCr_MPSub_HillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(MoCr_HillSub_MinLab, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(MoCr_HillSub_MaxLab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(MoCr_MPSub_HillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MoCr_HillSub_MinLab, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MoCr_HillSub_MaxLab, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MoCr_HillSub_Slider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MoCr_MPSub_HillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(MoCr_HillSub_SizeLab, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MoCr_HillSub_Size, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(265, Short.MAX_VALUE))
+                .addContainerGap(291, Short.MAX_VALUE))
         );
 
         MoCr_MainPro_changeable.add(MoCr_MPSub_Hill, "card10");
@@ -1400,7 +1446,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(MoCr_Gen_DynamicPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(MoCr_Gen_ListPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(MoCr_Gen_ListPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
         );
 
         pack();
@@ -1669,10 +1715,16 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private void MoCr_HillSub_SliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_MoCr_HillSub_SliderStateChanged
         // TODO add your handling code here:
         int t = MoCr_HillSub_Slider.getValue();
-        String l = Integer.toString(t);
-        MoCr_HillSub_Size.setText(l);
         localLogic.alterJTable(MoCr_HillSub_Matrix, t);
+        MoCr_HillSub_Size.setText(Integer.toString(t));
     }//GEN-LAST:event_MoCr_HillSub_SliderStateChanged
+
+    private void MoCr_PermSub_SliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_MoCr_PermSub_SliderStateChanged
+        // TODO add your handling code here:
+        int t = MoCr_PermSub_Slider.getValue();
+        localLogic.alterJTable(MoCr_TranspositionSub_MatrixKeyField, t);
+        MoCr_PermSub_ValueLabel.setText(Integer.toString(t));
+    }//GEN-LAST:event_MoCr_PermSub_SliderStateChanged
         
     private void changeTranspositionKeyPanel(int i) {
         javax.swing.JPanel l = null;
@@ -1845,6 +1897,11 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private javax.swing.JTextArea MoCr_OTPSub_Area;
     private javax.swing.JButton MoCr_OTPSub_Generator;
     private javax.swing.JLabel MoCr_OTPSub_LabelSchlüssel;
+    private javax.swing.JLabel MoCr_PermSub_Label;
+    private javax.swing.JLabel MoCr_PermSub_MaxVal;
+    private javax.swing.JLabel MoCr_PermSub_MinVal;
+    private javax.swing.JSlider MoCr_PermSub_Slider;
+    private javax.swing.JLabel MoCr_PermSub_ValueLabel;
     private javax.swing.JRadioButton MoCr_SpielsprachenMP_BiButton;
     private javax.swing.JRadioButton MoCr_SpielsprachenMP_BobButton;
     private javax.swing.ButtonGroup MoCr_SpielsprachenMP_Grouper;
