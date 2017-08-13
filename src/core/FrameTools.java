@@ -15,7 +15,6 @@ public class FrameTools {
     
     public Alphabet myAlphabet;
     public String currentAlphabet;
-    static Tools myTools = new Tools();
     
     public FrameTools() {
         myAlphabet = Alphabet.getInstance();

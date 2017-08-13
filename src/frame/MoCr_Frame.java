@@ -21,7 +21,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
     MoCr_Frame_exc localExc;
     Core localCore;                         //lokale Core-Instanz
     static CommTools localTools = new CommTools();
-    FrameTools localFraTools = new FrameTools();
+    static FrameTools localFraTools = new FrameTools();
     WindowLogic localLogic = new WindowLogic();
     HtmlReader localDidViewer;
     
@@ -1536,7 +1536,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
                                 MoCr_AffChiffSub_Function.setText(localFraTools.createFunction(k));   break;
                 }
                 out = localCore.verschlüsseln(c, in, k);    break;
-            case 1: out = localCore.spielsprache_verschlüsseln(c, in);
+            case 1: out = localCore.spielsprache_verschlüsseln(c, in); break;
         }
         MoCr_MPstaticIO_OutField.setText(out);        
     }//GEN-LAST:event_MoCr_MPButtonpanel_CrypterActionPerformed

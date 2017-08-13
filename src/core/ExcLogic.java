@@ -95,13 +95,13 @@ public class ExcLogic {
         switch(verschlüsselung)
         {
             case 0:
-                lösung =  core.caesarVerschlüsseln(text, schlüssel);
+                lösung =  core.verschlüsseln(0, text, schlüssel);
                 break;
             case 1:
-                lösung = core.multiplikativVerschlüsseln(text, schlüssel);
+                lösung = core.verschlüsseln(1, text, schlüssel);
                 break;
             case 2:
-                lösung = core.vigenereVerschlüsseln(text, schlüssel);
+                lösung = core.verschlüsseln(2, text, schlüssel);
         }
         
         return lösung;
