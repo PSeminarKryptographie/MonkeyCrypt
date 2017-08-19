@@ -15,27 +15,27 @@ public class Gartenzaun extends Chiffre{
 	public String encrypt(String text, String key) {
 		String verified = verify(key, "");
 		
-		if (verified == null){
-			int depth = Integer.valueOf(key);
-			if (depth > text.length()){
-				depth = text.length();
-			}
-			int counter = depth;
-			String[] newTextArray = new String[depth];
-			Arrays.fill(newTextArray, "");
-			for (int i = 0; i<text.length(); i++){
-				newTextArray[counter%depth] += text.charAt(i);
-				counter++;
-			}
-			StringBuilder builder = new StringBuilder();
-			for(String s : newTextArray) {
-				builder.append(s);
-			}	
-			return builder.toString();
-		}
-		else{
+		if (verified != null){
 			return verified;
 		}
+		int depth = Integer.valueOf(key);
+		if (depth > text.length()){
+			depth = text.length();
+		}
+		int counter = depth;
+		String[] newTextArray = new String[depth];
+		Arrays.fill(newTextArray, "");
+		for (int i = 0; i<text.length(); i++){
+			newTextArray[counter%depth] += text.charAt(i);
+			counter++;
+		}
+		StringBuilder builder = new StringBuilder();
+		for(String s : newTextArray) {
+			builder.append(s);
+		}	
+		return builder.toString();
+		
+			
 	}
 
 	@Override

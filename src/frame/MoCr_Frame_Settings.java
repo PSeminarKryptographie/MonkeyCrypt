@@ -26,6 +26,7 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
     public void renew() {
         this.setVisible(true);
         MoCr_SettingsFrame_AlphabetField.setText(localAlphabet.getAlphabet());
+        MoCr_SettingsFrame_ClearBox.setSelectedIndex(0);
     }
     
     public void changeResizability(boolean s) {
@@ -47,7 +48,6 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
         MoCr_SettingsFrame_Validation = new javax.swing.JButton();
         MoCr_SettingsFrame_ResetButton = new javax.swing.JButton();
         MoCr_SettingsFrame_ClearBox = new javax.swing.JComboBox<>();
-        MoCr_SettingsFrame_ClearButton = new javax.swing.JButton();
 
         setTitle("Einstellungen");
         setResizable(false);
@@ -59,11 +59,6 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
 
         MoCr_SettingsFrame_AlphabetField.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         MoCr_SettingsFrame_AlphabetField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        MoCr_SettingsFrame_AlphabetField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MoCr_SettingsFrame_AlphabetFieldActionPerformed(evt);
-            }
-        });
 
         MoCr_SettingsFrame_Checkbox.setFont(new java.awt.Font("Constantia", 0, 14)); // NOI18N
         MoCr_SettingsFrame_Checkbox.setText("Vergrößerbarkeit des Hauptfensters aktiviert");
@@ -84,14 +79,7 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
             }
         });
 
-        MoCr_SettingsFrame_ClearBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alle Felder leeren", "Lokale Felder leeren", "Alle Schlüsselfelder leeren", "Ein- und Ausgabefelder leeren" }));
-
-        MoCr_SettingsFrame_ClearButton.setText("Bestätigen");
-        MoCr_SettingsFrame_ClearButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MoCr_SettingsFrame_ClearButtonActionPerformed(evt);
-            }
-        });
+        MoCr_SettingsFrame_ClearBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kein Feld leeren", "Alle Felder leeren", "Lokale Felder leeren", "Alle Schlüsselfelder leeren", "Ein- und Ausgabefelder leeren" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -100,15 +88,12 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(MoCr_SettingsFrame_ClearBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(MoCr_SettingsFrame_ClearButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(MoCr_SettingsFrame_Checkbox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(MoCr_SettingsFrame_Heading1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(MoCr_SettingsFrame_AlphabetField)
                     .addComponent(MoCr_SettingsFrame_Validation, javax.swing.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
-                    .addComponent(MoCr_SettingsFrame_ResetButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(MoCr_SettingsFrame_ResetButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MoCr_SettingsFrame_ClearBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -123,10 +108,8 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(MoCr_SettingsFrame_Checkbox, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(MoCr_SettingsFrame_ClearBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MoCr_SettingsFrame_ClearButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(MoCr_SettingsFrame_ClearBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addComponent(MoCr_SettingsFrame_Validation)
                 .addContainerGap())
         );
@@ -139,33 +122,27 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
         changeResizability(MoCr_SettingsFrame_Checkbox.isSelected());
         localAlphabet.setAlphabet(MoCr_SettingsFrame_AlphabetField.getText());
         this.setVisible(false);
+        clearFrame(MoCr_SettingsFrame_ClearBox.getSelectedIndex());
     }//GEN-LAST:event_MoCr_SettingsFrame_ValidationActionPerformed
-
-    private void MoCr_SettingsFrame_AlphabetFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_SettingsFrame_AlphabetFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MoCr_SettingsFrame_AlphabetFieldActionPerformed
 
     private void MoCr_SettingsFrame_ResetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_SettingsFrame_ResetButtonActionPerformed
         // TODO add your handling code here:
         MoCr_SettingsFrame_AlphabetField.setText("abcdefghijklmnopqrstuvwxyz");
     }//GEN-LAST:event_MoCr_SettingsFrame_ResetButtonActionPerformed
-
-    private void MoCr_SettingsFrame_ClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_SettingsFrame_ClearButtonActionPerformed
-        // TODO add your handling code here:
-        int d = MoCr_SettingsFrame_ClearBox.getSelectedIndex();
-        switch(d) {
-            case 0: localFrame.clearAll(); break;
-            case 1: localFrame.clearLocal(); break;
-            case 2: localFrame.clearKeys(); break;
-            case 3: localFrame.clearIO(); break;
+    
+    public void clearFrame(int i) {
+        switch(i) {
+            case 0: break;
+            case 1: localFrame.clearAll(); break;
+            case 2: localFrame.clearLocal(); break;
+            case 3: localFrame.clearKeys(); break;
+            case 4: localFrame.clearIO(); break;
         }
-    }//GEN-LAST:event_MoCr_SettingsFrame_ClearButtonActionPerformed
-
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField MoCr_SettingsFrame_AlphabetField;
     private javax.swing.JCheckBox MoCr_SettingsFrame_Checkbox;
     private javax.swing.JComboBox<String> MoCr_SettingsFrame_ClearBox;
-    private javax.swing.JButton MoCr_SettingsFrame_ClearButton;
     private javax.swing.JLabel MoCr_SettingsFrame_Heading1;
     private javax.swing.JButton MoCr_SettingsFrame_ResetButton;
     private javax.swing.JButton MoCr_SettingsFrame_Validation;
