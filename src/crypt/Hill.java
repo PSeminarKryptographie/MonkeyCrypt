@@ -56,22 +56,18 @@ public class Hill extends Chiffre{
 		String verified = verify(key, currentAlphabet);
 		key = key.toLowerCase();
 		String shortText = Tools.onlyAlphabet(text, currentAlphabet);
-		if (verified == null){
-			int dimension = (int) Math.sqrt(key.length());
-
-			while (shortText.length()%(dimension) != 0){
-				shortText += currentAlphabet.charAt(0);
-			}
-			
-			int [][] keyMatrix = Tools.makeMatrix(key, dimension, dimension, currentAlphabet);			
-			String newText = algorithm(shortText, keyMatrix, currentAlphabet, dimension);
-
-			return newText;
-		}
-		else{
+		if (verified != null){
 			return verified;
 		}
+		int dimension = (int) Math.sqrt(key.length());
+		while (shortText.length()%(dimension) != 0){
+			shortText += currentAlphabet.charAt(0);
+		}
 		
+		int [][] keyMatrix = Tools.makeMatrix(key, dimension, dimension, currentAlphabet);			
+		String newText = algorithm(shortText, keyMatrix, currentAlphabet, dimension);
+		return newText;
+	
 		
 	}
 	
@@ -88,24 +84,22 @@ public class Hill extends Chiffre{
 		String verified = verify(key, currentAlphabet);
 		key = key.toLowerCase();
 		
-		if (verified == null){
-			int dimension = (int) Math.sqrt(key.length());
-			int count = 0;
-			while (text.length()%(dimension) != 0){
-				text += currentAlphabet.charAt(0);
-				count ++;
-			}
-			int [][] keyMatrix = Tools.makeMatrix(key, dimension, dimension, currentAlphabet);
-			int [][] invKeyMatrix = MatrixTools.inverse(keyMatrix, currentAlphabet);
-			
-			String newText = algorithm(text, invKeyMatrix, currentAlphabet, dimension);
-			
-			newText = newText.substring(0, newText.length()-count);
-			return newText;
-		}
-		else{
+		if (verified != null){
 			return verified;
 		}
+		int dimension = (int) Math.sqrt(key.length());
+		int count = 0;
+		while (text.length()%(dimension) != 0){
+			text += currentAlphabet.charAt(0);
+			count ++;
+		}
+		int [][] keyMatrix = Tools.makeMatrix(key, dimension, dimension, currentAlphabet);
+		int [][] invKeyMatrix = MatrixTools.inverse(keyMatrix, currentAlphabet);
+		
+		String newText = algorithm(text, invKeyMatrix, currentAlphabet, dimension);
+		
+		newText = newText.substring(0, newText.length()-count);
+		return newText;
 	}
 	
 	

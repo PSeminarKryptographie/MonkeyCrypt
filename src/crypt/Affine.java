@@ -33,13 +33,11 @@ public class Affine extends Chiffre{
 		key = key.toLowerCase();
 		currentAlphabet = myAlphabet.getAlphabet();
 		String verified = verify(key, currentAlphabet);
-		
-		if (verified == null){
-			return algorithmEncrypt(text, key);
-		}
-		else{
+		if (verified != null){
 			return verified;
 		}
+		return algorithmEncrypt(text, key);
+		
 	}
 
 	@Override
@@ -48,13 +46,12 @@ public class Affine extends Chiffre{
 		currentAlphabet = myAlphabet.getAlphabet();
 		String verified = verify(key, currentAlphabet);
 		
-		if (verified == null){	
-			return algorithmDecrypt(text, key);
-		}
-		else{
+		if (verified != null){
 			return verified;
 		}
-	}
+		return algorithmDecrypt(text, key);
+
+		}
 
 	@Override
 	protected String verify(String key, String alphabet) {
@@ -66,7 +63,7 @@ public class Affine extends Chiffre{
 		}
 		else if(!checkCoprimes(String.valueOf(key.charAt(0)), alphabet)){
 			List<Integer> coprimes = Tools.phi(currentAlphabet.length());
-			String cp = Tools.listtoString(coprimes, currentAlphabet);
+			String cp = Tools.list2String(coprimes, currentAlphabet, true);
 			return "Der angegebene Schlüssel a ist nicht co-prim zur Länge des Alphabets. Eine Entschlüsselung wird daher nicht möglich sein. Verwendbare Schlüssel für a sind: " + cp;
 		}
 		else{

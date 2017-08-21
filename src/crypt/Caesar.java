@@ -53,13 +53,12 @@ public class Caesar extends Chiffre
 		currentAlphabet = myAlphabet.getAlphabet();
 		String verified = verify(key, currentAlphabet);
 		
-		if (verified == null){
-			int keynum = Tools.string2int(key, currentAlphabet);
-			return algorithm(text, keynum, currentAlphabet);
-		}
-		else{
+		if (verified != null){
 			return verified;
 		}
+		int keynum = Tools.string2int(key, currentAlphabet);
+		return algorithm(text, keynum, currentAlphabet);
+		
 	}
 	
 	/**
@@ -75,14 +74,13 @@ public class Caesar extends Chiffre
 		currentAlphabet = myAlphabet.getAlphabet();	
 		String verified = verify(key, currentAlphabet);
 		
-		if (verified == null){
-			int keynum = Tools.string2int(key, currentAlphabet);
-			keynum = currentAlphabet.length()-keynum;
-			return algorithm(text, keynum, currentAlphabet);
-		}
-		else{
+		if (verified != null){
 			return verified;
-		}	
+		}
+		int keynum = Tools.string2int(key, currentAlphabet);
+		keynum = currentAlphabet.length()-keynum;
+		return algorithm(text, keynum, currentAlphabet);
+			
 	}
 	
 	@Override

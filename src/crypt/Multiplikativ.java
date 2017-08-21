@@ -66,15 +66,14 @@ public class Multiplikativ extends Chiffre{
 		currentAlphabet = myAlphabet.getAlphabet();
 		String verified = verify(key, currentAlphabet);
 		
-		if (verified == null){	
-			int keynum = Tools.string2int(key, currentAlphabet);
-			decrypt = false;
-			return algorithm(text, keynum, currentAlphabet);
-
-		}
-		else{
+		if (verified != null){
 			return verified;
-		}
+		}	
+		int keynum = Tools.string2int(key, currentAlphabet);
+		decrypt = false;
+		return algorithm(text, keynum, currentAlphabet);
+
+		
 		
 		
 		
@@ -93,14 +92,13 @@ public class Multiplikativ extends Chiffre{
 		currentAlphabet = myAlphabet.getAlphabet();
 		String verified = verify(key, currentAlphabet);
 		
-		if (verified == null){	
-			int keynum = Tools.string2int(key, currentAlphabet);
-			decrypt = true;
-			return algorithm(text, keynum, currentAlphabet);
-		}
-		else{
+		if (verified != null){
 			return verified;
 		}
+		int keynum = Tools.string2int(key, currentAlphabet);
+		decrypt = true;
+		return algorithm(text, keynum, currentAlphabet);
+		
 		
 		
 	}
@@ -118,7 +116,7 @@ public class Multiplikativ extends Chiffre{
 		}
 		else if(!checkCoprimes(key, alphabet)){
 			List<Integer> coprimes = Tools.phi(currentAlphabet.length());
-			String cp = Tools.listtoString(coprimes, currentAlphabet);
+			String cp = Tools.list2String(coprimes, currentAlphabet, true);
 			return "Der angegebene Schlüssel ist nicht co-prim zur Länge des Alphabets. Eine Entschlüsselung wird daher nicht möglich sein. Verwendbare Schlüssel sind: " + cp;
 		}
 		else{
