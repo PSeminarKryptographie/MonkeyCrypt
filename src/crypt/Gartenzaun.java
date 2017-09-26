@@ -11,7 +11,35 @@ import java.util.List;
  *
  */
 public class Gartenzaun extends Chiffre{
-	@Override
+	
+	private String makeString(String [][] array){
+		String newString = ""; 
+		for (int i = 0; i<array[0].length; i++){
+			for (int j = 0; j<array.length; j++){
+				String letter = array[j][i];
+				if (letter != null){
+					newString += letter;
+				}
+			}
+		}
+		return newString;
+	}
+	
+	private int getPosition(boolean even, int depth, int rail){
+		if ((rail == 0) || (rail == depth - 1)){
+	        return (depth - 1) * 2;
+		}
+
+	    if (even){
+	        return 2 * rail;
+	    }
+	    else{
+	    	return 2*(depth - 1 - rail);
+	    }
+	}
+	
+	
+	
 	public String encrypt(String text, String key) {
 		String verified = verify(key, "");
 		
@@ -60,7 +88,7 @@ public class Gartenzaun extends Chiffre{
 	@Override
 	public String decrypt(String text, String key) {
 		
-String verified = verify(key, "");
+		String verified = verify(key, "");
 		
 		if (verified != null){
 			return verified;
@@ -75,39 +103,36 @@ String verified = verify(key, "");
 			depth = text.length();
 		}
 		
-		int groupsize = 2*depth -2;
-		//System.out.println(groupsize);
-		int groupamount = ((text.length()/groupsize));
-		while(groupamount*groupsize < text.length()){
-			text += "a";
-			System.out.println(text);
-			groupamount = ((text.length()/groupsize));
-		}
+		String[][] array = new String[depth][text.length()];
+		//Arrays.fill(newTextArray, "");
+			int read = 0;
+		    for (int rail = 0; rail<text.length(); rail++){
+		        int pos = getPosition(true, depth, rail);
+		        boolean even = false;
+		        
+		        if (rail == 0){
+		            pos = 0;
+		        }
+		        else{
+		            pos = (int) pos / 2;
+		        }
+		        
+		        while (pos < text.length()){
+		            if (read == text.length()){
+		                break;
+		            }
+
+		            array[rail][pos] = String.valueOf(text.charAt(read));
+		            read = read + 1;
+
+		            pos = pos + getPosition(even, depth, rail);
+		            even =  ! even;
+		            }
+		    }
+		//System.out.println(Arrays.deepToString(array));
+		return makeString(array);
 		
 		
-		String[] newTextArray = new String[depth];
-		Arrays.fill(newTextArray, "");
-		for (int i = 0; i<groupamount; i++){
-			newTextArray[0] += String.valueOf(text.charAt(i));
-			System.out.println(String.valueOf(text.charAt(i)));
-		}
-		System.out.println("__");
-		int cellsize = groupamount * 2;
-		int cellamount = depth - 2;
-		for (int i = 0; i<cellamount; i++){
-			for (int j = 0; j<cellsize; j++){
-				newTextArray[0] += String.valueOf(text.charAt(cellsize*i+j+groupamount));
-				System.out.println(String.valueOf(text.charAt(cellsize*i+j+groupamount)));
-				//System.out.println(cellsize*i+j+groupamount);
-			}
-			System.out.println("__");
-		}
-		for (int i = text.length()-groupamount; i<text.length(); i++){
-			newTextArray[0] += String.valueOf(text.charAt(i));
-			System.out.println(String.valueOf(text.charAt(i)));
-		}
-		
-		return "Noch zu implementieren";
 	}
 
 	@Override

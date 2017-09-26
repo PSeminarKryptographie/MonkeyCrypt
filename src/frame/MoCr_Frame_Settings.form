@@ -27,18 +27,24 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="MoCr_SettingsFrame_Checkbox" max="32767" attributes="0"/>
                   <Component id="MoCr_SettingsFrame_Heading1" max="32767" attributes="0"/>
                   <Component id="MoCr_SettingsFrame_AlphabetField" max="32767" attributes="0"/>
-                  <Component id="MoCr_SettingsFrame_Validation" alignment="0" pref="430" max="32767" attributes="0"/>
                   <Component id="MoCr_SettingsFrame_ResetButton" alignment="0" max="32767" attributes="0"/>
-                  <Component id="MoCr_SettingsFrame_ClearBox" alignment="0" max="32767" attributes="0"/>
+                  <Component id="MoCr_SettingsFrame_Checkbox" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="MoCr_SettingsFrame_Colourbox" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="MoCr_SettingsFrame_ClearBox" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
+          <Component id="MoCr_SettingsFrame_Validation" alignment="0" pref="450" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -50,13 +56,17 @@
               <Component id="MoCr_SettingsFrame_AlphabetField" min="-2" pref="40" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="MoCr_SettingsFrame_ResetButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="MoCr_SettingsFrame_Checkbox" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="MoCr_SettingsFrame_Checkbox" min="-2" pref="45" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="MoCr_SettingsFrame_Colourbox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="MoCr_SettingsFrame_ClearBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="MoCr_SettingsFrame_ClearBox" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="9" max="32767" attributes="0"/>
               <Component id="MoCr_SettingsFrame_Validation" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -94,9 +104,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="&#xc4;nderungen speichern"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_SettingsFrame_ValidationActionPerformed"/>
-      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="MoCr_SettingsFrame_ResetButton">
       <Properties>
@@ -105,9 +115,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Standardalphabet wiederherstellen"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_SettingsFrame_ResetButtonActionPerformed"/>
-      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JComboBox" name="MoCr_SettingsFrame_ClearBox">
       <Properties>
@@ -124,6 +134,30 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="MoCr_SettingsFrame_Colourbox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Blau"/>
+            <StringItem index="1" value="Gr&#xfc;n"/>
+            <StringItem index="2" value="Gelb"/>
+            <StringItem index="3" value="Rosa"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Constantia" size="12" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Fensterfarbe"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

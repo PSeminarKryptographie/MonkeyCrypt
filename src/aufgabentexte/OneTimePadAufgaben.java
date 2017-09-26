@@ -9,35 +9,28 @@ package aufgabentexte;
  *
  * @author simon
  */
-public class CaesarAufgaben extends Aufgaben{
+public class OneTimePadAufgaben extends Aufgaben {
     
-    public CaesarAufgaben()
+    public OneTimePadAufgaben()
     {
-        super(4);
+        super(3);
         
         for(int i = 0; i < anweisungstext.length; i = i+1)
         {
             verschlüsselungstyp[i] = 1;
         }
         
-        //Aufgabe 1:
         anweisungstext[0] = "Hallo Welt";
-        schlüssel[0] = "b";
+        schlüssel[0] = "lflqpoqent";
         aufgabentyp[0] = 1;
         
-        //Aufgabe 2:
-        anweisungstext[1] = "Hier ist Aufgabe 3";
-        schlüssel[1] = "x";
+        anweisungstext[1] = "Das ist der entschlüsselte Text";
+        schlüssel[1] = "h";
         aufgabentyp[1] = 2;
         
-        //Aufgabe 3:
-        anweisungstext[2] = "Knacken macht Spaß";
-        schlüssel[2] = "s";
+        anweisungstext[2] = "Multiplikativ";
+        schlüssel[2] = "x";
         aufgabentyp[2] = 3;
-        
-        //Aufgabe 4:
-        anweisungstext[3] = "Vierte Aufgabe zum Test";
-        schlüssel[3] = "j";
-        aufgabentyp[3] = 2;
     }
+    
 }

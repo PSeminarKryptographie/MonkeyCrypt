@@ -3,15 +3,15 @@ package crypt;
 public class Trans_Test {
 
 	private static Alphabet myAlphabet;
-	public static Gartenzaun garten = new Gartenzaun();
+	public static Spaltentransposition st = new Spaltentransposition();
 	
-	public static void main(String [ ] args){	
+	public static void main(String [ ] args){
 		myAlphabet = Alphabet.getInstance();
 		myAlphabet.setAlphabet("abcdefghijklmnopqrstuvwxyz.,?");
-		String encrypted = garten.encrypt("abcdefghijklmnop", "3");
+		String encrypted = st.encrypt("abcdefghijklmnopqrstuvwxyz", "hallo");
 		System.out.println(encrypted);
-		String decrypted = garten.decrypt("abcdefghijklmno", "4");
-		System.out.println(decrypted);
+		//String decrypted = st.decrypt(encrypted, "5");
+		//System.out.println(decrypted)
 	}
 	
 

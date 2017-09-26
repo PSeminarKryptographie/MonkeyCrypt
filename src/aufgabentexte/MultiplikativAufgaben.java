@@ -15,6 +15,12 @@ public class MultiplikativAufgaben extends Aufgaben {
     {
         super(3);
         
+        for(int i = 0; i < anweisungstext.length; i = i+1)
+        {
+            verschlüsselungstyp[i] = 1;
+        }
+
+        
         anweisungstext[0] = "Hallo Welt";
         schlüssel[0] = "f";
         aufgabentyp[0] = 1;
