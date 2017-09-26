@@ -11,10 +11,14 @@ package aufgabentexte;
  */
 public class CaesarAufgaben extends Aufgaben{
     
-    
     public CaesarAufgaben()
     {
         super(4);
+        
+        for(int i = 0; i < anweisungstext.length; i = i+1)
+        {
+            verschlüsselungstyp[i] = 1;
+        }
         
         //Aufgabe 1:
         anweisungstext[0] = "Hallo Welt";

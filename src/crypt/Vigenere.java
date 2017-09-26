@@ -48,19 +48,14 @@ public class Vigenere extends Chiffre{
 		key = key.toLowerCase();
 		currentAlphabet = myAlphabet.getAlphabet();
 		String verified = verify(key, currentAlphabet);
-		if (text == null){
+		/*if (text == null){
 			return "text ist null";
-		}
-		if (verified == null){
-			key = key.toLowerCase();
-			return algorithm(text, key, currentAlphabet, true);
-		}
-		else{
+		}*/
+		if (verified != null){
 			return verified;
 		}
-			
-		
-		
+		key = key.toLowerCase();
+		return algorithm(text, key, currentAlphabet, true);	
 	}
 	
 	/**
@@ -76,12 +71,10 @@ public class Vigenere extends Chiffre{
 		key = key.toLowerCase();
 		currentAlphabet = myAlphabet.getAlphabet();
 		String verified = verify(key, currentAlphabet);
-		if (verified == null){
-			return algorithm(text, key, currentAlphabet, false);
-		}
-		else{
+		if (verified != null){
 			return verified;
 		}
+		return algorithm(text, key, currentAlphabet, false);
 		
 	}
 

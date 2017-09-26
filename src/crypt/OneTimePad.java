@@ -20,13 +20,12 @@ public class OneTimePad extends Chiffre {
 		length = Arrays.asList(text.length());
 		currentAlphabet = myAlphabet.getAlphabet();
 		String verified = verify(key, currentAlphabet);
-		if (verified == null){
-		
-			return v.encrypt(text, key);
-		}
-		else{
+		if (verified != null){
 			return verified;
 		}
+		
+		return v.encrypt(text, key);
+		
 		
 	}
 
@@ -35,13 +34,12 @@ public class OneTimePad extends Chiffre {
 		length = Arrays.asList(text.length());
 		currentAlphabet = myAlphabet.getAlphabet();
 		String verified = verify(key, currentAlphabet);
-		if (verified == null){
-			
-			return v.decrypt(text, key);
-		}
-		else{
+		if (verified != null){
 			return verified;
 		}
+			
+		return v.decrypt(text, key);
+		
 	}
 	
 

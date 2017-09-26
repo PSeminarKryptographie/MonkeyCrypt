@@ -87,9 +87,12 @@
         <Container class="javax.swing.JPanel" name="MoCr_MainPro_cardPanel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="ff" red="ff" type="rgb"/>
+              <Color blue="ff" green="99" red="99" type="rgb"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
               <CardConstraints cardName="card3"/>
@@ -101,15 +104,15 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="MoCr_MainPro_static_IOpanel" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="MoCr_MainPro_changeable" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="MoCr_MainPro_changeable" min="-2" pref="352" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="MoCr_MainPro_static_IOpanel" max="32767" attributes="0"/>
-                  <Component id="MoCr_MainPro_changeable" alignment="0" max="32767" attributes="0"/>
+                  <Component id="MoCr_MainPro_changeable" alignment="1" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -124,7 +127,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="MoCr_MPstaticIO_ScrollerOut" alignment="0" pref="225" max="32767" attributes="0"/>
+                              <Component id="MoCr_MPstaticIO_ScrollerOut" alignment="0" pref="393" max="32767" attributes="0"/>
                               <Component id="MoCr_MPstaticIO_OutHeading" alignment="0" max="32767" attributes="0"/>
                               <Component id="MoCr_MPstaticIO_ScrollerIn" alignment="0" max="32767" attributes="0"/>
                               <Component id="MoCr_MPstaticIO_InHeading" alignment="0" max="32767" attributes="0"/>
@@ -217,6 +220,9 @@
             <Container class="javax.swing.JPanel" name="MoCr_MainPro_changeable">
               <Properties>
                 <Property name="opaque" type="boolean" value="false"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[360, 508]"/>
+                </Property>
               </Properties>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
@@ -234,14 +240,18 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="MoCr_CaesarSub_Heading" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="MoCr_CaesarSub_LabelSchlüssel" min="-2" pref="210" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jButton2" min="-2" pref="153" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                              <Component id="jButton3" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="MoCr_CaesarSub_LabelSchlüssel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="MoCr_Caesar_EingabefeldSchlüssel" min="-2" pref="44" max="-2" attributes="0"/>
-                              <EmptySpace pref="256" max="32767" attributes="0"/>
                           </Group>
                           <Component id="MoCr_CaesarSub_DiscBack" alignment="0" max="32767" attributes="0"/>
+                          <Component id="MoCr_CaesarSub_Heading" alignment="0" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
@@ -249,13 +259,18 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="MoCr_CaesarSub_Heading" min="-2" pref="53" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="MoCr_CaesarSub_DiscBack" min="-2" pref="392" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="MoCr_CaesarSub_LabelSchlüssel" min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="MoCr_Caesar_EingabefeldSchlüssel" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="MoCr_CaesarSub_DiscBack" min="-2" pref="350" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="92" max="32767" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="MoCr_CaesarSub_LabelSchlüssel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="MoCr_Caesar_EingabefeldSchlüssel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="16" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -286,20 +301,45 @@
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_CaesarSub_DiscBack">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/img/graphics/Drehscheibe/Drehscheibe-Bild 2.png"/>
+                          <Image iconType="3" name="/img/graphics/Drehscheibe Einzelsequenzen/DS_a.png"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="jButton2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;---"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="jButton3">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="---&gt;"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="MoCr_MPSub_Multiplikativ">
                   <Properties>
                     <Property name="opaque" type="boolean" value="false"/>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[350, 508]"/>
+                    </Property>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -310,16 +350,18 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="MoCr_MultiplikativSub_Heading" pref="520" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="MoCr_MultiplikaitvSub_KeyPointer" pref="261" max="32767" attributes="0"/>
+                              <Component id="MoCr_MultiplikaitvSub_KeyPointer" max="32767" attributes="0"/>
                               <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                               <Component id="MoCr_MultiplikativSub_KeyField" min="-2" pref="57" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="192" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="MoCr_MultiplikaitvSub_KeyGenButton" max="32767" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="MoCr_MultiplikativSub_Heading" pref="350" max="32767" attributes="0"/>
+                                  <Component id="MoCr_MultiplikaitvSub_KeyGenButton" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -334,7 +376,7 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="MoCr_MultiplikaitvSub_KeyGenButton" min="-2" pref="50" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="415" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="344" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -373,6 +415,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Schl&#xfc;ssel generieren"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_MultiplikaitvSub_KeyGenButtonActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -389,21 +434,21 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="MoCr_VigenereSub_Heading" alignment="0" pref="520" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                       <Component id="MoCr_VigenereSub_LabelSchlüssel" min="-2" pref="104" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="MoCr_VigenereSub_EingabefeldSchlüssel" max="32767" attributes="0"/>
+                                      <Component id="MoCr_VigenereSub_EingabefeldSchlüssel" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
-                                      <Component id="MoCr_VigenereSub_Image" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="MoCr_VigenereSub_Heading" alignment="0" min="-2" pref="333" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="19" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="MoCr_VigenereSub_Image" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -411,14 +456,14 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="MoCr_VigenereSub_Heading" min="-2" pref="50" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="MoCr_VigenereSub_Image" pref="403" max="32767" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="MoCr_VigenereSub_Image" min="-2" pref="353" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="MoCr_VigenereSub_EingabefeldSchlüssel" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="MoCr_VigenereSub_LabelSchlüssel" alignment="3" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="75" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="40" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -472,14 +517,14 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="MoCr_EnigmaSub_Heading" alignment="0" pref="520" max="32767" attributes="0"/>
+                          <Component id="MoCr_EnigmaSub_Heading" alignment="0" pref="352" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="MoCr_EnigmaSub_Heading" min="-2" pref="53" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="526" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="455" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -509,16 +554,19 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="MoCr_MPSub_OTP_Testlabel" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="MoCr_MPSub_OTP_Testlabel" min="-2" pref="350" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="MoCr_OTPSub_LabelSchlüssel" min="-2" pref="79" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="MoCr_OTPSub_LabelSchlüssel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Component id="MoCr_OTPSub_Generator" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -529,12 +577,12 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="MoCr_MPSub_OTP_Testlabel" min="-2" pref="53" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="MoCr_OTPSub_LabelSchlüssel" pref="38" max="32767" attributes="0"/>
-                                  <Component id="MoCr_OTPSub_Generator" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="MoCr_OTPSub_LabelSchlüssel" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                  <Component id="MoCr_OTPSub_Generator" alignment="3" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" pref="362" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" pref="291" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -578,7 +626,7 @@
                     <Component class="javax.swing.JButton" name="MoCr_OTPSub_Generator">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                          <Font name="Constantia" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="SCHL&#xdc;SSEL GENERERIEREN"/>
                       </Properties>
@@ -601,18 +649,18 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="MoCr_TranspositionSub_Heading" alignment="0" max="32767" attributes="0"/>
+                          <Component id="MoCr_TranspositionSub_Heading" min="-2" pref="350" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="MoCr_TranspositionSub_KeyPanel" max="32767" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                  </Group>
                                   <Component id="MoCr_TranspositionSub_SpaltelButton" max="32767" attributes="0"/>
                                   <Component id="MoCr_TranspositionSub_GartenzaunButton" alignment="0" max="32767" attributes="0"/>
                                   <Component id="MoCr_TranspositionSub_AnagrammButton" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="MoCr_TranspositionSub_DoppelwürfelButton" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="MoCr_TranspositionSub_KeyPanel" pref="0" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="MoCr_TranspositionSub_DoppelwürfelButton" max="32767" attributes="0"/>
                                   <Component id="MoCr_TranspositionSub_PermutaButton" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -622,10 +670,10 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="MoCr_TranspositionSub_Heading" min="-2" pref="53" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="MoCr_TranspositionSub_SpaltelButton" min="-2" pref="24" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="MoCr_TranspositionSub_SpaltelButton" min="-2" pref="35" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="MoCr_TranspositionSub_GartenzaunButton" min="-2" max="-2" attributes="0"/>
+                              <Component id="MoCr_TranspositionSub_GartenzaunButton" min="-2" pref="27" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="MoCr_TranspositionSub_AnagrammButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -655,7 +703,7 @@
                           <ComponentRef name="MoCr_TranspositionMP_Grouper"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                          <Font name="Constantia" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Spaltentransposition"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -670,7 +718,7 @@
                           <ComponentRef name="MoCr_TranspositionMP_Grouper"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                          <Font name="Constantia" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Gartenzaun-Transposition"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -685,7 +733,7 @@
                           <ComponentRef name="MoCr_TranspositionMP_Grouper"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                          <Font name="Constantia" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Anagramm"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -700,7 +748,7 @@
                           <ComponentRef name="MoCr_TranspositionMP_Grouper"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                          <Font name="Constantia" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Doppelw&#xfc;rfel"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -715,7 +763,7 @@
                           <ComponentRef name="MoCr_TranspositionMP_Grouper"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                          <Font name="Constantia" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Transposition &#xfc;ber Permutationsmatrix"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -744,7 +792,7 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="MoCr_TranspositionKey_1KeyLabel" alignment="0" pref="500" max="32767" attributes="0"/>
+                                  <Component id="MoCr_TranspositionKey_1KeyLabel" alignment="0" pref="332" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="MoCr_TranspositionKey_1KeyField" max="32767" attributes="0"/>
@@ -758,7 +806,7 @@
                                       <Component id="MoCr_TranspositionKey_1KeyLabel" min="-2" pref="40" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="MoCr_TranspositionKey_1KeyField" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="234" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="179" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -799,9 +847,9 @@
                                   <Component id="MoCr_TranspositionSub_2KeyLabel" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="MoCr_TranspositionSub_2KeyField1" min="-2" pref="218" max="-2" attributes="0"/>
+                                      <Component id="MoCr_TranspositionSub_2KeyField1" min="-2" pref="150" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="MoCr_TranspositionSub_2KeyField2" pref="244" max="32767" attributes="0"/>
+                                      <Component id="MoCr_TranspositionSub_2KeyField2" min="-2" pref="142" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -815,7 +863,7 @@
                                           <Component id="MoCr_TranspositionSub_2KeyField1" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                                           <Component id="MoCr_TranspositionSub_2KeyField2" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="0" pref="227" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="172" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -845,6 +893,9 @@
                                 </Property>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_TranspositionSub_2KeyField2ActionPerformed"/>
+                              </Events>
                             </Component>
                           </SubComponents>
                         </Container>
@@ -861,7 +912,7 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="MoCr_TranspositionSub_MatrixKeyLabel" alignment="0" pref="500" max="32767" attributes="0"/>
+                                  <Component id="MoCr_TranspositionSub_MatrixKeyLabel" alignment="0" pref="332" max="32767" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -901,7 +952,7 @@
                                           <Component id="MoCr_PermSub_Label" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                                           <Component id="MoCr_PermSub_ValueLabel" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="83" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -998,12 +1049,12 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <EmptySpace min="0" pref="500" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="332" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <EmptySpace min="0" pref="330" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="275" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
@@ -1025,13 +1076,13 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="MoCr_CodierungenSub_Heading" alignment="0" pref="520" max="32767" attributes="0"/>
+                          <Component id="MoCr_CodierungenSub_Heading" alignment="0" pref="352" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="MoCr_CodierungenSub_BinärButton" alignment="0" max="32767" attributes="0"/>
                                   <Component id="MoCr_CodierungenSub_MorseButton" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="MoCr_ADFGX_Scroller" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="MoCr_ADFGX_Scroller" alignment="0" pref="342" max="32767" attributes="0"/>
                                   <Component id="MoCr_CodierungenSub_ASCIIButton" alignment="0" max="32767" attributes="0"/>
                                   <Component id="MoCr_CodierungenSub_AlphaButton" alignment="0" max="32767" attributes="0"/>
                                   <Component id="MoCr_CodierungenSub_ADFGXButton" alignment="0" max="32767" attributes="0"/>
@@ -1069,7 +1120,7 @@
                               <Component id="MoCr_ADFGX_Scroller" min="-2" pref="109" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="MoCr_CodierungenSub_ADFGXFiller" min="-2" pref="50" max="-2" attributes="0"/>
-                              <EmptySpace pref="117" max="32767" attributes="0"/>
+                              <EmptySpace pref="74" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1090,7 +1141,7 @@
                           <ComponentRef name="MoCr_CodierungenMp_Grouper"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                          <Font name="Constantia" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Morse"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1105,7 +1156,7 @@
                           <ComponentRef name="MoCr_CodierungenMp_Grouper"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                          <Font name="Constantia" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Hexadecimalcode (ASCII)"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1120,7 +1171,7 @@
                           <ComponentRef name="MoCr_CodierungenMp_Grouper"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                          <Font name="Constantia" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Bin&#xe4;rcode"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1135,7 +1186,7 @@
                           <ComponentRef name="MoCr_CodierungenMp_Grouper"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                          <Font name="Constantia" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Alphabetindex-Code"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1150,7 +1201,7 @@
                           <ComponentRef name="MoCr_CodierungenMp_Grouper"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                          <Font name="Constantia" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="ADFGX-Code"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1232,7 +1283,7 @@
                           <ComponentRef name="MoCr_CodierungenMp_Grouper"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                          <Font name="Constantia" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Hexadecimalcode -&gt; Bin&#xe4;rcode"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1247,7 +1298,7 @@
                           <ComponentRef name="MoCr_CodierungenMp_Grouper"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                          <Font name="Constantia" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Buchstabieralphabet (NATO)"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1282,7 +1333,7 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="MoCr_SpielsprachenSub_Heading" pref="520" max="32767" attributes="0"/>
+                          <Component id="MoCr_SpielsprachenSub_Heading" pref="352" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -1306,7 +1357,7 @@
                               <Component id="MoCr_SpielsprachenMP_BobButton" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="MoCr_SpielsprachenMP_LöffelButton" min="-2" pref="50" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="363" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="292" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1381,7 +1432,7 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="MoCr_HillSub_Heading" pref="520" max="32767" attributes="0"/>
+                          <Component id="MoCr_HillSub_Heading" pref="352" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -1425,7 +1476,7 @@
                                   <Component id="MoCr_HillSub_SizeLab" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                                   <Component id="MoCr_HillSub_Size" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="291" max="32767" attributes="0"/>
+                              <EmptySpace pref="220" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1542,13 +1593,13 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="MoCr_SteganoSub_Heading" alignment="0" pref="520" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
+                          <Component id="MoCr_SteganoSub_Heading" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="MoCr_SteganoSub_BaconButton" max="32767" attributes="0"/>
-                                  <Component id="MoCr_SteganoSub_PseudoButton" max="32767" attributes="0"/>
-                                  <Component id="MoCr_SteganoSub_BaconKeyHeading" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="MoCr_SteganoSub_PseudoButton" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="MoCr_SteganoSub_BaconKeyHeading" pref="332" max="32767" attributes="0"/>
                                   <Component id="jScrollPane4" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -1566,7 +1617,7 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="MoCr_SteganoSub_BaconKeyHeading" min="-2" pref="30" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jScrollPane4" pref="360" max="32767" attributes="0"/>
+                              <Component id="jScrollPane4" pref="289" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1576,7 +1627,7 @@
                     <Component class="javax.swing.JLabel" name="MoCr_SteganoSub_Heading">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="28" style="1"/>
+                          <Font name="Constantia" size="18" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Steganographische Verfahren"/>
@@ -1643,6 +1694,9 @@
                 <Container class="javax.swing.JPanel" name="MoCr_MPSub_AffineChiffre">
                   <Properties>
                     <Property name="opaque" type="boolean" value="false"/>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[350, 480]"/>
+                    </Property>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -1653,31 +1707,35 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="MoCr_AffiChiffSub_Heading" alignment="0" max="32767" attributes="0"/>
-                          <Component id="MoCr_AffChiffSub_KeyLabel" alignment="1" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="0" pref="147" max="32767" attributes="0"/>
-                                      <Component id="MoCr_AffChiffSub_mLabel" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="MoCr_AffiChiffSub_Heading" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="MoCr_AffChiffSub_KeyLabel" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="MoCr_AffChiffSub_mLabel" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="MoCr_AffChiffSub_Key1" min="-2" pref="80" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="MoCr_AffChiffSub_Functionpointer" min="-2" pref="148" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="MoCr_AffChiffSub_FuncPre" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="MoCr_AffChiffSub_Key1" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="MoCr_AffChiffSub_tLabel" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="MoCr_AffChiffSub_Functionpointer" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="MoCr_AffChiffSub_FuncPre" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="MoCr_AffChiffSub_tLabel" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="MoCr_AffChiffSub_Key2" min="-2" pref="80" max="-2" attributes="0"/>
+                                              <EmptySpace min="0" pref="37" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Component id="MoCr_AffChiffSub_Function" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="MoCr_AffChiffSub_Key2" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="MoCr_AffChiffSub_Function" min="-2" pref="191" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1696,8 +1754,10 @@
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="MoCr_AffChiffSub_Functionpointer" pref="50" max="32767" attributes="0"/>
-                                  <Component id="MoCr_AffChiffSub_FuncPre" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="MoCr_AffChiffSub_Functionpointer" alignment="3" pref="50" max="32767" attributes="0"/>
+                                      <Component id="MoCr_AffChiffSub_FuncPre" alignment="3" max="32767" attributes="0"/>
+                                  </Group>
                                   <Component id="MoCr_AffChiffSub_Function" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="273" max="-2" attributes="0"/>
@@ -1761,7 +1821,7 @@
                     <Component class="javax.swing.JLabel" name="MoCr_AffChiffSub_Functionpointer">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                          <Font name="Constantia" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Zuordnungsvorschrift"/>
@@ -1799,7 +1859,7 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="MoCr_KryptoanalyseSub_Heading" alignment="0" pref="520" max="32767" attributes="0"/>
+                          <Component id="MoCr_KryptoanalyseSub_Heading" alignment="0" pref="352" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="MoCr_KryptoanalyseSub_ComboBox" min="-2" max="-2" attributes="0"/>
@@ -1813,7 +1873,7 @@
                               <Component id="MoCr_KryptoanalyseSub_Heading" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="MoCr_KryptoanalyseSub_ComboBox" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="498" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="427" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1867,7 +1927,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="MoCr_Did_Scrollpanel" pref="550" max="32767" attributes="0"/>
+                      <Component id="MoCr_Did_Scrollpanel" pref="479" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="MoCr_Did_Returnerbutton" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -1914,13 +1974,12 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="MoCr_Gen_Sidelist" max="32767" attributes="0"/>
-                  <Component id="MoCr_MPButtonpanel_IOChange" alignment="0" max="32767" attributes="0"/>
+                  <Component id="MoCr_MPButtonpanel_IOChange" alignment="0" pref="135" max="32767" attributes="0"/>
                   <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="MoCr_MPButtonpanel_Crypter" min="-2" pref="64" max="-2" attributes="0"/>
+                      <Component id="MoCr_EncryptButton" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="MoCr_MPButtonpanel_Decrypter" min="-2" pref="65" max="-2" attributes="0"/>
+                      <Component id="MoCr_DecryptButton" min="-2" pref="63" max="-2" attributes="0"/>
                   </Group>
                   <Component id="MoCr_MPButtonpanel_LearnButton" max="32767" attributes="0"/>
                   <Component id="MoCr_MPButtonpanel_ExerciseButton" alignment="0" max="32767" attributes="0"/>
@@ -1932,8 +1991,8 @@
                       <Component id="MoCr_Gen_Sidelist" min="-2" pref="252" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="MoCr_MPButtonpanel_Decrypter" max="32767" attributes="0"/>
-                          <Component id="MoCr_MPButtonpanel_Crypter" max="32767" attributes="0"/>
+                          <Component id="MoCr_EncryptButton" pref="113" max="32767" attributes="0"/>
+                          <Component id="MoCr_DecryptButton" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="MoCr_MPButtonpanel_LearnButton" min="-2" max="-2" attributes="0"/>
@@ -1943,7 +2002,7 @@
                       <Component id="MoCr_MPButtonpanel_IOChange" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="86" max="32767" attributes="0"/>
+                      <EmptySpace pref="15" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1990,38 +2049,6 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="MoCr_MPButtonpanel_Crypter">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Constantia" size="12" style="0"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/img/graphics/Angepasstes geschlossenes Schloss.png"/>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_MPButtonpanel_CrypterActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="MoCr_MPButtonpanel_Decrypter">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Constantia" size="12" style="0"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/img/graphics/Angepasstes geschlossenes Schloss 2.png"/>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_MPButtonpanel_DecrypterActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JButton" name="MoCr_MPButtonpanel_LearnButton">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -2063,6 +2090,26 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JLabel" name="MoCr_EncryptButton">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/img/graphics/Angepasstes geschlossenes Schloss.png"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MoCr_EncryptButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="MoCr_DecryptButton">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/img/graphics/Angepasstes geschlossenes Schloss 2.png"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MoCr_DecryptButtonMouseClicked"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="MoCr_GenDyn_DidListPanel">
@@ -2083,7 +2130,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="MoCr_Gen_DidList" alignment="0" pref="579" max="32767" attributes="0"/>
+                  <Component id="MoCr_Gen_DidList" alignment="0" pref="508" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>

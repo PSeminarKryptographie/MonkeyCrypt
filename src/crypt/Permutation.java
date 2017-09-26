@@ -32,25 +32,22 @@ public class Permutation extends Chiffre{
 	@Override
 	public String encrypt(String text, String key) {
 		String verified = verify(key, "01");
-		if (verified == null){
-			String stringKey = binary2String(key);
-			return h.encrypt(text, stringKey);
-		}
-		else{
+		if (verified != null){
 			return verified;
 		}
+		String stringKey = binary2String(key);
+		return h.encrypt(text, stringKey);
+		
 	}
 
 	@Override
 	public String decrypt(String text, String key) {
 		String verified = verify(key, "01");
-		if (verified == null){
-			String stringKey = binary2String(key);
-			return h.decrypt(text, stringKey);
-		}
-		else{
+		if (verified != null){
 			return verified;
 		}
+		String stringKey = binary2String(key);
+		return h.decrypt(text, stringKey);
 	}
 
 	@Override

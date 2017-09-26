@@ -7,6 +7,7 @@ package core;
 import crypt.Tools;
 import crypt.Alphabet;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.ImageIcon;
 /**
  *
  * @author Jonas
@@ -15,7 +16,6 @@ public class FrameTools {
     
     public Alphabet myAlphabet;
     public String currentAlphabet;
-    static Tools myTools = new Tools();
     
     public FrameTools() {
         myAlphabet = Alphabet.getInstance();

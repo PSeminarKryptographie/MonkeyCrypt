@@ -1,5 +1,3 @@
 Hill-Chiffre
 
-viele Zeilen
-
-und wieder eine längere Zeile die evtl. auch einen schönen wrap braucht. So, das sollte jetzt lang genug sein.
+Die Hill-Chiffre benötigt eine Matrix, welche vollständig mit jeweils einem Zeichen deines Alphabets ausgefüllt ist.

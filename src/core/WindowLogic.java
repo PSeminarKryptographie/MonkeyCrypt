@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package core;
-import javax.swing.table.*;
+
+import crypt.Tools;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -16,14 +18,14 @@ public class WindowLogic {
     int chiffrestate;
     int encryptionType;
     boolean ismainmode;
-    private static CommTools tools = new CommTools();
-    
-    
+    int caesardiscmode;
+       
     public WindowLogic() {
         state = 0;
         chiffrestate = 0;
         encryptionType = 0;
-        ismainmode = true;        
+        ismainmode = true;
+        caesardiscmode = 0;
     }
     
     public void setIdentificationPair(int c, int e) {
@@ -53,5 +55,36 @@ public class WindowLogic {
     
     public int getState() {
         return state;
+    }
+    
+    public void setCaesardiscmode(int n) {
+        caesardiscmode = n;
+    }
+    
+    public int getCaesardiscmode() {
+        return caesardiscmode;
+    }
+    
+    public void alterDiscMode(boolean directedLeft) {
+        if(directedLeft == true) {
+            if(caesardiscmode < 25) {
+                caesardiscmode++;
+            } else {caesardiscmode = 0;}
+        }
+        else {
+            if(caesardiscmode > 0) {
+                caesardiscmode--;
+            } else {caesardiscmode = 25;}
+        }
+    }
+    
+    public ImageIcon alterDisc(boolean directedLeft) {
+        String nextChar = Tools.int2string(caesardiscmode, "abcdefghijklmnopqrstuvwxyz");
+        String path = "/img/graphics/Drehscheibe Einzelsequenzen/DS_" + nextChar + ".png";
+        return new javax.swing.ImageIcon(getClass().getResource(path));
+    }
+    
+    public String DiscModetoString() {
+        return Tools.int2string(caesardiscmode, "abcdefghijklmnopqrstuvwxyz");
     }
 }

@@ -16,6 +16,11 @@ public class VigenereAufgaben extends Aufgaben {
     {
         super(2);
         
+        for(int i = 0; i < anweisungstext.length; i = i+1)
+        {
+            verschlüsselungstyp[i] = 1;
+        }
+        
         anweisungstext[0] = "Hallo Welt";
         schlüssel[0] = "abc";
         aufgabentyp[0] = 1;

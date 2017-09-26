@@ -1,0 +1,36 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package aufgabentexte;
+
+/**
+ *
+ * @author simon
+ */
+public class OneTimePadAufgaben extends Aufgaben {
+    
+    public OneTimePadAufgaben()
+    {
+        super(3);
+        
+        for(int i = 0; i < anweisungstext.length; i = i+1)
+        {
+            verschlüsselungstyp[i] = 1;
+        }
+        
+        anweisungstext[0] = "Hallo Welt";
+        schlüssel[0] = "lflqpoqent";
+        aufgabentyp[0] = 1;
+        
+        anweisungstext[1] = "Das ist der entschlüsselte Text";
+        schlüssel[1] = "h";
+        aufgabentyp[1] = 2;
+        
+        anweisungstext[2] = "Multiplikativ";
+        schlüssel[2] = "x";
+        aufgabentyp[2] = 3;
+    }
+    
+}

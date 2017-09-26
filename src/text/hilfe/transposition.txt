@@ -10,4 +10,4 @@ Ein Anagramm wird durch die Durchmischung von Buchstaben erreicht. Es benötigt 
 
 Der Doppelwürfel benötigt zwei Schlüsselwörter, mit denen doppelt die Spaltentransposition durchgeführt wird.
 
-Die Transposition mittels Permutationsmatrix ...
+Bei der Transposition durch eine Permutationsmatrix darf in jeder Zeile und Spalte nur eine einzige 1 stehen. Den Rest musst du mit 0 ausfüllen.

@@ -47,6 +47,18 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
             case 2:
                 MoCr_exc_überschrift.add(MoCr_exc_überschrift_Vigenere);
                 break;
+            case 4:
+                MoCr_exc_überschrift.add(MoCr_exc_überschrift_OneTimePad);
+                break;
+            case 5:
+                MoCr_exc_überschrift.add(MoCr_exc_überschrift_Transpositionen);
+                break;
+            case 6:
+                MoCr_exc_überschrift.add(MoCr_exc_überschrift_Codierungen);
+                break;
+            case 7:
+                MoCr_exc_überschrift.add(MoCr_exc_überschrift_Spielsprachen);
+                break;
             default:
                 MoCr_exc_überschrift.add(MoCr_exc_überschrift_Caesar);
                 excLogic.VerschlüsselungSetzen(0);
@@ -68,18 +80,150 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
         if(excLogic.aufgabentypGeben() == 1) 
         {
             MoCr_exc_Caesar_anweisung.setText("Verschlüssele folgenden Text:");
+            if(excLogic.verschlüsselungsNummerGeben() != 0)
+            {
+                switch(excLogic.verschlüsselungGeben())
+                {
+                    case 5:
+                        switch(excLogic.verschlüsselungsNummerGeben())
+                        {
+                            case 1:
+                                 MoCr_exc_Caesar_anweisung.setText("Verschlüssele folgenden Text in Spaltentransposition");
+                                 break;
+                            case 2:
+                                 MoCr_exc_Caesar_anweisung.setText("Verschlüssele folgenden Text in Gartenzaun-Transposition");
+                                 break;
+                        }
+                        break;
+                    case 6:
+                        switch(excLogic.verschlüsselungsNummerGeben())
+                        {
+                            case 1:
+                                MoCr_exc_Caesar_anweisung.setText("Verschlüssele folgenden Text in Morse");
+                                break;
+                            case 2:
+                                MoCr_exc_Caesar_anweisung.setText("Verschlüssele folgenden Text in Ascii");
+                               break;
+                            case 3:
+                                MoCr_exc_Caesar_anweisung.setText("Verschlüssele folgenden Text in Binärcode");
+                                break;
+                            case 4:
+                                MoCr_exc_Caesar_anweisung.setText("Verschlüssele folgenden Text in Hexadezimalcode");
+                                break;
+                            case 5:
+                                MoCr_exc_Caesar_anweisung.setText("Verschlüssele folgenden Text in Alphabetindex-Code");
+                                break;
+                            case 6:
+                                MoCr_exc_Caesar_anweisung.setText("Verschlüssele folgenden Text im Bustabieralphabet");
+                                break;
+                        }
+                        break; 
+                    case 7:
+                        switch(excLogic.verschlüsselungsNummerGeben())
+                        {
+                            case 1:
+                                MoCr_exc_Caesar_anweisung.setText("Verschlüssele folgenden Text in Bisprache");
+                                break;
+                            case 2:
+                                MoCr_exc_Caesar_anweisung.setText("Verschlüssele folgenden Text in Bobsprache");
+                                break;
+                            case 3:
+                                MoCr_exc_Caesar_anweisung.setText("Verschlüssele folgenden Text in Löffelsprache");
+                                break;
+                        }
+                        break;
+                }
+            }
             MoCr_exc_Caesar_aufgabentext.setText(excLogic.anweisungstextGeben());
-            MoCr_exc_Caesar_aufgabentext.append("\n" + "\n" + "Schlüssel: " + excLogic.schlüsselGeben());
+            if(excLogic.verschlüsselungstypGeben() == 1)
+            {
+                MoCr_exc_Caesar_aufgabentext.append("\n" + "\n" + "Schlüssel: " + excLogic.schlüsselGeben());
+            }
         }
         else if(excLogic.aufgabentypGeben() == 2)
         {
             MoCr_exc_Caesar_anweisung.setText("Entschlüssele folgenden Text:");
+            
+            if(excLogic.verschlüsselungsNummerGeben() != 0)
+            {
+                switch(excLogic.verschlüsselungGeben())
+                {
+                    case 5:
+                        switch(excLogic.verschlüsselungsNummerGeben())
+                        {
+                            case 1:
+                                 MoCr_exc_Caesar_anweisung.setText("Entschlüssele folgenden Text in Spaltentransposition");
+                                 break;
+                            case 2:
+                                 MoCr_exc_Caesar_anweisung.setText("Entschlüssele folgenden Text in Gartenzaun-Transposition");
+                                 break;
+                        }
+                        break;
+                    case 6:
+                        switch(excLogic.verschlüsselungsNummerGeben())
+                        {
+                            case 1:
+                                MoCr_exc_Caesar_anweisung.setText("Entschlüssele folgenden MorseCode");
+                                break;
+                            case 2:
+                                MoCr_exc_Caesar_anweisung.setText("Entschlüssele folgenden Text in Ascii");
+                               break;
+                            case 3:
+                                MoCr_exc_Caesar_anweisung.setText("Entschlüsselde folgenden Text in Binärcode");
+                                break;
+                            case 4:
+                                MoCr_exc_Caesar_anweisung.setText("Entschlüssele folgenden Text in Hexadezimalcode");
+                                break;
+                            case 5:
+                                MoCr_exc_Caesar_anweisung.setText("Entschlüssele folgenden Text in Alphabetindex-Code");
+                                break;
+                            case 6:
+                                MoCr_exc_Caesar_anweisung.setText("Entschlüssele folgenden Text im Bustabieralphabet");
+                                break;
+                        }
+                        break;
+                    case 7:
+                        switch(excLogic.verschlüsselungsNummerGeben())
+                        {
+                            case 1:
+                                MoCr_exc_Caesar_anweisung.setText("Entschlüssele folgenden Text in Bisprache");
+                                break;
+                            case 2:
+                                MoCr_exc_Caesar_anweisung.setText("Entschlüssele folgenden Text in Bobsprache");
+                                break;
+                            case 3:
+                                MoCr_exc_Caesar_anweisung.setText("Entschlüssele folgenden Text in Löffelsprache");
+                                break;
+                        }
+                        break;
+                }
+            }
             MoCr_exc_Caesar_aufgabentext.setText(excLogic.LösungGeben());
-            MoCr_exc_Caesar_aufgabentext.append("\n" + "\n" + "Schlüssel: " + excLogic.schlüsselGeben());
+            if(excLogic.verschlüsselungstypGeben() == 1)
+            {
+                MoCr_exc_Caesar_aufgabentext.append("\n" + "\n" + "Schlüssel: " + excLogic.schlüsselGeben());
+            }
         }
         else if(excLogic.aufgabentypGeben() == 3)
         {
             MoCr_exc_Caesar_anweisung.setText("Finde den Schlüssel");
+            if(excLogic.verschlüsselungsNummerGeben() != 0)
+            {
+                switch(excLogic.verschlüsselungGeben())
+                {
+                    case 5:
+                        switch(excLogic.verschlüsselungsNummerGeben())
+                        {
+                            case 1:
+                                 MoCr_exc_Caesar_anweisung.setText("Finde den Schlüssel der Spaltentransposition");
+                                 break;
+                            case 2:
+                                 MoCr_exc_Caesar_anweisung.setText("Finde den Schlüssel der Gartenzaun-Transposition");
+                                 break;
+                        }
+                        break;
+                }
+            }
             MoCr_exc_Caesar_aufgabentext.setText("Text: " + excLogic.anweisungstextGeben());
             MoCr_exc_Caesar_aufgabentext.append("\n" + "\n" + "Verschlüsselter Text:  " + excLogic.LösungGeben());
         }
@@ -123,6 +267,14 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
         MoCr_exc_Multiplikativ_überschriftenfenster = new javax.swing.JLabel();
         MoCr_exc_überschrift_Vigenere = new javax.swing.JPanel();
         MoCr_exc_Vigenere_überschriftenfenster = new javax.swing.JLabel();
+        MoCr_exc_überschrift_OneTimePad = new javax.swing.JPanel();
+        MoCr_exc_OneTimePad_überschriftenfenster = new javax.swing.JLabel();
+        MoCr_exc_überschrift_Spielsprachen = new javax.swing.JPanel();
+        MoCr_exc_Spielsprachen_überschriftenfenster = new javax.swing.JLabel();
+        MoCr_exc_überschrift_Codierungen = new javax.swing.JPanel();
+        MoCr_exc_Codierungen_überschriftenfenster = new javax.swing.JLabel();
+        MoCr_exc_überschrift_Transpositionen = new javax.swing.JPanel();
+        MoCr_exc_Transpositionen_überschriftenfenster = new javax.swing.JLabel();
 
         setResizable(false);
         setType(java.awt.Window.Type.UTILITY);
@@ -159,10 +311,8 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
                 .addComponent(MoCr_Caesar_AufgabeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(MoCr_exc_Caesar_AufgabeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MoCr_exc_Caesar_AufgabeLayout.createSequentialGroup()
-                        .addComponent(MoCr_exc_Caesar_anweisung, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane4)))
+                    .addComponent(jScrollPane4)
+                    .addComponent(MoCr_exc_Caesar_anweisung)))
         );
         MoCr_exc_Caesar_AufgabeLayout.setVerticalGroup(
             MoCr_exc_Caesar_AufgabeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -344,6 +494,94 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
 
         MoCr_exc_überschrift.add(MoCr_exc_überschrift_Vigenere, "card4");
 
+        MoCr_exc_OneTimePad_überschriftenfenster.setFont(new java.awt.Font("Constantia", 1, 24)); // NOI18N
+        MoCr_exc_OneTimePad_überschriftenfenster.setText("Übungsaufgaben zu One Time Pad:");
+
+        javax.swing.GroupLayout MoCr_exc_überschrift_OneTimePadLayout = new javax.swing.GroupLayout(MoCr_exc_überschrift_OneTimePad);
+        MoCr_exc_überschrift_OneTimePad.setLayout(MoCr_exc_überschrift_OneTimePadLayout);
+        MoCr_exc_überschrift_OneTimePadLayout.setHorizontalGroup(
+            MoCr_exc_überschrift_OneTimePadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MoCr_exc_überschrift_OneTimePadLayout.createSequentialGroup()
+                .addContainerGap(146, Short.MAX_VALUE)
+                .addComponent(MoCr_exc_OneTimePad_überschriftenfenster, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(143, 143, 143))
+        );
+        MoCr_exc_überschrift_OneTimePadLayout.setVerticalGroup(
+            MoCr_exc_überschrift_OneTimePadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MoCr_exc_überschrift_OneTimePadLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(MoCr_exc_OneTimePad_überschriftenfenster, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        MoCr_exc_überschrift.add(MoCr_exc_überschrift_OneTimePad, "card5");
+
+        MoCr_exc_Spielsprachen_überschriftenfenster.setFont(new java.awt.Font("Constantia", 1, 24)); // NOI18N
+        MoCr_exc_Spielsprachen_überschriftenfenster.setText("Übungsaufgaben zu Spielsprachen");
+
+        javax.swing.GroupLayout MoCr_exc_überschrift_SpielsprachenLayout = new javax.swing.GroupLayout(MoCr_exc_überschrift_Spielsprachen);
+        MoCr_exc_überschrift_Spielsprachen.setLayout(MoCr_exc_überschrift_SpielsprachenLayout);
+        MoCr_exc_überschrift_SpielsprachenLayout.setHorizontalGroup(
+            MoCr_exc_überschrift_SpielsprachenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MoCr_exc_überschrift_SpielsprachenLayout.createSequentialGroup()
+                .addContainerGap(148, Short.MAX_VALUE)
+                .addComponent(MoCr_exc_Spielsprachen_überschriftenfenster, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(142, 142, 142))
+        );
+        MoCr_exc_überschrift_SpielsprachenLayout.setVerticalGroup(
+            MoCr_exc_überschrift_SpielsprachenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MoCr_exc_überschrift_SpielsprachenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(MoCr_exc_Spielsprachen_überschriftenfenster, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        MoCr_exc_überschrift.add(MoCr_exc_überschrift_Spielsprachen, "card6");
+
+        MoCr_exc_Codierungen_überschriftenfenster.setFont(new java.awt.Font("Constantia", 1, 24)); // NOI18N
+        MoCr_exc_Codierungen_überschriftenfenster.setText("Übungsafugaben zu Codierungen");
+
+        javax.swing.GroupLayout MoCr_exc_überschrift_CodierungenLayout = new javax.swing.GroupLayout(MoCr_exc_überschrift_Codierungen);
+        MoCr_exc_überschrift_Codierungen.setLayout(MoCr_exc_überschrift_CodierungenLayout);
+        MoCr_exc_überschrift_CodierungenLayout.setHorizontalGroup(
+            MoCr_exc_überschrift_CodierungenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MoCr_exc_überschrift_CodierungenLayout.createSequentialGroup()
+                .addContainerGap(153, Short.MAX_VALUE)
+                .addComponent(MoCr_exc_Codierungen_überschriftenfenster, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(150, 150, 150))
+        );
+        MoCr_exc_überschrift_CodierungenLayout.setVerticalGroup(
+            MoCr_exc_überschrift_CodierungenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MoCr_exc_überschrift_CodierungenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(MoCr_exc_Codierungen_überschriftenfenster, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        MoCr_exc_überschrift.add(MoCr_exc_überschrift_Codierungen, "card7");
+
+        MoCr_exc_Transpositionen_überschriftenfenster.setFont(new java.awt.Font("Constantia", 1, 24)); // NOI18N
+        MoCr_exc_Transpositionen_überschriftenfenster.setText("Übungsaufgaben zu Transpositionen");
+
+        javax.swing.GroupLayout MoCr_exc_überschrift_TranspositionenLayout = new javax.swing.GroupLayout(MoCr_exc_überschrift_Transpositionen);
+        MoCr_exc_überschrift_Transpositionen.setLayout(MoCr_exc_überschrift_TranspositionenLayout);
+        MoCr_exc_überschrift_TranspositionenLayout.setHorizontalGroup(
+            MoCr_exc_überschrift_TranspositionenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MoCr_exc_überschrift_TranspositionenLayout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(MoCr_exc_Transpositionen_überschriftenfenster, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(136, Short.MAX_VALUE))
+        );
+        MoCr_exc_überschrift_TranspositionenLayout.setVerticalGroup(
+            MoCr_exc_überschrift_TranspositionenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MoCr_exc_überschrift_TranspositionenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(MoCr_exc_Transpositionen_überschriftenfenster, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        MoCr_exc_überschrift.add(MoCr_exc_überschrift_Transpositionen, "card8");
+
         javax.swing.GroupLayout MoCr_exc_CaesarLayout = new javax.swing.GroupLayout(MoCr_exc_Caesar);
         MoCr_exc_Caesar.setLayout(MoCr_exc_CaesarLayout);
         MoCr_exc_CaesarLayout.setHorizontalGroup(
@@ -364,12 +602,11 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
                 .addGroup(MoCr_exc_CaesarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MoCr_exc_CaesarLayout.createSequentialGroup()
                         .addGap(66, 66, 66)
-                        .addComponent(MoCr_exc_Caesar_Weiterschaltknopf, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(84, 84, 84))
+                        .addComponent(MoCr_exc_Caesar_Weiterschaltknopf, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MoCr_exc_CaesarLayout.createSequentialGroup()
                         .addGap(4, 4, 4)
-                        .addComponent(MoCr_exc_Caesar_Aufgabe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)))
+                        .addComponent(MoCr_exc_Caesar_Aufgabe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(6, 6, 6)
                 .addComponent(MoCr_exc_Caesar_Eingabe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MoCr_exc_Caesar_Loesung, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -380,9 +617,8 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(MoCr_exc_Caesar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 11, Short.MAX_VALUE)
+                .addComponent(MoCr_exc_Caesar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -480,11 +716,19 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
     private javax.swing.JTextArea MoCr_exc_Caesar_aufgabentext;
     private javax.swing.JTextArea MoCr_exc_Caesar_eingabefeld;
     private javax.swing.JLabel MoCr_exc_Caesar_überschriftfenster;
+    private javax.swing.JLabel MoCr_exc_Codierungen_überschriftenfenster;
     private javax.swing.JLabel MoCr_exc_Multiplikativ_überschriftenfenster;
+    private javax.swing.JLabel MoCr_exc_OneTimePad_überschriftenfenster;
+    private javax.swing.JLabel MoCr_exc_Spielsprachen_überschriftenfenster;
+    private javax.swing.JLabel MoCr_exc_Transpositionen_überschriftenfenster;
     private javax.swing.JLabel MoCr_exc_Vigenere_überschriftenfenster;
     private javax.swing.JPanel MoCr_exc_überschrift;
     private javax.swing.JPanel MoCr_exc_überschrift_Caesar;
+    private javax.swing.JPanel MoCr_exc_überschrift_Codierungen;
     private javax.swing.JPanel MoCr_exc_überschrift_Multiplikativ;
+    private javax.swing.JPanel MoCr_exc_überschrift_OneTimePad;
+    private javax.swing.JPanel MoCr_exc_überschrift_Spielsprachen;
+    private javax.swing.JPanel MoCr_exc_überschrift_Transpositionen;
     private javax.swing.JPanel MoCr_exc_überschrift_Vigenere;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

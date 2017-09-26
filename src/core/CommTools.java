@@ -35,7 +35,7 @@ public class CommTools {
 	public String generateCoprimeKey(int laenge){
 		currentAlphabet = myAlphabet.getAlphabet();
 		List<Integer> coprimes = Tools.phi(currentAlphabet.length());
-		String pool = Tools.listtoString(coprimes, currentAlphabet);
+		String pool = Tools.list2String(coprimes, currentAlphabet, false);
 		return Tools.generieren(laenge, pool);
 	}
 }

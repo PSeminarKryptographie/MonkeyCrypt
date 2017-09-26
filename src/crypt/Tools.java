@@ -62,7 +62,7 @@ public class Tools {
 	 * @param alpha
 	 * @return text
 	 */
-	public static String listtoString(List<Integer> list, String alpha){
+	public static String list2String(List<Integer> list, String alpha, boolean addCommas){
 		String text = "";
 		for (int i = 0; i<list.size(); i++)
 		{
@@ -70,13 +70,16 @@ public class Tools {
 			{
 				if(n==list.get(i)){
 					text += alpha.charAt(n);
-					text += ", ";
+					if (addCommas){
+						text += ", ";
+					}
 				}
 			}
 		}
 		text = text.substring(0,text.length()-2);
 		return text;
 	}
+	
 	
 	/**
 	 * 

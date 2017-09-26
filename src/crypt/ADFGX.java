@@ -98,25 +98,22 @@ public class ADFGX extends Chiffre{
 		key = key.toLowerCase();
 		String verified = verify(key, "");
 		
-		if (verified == null){	
-			return algorithmEncrypt(text, key);
-		}
-		else{
+		if (verified != null){
 			return verified;
 		}
+		return algorithmEncrypt(text, key);
+		
 	}
 
 	@Override
 	public String decrypt(String text, String key) {
 		key = key.toLowerCase();
 		String verified = verify(key, "");
-		
-		if (verified == null){	
-			return algorithmDecrypt(text, key);
-		}
-		else{
+		if (verified != null){
 			return verified;
 		}
+		return algorithmDecrypt(text, key);
+		
 	}
 
 	@Override
