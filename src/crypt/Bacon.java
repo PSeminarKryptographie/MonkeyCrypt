@@ -1,17 +1,11 @@
 package crypt;
 
-class Bacon extends Chiffre
+public class Bacon extends Chiffre
 {
     String Alphabet = "abcdefghijklmnopqrstuvwxyz";
     String[] Code = { "aaaaa", "aaaab", "aaaba", "aaabb", "aabaa", "aabab", "aabba", "aabbb", "abaaa", "abaaa", "abaab", "ababa", "ababb", "abbaa", "abbab", "abbba", "abbbb", "baaaa", "baaab", "baaba", "baabb", "baabb", "babaa", "babab", "babba", "babbb"}; 
     String StandardTarntext = "Du hast keinen oder einen ungültigen Tarntext eingegeben. Du kannst entweder diesen automatisch erstellten Text weiter verwenden oder es noch einmal mit einem eigenen versuchen. Dies ist eine fast unauffällige Textpassage. Sie dient nur dazu Informationen zu verstecken, falls manuell kein Text eingegeben wurde und sie hat eine begrenzte L�nge. Es sind ca. dreihundert gültige Zeichen enthalten";
-    
-    public Bacon()
-    {
-        
-       
-    }
-    
+
     int gibStandardTarntextLaenge()
     {
         return StandardTarntext.length();
