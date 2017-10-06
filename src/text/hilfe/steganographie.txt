@@ -1,5 +1,3 @@
 Steganographie
 
-viele Zeilen
-
-und wieder eine längere Zeile die evtl. auch einen schönen wrap braucht. So, das sollte jetzt lang genug sein.
+Um deine Eingabe mit Bacon zu verschlüsseln, gebe bitte in die Textfläche einen Text ein, der fünfmal so lang ist wie deine Eingabe.

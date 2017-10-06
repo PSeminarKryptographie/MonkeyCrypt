@@ -13,15 +13,9 @@ import javax.swing.ImageIcon;
  * @author Jonas
  */
 public class FrameTools {
-    
-    public Alphabet myAlphabet;
-    public String currentAlphabet;
-    
-    public FrameTools() {
-        myAlphabet = Alphabet.getInstance();
-        currentAlphabet = myAlphabet.getAlphabet();
-    }
-    public String fillTable(String text){
+
+    public String fillTable(String text){        
+                String currentAlphabet = Alphabet.getInstance().getAlphabet();
 		currentAlphabet += "abcdefghiklmnopqrstuvwxyz";
 		
 		String newText = text + currentAlphabet;
@@ -128,6 +122,7 @@ public class FrameTools {
     
     
     public String createFunction(String c) {
+        String currentAlphabet = Alphabet.getInstance().getAlphabet();        
         if(c.length() == 2) {
             String out = "";
             int co = Tools.string2int(c.valueOf(c.charAt(0)), currentAlphabet);
