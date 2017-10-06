@@ -47,16 +47,16 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
             case 2:
                 MoCr_exc_überschrift.add(MoCr_exc_überschrift_Vigenere);
                 break;
-            case 4:
+            case 3:
                 MoCr_exc_überschrift.add(MoCr_exc_überschrift_OneTimePad);
                 break;
-            case 5:
+            case 4:
                 MoCr_exc_überschrift.add(MoCr_exc_überschrift_Transpositionen);
                 break;
-            case 6:
+            case 5:
                 MoCr_exc_überschrift.add(MoCr_exc_überschrift_Codierungen);
                 break;
-            case 7:
+            case 6:
                 MoCr_exc_überschrift.add(MoCr_exc_überschrift_Spielsprachen);
                 break;
             default:
@@ -84,7 +84,7 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
             {
                 switch(excLogic.verschlüsselungGeben())
                 {
-                    case 5:
+                    case 4:
                         switch(excLogic.verschlüsselungsNummerGeben())
                         {
                             case 1:
@@ -95,7 +95,7 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
                                  break;
                         }
                         break;
-                    case 6:
+                    case 5:
                         switch(excLogic.verschlüsselungsNummerGeben())
                         {
                             case 1:
@@ -118,7 +118,7 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
                                 break;
                         }
                         break; 
-                    case 7:
+                    case 6:
                         switch(excLogic.verschlüsselungsNummerGeben())
                         {
                             case 1:
@@ -148,7 +148,7 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
             {
                 switch(excLogic.verschlüsselungGeben())
                 {
-                    case 5:
+                    case 4:
                         switch(excLogic.verschlüsselungsNummerGeben())
                         {
                             case 1:
@@ -159,7 +159,7 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
                                  break;
                         }
                         break;
-                    case 6:
+                    case 5:
                         switch(excLogic.verschlüsselungsNummerGeben())
                         {
                             case 1:
@@ -182,7 +182,7 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
                                 break;
                         }
                         break;
-                    case 7:
+                    case 6:
                         switch(excLogic.verschlüsselungsNummerGeben())
                         {
                             case 1:
@@ -211,7 +211,7 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
             {
                 switch(excLogic.verschlüsselungGeben())
                 {
-                    case 5:
+                    case 4:
                         switch(excLogic.verschlüsselungsNummerGeben())
                         {
                             case 1:

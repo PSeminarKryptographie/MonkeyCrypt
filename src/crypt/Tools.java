@@ -168,7 +168,20 @@ public class Tools {
 		 }
 		 return newString;
 	 }
-	 
+	 public static String array2string (String [][] matrix, String alpha){
+		 
+		 int rows = matrix.length;
+		 int columns = matrix[0].length;
+		 String newString = "";
+		 for (int i = 0; i < rows; i++){
+			 for (int n = 0; n < columns; n++){
+				 String field = matrix[i][n];
+				 String letter = field;
+				 newString += letter;
+			 }
+		 }
+		 return newString;
+	 }
 	 public static String removeDoubles(String text){
 		 String newString = "";
 		 for (int i = 0; i < text.length(); i++){
@@ -178,6 +191,54 @@ public class Tools {
 		 }
 		 return newString;
 	 }
+	 public static int findinArray(int [] array, int value) {
+		    for(int i=0; i<array.length; i++) 
+		         if(array[i] == value)
+		             return i;
+		    return -1;
+	}
+	public static String [][] flipMatrix(String [][] array){
+			String [][] newArray = new String [array[0].length][array.length];
+			for(int c = 0; c < array[0].length; c++){
+				newArray[c] = getColumn(array, c);
+			}
+			return newArray;
+	}
+	
+	public static String [] getColumn(String [][] array, int i){
+		String [] colArray = new String[array.length];
+		for(int row = 0; row < array.length; row++)
+		{
+		    colArray[row] = array[row][i];
+		}
+			return colArray;
+		}
+	 
+	public static boolean checkCharacter(String text, String alpha){
+	 text = text.toLowerCase();
+		boolean contains = true;
+		for (int i = 0; i<text.length(); i++){
+			if (!alpha.contains(String.valueOf(text.charAt(i)))){
+				contains = false;
+			}
+		}
+		return contains;
+	}
+	
+	 
+	 public static int maxIndex(int[] array) {
+		    int max = array[0];
+		    int index = 0;
+		    for (int i = 0; i < array.length; i++) {
+		        if (array[i] >= max) {
+		            max = array[i];
+		            index = i;
+		        }
+		    }
+		    return index;
+	}
+	
+	 
 	 
 	 public static int modInverse(int key, String alpha){
 		 int n = 1;

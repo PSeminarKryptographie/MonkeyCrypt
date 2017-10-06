@@ -19,6 +19,7 @@ public class WindowLogic {
     int encryptionType;
     boolean ismainmode;
     int caesardiscmode;
+    boolean isused;
        
     public WindowLogic() {
         state = 0;
@@ -26,6 +27,15 @@ public class WindowLogic {
         encryptionType = 0;
         ismainmode = true;
         caesardiscmode = 0;
+        isused = false;
+    }
+    
+    public void setIsUsed(boolean d) {
+        isused = d;
+    }
+    
+    public boolean getIsUsed() {
+        return isused;
     }
     
     public void setIdentificationPair(int c, int e) {

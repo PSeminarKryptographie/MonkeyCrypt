@@ -12,7 +12,6 @@ import java.util.List;
  */
 public abstract class Chiffre {
 	public Alphabet myAlphabet;
-
 	public Chiffre() //constructor
 	{
 		myAlphabet = Alphabet.getInstance();
@@ -28,14 +27,7 @@ public abstract class Chiffre {
 	}
 	
 	final boolean checkCharacter(String text, String alpha){
-		text = text.toLowerCase();
-		boolean contains = true;
-		for (int i = 0; i<text.length(); i++){
-			if (!alpha.contains(String.valueOf(text.charAt(i)))){
-				contains = false;
-			}
-		}
-		return contains;
+		return Tools.checkCharacter(text, alpha);
 	}
 	final boolean checkDeterminant(int [][] Matrix){
 		if (MatrixTools.determinant(Matrix) == 0){

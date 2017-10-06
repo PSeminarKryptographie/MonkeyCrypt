@@ -59,14 +59,14 @@ public class ExcLogic {
         core = new Core();
         lösung = "";
         verschlüsselungsNummer = 0;
-        aufgaben = new Aufgaben[8];
+        aufgaben = new Aufgaben[7];
         aufgaben[0] = new CaesarAufgaben();
         aufgaben[1] = new MultiplikativAufgaben();
         aufgaben[2] = new VigenereAufgaben();
-        aufgaben[4] = new OneTimePadAufgaben();
-        aufgaben[5] = new TranspositionenAufgaben();
-        aufgaben[6] = new CodierungenAufgaben();
-        aufgaben[7] = new SpielsprachenAufgaben();
+        aufgaben[3] = new OneTimePadAufgaben();
+        aufgaben[4] = new TranspositionenAufgaben();
+        aufgaben[5] = new CodierungenAufgaben();
+        aufgaben[6] = new SpielsprachenAufgaben();
     }
     
     public void aufgabenNummerSetzen(int nummer)
@@ -153,10 +153,10 @@ public class ExcLogic {
             case 2:
                 lösung = core.verschlüsseln(2, text, schlüssel);
                 break;
-            case 4:
+            case 3:
                 lösung = core.verschlüsseln(3, text, schlüssel);
                 break;
-            case 5:
+            case 4:
                 switch(verschlüsselungsNummer)
                 {
                     case 1:
@@ -167,7 +167,7 @@ public class ExcLogic {
                         break;
                 }
                 break;
-            case 6:
+            case 5:
                 switch(verschlüsselungsNummer)
                 {
                     case 1:
@@ -191,7 +191,7 @@ public class ExcLogic {
                 
                 }
                 break;
-            case 7:
+            case 6:
                 switch(verschlüsselungsNummer)
                 {
                     case 1:

@@ -18,15 +18,13 @@ public class DidMediator {
                 case 0: ending = "caesar"; break;
                 case 1: ending = "multiplikative"; break;
                 case 2: ending = "vigenere"; break;
-                case 3: ending = "enigma"; break;
-                case 4: ending = "otp"; break;
-                case 5: ending = "transpositionen"; break;
-                case 6: ending = "codierungen"; break;
-                case 7: ending = "spielsprachen"; break;
-                case 8: ending = "hill"; break;
-                case 9: ending = "steganographie"; break;
-                case 10: ending = "affine"; break;
-                case 11: ending = "kryptoanalyse"; break;
+                case 3: ending = "otp"; break;
+                case 4: ending = "transpositionen"; break;
+                case 5: ending = "codierungen"; break;
+                case 6: ending = "spielsprachen"; break;
+                case 7: ending = "hill"; break;
+                case 8: ending = "steganographie"; break;
+                case 9: ending = "affine"; break;
             }
         }
         else {
