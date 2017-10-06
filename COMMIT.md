@@ -12,6 +12,7 @@ So:
 + open a txt file
 + replace the German text with an English translation
 + submit a pull request
+
 If you'd like to translate MonkeyCrypt into another language, you can copy the whole folder *en*, rename it, and start the same procedure.
 
 ### Submitting Ideas or issues
