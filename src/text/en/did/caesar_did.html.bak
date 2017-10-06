@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <title>Simple Page</title>
+  </head>
+  <body>
+    <span style="font-family: Bitstream Charter;"></span><br>
+    <div style="margin-left: 160px;"><span style="font-family: Bitstream Charter;"><img
+          style="width: 151px; height: 205px;" alt="Caesar" src="file:///home/caterina/Dropbox/P-Seminar%20Softwareprojekt/NetBeansBuild/MonkeyCrypt/src/img/graphics/Caesar-Grafik-Bild.png">Av</span><span
+        style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;">e!
+        Ich bin
+        der Iulius Caesar, berühmter römischer Feldherr. Du
+        hast sicher schon von mir gehört, immerhin habe ich ganz
+        Gallien erobert - Na gut, mit der Ausnahme eines Dorfes, das nicht
+        aufhört, mir Widerstand zu leisten, ich gebe es zu. Aber das
+        ist auch unfair, sie haben einen geheimen Zaubertrank! Doch au</span><span
+        style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;">ch
+        ich
+        habe eine Geheimwaffe: Die nach mir benannte
+        Caesar-Verschlüsselung. Damit schicke ich&nbsp;</span><span style="font-family: Bitstream Charter;"></span><span
+        style="font-family: Bitstream Charter;">meinen
+        Legionen&nbsp;</span><span style="font-family: Bitstream Charter;"></span><span
+        style="font-family: Bitstream Charter;">geheime Nachrichten.</span><br>
+      <span style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;"></span><span
+        style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;"></span><span
+        style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;"></span><span
+        style="font-family: Bitstream Charter;"></span><br>
+      <span style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;">Das
+        hat
+        folgendermaßen funktioniert:</span><br>
+    </div>
+    <span style="font-family: Bitstream Charter;"></span><br>
+    <span style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;"></span><br>
+    <span style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;"></span><br>
+    <span style="font-family: Bitstream Charter;"></span><br>
+    <span style="font-family: Bitstream Charter;">
+      A -&gt; E<br>
+      B -&gt; F<br>
+      ...<br>
+      Z -&gt; D</span><span style="font-family: Bitstream Charter;"></span><br>
+    <span style="font-family: Bitstream Charter;">
+      &nbsp;&nbsp;&nbsp; <br>
+      Könnt ihr erraten, was folgender Geheimtext bedeutet?<br>
+      Geheimtext:&nbsp;&nbsp;&nbsp; Hiv Jimrh peyivx mq Aeph<br>
+      Klartext:&nbsp;&nbsp;&nbsp; Der Feind lauert im
+      ………<br>
+      <br>
+      Super! Wie du siehst wird bei der Caesar-Verschlüsselung ein
+      Buchstabe immer mit genau einem anderen ersetzt. Deswegen wird dieses
+      Verfahren als Monoalphabetische Substitution. Man kann das Ersetzen
+      veranschulichen, indem man das normale Alphabet aufschreibt, und
+      darunter ein Geheimalphabet, der mit einem beliebigen</span><span style="font-family: Bitstream Charter;"></span><span
+      style="font-family: Bitstream Charter;"> Buchstaben&nbsp;</span><span style="font-family: Bitstream Charter;"></span><span
+      style="font-family: Bitstream Charter;">angefängt und entsprechend
+      fortgesetzt wird. Dieser erste
+      Buchstabe ist dann der "Schlüssel" des Geheimtexts.<br>
+      Hier ein Beispiel mit dem Schlüssel D: [][]<br>
+      [evtl. kleine Beispielübung verschlüsseln mit
+      Schlüssel D]<br>
+    </span><span style="font-family: Bitstream Charter;"><br>
+      Das ist eine Caesar-scheibe. Das Klartextalphabet ist außen
+      (Großbuchstaben), der Geheimtextalphabet innen. Den
+      Schlüssel siehst du immer unterhalb vom Klartext "A".
+      Drückst du den [oder die] Pfeil[e], so verändert sich
+      der Schlüssel.<br>
+      [evtl. Beispielübung mit beliebigem Schlüssel]<br>
+      Basteltipp: So kannst du selbst eine Caesar-scheibe basteln: Drucke
+      unter [Druckvorlagen] des Dokument [Caesar-scheibe] aus. Klebe das
+      Blatt auf ein Stück Pappe und schneide die beiden Scheiben
+      dann sorgfältig aus. Lege die beiden Scheiben auf einen Korken
+      und befestige sie mit einer Reißzwecke in ihrem Mittelpunkt.
+      Fertig sind die Caesar-Scheiben! Den Schlüssel siehst du immer
+      unterhalb vom Klartext "A". Drückst du den [oder die]
+      Pfeil[e], so verändert sich der Schlüssel.<br>
+      [evtl. Beispielübung mit beliebigem Schlüssel]<br>
+      Basteltipp: So kannst du selbst eine Caesar-scheibe basteln: Drucke
+      unter [Druckvorlagen] des Dokument [Caesar-scheibe] aus. Klebe das
+      Blatt auf ein Stück Pappe und schneide die beiden Scheiben
+      dann sorgfältig aus. Lege die beiden Scheiben auf einen Korken
+      und befestige sie mit einer Reißzwecke in ihrem Mittelpunkt.
+      Fertig sind die Caesar-Scheiben!</span><br>
+  </body>
+</html>
