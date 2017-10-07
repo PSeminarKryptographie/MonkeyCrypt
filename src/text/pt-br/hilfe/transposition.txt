@@ -1,0 +1,14 @@
+Transposição
+
+As chaves das transposições são diferentes:
+
+A chave da translocação do espaço é uma série de caracteres do alfabeto.
+
+A chave da transposição da cerca do jardim (a "profundidade" da cerca) é um número natural.
+
+Os anagramas não precisam de uma chave. Um simples decodificação não é possível aqui.
+
+O cubo duplo possui duas chaves. Ambos são uma série de caracteres do alfabeto.
+
+A chave da transposição por permutação é uma matriz que deve ser preenchida com os números 1 ou 0. Por linha e coluna só pode ser 0.
+Quando você criptografa, uma matriz é criada a partir do texto de entrada. Pode ser que a saída criptografada também contenha alguns caracteres. Para garantir um decodificação bem-sucedida, esses caracteres adicionais não devem ser excluídos.

@@ -1,13 +1,13 @@
-Multiplikative Chiffre
+Multiplier cipher
 
+The key of Caesar encryption is a character of the alphabet.
 
-Der Schlüssel der Caesar-Verschlüsselung ist ein Zeichen des Alphabets.
+The key of Caesar encryption is a sign of the alphabet.
 
-Der Schlüssel sollte coprim zur Länge des Alphabets sein.
-Ein zufälliger coprimer Schlüssel kann generiert werden.
-Alle Schlüssel sind coprim zu einem Alphabet, der eine Primzahl als Länge hat.
+The key should be coprime to the length of the alphabet.
+A random coprimer key can be generated.
+All keys are coprime to an alphabet that has a prime number as its length.
 
-Zeichen, die nicht im Alphabet enthalten sind, werden nicht verschlüsselt.
+Characters that are not contained in the alphabet will not be encrypted.
 
-Die Multiplikative Chiffre ist eine monoalphabetische Substitution. 
-
+The multiplicative cipher is a monoalphabetic substitution.

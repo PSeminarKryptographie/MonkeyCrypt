@@ -1,0 +1,7 @@
+Codificações
+
+As codificações não têm nenhuma chave.
+
+Os caracteres que não podem ser convertidos por codificação não são codificados.
+
+Para criptografia ADFGX, uma tabela deve ser preenchida com caracteres.

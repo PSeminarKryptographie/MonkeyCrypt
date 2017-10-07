@@ -1,7 +1,7 @@
-﻿Vigenere-Chiffre
+Vigenere cipher
 
-Der Schlüssel der Vignere-Chiffre ist eine Zeichenkette aus Zeichen des Alphabets.
+The key of the Vignere cipher is a string of characters of the alphabet.
 
-Je länger der Schlüssel, desto sicherer ist auch die Verschlüsselung!
+The longer the key, the more secure the encryption!
 
-Zeichen, die nicht im Alphabet enthalten sind, werden nicht verschlüsselt.
+Characters that are not contained in the alphabet will not be encrypted.

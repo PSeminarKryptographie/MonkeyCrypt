@@ -1,7 +1,9 @@
-Kodierungen
+Encodings
 
-Kodierungen besitzen keinen Schlüssel.
 
-Zeichen, die nicht von einer Kodierung überführt werden können, werden nicht kodiert.
+Encodings have no key.
 
-Bei der ADFGX-Verschlüsselung muss eine Tabelle mit Zeichen gefüllt werden.
+Characters which can not be converted by encoding are not encoded.
+
+For ADFGX encryption, a table must be filled with characters.
+

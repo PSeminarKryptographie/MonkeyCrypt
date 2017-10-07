@@ -1,0 +1,11 @@
+One-time pad
+
+A chave da única vez é uma seqüência de caracteres do alfabeto.
+
+A chave deve ser exatamente desde a entrada.
+Uma chave aleatória exatamente nesse comprimento pode ser gerada.
+As chaves geradas aleatoriamente são mais seguras.
+
+Os caracteres que não estão contidos no alfabeto não são criptografados.
+
+A almofada de uma vez é uma substituição polialfabética.

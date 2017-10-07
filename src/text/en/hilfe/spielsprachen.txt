@@ -1,3 +1,4 @@
-Spielsprachen
+Language games
 
-Spielsprachen besitzen keinen SChlüssel.
+Language games do not have a key.
+

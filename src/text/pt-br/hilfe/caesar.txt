@@ -1,0 +1,8 @@
+﻿Cifra César
+
+A chave da criptografia César é um sinal do alfabeto.
+
+Os caracteres que não estão contidos no alfabeto não são criptografados.
+
+
+A cifra César é uma substituição monoalfabética.

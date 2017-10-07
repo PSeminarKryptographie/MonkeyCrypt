@@ -6,27 +6,27 @@
   <body style=" background-color: rgb(153, 255, 38); color: rgb(0, 0, 0);" link="#000099"
     vlink="#990099" alink="#000099"><big><span style="font-family: serif;"><span></span></span></big><big><big><span><big
             style="font-weight: bold;"><br>
-            Hallo!</big></span></big></big>
-    <div><big><big><span>Ich bin Bob, Experte in Geheimer Kommunikation und in
-            alles, was mit ihr zu tun hat. Mein Lieblingsteilgebiet ist die
-            Kryptologie. Dieser Begriff kommt aus dem Altgriechischen und
-            bedeutet soviel wie "Die Lehre des Geheimhaltens".</span><span></span></big></big></div>
+            Hello!</big></span></big></big>
+    <div><big><big><span>I am Bob, an expert in secret communication and in
+            everything that has to do with it. My favorite part is the
+            Cryptology. This term comes from ancient Greek and Greek
+            means "the doctrine of secrecy".</span><span></span></big></big></div>
     <p><big><big><span></span></big></big></p>
     <big><big><span><br>
-          Die <span style="font-weight: bold; color: rgb(0, 0, 153);">Kryptologie</span>
-          ist der <span style="color: rgb(0, 0, 153); font-weight: bold;">Steganographie</span>
-          sowie den <span style="color: rgb(0, 0, 153); font-weight: bold;">Spielsprachen</span>
-          weitaus überlegen.<span style="font-style: italic;"><br>
+          The <span style="font-weight: bold; color: rgb(0, 0, 153);">Cryptology</span>
+          is the <span style="color: rgb(0, 0, 153); font-weight: bold;">Steganography</span>
+          as well as the <span style="color: rgb(0, 0, 153); font-weight: bold;">Game Languages</span>
+          far superior.<span style="font-style: italic;"><br>
             <br>
-            Warum? </span>Weil sie eine mathematische Disziplin ist! Nur mit
-          der Mathematik kann man die Stärke eines Verfahrens überprüfen oder
-          seine Sicherheit lückenlos beweisen. Außerdem hat sie klare Regeln,
-          die für Computer leicht umzusetzen sind. So muss man nicht alles per
-          Hand machen. Ziemlich praktisch, nicht?</span><span><br>
+            Why? </span>Because it is a mathematical discipline! Only with
+          mathematics you can check the strength of a procedure or
+          to prove its safety without a trace. It also has clear rules,
+          which are easy to implement for computers. So you do not have to make everything by
+          hand. Pretty handy, is not it?</span><span><br>
         </span><span><br>
-          Wie in der Mathematik gibt es in der Kryptologie Abkürzungen und
-          Formulierungen die einem faulen Mathematiker (wie mir) Schreibarbeit
-          sparen.<br>
+          As in mathematics, there are abbreviations and abbreviations in cryptology
+          Formulations that correspond to a rotten mathematician (like me)
+          save up.<br>
           <br>
         </span></big></big>
     <table style="text-align: left; margin-left: auto; margin-right: auto; width: 1249px; height: 276px;"
@@ -34,43 +34,43 @@
       <tbody>
         <tr>
           <td><span style="font-family: Andale Mono;"><big>Alphabet <span style="font-weight: bold;">A</span></big></span></td>
-          <td><span style="font-family: Andale Mono;"><big>Eine endliche Menge
-                an Zeichen (A = {a, b, c})</big></span></td>
+          <td><span style="font-family: Andale Mono;"><big>A finite quantity of
+                characters (A = {a, b, c})</big></span></td>
         </tr>
         <tr>
-          <td><span style="font-family: Andale Mono;"><big>Mächtigkeit<span style="font-weight: bold;">
+          <td><span style="font-family: Andale Mono;"><big>Cardinality<span style="font-weight: bold;">
                   |A|</span></big></span></td>
-          <td><span style="font-family: Andale Mono;"><big>Die Mächtigkeit von A
-                = Anzahl von Zeichen in A&nbsp;&nbsp;&nbsp; </big></span></td>
+          <td><span style="font-family: Andale Mono;"><big>The cardinality of A
+                = Number of characters in A&nbsp;&nbsp;&nbsp; </big></span></td>
         </tr>
         <tr>
-          <td><span style="font-family: Andale Mono;"><big>Klartext <span style="font-weight: bold;">M</span></big></span></td>
-          <td><span style="font-family: Andale Mono;"><big>Eine lesbare
-                Zeichenkette (eng. message) "über" A. Das bedeutet das sie nur
-                aus Zeichen im Alphabet besteht.</big></span></td>
+          <td><span style="font-family: Andale Mono;"><big>plain text <span style="font-weight: bold;">M</span></big></span></td>
+          <td><span style="font-family: Andale Mono;"><big>A readable
+                Character string "over" A. This means its only
+                from characters in the alphabet.</big></span></td>
         </tr>
         <tr>
-          <td><span style="font-family: Andale Mono;"><big>Schlüssel <span style="font-weight: bold;">K</span></big></span></td>
-          <td><span style="font-family: Andale Mono;"><big>Eine Zeichenkette
+          <td><span style="font-family: Andale Mono;"><big>key <span style="font-weight: bold;">K</span></big></span></td>
+          <td><span style="font-family: Andale Mono;"><big>A String
                 (eng. key)</big></span></td>
         </tr>
         <tr>
-          <td><span style="font-family: Andale Mono;"><big>Verschlüsselung <span
+          <td><span style="font-family: Andale Mono;"><big>Encoding <span
                   style="font-weight: bold;">E</span></big></span></td>
-          <td><span style="font-family: Andale Mono;"><big>Verfahren, welches
-                aus M und K den Geheimtext erzeugt</big></span></td>
+          <td><span style="font-family: Andale Mono;"><big>Process which comprises
+                from M and K the secret text</big></span></td>
         </tr>
         <tr>
-          <td><span style="font-family: Andale Mono;"><big>Geheimtext<span style="font-weight: bold;">
+          <td><span style="font-family: Andale Mono;"><big>ciphertext<span style="font-weight: bold;">
                   C</span></big></span></td>
-          <td><span style="font-family: Andale Mono;"><big>Eine unlesbare
-                Zeichenkette (eng. ciphertext)</big></span></td>
+          <td><span style="font-family: Andale Mono;"><big>An unreadable
+                string (eng. ciphertext)</big></span></td>
         </tr>
         <tr>
-          <td><span style="font-family: Andale Mono;"><big>Entschlüsselung<span
+          <td><span style="font-family: Andale Mono;"><big>Decryption<span
                   style="font-weight: bold;"> D</span></big></span></td>
-          <td><span style="font-family: Andale Mono;"><big>Verfahren zur
-                Wiederherstellung des Klartextes</big></span></td>
+          <td><span style="font-family: Andale Mono;"><big>English translation for:
+                Restoration of the plain text</big></span></td>
         </tr>
       </tbody>
     </table>

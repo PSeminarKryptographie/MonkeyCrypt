@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+  </head>
+  <body style=" background-color: rgb(153, 255, 38); color: rgb(0, 0, 0);" link="#000099"
+    vlink="#990099" alink="#000099"><big><span style="font-family: serif;"><span></span></span></big><big><big><span><big
+            style="font-weight: bold;"><br>
+            Hallo!</big></span></big></big>
+    <div><big><big><span>Ich bin Bob, Experte in Geheimer Kommunikation und in
+            alles, was mit ihr zu tun hat. Mein Lieblingsteilgebiet ist die
+            Kryptologie. Dieser Begriff kommt aus dem Altgriechischen und
+            bedeutet soviel wie "Die Lehre des Geheimhaltens".</span><span></span></big></big></div>
+    <p><big><big><span></span></big></big></p>
+    <big><big><span><br>
+          Die <span style="font-weight: bold; color: rgb(0, 0, 153);">Kryptologie</span>
+          ist der <span style="color: rgb(0, 0, 153); font-weight: bold;">Steganographie</span>
+          sowie den <span style="color: rgb(0, 0, 153); font-weight: bold;">Spielsprachen</span>
+          weitaus überlegen.<span style="font-style: italic;"><br>
+            <br>
+            Warum? </span>Weil sie eine mathematische Disziplin ist! Nur mit
+          der Mathematik kann man die Stärke eines Verfahrens überprüfen oder
+          seine Sicherheit lückenlos beweisen. Außerdem hat sie klare Regeln,
+          die für Computer leicht umzusetzen sind. So muss man nicht alles per
+          Hand machen. Ziemlich praktisch, nicht?</span><span><br>
+        </span><span><br>
+          Wie in der Mathematik gibt es in der Kryptologie Abkürzungen und
+          Formulierungen die einem faulen Mathematiker (wie mir) Schreibarbeit
+          sparen.<br>
+          <br>
+        </span></big></big>
+    <table style="text-align: left; margin-left: auto; margin-right: auto; width: 1249px; height: 276px;"
+      border="1" cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td><span style="font-family: Andale Mono;"><big>Alphabet <span style="font-weight: bold;">A</span></big></span></td>
+          <td><span style="font-family: Andale Mono;"><big>Eine endliche Menge
+                an Zeichen (A = {a, b, c})</big></span></td>
+        </tr>
+        <tr>
+          <td><span style="font-family: Andale Mono;"><big>Mächtigkeit<span style="font-weight: bold;">
+                  |A|</span></big></span></td>
+          <td><span style="font-family: Andale Mono;"><big>Die Mächtigkeit von A
+                = Anzahl von Zeichen in A&nbsp;&nbsp;&nbsp; </big></span></td>
+        </tr>
+        <tr>
+          <td><span style="font-family: Andale Mono;"><big>Klartext <span style="font-weight: bold;">M</span></big></span></td>
+          <td><span style="font-family: Andale Mono;"><big>Eine lesbare
+                Zeichenkette (eng. message) "über" A. Das bedeutet das sie nur
+                aus Zeichen im Alphabet besteht.</big></span></td>
+        </tr>
+        <tr>
+          <td><span style="font-family: Andale Mono;"><big>Schlüssel <span style="font-weight: bold;">K</span></big></span></td>
+          <td><span style="font-family: Andale Mono;"><big>Eine Zeichenkette
+                (eng. key)</big></span></td>
+        </tr>
+        <tr>
+          <td><span style="font-family: Andale Mono;"><big>Verschlüsselung <span
+                  style="font-weight: bold;">E</span></big></span></td>
+          <td><span style="font-family: Andale Mono;"><big>Verfahren, welches
+                aus M und K den Geheimtext erzeugt</big></span></td>
+        </tr>
+        <tr>
+          <td><span style="font-family: Andale Mono;"><big>Geheimtext<span style="font-weight: bold;">
+                  C</span></big></span></td>
+          <td><span style="font-family: Andale Mono;"><big>Eine unlesbare
+                Zeichenkette (eng. ciphertext)</big></span></td>
+        </tr>
+        <tr>
+          <td><span style="font-family: Andale Mono;"><big>Entschlüsselung<span
+                  style="font-weight: bold;"> D</span></big></span></td>
+          <td><span style="font-family: Andale Mono;"><big>Verfahren zur
+                Wiederherstellung des Klartextes</big></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <big><big><span style="font-family: Courier New;"><span><br>
+          </span></span></big></big>
+  </body>
+</html>

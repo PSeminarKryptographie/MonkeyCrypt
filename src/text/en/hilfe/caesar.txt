@@ -1,8 +1,8 @@
-﻿Caesar Chiffre
+﻿Caesar cipher
 
-Der Schlüssel der Caesar-Verschlüsselung ist ein Zeichen des Alphabets.
+The key of Caesar encryption is a sign of the alphabet.
 
-Zeichen, die nicht im Alphabet enthalten sind, werden nicht verschlüsselt.
+Characters that are not contained in the alphabet are not encrypted.
 
 
-Die Caesar Chiffre ist eine monoalphabetische Substitution.
+The Caesar cipher is a monoalphabetic substitution.
