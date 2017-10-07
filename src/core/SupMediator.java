@@ -12,7 +12,7 @@ package core;
 public class SupMediator {
     //erstellt String für den relativen Dateipfad
     public String selectSupTxt(int e, int c) {
-        String path = "src/text/hilfe/";
+        String path = "src/text/de/hilfe/";
         String name = "";
         switch(e) {
             case -1: name = "kryptoanalyse"; break;
