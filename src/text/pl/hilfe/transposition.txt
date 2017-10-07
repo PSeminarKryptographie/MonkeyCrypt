@@ -1,0 +1,15 @@
+Transpozycja
+
+Klucze transpozycji są różne:
+
+Klucz translokacji luk jest tekstem złożonym z znaków alfabetu.
+
+Kluczem płotkowym jest liczba naturalna.
+
+Anagramy nie potrzbują klucza. Deszyfracja w tym przypadku jest niemożliwa.
+
+Szyfr dwukwadratowy ma dwa klucze. Oba są tekstem złożonym z znaków alfabetu.
+
+Kluczem transpozycji przez permutacje jest tablica która musi zostać wypełniona liczbami 1 oraz 0. Każdy rząd i kolumna może mieć tylko wartośc 0.
+
+Podszas kodowania tablica zostaje stworzona na podstawie tekstu jawnego. Może ona zawierać dodatkowe znaki. Aby upewnić się, że deszyfracja zostanie zakończona pomyślnie, te znaki nie mogą być usunięte.
