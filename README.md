@@ -18,6 +18,7 @@ to run it right away.
 2. Manually compile. We still have the issue that texts aren't read into the program if you compile normally, so this is not recommended. However this works without having to aditionally install anything.
 
 > ~/<your_path>/MonkeyCrypt/src/$ **javac Run.java**
+
 > ~/<your_path>/MonkeyCrypt/src/$ **java Run**
 
 3. Through an IDE. If you have an IDE like eclipse or NetBeans, you can import the src - file and run it over the IDE. The class you need to run is Run.java
