@@ -1,9 +1,10 @@
-Hill Chiffre
+Hill Cipher
 
-Der Schlüssel der Hill Chiffre ist eine Matrix, die vollständig mit jeweils einem Zeichen des Alphabets gefüllt werden muss.
+The key to the Hill cipher is a matrix, which must be completely filled with a character of the alphabet.
 
-Beim Verschlüsseln wird eine Matrix aus dem Eingabe-Text erstellt. Es kann deswegen sein, dass die verschlüsselte Ausgabe einige Zeichen zusätzlich enthält. Um eine gelungene Entschlüsselung zu gewähren sollten diese zusätzlichen Zeichen nicht gelöscht werden.
+When you encrypt, a matrix is created from the input text. It may be that the encrypted output contains some characters in addition. To ensure a successful decryption these additional characters should not be deleted.
 
-Zeichen, die nicht im Alphabet enthalten sind, werden nicht verschlüsselt.
+Characters that are not contained in the alphabet are not encrypted.
 
-Die Hill Chiffre ist eine polyalphabetische Substitution.
+The Hill cipher is a polyalphabetic substitution.
+
