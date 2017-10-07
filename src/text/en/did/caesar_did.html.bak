@@ -9,26 +9,27 @@
     <div style="margin-left: 160px;"><span style="font-family: Bitstream Charter;"><img
           style="width: 151px; height: 205px;" alt="Caesar" src="file:///home/caterina/Dropbox/P-Seminar%20Softwareprojekt/NetBeansBuild/MonkeyCrypt/src/img/graphics/Caesar-Grafik-Bild.png">Av</span><span
         style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;">e!
-        Ich bin
-        der Iulius Caesar, berühmter römischer Feldherr. Du
-        hast sicher schon von mir gehört, immerhin habe ich ganz
-        Gallien erobert - Na gut, mit der Ausnahme eines Dorfes, das nicht
-        aufhört, mir Widerstand zu leisten, ich gebe es zu. Aber das
-        ist auch unfair, sie haben einen geheimen Zaubertrank! Doch au</span><span
+        I am
+        the Julius Caesar, famous Roman landlord. You
+        have certainly heard of me, after all, I completely
+        conquered Gauls - Well, with the exception of a village that is not
+        ceases to resist me, I admit it. But that
+        is also unfair, they have a secret magic potion! But au</span><span
         style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;">ch
-        ich
-        habe eine Geheimwaffe: Die nach mir benannte
-        Caesar-Verschlüsselung. Damit schicke ich&nbsp;</span><span style="font-family: Bitstream Charter;"></span><span
+        
+        I
+        got a secret weapon: the one named after me
+        Caesar encryption. So I send&nbsp;</span><span style="font-family: Bitstream Charter;"></span><span
         style="font-family: Bitstream Charter;">meinen
         Legionen&nbsp;</span><span style="font-family: Bitstream Charter;"></span><span
-        style="font-family: Bitstream Charter;">geheime Nachrichten.</span><br>
+        style="font-family: Bitstream Charter;">secret news.</span><br>
       <span style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;"></span><span
         style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;"></span><span
         style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;"></span><span
         style="font-family: Bitstream Charter;"></span><br>
-      <span style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;">Das
-        hat
-        folgendermaßen funktioniert:</span><br>
+      <span style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;">The
+        Has
+        as follows:</span><br>
     </div>
     <span style="font-family: Bitstream Charter;"></span><br>
     <span style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;"></span><br>
@@ -41,44 +42,46 @@
       Z -&gt; D</span><span style="font-family: Bitstream Charter;"></span><br>
     <span style="font-family: Bitstream Charter;">
       &nbsp;&nbsp;&nbsp; <br>
-      Könnt ihr erraten, was folgender Geheimtext bedeutet?<br>
-      Geheimtext:&nbsp;&nbsp;&nbsp; Hiv Jimrh peyivx mq Aeph<br>
-      Klartext:&nbsp;&nbsp;&nbsp; Der Feind lauert im
+      
+      Can you guess what the following secret text means?<br>
+      ciphertext:&nbsp;&nbsp;&nbsp; Hiv Jimrh peyivx mq Aeph<br>
+      plain text:&nbsp;&nbsp;&nbsp; The enemy lurks in the
       ………<br>
       <br>
-      Super! Wie du siehst wird bei der Caesar-Verschlüsselung ein
-      Buchstabe immer mit genau einem anderen ersetzt. Deswegen wird dieses
-      Verfahren als Monoalphabetische Substitution. Man kann das Ersetzen
-      veranschulichen, indem man das normale Alphabet aufschreibt, und
-      darunter ein Geheimalphabet, der mit einem beliebigen</span><span style="font-family: Bitstream Charter;"></span><span
+      Excellent! As you can see in the Caesar encryption one
+      Letter is always replaced with exactly one other. That is why this
+      Process as monoalphabetic substitution. You can replace it
+      by writing down the normal alphabet, and
+      including a comma</span><span style="font-family: Bitstream Charter;"></span><span
       style="font-family: Bitstream Charter;"> Buchstaben&nbsp;</span><span style="font-family: Bitstream Charter;"></span><span
-      style="font-family: Bitstream Charter;">angefängt und entsprechend
-      fortgesetzt wird. Dieser erste
-      Buchstabe ist dann der "Schlüssel" des Geheimtexts.<br>
-      Hier ein Beispiel mit dem Schlüssel D: [][]<br>
-      [evtl. kleine Beispielübung verschlüsseln mit
-      Schlüssel D]<br>
+      style="font-family: Bitstream Charter;">commenced and appropriately
+      is continued. This first
+      Letter is then the "key" of the secret.<br>
+      Here is an example with the key D: [][]<br>
+      Possibly. small sample exercise encrypt with
+      Key D]<br>
     </span><span style="font-family: Bitstream Charter;"><br>
-      Das ist eine Caesar-scheibe. Das Klartextalphabet ist außen
-      (Großbuchstaben), der Geheimtextalphabet innen. Den
-      Schlüssel siehst du immer unterhalb vom Klartext "A".
-      Drückst du den [oder die] Pfeil[e], so verändert sich
-      der Schlüssel.<br>
-      [evtl. Beispielübung mit beliebigem Schlüssel]<br>
-      Basteltipp: So kannst du selbst eine Caesar-scheibe basteln: Drucke
-      unter [Druckvorlagen] des Dokument [Caesar-scheibe] aus. Klebe das
-      Blatt auf ein Stück Pappe und schneide die beiden Scheiben
-      dann sorgfältig aus. Lege die beiden Scheiben auf einen Korken
-      und befestige sie mit einer Reißzwecke in ihrem Mittelpunkt.
-      Fertig sind die Caesar-Scheiben! Den Schlüssel siehst du immer
-      unterhalb vom Klartext "A". Drückst du den [oder die]
-      Pfeil[e], so verändert sich der Schlüssel.<br>
-      [evtl. Beispielübung mit beliebigem Schlüssel]<br>
-      Basteltipp: So kannst du selbst eine Caesar-scheibe basteln: Drucke
-      unter [Druckvorlagen] des Dokument [Caesar-scheibe] aus. Klebe das
-      Blatt auf ein Stück Pappe und schneide die beiden Scheiben
-      dann sorgfältig aus. Lege die beiden Scheiben auf einen Korken
-      und befestige sie mit einer Reißzwecke in ihrem Mittelpunkt.
-      Fertig sind die Caesar-Scheiben!</span><br>
+      This is a Caesar disk. The plaintext is outside
+      (Uppercase letters), the secret text alphabet inside. The
+      You always see the key below the plain text "A".
+      If you press the [or the] arrow [e], it changes
+      the key.<br>
+      
+      [Possibly. Example exercise with any key]<br>
+      Basteltipp: So you can even make a Caesar-disk: prints
+      under [print] of the document [Caesar-disk]. Glue that
+      Sheet on a piece of cardboard and cut the two slices
+      then carefully. Place the two slices on a cork
+      and fasten them with a tear in their center.
+      The Caesar discs are finished! You always see the key
+      below the plain text "A". Do you press the [or the]
+      Arrow [e], the key changes.<br>
+      [Possibly. Example exercise with any key]<br>
+      Basteltipp: So you can even make a Caesar-disk: prints
+      under [print] of the document [Caesar-disk]. Glue that
+      Sheet on a piece of cardboard and cut the two slices
+      then carefully. Place the two slices on a cork
+      and fasten them with a tear in their center.
+      The Caesar discs are finished!</span><br>
   </body>
 </html>

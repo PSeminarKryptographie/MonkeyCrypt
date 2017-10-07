@@ -1,7 +1,7 @@
-﻿Vigenere cipher
+Vigenere cipher
 
-The key of the Vigenere cipher is a string consisting of characters of the alphabet.
+The key of the Vignere cipher is a string of characters of the alphabet.
 
-With longer keys the encryption gets better and better!
+The longer the key, the more secure the encryption!
 
-Characters, which are not part of the alphabet, are not encrypted.
+Characters that are not contained in the alphabet will not be encrypted.

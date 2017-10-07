@@ -1,4 +1,4 @@
-One-Time-Pad
+One-Time Pad
 
 The key of the One-Time-Pad is a string consisting of characters of the alphabet.
 
@@ -9,3 +9,4 @@ Randomly generated keys are more secure.
 Characters, which are not part of the alphabet, are not encrypted.
 
 One-Time-Pad is a polyalphabetic cipher.
+

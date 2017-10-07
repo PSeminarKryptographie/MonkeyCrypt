@@ -1,3 +1,4 @@
+
 Hill Cipher
 
 The key to the Hill cipher is a matrix, which must be completely filled with a character of the alphabet.
@@ -7,4 +8,5 @@ When you encrypt, a matrix is created from the input text. It may be that the en
 Characters that are not contained in the alphabet are not encrypted.
 
 The Hill cipher is a polyalphabetic substitution.
+
 

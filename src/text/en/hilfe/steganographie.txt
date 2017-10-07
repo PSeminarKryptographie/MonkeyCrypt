@@ -1,5 +1,5 @@
-Steganographie
+Steganography
 
-Steganographische Verfahren besitzen keinen Schlüssel.
+Steganographic procedures have no key.
 
-Bacon: Der Tarntext sollte fünfmal länger sein als die Eingabe.
+Bacon: The camouflage text should be five times longer than the input.
