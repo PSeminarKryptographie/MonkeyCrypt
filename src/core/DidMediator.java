@@ -54,7 +54,7 @@ public class DidMediator {
                 case 22: ending = "affine"; break;
             }
         }
-        String out = "src/text/did/" + ending + "_did.html";
+        String out = "src/text/de/did/" + ending + "_did.html";
         return out;
     }
 }
