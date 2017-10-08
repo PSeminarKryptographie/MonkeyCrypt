@@ -4,6 +4,7 @@ Ideas for MonkeyCrypt
 **GUI**
 + add an interactive vigenere-square that highlights the column and row you're clicking on.
 + Less compact UI
++ Add a drag and move functionality instead of clicking on the arrows for rotating the wheel
 
 **Cryptography**
 + add the enigma as encryption / decryption
