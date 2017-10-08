@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package frame;
-import core.TxtAmbassador;
+import tools.TxtAmbassador;
+import core.WindowLogic;
 /**
  *
  * @author Jonas
@@ -12,19 +13,16 @@ import core.TxtAmbassador;
 public class MoCr_Frame_Support extends javax.swing.JFrame {
 
     public static TxtAmbassador Inserter = new TxtAmbassador();
-    public MoCr_Frame localFrame;
     /**
      * Creates new form MoCr_Frame_Support
      */
-    public MoCr_Frame_Support(MoCr_Frame f) {
+    public MoCr_Frame_Support() {
         initComponents();
-        localFrame = f;
     }
     
     public void refreshSupport() {
         this.setVisible(true);
-        Inserter.readSupTxt(MoCr_Frame_Support_Area, localFrame.localLogic.getencryptionType(), localFrame.localLogic.getChiffrestate());
-        
+        Inserter.readSupTxt(MoCr_Frame_Support_Area, WindowLogic.getInstance().getencryptionType(), WindowLogic.getInstance().getChiffrestate());       
     }
 
     /**

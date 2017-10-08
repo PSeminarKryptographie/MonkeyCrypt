@@ -14,6 +14,7 @@ import javax.swing.ImageIcon;
  */
 public class WindowLogic {
     
+    private static WindowLogic myLogic = new WindowLogic();
     int state;
     int chiffrestate;
     int encryptionType;
@@ -21,13 +22,17 @@ public class WindowLogic {
     int caesardiscmode;
     boolean isused;
        
-    public WindowLogic() {
+    private WindowLogic() {
         state = 0;
         chiffrestate = 0;
         encryptionType = 0;
         ismainmode = true;
         caesardiscmode = 0;
         isused = false;
+    }
+    
+    public static WindowLogic getInstance() {
+        return myLogic;
     }
     
     public void setIsUsed(boolean d) {
@@ -86,15 +91,5 @@ public class WindowLogic {
                 caesardiscmode--;
             } else {caesardiscmode = 25;}
         }
-    }
-    
-    public ImageIcon alterDisc(boolean directedLeft) {
-        String nextChar = Tools.int2string(caesardiscmode, "abcdefghijklmnopqrstuvwxyz");
-        String path = "/img/graphics/Drehscheibe Einzelsequenzen/DS_" + nextChar + ".png";
-        return new javax.swing.ImageIcon(getClass().getResource(path));
-    }
-    
-    public String DiscModetoString() {
-        return Tools.int2string(caesardiscmode, "abcdefghijklmnopqrstuvwxyz");
     }
 }

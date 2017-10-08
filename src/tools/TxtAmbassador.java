@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package core;
+package tools;
 import java.io.*;
 /**
  *
@@ -27,8 +27,8 @@ public class TxtAmbassador {
     
     public String readTxt(String path) {
         try {
-            FileReader fr = new FileReader(path);
-            BufferedReader br = new BufferedReader(fr);
+            InputStream in = getClass().getResourceAsStream(path);
+            BufferedReader br = new BufferedReader(new InputStreamReader(in));
             boolean notempty = true;
             String out = "";
         
@@ -43,11 +43,11 @@ public class TxtAmbassador {
                 }
             }
             br.close();
+            in.close();
             return out;
-        } catch(Exception d) {return "error";}
+        } catch(Exception d) {return "error";} 
+        
     }
     
-    public int getTxtLength(String n) {
-        return 0;
-    }
+   
 }

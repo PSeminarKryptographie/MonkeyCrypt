@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package core;
+package tools;
+import core.WindowLogic;
 import crypt.Tools;
 import crypt.Alphabet;
 import javax.swing.table.DefaultTableModel;
@@ -138,5 +139,15 @@ public class FrameTools {
     
     public void alterJTable(javax.swing.JTable t, int l) {
         t.setModel(new DefaultTableModel(l, l));
+    }
+    
+    public String DiscModetoString() {
+        return Tools.int2string(WindowLogic.getInstance().getCaesardiscmode(), "abcdefghijklmnopqrstuvwxyz");
+    }
+    
+    public ImageIcon alterDisc(boolean directedLeft) {
+        String nextChar = Tools.int2string(WindowLogic.getInstance().getCaesardiscmode(), "abcdefghijklmnopqrstuvwxyz");
+        String path = "/img/graphics/Drehscheibe Einzelsequenzen/DS_" + nextChar + ".png";
+        return new javax.swing.ImageIcon(getClass().getResource(path));
     }
 }
