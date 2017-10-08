@@ -1,0 +1,12 @@
+Szyfr afiniczny
+
+Szyfr afiniczny posiada dwa klucze, a oraz b.
+Oba są literami alfabetu.
+
+Klucz a powinien być liczbą względnie pierwszą do długości alfabetu.
+Jest możliwe wygenerowanie losowej liczby względnie pierwszej.
+Wszystkie klucze są względnie pierwsze do alfabetu jeżeli jego długośćest liczbą pierwszą.
+
+Znaki które nie są częścią alfabetu nie są szyfrowane.
+
+Szyfr afiniczny jest szyfrem monoalfabetycznym podstawieniowym.

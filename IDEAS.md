@@ -3,7 +3,7 @@ Ideas for MonkeyCrypt
 
 **GUI**
 + add an interactive vigenere-square that highlights the column and row you're clicking on.
-
++ Less compact UI
 
 **Cryptography**
 + add the enigma as encryption / decryption
@@ -16,4 +16,4 @@ Ideas for MonkeyCrypt
 **Other stuff**
 + translate it in other languages
 + add build instructions
-+ 
++ Code examples in python
