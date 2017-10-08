@@ -5,6 +5,9 @@
  */
 package frame;
 
+import tools.FrameTools;
+import tools.HtmlReader;
+import tools.CommTools;
 import core.*;
 import crypt.Tools;
 import java.awt.Color;
@@ -24,15 +27,16 @@ public class MoCr_Frame extends javax.swing.JFrame {
     Core localCore;                         //lokale Core-Instanz
     static CommTools localTools = new CommTools();
     static FrameTools localFraTools = new FrameTools();
-    WindowLogic localLogic = new WindowLogic();
+    public WindowLogic localLogic;
     HtmlReader localDidViewer;
     
     
     public MoCr_Frame() {
         initComponents();   //Initialisierung der Fensterkomponente
+        localLogic = WindowLogic.getInstance();
         getContentPane().requestFocusInWindow();
         localCredits = new MoCr_Frame_Credits();    //Initialisierung der lokalen Impressumsinstanz
-        localSupport = new MoCr_Frame_Support(this);
+        localSupport = new MoCr_Frame_Support();
         localCore = new Core();     //Core wird initialisiert
         localLogic.setIdentificationPair(0, 0);
         localLogic.setMode(true);
@@ -257,7 +261,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_CaesarSub_Heading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MoCr_CaesarSub_Heading.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/headings/Schriftzug Caesar.png"))); // NOI18N
 
-        MoCr_CaesarSub_LabelSchlüssel.setFont(new java.awt.Font("Constantia", 0, 18)); // NOI18N
+        MoCr_CaesarSub_LabelSchlüssel.setFont(new java.awt.Font("Constantia", 0, 18));
         MoCr_CaesarSub_LabelSchlüssel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         MoCr_CaesarSub_LabelSchlüssel.setText("Schlüssel:");
 
@@ -316,7 +320,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
                 .addGroup(MoCr_MPSub_CaesarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(MoCr_CaesarSub_LabelSchlüssel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MoCr_Caesar_EingabefeldSchlüssel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         MoCr_MainPro_changeable.add(MoCr_MPSub_Caesar, "card2");
@@ -448,8 +452,8 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_OTPSub_Area.setRows(5);
         jScrollPane1.setViewportView(MoCr_OTPSub_Area);
 
-        MoCr_OTPSub_Generator.setFont(new java.awt.Font("Constantia", 1, 14)); // NOI18N
-        MoCr_OTPSub_Generator.setText("SCHLÜSSEL GENERERIEREN");
+        MoCr_OTPSub_Generator.setFont(new java.awt.Font("Constantia", 0, 14)); // NOI18N
+        MoCr_OTPSub_Generator.setText("Schlüssel erzeugen");
         MoCr_OTPSub_Generator.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MoCr_OTPSub_GeneratorActionPerformed(evt);
@@ -467,7 +471,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
                     .addComponent(jScrollPane1)
                     .addGroup(MoCr_MPSub_OTPLayout.createSequentialGroup()
                         .addComponent(MoCr_OTPSub_LabelSchlüssel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(MoCr_OTPSub_Generator)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -1440,7 +1444,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
         MoCr_Gen_ListPanel.add(MoCr_GenDyn_DidListPanel, "card3");
 
-        MoCr_Gen_Choicemenu1.setText("Einstellung");
+        MoCr_Gen_Choicemenu1.setText("Einstellungen");
         MoCr_Gen_Choicemenu1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 MoCr_Gen_Choicemenu1MouseClicked(evt);
@@ -1539,10 +1543,12 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
     private void MoCr_OTPSub_GeneratorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_OTPSub_GeneratorActionPerformed
         // TODO add your handling code here:
-        String in = MoCr_MPstaticIO_InField.getText();
-        int l = in.length();
-        String nk = localTools.generateNormalKey(l);
-        MoCr_OTPSub_Area.setText(nk);        
+        if(localLogic.getIsUsed() == true) {
+            String in = MoCr_MPstaticIO_InField.getText();
+            int l = in.length();
+            String nk = localTools.generateNormalKey(l);
+            MoCr_OTPSub_Area.setText(nk);        
+        }
     }//GEN-LAST:event_MoCr_OTPSub_GeneratorActionPerformed
 
     private void MoCr_MPButtonpanel_HelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_MPButtonpanel_HelpActionPerformed
@@ -1800,15 +1806,15 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
         localLogic.alterDiscMode(false);
-        MoCr_CaesarSub_DiscBack.setIcon(localLogic.alterDisc(false));
-        MoCr_Caesar_EingabefeldSchlüssel.setText(localLogic.DiscModetoString());
+        MoCr_CaesarSub_DiscBack.setIcon(localFraTools.alterDisc(false));
+        MoCr_Caesar_EingabefeldSchlüssel.setText(localFraTools.DiscModetoString());
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         // TODO add your handling code here:
         localLogic.alterDiscMode(true);
-        MoCr_CaesarSub_DiscBack.setIcon(localLogic.alterDisc(true));
-        MoCr_Caesar_EingabefeldSchlüssel.setText(localLogic.DiscModetoString());
+        MoCr_CaesarSub_DiscBack.setIcon(localFraTools.alterDisc(true));
+        MoCr_Caesar_EingabefeldSchlüssel.setText(localFraTools.DiscModetoString());
     }//GEN-LAST:event_jLabel2MouseClicked
         
     private void changeTranspositionKeyPanel(int i) {

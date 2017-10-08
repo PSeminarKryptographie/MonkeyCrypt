@@ -1,7 +1,7 @@
 /**
  * 
  */
-package core;
+package tools;
 
 import crypt.*;
 

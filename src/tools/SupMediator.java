@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package core;
+package tools;
 
 /**
  *
@@ -12,10 +12,9 @@ package core;
 public class SupMediator {
     //erstellt String für den relativen Dateipfad
     public String selectSupTxt(int e, int c) {
-        String path = "src/text/de/hilfe/";
+        String path = "/text/de/sup/";
         String name = "";
         switch(e) {
-            case -1: name = "kryptoanalyse"; break;
             case 0: switch(c) {
                 case 0: name = "caesar"; break;
                 case 1: name = "multiplikativ"; break;

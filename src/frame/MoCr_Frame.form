@@ -14,7 +14,7 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="MoCr_Gen_Choicemenu1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Einstellung"/>
+            <Property name="text" type="java.lang.String" value="Einstellungen"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MoCr_Gen_Choicemenu1MouseClicked"/>
@@ -268,7 +268,7 @@
                                   <Component id="MoCr_CaesarSub_LabelSchlüssel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                   <Component id="MoCr_Caesar_EingabefeldSchlüssel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="16" max="32767" attributes="0"/>
+                              <EmptySpace pref="17" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -287,8 +287,8 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_CaesarSub_LabelSchl&#xfc;ssel">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="0"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(&quot;Constantia&quot;, 0, 18)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
                         <Property name="text" type="java.lang.String" value="Schl&#xfc;ssel:"/>
@@ -548,7 +548,7 @@
                                   <Component id="jScrollPane1" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="MoCr_OTPSub_LabelSchlüssel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="MoCr_OTPSub_Generator" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
@@ -613,9 +613,9 @@
                     <Component class="javax.swing.JButton" name="MoCr_OTPSub_Generator">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                          <Font name="Constantia" size="14" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="SCHL&#xdc;SSEL GENERERIEREN"/>
+                        <Property name="text" type="java.lang.String" value="Schl&#xfc;ssel erzeugen"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_OTPSub_GeneratorActionPerformed"/>
