@@ -6,27 +6,20 @@
   <body style=" background-color: rgb(153, 255, 38); color: rgb(0, 0, 0);" link="#000099"
     vlink="#990099" alink="#000099"><big><span style="font-family: serif;"><span></span></span></big><big><big><span><big
             style="font-weight: bold;"><br>
-            Hello!</big></span></big></big>
-    <div><big><big><span>I am Bob, an expert in secret communication and in
-            everything that has to do with it. My favorite part is the
-            Cryptology. This term comes from ancient Greek and Greek
-            means "the doctrine of secrecy".</span><span></span></big></big></div>
+            Hi!</big></span></big></big>
+    <div><big><big><span>I'm Bob, an expert in secret communication and everything that relates. My favourite area is cryptography 
+                        (from Greek kryptós = "hidden secret", graphein = "writing", or "-logia = "study", respectively). Essentially, "the study of secrecy"..</span><span></span></big></big></div>
     <p><big><big><span></span></big></big></p>
     <big><big><span><br>
-          The <span style="font-weight: bold; color: rgb(0, 0, 153);">Cryptology</span>
-          is the <span style="color: rgb(0, 0, 153); font-weight: bold;">Steganography</span>
-          as well as the <span style="color: rgb(0, 0, 153); font-weight: bold;">Game Languages</span>
-          far superior.<span style="font-style: italic;"><br>
+          <span style="font-weight: bold; color: rgb(0, 0, 153);">Cryptology</span>
+          is far superior to <span style="color: rgb(0, 0, 153); font-weight: bold;">Steganography</span>
+          as well as <span style="color: rgb(0, 0, 153); font-weight: bold;">Secret Languages</span>
+          <span style="font-style: italic;"><br>
             <br>
-            Why? </span>Because it is a mathematical discipline! Only with
-          mathematics you can check the strength of a procedure or
-          to prove its safety without a trace. It also has clear rules,
-          which are easy to implement for computers. So you do not have to make everything by
-          hand. Pretty handy, is not it?</span><span><br>
+            Why? </span>Why? Because it is a mathematical discipline! Only mathematics can be used to test the strength or prove the certainty of a procedure completely. In addition, it has clear rules that are easy to implement for computers so that you don't have to do everything by hand. Quite practical, right?</span><span><br>
         </span><span><br>
-          As in mathematics, there are abbreviations and abbreviations in cryptology
-          Formulations that correspond to a rotten mathematician (like me)
-          save up.<br>
+          Like in mathematics, there are abbreviations and phrasing in cryptography that save lazy cryptographers 
+          (like me) from having to write too much.<br>
           <br>
         </span></big></big>
     <table style="text-align: left; margin-left: auto; margin-right: auto; width: 1249px; height: 276px;"
