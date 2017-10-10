@@ -1,7 +1,7 @@
-Cifra Affine
+Cifra Afim (Affine)
 
 A cifra affine tem duas chaves, a e b.
-Ambos são um sinal do alfabeto.
+Ambos são uma letra do alfabeto.
 
 um deve ser coprim ao comprimento do alfabeto.
 Uma chave aleatória de coprimer pode ser gerada.
