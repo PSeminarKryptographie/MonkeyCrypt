@@ -1,0 +1,13 @@
+I'm back - Bob, expert in the secrecy of news. Learning about symmetric encryption is a great way to get into cryptography. Maybe you've already learned from CRYPTOGRAPHY what encryption is and what it needs: a cryptographic algorithm and a protocol. Thus, a text can be changed and made incomprehensible in a controlled fashion.
+In order to prevent Eve from being able to read our messages - even if she knows how the encryption works - we need a key. Using symmetric encryption, Alice and I have the same key.
+[Figure]
+Let's imagine that the message is in a box with a lock. Both Alice and I can use our key to open the box. But if Eve gets a hold of the box, it is closed and the message is illegible. This is exactly how symmetric encryption works.
+But how does it work without a box? We replace the box with an algorithm, a mathematical function! We can visualise it as a machne: This machine takes two strings, the message M and the key K, and prints the ciphertext C. Mathematically it is written as:
+Ek(M) = C
+Here, E is the machine (the cryptographic algorithm), which takes the "input" in the parentheses and results in the "output". Since the machine needs a key to work, we write a 'k' next to it.
+The decryption works in the same way:
+Dk(C) = M
+In order to get our message from the ciphertext, both functions need an important property: Injectivity. This means that two different inputs in E() cannot have the same result.
+Dk(Ek(M)) = C
+If you need explanations for these mathematical terms, please press the MATHEMATICS button in the margin column.
+All symmetric encryptions work according to these rules. Nonetheless, there are a wide variety of algorithms. Some of them replace letters - this is called SUBSTITUTION, and it was already used by the ancient Romans. Even modern encryption works this way. Instead of replacing letters, you can also mix them - this is called TRANSPOSITION. This type of encryption is even older and was used in ancient Greece. You can learn more about these procedures by checking the margin column.
