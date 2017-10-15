@@ -2,11 +2,12 @@ Ideas for MonkeyCrypt
 =====================
 
 **GUI**
-+ add an interactive vigenere-square that highlights the column and row you're clicking on.
++ add an interactive vigenere-square that highlights the column and row you're clicking on. (a.k.a. animation)
 + Less compact UI
 + Resizable/responsive GUI
 + Move to JavaFX for a richer UX
 + Add a drag and move functionality instead of clicking on the arrows for rotating the wheel
++ Implements Google Material design API for the UI
 
 **Cryptography**
 + add the enigma as encryption / decryption
