@@ -1,0 +1,17 @@
+[Ü]: Cryptology
+Hello, I am Bob, an expert in secret communication and in everything that has to do with it. My favorite area is cryptology (altgr. Kryptós = "hidden, secret" and lógos = "word, teaching"). So it is "the doctrine of secrecy".
+Cryptography is far superior to steganography as well as game languages. Why? Because it is a mathematical discipline! Only mathematics can be used to check the strength of a procedure or to prove its security without any gaps. In addition, it has clear rules that are easy to implement for computers. So you do not have to do everything by hand. Pretty handy, is not it?
+As in mathematics, there are abbreviations and formulations in cryptology that save a lazy cryptologist (like me) writing.
+[Table]
+{
+Term Statement
+Alphabet A is a finite set of characters (A = {a, b, c}).
+| A | The thickness of A = number of characters in A (| A | = 3)
+Clear text M A readable character string "over" A. This means that it consists only of characters in the alphabet.
+Key K A string (close key)
+Encryption E A method which generates the secret text from M and K.
+Secret C An unreadable string (ciphertext)
+Decryption D Procedure for restoring the plain text
+
+}
+In cryptography one differentiates between CRYPTOGRAPHY and KRYPTO ANALYSIS.
