@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <title>Simple Page</title>
+  </head>
+  <body>
+    <span style="font-family: Bitstream Charter;"></span><br>
+    <div style="margin-left: 160px;"><span style="font-family: Bitstream Charter;"><img
+          style="width: 151px; height: 205px;" alt="Caesar" src="file:///home/caterina/Dropbox/P-Seminar%20Softwareprojekt/NetBeansBuild/MonkeyCrypt/src/img/graphics/Caesar-Grafik-Bild.png">Av</span><span
+        style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;">e!
+        I am
+        the Julius Caesar, famous Roman landlord. You
+        have certainly heard of me, after all, I completely
+        conquered Gauls - Well, with the exception of a village that is not
+        ceases to resist me, I admit it. But that
+        is also unfair, they have a secret magic potion! But au</span><span
+        style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;">ch
+        
+        I
+        got a secret weapon: the one named after me
+        Caesar encryption. So I send&nbsp;</span><span style="font-family: Bitstream Charter;"></span><span
+        style="font-family: Bitstream Charter;">meinen
+        Legionen&nbsp;</span><span style="font-family: Bitstream Charter;"></span><span
+        style="font-family: Bitstream Charter;">secret news.</span><br>
+      <span style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;"></span><span
+        style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;"></span><span
+        style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;"></span><span
+        style="font-family: Bitstream Charter;"></span><br>
+      <span style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;">The
+        Has
+        as follows:</span><br>
+    </div>
+    <span style="font-family: Bitstream Charter;"></span><br>
+    <span style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;"></span><br>
+    <span style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;"></span><br>
+    <span style="font-family: Bitstream Charter;"></span><br>
+    <span style="font-family: Bitstream Charter;">
+      A -&gt; E<br>
+      B -&gt; F<br>
+      ...<br>
+      Z -&gt; D</span><span style="font-family: Bitstream Charter;"></span><br>
+    <span style="font-family: Bitstream Charter;">
+      &nbsp;&nbsp;&nbsp; <br>
+      
+      Can you guess what the following secret text means?<br>
+      ciphertext:&nbsp;&nbsp;&nbsp; Hiv Jimrh peyivx mq Aeph<br>
+      plain text:&nbsp;&nbsp;&nbsp; The enemy lurks in the
+      ………<br>
+      <br>
+      Excellent! As you can see in the Caesar encryption one
+      Letter is always replaced with exactly one other. That is why this
+      Process as monoalphabetic substitution. You can replace it
+      by writing down the normal alphabet, and
+      including a comma</span><span style="font-family: Bitstream Charter;"></span><span
+      style="font-family: Bitstream Charter;"> Buchstaben&nbsp;</span><span style="font-family: Bitstream Charter;"></span><span
+      style="font-family: Bitstream Charter;">commenced and appropriately
+      is continued. This first
+      Letter is then the "key" of the secret.<br>
+      Here is an example with the key D: [][]<br>
+      Possibly. small sample exercise encrypt with
+      Key D]<br>
+    </span><span style="font-family: Bitstream Charter;"><br>
+      This is a Caesar disk. The plaintext is outside
+      (Uppercase letters), the secret text alphabet inside. The
+      You always see the key below the plain text "A".
+      If you press the [or the] arrow [e], it changes
+      the key.<br>
+      
+      [Possibly. Example exercise with any key]<br>
+      Basteltipp: So you can even make a Caesar-disk: prints
+      under [print] of the document [Caesar-disk]. Glue that
+      Sheet on a piece of cardboard and cut the two slices
+      then carefully. Place the two slices on a cork
+      and fasten them with a tear in their center.
+      The Caesar discs are finished! You always see the key
+      below the plain text "A". Do you press the [or the]
+      Arrow [e], the key changes.<br>
+      [Possibly. Example exercise with any key]<br>
+      Basteltipp: So you can even make a Caesar-disk: prints
+      under [print] of the document [Caesar-disk]. Glue that
+      Sheet on a piece of cardboard and cut the two slices
+      then carefully. Place the two slices on a cork
+      and fasten them with a tear in their center.
+      The Caesar discs are finished!</span><br>
+  </body>
+</html>
