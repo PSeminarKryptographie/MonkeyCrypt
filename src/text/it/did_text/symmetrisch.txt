@@ -1,13 +1,13 @@
-I'm back - Bob, expert in the secrecy of news. Learning about symmetric encryption is a great way to get into cryptography. Maybe you've already learned from CRYPTOGRAPHY what encryption is and what it needs: a cryptographic algorithm and a protocol. Thus, a text can be changed and made incomprehensible in a controlled fashion.
-In order to prevent Eve from being able to read our messages - even if she knows how the encryption works - we need a key. Using symmetric encryption, Alice and I have the same key.
-[Figure]
-Let's imagine that the message is in a box with a lock. Both Alice and I can use our key to open the box. But if Eve gets a hold of the box, it is closed and the message is illegible. This is exactly how symmetric encryption works.
-But how does it work without a box? We replace the box with an algorithm, a mathematical function! We can visualise it as a machne: This machine takes two strings, the message M and the key K, and prints the ciphertext C. Mathematically it is written as:
+Sono tornato - Bob, esperto nella segretezza delle notizie. Imparare la crittografia simmetrica è un ottimo modo per entrare nel mondo della crittografia. Forse hai già imparato da CRITTOGRAFIA cosa sia una cifratura e di cosa abbia bisogno: un algoritmo crittografico e un protocollo. In questo modo, un testo può essere modificato e reso incomprensibile in modo controllato.
+Per impedire a Eva di leggere i nostri messaggi - anche se sa come funziona la crittografia - abbiamo bisogno di una chiave. Utilizzando la crittografia simmetrica, Alice e io abbiamo la stessa chiave.
+[Figura]
+Immaginiamo che il messaggio sia in una scatola con una serratura. Sia Alice che io possiamo usare la nostra chiave per aprire la scatola. Ma se Eve ottiene una scatola, è chiusa e il messaggio è illeggibile. È esattamente come funziona la crittografia simmetrica.
+Ma come funziona senza una scatola? Noi sostituiamo la scatola con un algoritmo, una funzione matematica! Possiamo visualizzarlo come una macchina: questa macchina prende due stringhe, il messaggio M e la chiave K, e stampa il testo cifrato C. Matematicamente è scritto come:
 Ek(M) = C
-Here, E is the machine (the cryptographic algorithm), which takes the "input" in the parentheses and results in the "output". Since the machine needs a key to work, we write a 'k' next to it.
-The decryption works in the same way:
+Qui, E è la macchina (l'algoritmo crittografico), che prende l'"input" nelle parentesi e ne risulta l'"output". Poiché la macchina ha bisogno di una chiave per lavorare, scriviamo una 'k' accanto alla E.
+La decrittazione funziona allo stesso modo:
 Dk(C) = M
-In order to get our message from the ciphertext, both functions need an important property: Injectivity. This means that two different inputs in E() cannot have the same result.
+Per ottenere il nostro messaggio dal testo cifrato, entrambe le funzioni hanno bisogno di una proprietà importante: Iniettività. Ciò significa che due diversi input in E() non possono avere lo stesso risultato.
 Dk(Ek(M)) = C
-If you need explanations for these mathematical terms, please press the MATHEMATICS button in the margin column.
-All symmetric encryptions work according to these rules. Nonetheless, there are a wide variety of algorithms. Some of them replace letters - this is called SUBSTITUTION, and it was already used by the ancient Romans. Even modern encryption works this way. Instead of replacing letters, you can also mix them - this is called TRANSPOSITION. This type of encryption is even older and was used in ancient Greece. You can learn more about these procedures by checking the margin column.
+Se hai bisogno di spiegazioni per questi termini matematici, premi il pulsante MATEMATICA nella colonna al margine.
+Tutte le crittografie simmetriche funzionano secondo queste regole. Tuttavia, ci sono una grande varietà di algoritmi. Alcuni di essi sostituiscono lettere - questo è chiamato SOSTITUZIONE, ed è stato già utilizzato dagli antichi Romani. Anche la crittografia moderna funziona in questo modo. Invece di sostituire le lettere, puoi anche mescolarle - questo è chiamato TRANSPOSIZIONE. Questo tipo di crittografia è ancora più vecchio ed è stato utilizzato nella Grecia antica. Puoi scoprire di più su queste procedure controllando la colonna al margine.
