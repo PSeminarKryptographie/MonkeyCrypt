@@ -1,4 +1,5 @@
 <a href="https://codebeat.co/projects/github-com-heptocat-monkeycrypt-master"><img alt="codebeat badge" src="https://codebeat.co/badges/3c3db0c2-0ec6-4298-93cb-8702dfba2942" /></a>
+<img src="https://github.com/PSeminarKryptographie/MonkeyCrypt/blob/master/src/img/graphics/Schriftzug-Bild.png" width="400" height="200" />
 # MonkeyCrypt
 This modest Java Application aims to teach children the basics of (classical) cryptography, try out different encryption types and practice their skills. It was started by a Project-Seminar group of five German students, and is still a work in progress.
 ### How can I download MonkeyCrypt?
