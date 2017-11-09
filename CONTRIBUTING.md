@@ -3,6 +3,14 @@ Great! We'd love your help, whether your just passing by or want to become a reg
 ### Translating
 As you might have noticed MonkeyCrypt is all in German … :beers: We would like to make MonkeyCrypt available in many other languages though. And this is where you come in.
 
+#### A Good Translation…
++ is as close to the translated text as possible. This is especially important when translating from German to English, as many other translators will rely on the English version
++ has a good word flow, can be read comfortably in the language and doesn't sound weird.
++ doesn't include difficult words that children can't understand. This is an educational program!
++ includes translated ciphertexts. Sometimes we added ciphertext. If you're up for a challenge, decrypt it using MonkeyCrypt, translate it, and then encrypt it again.
++ uses the right **terminology**. The explanatory texts in German use specific terminology used in cryptology. This is often not translated correctly by translation programs or by people who have little experience in the area. A good way to find the correct terminology is to go to the wikipedia page in the original language, and then switch. E.g. Cryptography is not equal to cryptology!
++ is homogenous with other texts. Ok, this is the cherry on the cake. But a program shouldn't change the way it says things entirely every time. Check on other similar files and see how they formulate certain phrases (e.g. This encryption doesn't have a key vs. this encryption doesn't need a key) and stick to it or replace it.
+
 #### Adding a new Language
 
 The original texts can be found in the folder *src/text/de*. To create a folder with a new language, create a subfolder *src/text/<your language>*. The structure of the folder should be as the German one.

@@ -9,5 +9,4 @@ Todas as chaves são coprim para um alfabeto que tem um número primo como seu c
 
 Os caracteres que não estão contidos no alfabeto não são criptografados.
 
-
 A cifra affine é uma substituição monoalphabetic.
