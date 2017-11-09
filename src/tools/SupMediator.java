@@ -15,9 +15,6 @@ public class SupMediator {
         String path = "/text/de/sup/";
         String name = "";
         switch(e) {
-            case -1: switch(c) {
-                case 0: name = "kryptoanalyse"; break;
-            } break;
             case 0: switch(c) {
                 case 0: name = "caesar"; break;
                 case 1: name = "multiplikativ"; break;

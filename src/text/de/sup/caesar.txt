@@ -1,8 +1,8 @@
 ﻿Caesar Chiffre
 
-Der Schluessel der Caesar-Verschluesselung ist ein Zeichen des Alphabets.
+Der Schlüssel der Caesar-Verschlüsselung ist ein Zeichen des Alphabets.
 
-Zeichen, die nicht im Alphabet enthalten sind, werden nicht verschluesselt.
+Zeichen, die nicht im Alphabet enthalten sind, werden nicht verschlüsselt.
 
 
 Die Caesar Chiffre ist eine monoalphabetische Substitution.

@@ -1,7 +1,7 @@
-Codierung
+Kodierung
 
-Hi! Ich bin Alice, eine Expertin für Geheime Kommunikation. Meistens beschäftige ich mich mit der Kryptologie - der Lehre des Geheimhaltens. Das ist ganz schön nützlich und spaßig noch dazu! Doch genauso wichtig wie das Geheime ist die Kommunikation an sich. Deswegen sollte man als Kryptologe auch ein wenig über Codierungen bescheid wissen.
+Hi! Ich bin Alice, eine Expertin für Geheime Kommunikation. Meistens beschäftige ich mich mit der Kryptologie - der Lehre des Geheimhaltens. Das ist ganz schön nützlich und spaßig noch dazu! Doch genauso wichtig wie das Geheime ist die Kommunikation an sich. Deswegen sollte man als Kryptologe auch ein wenig über Kodierungen bescheid wissen.
 
 Wie kommuniziert ihr denn im alltäglichem Leben? Normalerweise tauschen Menschen Informationen mündlich aus, in ihrer jeweiligen Sprache. In unserem Fall ist das Deutsch. Alle Sprachen haben aber verschiedene Formen. Mündliche und schriftliche Formen kennt ihr. Man kann aber auch durh Computer miteinander kommunizieren. Früher hat man auch Lichtsignale zur Kommunikation verwendet. Das übersetzen von Nachrichten idiese Kommunikationsformen nennt man Kodieren.
 
-Zum Codieren braucht man keine mathematische Funktion, sonder eher eine Art Wörterbuch. Diese Wörterbücher und noch weitere Informationen zu einzelnen Kodierungen findest du unter der Randspalte. Beispiele für Codierungen sind die MORSE-CODIERUNG, die ASCII-CODIERUNG, die BINÄRE CODIERUNG oder die ALPHABET-INDEX-CODIERUNG.
+Zum Kodieren braucht man keine mathematische Funktion, sonder eher eine Art Wörterbuch. Diese Wörterbücher und noch weitere Informationen zu einzelnen Kodierungen findest du unter der Randspalte. Beispiele für Kodierungen sind die MORSE-CODIERUNG, die ASCII-KODIERUNG, die BINÄRE KODIERUNG oder die ALPHABET-INDEX-KODIERUNG.

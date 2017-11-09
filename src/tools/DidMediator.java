@@ -25,7 +25,6 @@ public class DidMediator {
                 case 7: ending = "hill"; break;
                 case 8: ending = "steganographie"; break;
                 case 9: ending = "affine"; break;
-                case 10: ending = "kryptoanalyse"; break;
             }
         }
         else {
@@ -55,7 +54,7 @@ public class DidMediator {
                 case 22: ending = "affine"; break;
             }
         }
-        String out = "/text/de/did/" + ending + "_did.html";
+        String out = "src/text/de/did/" + ending + "_did.html";
         return out;
     }
 }

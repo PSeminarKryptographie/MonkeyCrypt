@@ -1,7 +1,7 @@
 ﻿Vigenere-Chiffre
 
-Der Schluessel der Vignere-Chiffre ist eine Zeichenkette aus Zeichen des Alphabets.
+Der Schlüssel der Vignere-Chiffre ist eine Zeichenkette aus Zeichen des Alphabets.
 
-Je laenger der Schluessel, desto sicherer ist auch die Verschluesselung!
+Je länger der Schlüssel, desto sicherer ist auch die Verschlüsselung!
 
-Zeichen, die nicht im Alphabet enthalten sind, werden nicht verschluesselt.
+Zeichen, die nicht im Alphabet enthalten sind, werden nicht verschlüsselt.

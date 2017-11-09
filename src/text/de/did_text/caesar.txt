@@ -19,9 +19,9 @@ Das ist eine Caesar-Scheibe. Das Klartextalphabet ist außen (Großbuchstaben), 
 
 Basteltipp: So kannst du selbst eine Caesar-Scheibe basteln: Drucke unter [Druckvorlagen] das Dokument [Caesar-scheibe] aus. Klebe das Blatt auf ein Stück Pappe und schneide die beiden Scheiben dann sorgfältig aus. Lege die beiden Scheiben auf einen Korken und befestige sie mit einer Reißzwecke in ihrem Mittelpunkt. Fertig ist die Caesar-Scheibe!
 
-Nach der ganzen Bastelei wird es Zeit zu klären, wie jetzt der kryptographische Algorithmus der Caesar-Verschlüsselung funktioniert. Als erstes müssen wir wie gewohnt mit der Alphabet-Index Codierung unsere Buchstaben in Zahlen umwandeln (A=0, B=1, usw). Mal sehen wie jetzt eine Zuordnung mit den Schlüssel D (= 3) aussieht:
+Nach der ganzen Bastelei wird es Zeit zu klären, wie jetzt der kryptographische Algorithmus der Caesar-Verschlüsselung funktioniert. Als erstes müssen wir wie gewohnt mit der Alphabet-Index Codierung unsere Buchstaben in Zahlen umwandeln (A=0, B=1, etc). Mal sehen wie jetzt eine Zuordnung mit den Schlüssel D (= 5):
 
-Fällt dir eine Regelmäßigkeit auf? Genau! Um vom Klartextalphabet zum Geheimtextalphabet zu kommen, muss man immer eine 3 dazu addieren. Warum gerade 3? Weil 3 (= D) genau unserem Schlüssel entspricht. Einzige Ausnahme bilden die hohen Zahlen, bei ihnen wird eine Rechenregel angewendet, die Modulo genannt wird. Unter MATHEMATIK kannst du mehr darüber erfahren. Umgekehrt muss man dann zum Entschlüsseln einfach den Schlüssel wieder subtrahieren.
+Fällt dir eine Regelmäßigkeit auf? Genau! Es wird immer eine 5 dazuaddieren! Warum gerade 5? Weil 5 (= D) genau unserem Schlüssel entspricht. Einzige Ausnahme bilden die hohen Zahlen, bei ihnen wird eine Regel angewendet, die Modulo genannt wird. Unter MATHEMATIK kannst du mehr darüber erfahren. Umgekehrt muss man dann zum Entschlüsseln einfach den Schlüssel wieder subtrahieren.
 
 MERKE:
 Bei der Caesar-Verschlüsselung, die man auch Verschiebechiffre nennt, wird jedes Klartextzeichen m durch ein um K im Alphabet verschobenes Zeichen c ersetzt. Nummeriert man alle Zeichen nach ihrer Stelle im Alphabet mit der Länge n, so gilt:

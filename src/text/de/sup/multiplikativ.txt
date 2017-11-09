@@ -1,12 +1,13 @@
 Multiplikative Chiffre
 
-Der Schluessel der Caesar-Verschluesselung ist ein Zeichen des Alphabets.
 
-Der Schluessel sollte coprim zur Laenge des Alphabets sein.
-Ein zufaelliger coprimer Schluessel kann generiert werden.
-Alle Schluessel sind coprim zu einem Alphabet, der eine Primzahl als Laenge hat.
+Der Schlüssel der Caesar-Verschlüsselung ist ein Zeichen des Alphabets.
 
-Zeichen, die nicht im Alphabet enthalten sind, werden nicht verschluesselt.
+Der Schlüssel sollte coprim zur Länge des Alphabets sein.
+Ein zufälliger coprimer Schlüssel kann generiert werden.
+Alle Schlüssel sind coprim zu einem Alphabet, der eine Primzahl als Länge hat.
+
+Zeichen, die nicht im Alphabet enthalten sind, werden nicht verschlüsselt.
 
 Die Multiplikative Chiffre ist eine monoalphabetische Substitution. 
 

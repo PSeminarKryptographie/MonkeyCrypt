@@ -161,9 +161,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_AffChiffSub_Functionpointer = new javax.swing.JLabel();
         MoCr_AffChiffSub_FuncPre = new javax.swing.JLabel();
         MoCr_AffChiffSub_Function = new javax.swing.JLabel();
-        MoCr_MPSub_Kryptoanalyse = new javax.swing.JPanel();
-        MoCr_AffiChiffSub_Heading1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         MoCr_Did_cardPanel = new javax.swing.JPanel();
         MoCr_Did_Returnerbutton = new javax.swing.JButton();
         MoCr_Did_Scrollpanel = new javax.swing.JScrollPane();
@@ -188,7 +185,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MonkeyCrypt");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setMinimumSize(new java.awt.Dimension(902, 529));
+        setMinimumSize(new java.awt.Dimension(870, 600));
         setName("MoCr_Frame"); // NOI18N
         setResizable(false);
         setSize(new java.awt.Dimension(600, 450));
@@ -201,7 +198,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
         MoCr_MPstaticIO_Heading.setFont(new java.awt.Font("Constantia", 2, 18)); // NOI18N
         MoCr_MPstaticIO_Heading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MoCr_MPstaticIO_Heading.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/headings/angepasster Schriftzug des Programms.png"))); // NOI18N
+        MoCr_MPstaticIO_Heading.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/headings/Schriftzug-Bild.png"))); // NOI18N
 
         MoCr_MPstaticIO_OutField.setColumns(20);
         MoCr_MPstaticIO_OutField.setLineWrap(true);
@@ -239,18 +236,18 @@ public class MoCr_Frame extends javax.swing.JFrame {
             MoCr_MainPro_static_IOpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MoCr_MainPro_static_IOpanelLayout.createSequentialGroup()
                 .addGroup(MoCr_MainPro_static_IOpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(MoCr_MPstaticIO_ScrollerOut, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MoCr_MPstaticIO_ScrollerOut, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 393, Short.MAX_VALUE)
                     .addComponent(MoCr_MPstaticIO_ScrollerIn, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(MoCr_MPstaticIO_Heading, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(MoCr_MPstaticIO_Heading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         MoCr_MainPro_static_IOpanelLayout.setVerticalGroup(
             MoCr_MainPro_static_IOpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MoCr_MainPro_static_IOpanelLayout.createSequentialGroup()
-                .addComponent(MoCr_MPstaticIO_ScrollerIn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(MoCr_MPstaticIO_Heading, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(13, 13, 13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MoCr_MPstaticIO_ScrollerIn, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(MoCr_MPstaticIO_ScrollerOut))
         );
 
@@ -270,11 +267,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
         MoCr_Caesar_EingabefeldSchlüssel.setFont(new java.awt.Font("Constantia", 0, 18)); // NOI18N
         MoCr_Caesar_EingabefeldSchlüssel.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        MoCr_Caesar_EingabefeldSchlüssel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MoCr_Caesar_EingabefeldSchlüsselActionPerformed(evt);
-            }
-        });
 
         MoCr_CaesarSub_DiscBack.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MoCr_CaesarSub_DiscBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/Drehscheibe Einzelsequenzen/DS_a.png"))); // NOI18N
@@ -1231,26 +1223,29 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_MPSub_AffineChiffre.setLayout(MoCr_MPSub_AffineChiffreLayout);
         MoCr_MPSub_AffineChiffreLayout.setHorizontalGroup(
             MoCr_MPSub_AffineChiffreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MoCr_AffChiffSub_KeyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(MoCr_MPSub_AffineChiffreLayout.createSequentialGroup()
-                .addGroup(MoCr_MPSub_AffineChiffreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MoCr_MPSub_AffineChiffreLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(MoCr_AffChiffSub_mLabel)
+                .addGroup(MoCr_MPSub_AffineChiffreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(MoCr_AffChiffSub_KeyLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, MoCr_MPSub_AffineChiffreLayout.createSequentialGroup()
+                        .addGroup(MoCr_MPSub_AffineChiffreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MoCr_MPSub_AffineChiffreLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(MoCr_AffChiffSub_mLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(MoCr_AffChiffSub_Key1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(MoCr_AffChiffSub_Functionpointer, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MoCr_AffChiffSub_Key1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(MoCr_AffChiffSub_Functionpointer, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(MoCr_AffChiffSub_FuncPre)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(MoCr_MPSub_AffineChiffreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MoCr_MPSub_AffineChiffreLayout.createSequentialGroup()
-                        .addComponent(MoCr_AffChiffSub_tLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MoCr_AffChiffSub_Key2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(MoCr_AffChiffSub_Function, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addComponent(MoCr_AffiChiffSub_Heading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(MoCr_AffChiffSub_FuncPre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(MoCr_MPSub_AffineChiffreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(MoCr_MPSub_AffineChiffreLayout.createSequentialGroup()
+                                .addComponent(MoCr_AffChiffSub_tLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(MoCr_AffChiffSub_Key2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 37, Short.MAX_VALUE))
+                            .addComponent(MoCr_AffChiffSub_Function, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(MoCr_AffiChiffSub_Heading, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         MoCr_MPSub_AffineChiffreLayout.setVerticalGroup(
             MoCr_MPSub_AffineChiffreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1274,38 +1269,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
         );
 
         MoCr_MainPro_changeable.add(MoCr_MPSub_AffineChiffre, "card12");
-
-        MoCr_MPSub_Kryptoanalyse.setOpaque(false);
-        MoCr_MPSub_Kryptoanalyse.setPreferredSize(new java.awt.Dimension(350, 480));
-
-        MoCr_AffiChiffSub_Heading1.setFont(new java.awt.Font("Constantia", 1, 28)); // NOI18N
-        MoCr_AffiChiffSub_Heading1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MoCr_AffiChiffSub_Heading1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/headings/Schriftzug Kryptoanalyse.png"))); // NOI18N
-
-        jButton1.setText("Berechne die Buchstabenverteilung!");
-
-        javax.swing.GroupLayout MoCr_MPSub_KryptoanalyseLayout = new javax.swing.GroupLayout(MoCr_MPSub_Kryptoanalyse);
-        MoCr_MPSub_Kryptoanalyse.setLayout(MoCr_MPSub_KryptoanalyseLayout);
-        MoCr_MPSub_KryptoanalyseLayout.setHorizontalGroup(
-            MoCr_MPSub_KryptoanalyseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MoCr_MPSub_KryptoanalyseLayout.createSequentialGroup()
-                .addComponent(MoCr_AffiChiffSub_Heading1, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(MoCr_MPSub_KryptoanalyseLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        MoCr_MPSub_KryptoanalyseLayout.setVerticalGroup(
-            MoCr_MPSub_KryptoanalyseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MoCr_MPSub_KryptoanalyseLayout.createSequentialGroup()
-                .addComponent(MoCr_AffiChiffSub_Heading1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
-                .addContainerGap(421, Short.MAX_VALUE))
-        );
-
-        MoCr_MainPro_changeable.add(MoCr_MPSub_Kryptoanalyse, "card12");
 
         javax.swing.GroupLayout MoCr_MainPro_cardPanelLayout = new javax.swing.GroupLayout(MoCr_MainPro_cardPanel);
         MoCr_MainPro_cardPanel.setLayout(MoCr_MainPro_cardPanelLayout);
@@ -1358,7 +1321,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
         MoCr_Gen_Sidelister.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
         MoCr_Gen_Sidelister.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Caesar Chiffre", "Multiplikative Chiffre", "Vigenere Chiffre", "One-Time-Pad", "Transpositionen", "Codierungen", "Spielsprachen", "Hill Chiffre", "Steganographie", "Affine Chiffre", "Kryptoanalyse" };
+            String[] strings = { "Caesar Chiffre", "Multiplikative Chiffre", "Vigenere Chiffre", "One-Time-Pad", "Transpositionen", "Codierungen", "Spielsprachen", "Hill Chiffre", "Steganographie", "Affine Chiffre" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -1421,37 +1384,33 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_GenDyn_MainProList.setLayout(MoCr_GenDyn_MainProListLayout);
         MoCr_GenDyn_MainProListLayout.setHorizontalGroup(
             MoCr_GenDyn_MainProListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(MoCr_Gen_Sidelist)
+            .addComponent(MoCr_MPButtonpanel_IOChange, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
+            .addComponent(MoCr_MPButtonpanel_Help, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MoCr_GenDyn_MainProListLayout.createSequentialGroup()
                 .addComponent(MoCr_EncryptButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(MoCr_DecryptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addComponent(MoCr_MPButtonpanel_Help, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MoCr_GenDyn_MainProListLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(MoCr_GenDyn_MainProListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(MoCr_MPButtonpanel_IOChange, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MoCr_MPButtonpanel_ExerciseButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MoCr_Gen_Sidelist, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MoCr_MPButtonpanel_LearnButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(MoCr_DecryptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(MoCr_MPButtonpanel_LearnButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(MoCr_MPButtonpanel_ExerciseButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         MoCr_GenDyn_MainProListLayout.setVerticalGroup(
             MoCr_GenDyn_MainProListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MoCr_GenDyn_MainProListLayout.createSequentialGroup()
-                .addComponent(MoCr_Gen_Sidelist, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(MoCr_Gen_Sidelist, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(MoCr_GenDyn_MainProListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(MoCr_EncryptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MoCr_DecryptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(13, 13, 13)
                 .addComponent(MoCr_MPButtonpanel_LearnButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(MoCr_MPButtonpanel_ExerciseButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(MoCr_MPButtonpanel_IOChange)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(MoCr_MPButtonpanel_Help)
-                .addContainerGap())
+                .addGap(25, 25, 25))
         );
 
         MoCr_Gen_ListPanel.add(MoCr_GenDyn_MainProList, "card3");
@@ -1549,9 +1508,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
                     localLogic.setIdentificationPair(9, 0);     break;
             case 9: n = MoCr_MPSub_AffineChiffre;
                     localLogic.setIdentificationPair(10, 0);     break;
-            case 10: n = MoCr_MPSub_Kryptoanalyse;
-                    localLogic.setIdentificationPair(0, -1);
-        }           
+        }
         return n;
     }
    
@@ -1753,7 +1710,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
             int c = localLogic.getChiffrestate();
         
             switch(e) {
-                case -1: break;
                 case 0: String k = "";  //für Chiffren gilt: 1 Schlüssel                  
                     switch(c) {
                         case 0: k = MoCr_Caesar_EingabefeldSchlüssel.getText(); break;
@@ -1789,7 +1745,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
             int c = localLogic.getChiffrestate();
         
             switch(e) {
-                case -1: break;
                 case 0: String k = "";  //für Chiffren gilt: 1 Schlüssel                  
                     switch(c) {
                         case 0: k = MoCr_Caesar_EingabefeldSchlüssel.getText(); break;
@@ -1861,10 +1816,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_CaesarSub_DiscBack.setIcon(localFraTools.alterDisc(true));
         MoCr_Caesar_EingabefeldSchlüssel.setText(localFraTools.DiscModetoString());
     }//GEN-LAST:event_jLabel2MouseClicked
-
-    private void MoCr_Caesar_EingabefeldSchlüsselActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_Caesar_EingabefeldSchlüsselActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MoCr_Caesar_EingabefeldSchlüsselActionPerformed
         
     private void changeTranspositionKeyPanel(int i) {
         javax.swing.JPanel l = null;
@@ -1961,7 +1912,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private javax.swing.JLabel MoCr_AffChiffSub_mLabel;
     private javax.swing.JLabel MoCr_AffChiffSub_tLabel;
     private javax.swing.JLabel MoCr_AffiChiffSub_Heading;
-    private javax.swing.JLabel MoCr_AffiChiffSub_Heading1;
     public javax.swing.JLabel MoCr_CaesarSub_DiscBack;
     private javax.swing.JLabel MoCr_CaesarSub_Heading;
     private javax.swing.JLabel MoCr_CaesarSub_LabelSchlüssel;
@@ -2008,7 +1958,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private javax.swing.JPanel MoCr_MPSub_Caesar;
     private javax.swing.JPanel MoCr_MPSub_Codierungen;
     private javax.swing.JPanel MoCr_MPSub_Hill;
-    private javax.swing.JPanel MoCr_MPSub_Kryptoanalyse;
     private javax.swing.JPanel MoCr_MPSub_Multiplikativ;
     private javax.swing.JPanel MoCr_MPSub_OTP;
     private javax.swing.JLabel MoCr_MPSub_OTP_Testlabel;
@@ -2071,7 +2020,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private javax.swing.JLabel MoCr_VigenereSub_Heading;
     private javax.swing.JLabel MoCr_VigenereSub_Image;
     private javax.swing.JLabel MoCr_VigenereSub_LabelSchlüssel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;

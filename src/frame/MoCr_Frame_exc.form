@@ -377,7 +377,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Constantia" size="24" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&#xdc;bungsaufgaben zu Caesar"/>
+                    <Property name="text" type="java.lang.String" value="&#xdc;bungsaufgaben zu Caesar:"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -449,7 +449,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Constantia" size="24" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&#xdc;bungsaufgaben zu Vigenere"/>
+                    <Property name="text" type="java.lang.String" value="&#xdc;bungsaufgaben zu Vigenere:"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -487,7 +487,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Constantia" size="24" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&#xdc;bungsaufgaben zu One Time Pad"/>
+                    <Property name="text" type="java.lang.String" value="&#xdc;bungsaufgaben zu One Time Pad:"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -602,82 +602,6 @@
                       <Font name="Constantia" size="24" style="1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#xdc;bungsaufgaben zu Transpositionen"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Container class="javax.swing.JPanel" name="MoCr_exc_&#xfc;berschrift_Steganographie">
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card9"/>
-                </Constraint>
-              </Constraints>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="198" max="32767" attributes="0"/>
-                          <Component id="MoCr_exc_Steganographie_überschriftenfenster" min="-2" pref="322" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="MoCr_exc_Steganographie_überschriftenfenster" pref="40" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JLabel" name="MoCr_exc_Steganographie_&#xfc;berschriftenfenster">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Constantia" size="24" style="1"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="&#xdc;bungsaufgaben zu Bacon"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Container class="javax.swing.JPanel" name="MoCr_exc_&#xfc;berschrift_Affine">
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card10"/>
-                </Constraint>
-              </Constraints>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="198" max="32767" attributes="0"/>
-                          <Component id="MoCr_exc_Affine_überschriftenfenster" min="-2" pref="310" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="MoCr_exc_Affine_überschriftenfenster" pref="40" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JLabel" name="MoCr_exc_Affine_&#xfc;berschriftenfenster">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Constantia" size="24" style="1"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="&#xdc;bungsaufgaben zu Affine"/>
                   </Properties>
                 </Component>
               </SubComponents>
