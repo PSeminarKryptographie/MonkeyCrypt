@@ -1,0 +1,6 @@
+So ein Glück! Die aller-wichtigste aller Codierungen ist auch noch die aller-einfachste!
+Die Alphabet-Index Codierung ersetzt einfach jeden Buchstaben im Alphabet mit seinem Index, also seine Stelle im Alphabet. Üblicherweise fängt man dabei mit 0 an. In anderen Worten, man numerriert einfach das Alphabet durch. Super-einfach, oder?
+[Tabelle mit normales Alphabet]
+Toll an der Alphabet-Index Codierung ist auch, dass man beliebig viele Zeichen anhängen kann, und nicht wie bei anderen Kodierungen ein eingeschränktes "Wörterbuch" hat:
+[Tabelle mit erweitertem Alphabet]
+Die Alphabet-Index Kodierung ist für kryptographische Algorithmen sehr wichtig, da sie Buchstaben mit Zahlen ersetzt.
