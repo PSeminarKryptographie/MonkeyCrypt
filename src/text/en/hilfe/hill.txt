@@ -1,9 +1,0 @@
-Hill Chiffre
-
-Der Schlüssel der Hill Chiffre ist eine Matrix, die vollständig mit jeweils einem Zeichen des Alphabets gefüllt werden muss.
-
-Beim Verschlüsseln wird eine Matrix aus dem Eingabe-Text erstellt. Es kann deswegen sein, dass die verschlüsselte Ausgabe einige Zeichen zusätzlich enthält. Um eine gelungene Entschlüsselung zu gewähren sollten diese zusätzlichen Zeichen nicht gelöscht werden.
-
-Zeichen, die nicht im Alphabet enthalten sind, werden nicht verschlüsselt.
-
-Die Hill Chiffre ist eine polyalphabetische Substitution.
