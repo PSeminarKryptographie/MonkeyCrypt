@@ -13,8 +13,7 @@ public class HtmlReader {
 
   public void insertHTML(int z, boolean fromMainmode) {                
      try {
-       File file = new File(DidMed.rightDidPath(z, fromMainmode)); // !!EINFÜGEN!!
-       Entity.setPage(file.toURI().toURL());
+       Entity.setPage(getClass().getResource(DidMed.rightDidPath(z, fromMainmode)));
      }
      catch (IOException e) {
        Entity.setContentType("text/html");

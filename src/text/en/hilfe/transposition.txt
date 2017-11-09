@@ -1,0 +1,14 @@
+Transposition
+
+Die Schlüssel der Transpositionen gestalten sich unterschiedlich:
+
+Der Schlüssel der Spaltentransposition ist eine Zeichenkette aus Zeichen des Alphabets.
+
+Der Schlüssel der Gartenzauntransposition (die "Tiefe" des Zauns) ist eine natürliche Zahl. 
+
+Anagramme benötigen keinen Schlüssel. Eine eindeutige Entschlüsselung ist hier nicht möglich.
+
+Der Doppelwürfel besitzt zwei Schlüssel. Beide sind jeweils eine Zeichenkette aus Zeichen des Alphabets.
+
+Der Schlüssel der Transposition durch Permutation ist eine Matrix, die mit den Zahlen 1 oder 0 ausgefüllt werden muss. Pro Zeile und Spalte darf jeweils nur eine 0 stehen.
+Beim Verschlüsseln wird eine Matrix aus dem Eingabe-Text erstellt. Es kann deswegen sein, dass die verschlüsselte Ausgabe einige Zeichen zusätzlich enthält. Um eine gelungene Entschlüsselung zu gewähren sollten diese zusätzlichen Zeichen nicht gelöscht werden.
