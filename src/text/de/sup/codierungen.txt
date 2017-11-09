@@ -1,7 +1,7 @@
-Kodierungen
+Codierungen
 
-Kodierungen besitzen keinen Schlüssel.
+Codierungen besitzen keinen Schluessel.
 
-Zeichen, die nicht von einer Kodierung überführt werden können, werden nicht kodiert.
+Zeichen, die nicht von einer Codierung ueberfuehrt werden koennen, werden nicht codiert.
 
-Bei der ADFGX-Verschlüsselung muss eine Tabelle mit Zeichen gefüllt werden.
+Bei der ADFGX-Verschlüsselung muss eine Tabelle mit Zeichen gefuellt werden.
