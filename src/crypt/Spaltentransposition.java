@@ -24,6 +24,9 @@ public class Spaltentransposition extends Chiffre{
 		//make a matrix
 		
 		int width = key.length();
+		if (width == 0) {
+			return text;
+		}
 		int height = Integer.valueOf(text.length()/key.length());
 		if (text.length()%key.length() != 0){
 			height++;
@@ -31,7 +34,9 @@ public class Spaltentransposition extends Chiffre{
 		
 				
 		String[][] array = new String[height][width];
-		Arrays.fill(array[height-1], "");
+		for (int a = 0; a<height; a++){
+			Arrays.fill(array[a], "");
+		}
 		int counter = 0;
 		for (int i = 0; i<array.length; i++){
 			for (int j = 0; j<array[0].length; j++){
@@ -43,6 +48,7 @@ public class Spaltentransposition extends Chiffre{
 			}
 			
 		}
+		
 		
 		//numerate key as index from alphabet
 		int [] indexKey = new int [key.length()];
@@ -77,48 +83,74 @@ public class Spaltentransposition extends Chiffre{
 		if (verified != null){
 			return verified;
 		}
+		if (key.length() == 0) {
+			return text;
+		}
 		//numerate key as index from alphabet
 		int [] indexKey = new int [key.length()];
 		for(int i = 0; i < key.length(); i++){
 			indexKey[i] = Tools.string2int(String.valueOf(key.charAt(i)), currentAlphabet);
 		}
+		
 		//numerate key from smallest to largest
 		int [] sortedKey = new int [indexKey.length];
 		for (int i = indexKey.length; i > 0; i--) {
 			int n = Tools.maxIndex(indexKey);
 			sortedKey[n] = i;
+			
 			indexKey[n] = -1;
+			
 		}
+		
 		
 		//make a matrix
 		
 		int height = key.length();
 		int width = Integer.valueOf(text.length()/key.length());
-		int missing = text.length()%key.length();
+		
 		if (text.length()%key.length() != 0){
 			width++;
 		}
+		int missing =(height*width) - text.length();
+		
 		
 				
 		String[][] array = new String[height][width];
-		Arrays.fill(array[height-1], "");
+		for (int a = 0; a<height; a++){
+			Arrays.fill(array[a], "");
+		}
+		boolean leave_me = false;
 		int counter = 0;
 		for (int i = 0; i<array.length; i++){
 			for (int j = 0; j<array[0].length; j++){
 				if (counter >= text.length()){
 					break;
 				}
-				if ((Tools.findinArray(sortedKey, i+1) > array.length - missing) && j == array[0].length-1){
-					System.out.println("hier");
+				
+				//System.out.println(sortedKey[i] - missing);
+				//System.out.println("j: " + j);
+				//System.out.println("expected: " + array[0].length);
+				int index = i +1;
+				
+				int position = Tools.getArrayIndex(sortedKey, index)+1;
+				
+				if (leave_me) {
 					array[i][j] = "";
+					leave_me = false;
+					break;
 				}
-				else{
-					array[i][j] = String.valueOf(text.charAt(counter));
-					counter++;
+				
+				if ((position > key.length() - missing) && j == array[0].length -2){
+					
+					leave_me = true;
 				}
-				System.out.println(Arrays.deepToString(array));
+
+				array[i][j] = String.valueOf(text.charAt(counter));
+				counter++;
+				
+
+				
 			}
-			
 		}
 		
 		
@@ -133,6 +165,7 @@ public class Spaltentransposition extends Chiffre{
 			newArray[i] =array[sortedKey[i]-1];
 
 		}
+		
 		return Tools.array2string(Tools.flipMatrix(newArray), currentAlphabet);
 	}
 	
@@ -149,6 +182,9 @@ public class Spaltentransposition extends Chiffre{
 	protected String verify(String key, String alphabet) {
 		if(!checkCharacter(key, alphabet)){
 			return "Vorsicht! Das Schlüsselwort darf nur Zeichen enthalten, die auch im Alphabet enthalten sind!";
+		}
+		if(key.length()>length.get(0)) {
+			return "Vorsicht! Das Schlüsselwort darf nicht länger als deine Eingabe sein!";
 		}
 		else{
 			return null;

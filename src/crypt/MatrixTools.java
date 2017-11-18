@@ -60,11 +60,11 @@ public class MatrixTools {
 
 		
 		// minors and cofactors
-				for (int i = 0; i < matrix.length; i++){
-					for (int j = 0; j < matrix[i].length; j++){
-						inverse[i][j] = (int) Math.pow(-1, i + j) * determinant(minor(matrix, i, j));
-					}
-				}
+		for (int i = 0; i < matrix.length; i++){
+			for (int j = 0; j < matrix[i].length; j++){
+				inverse[i][j] = (int) Math.pow(-1, i + j) * determinant(minor(matrix, i, j));
+			}
+		}
 		
 		// adjugate and determinant
 		

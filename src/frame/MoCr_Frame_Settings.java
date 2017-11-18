@@ -19,6 +19,7 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
         MoCr_SettingsFrame_ResetButton.addActionListener(myAL);
         MoCr_SettingsFrame_Validation.addActionListener(myAL);
         MoCr_SettingsFrame_Colourbox.addActionListener(myAL);
+        MoCr_SettingsFrame_Checkbox.setSelected(true);
     }
     
     public void renewalRoutine(String in) {

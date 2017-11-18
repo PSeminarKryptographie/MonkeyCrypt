@@ -95,9 +95,11 @@ public class Hill extends Chiffre{
 		}
 		int [][] keyMatrix = Tools.makeMatrix(key, dimension, dimension, currentAlphabet);
 		int [][] invKeyMatrix = MatrixTools.inverse(keyMatrix, currentAlphabet);
+		System.out.println(Arrays.deepToString(keyMatrix));
+		System.out.println(Arrays.deepToString(invKeyMatrix));
 		
 		String newText = algorithm(text, invKeyMatrix, currentAlphabet, dimension);
-		
+		System.out.println(newText);
 		newText = newText.substring(0, newText.length()-count);
 		return newText;
 	}
@@ -119,6 +121,10 @@ public class Hill extends Chiffre{
 				return "Vorsicht! Die Determinante der Schlüsselmatrix ist 0. Dein Text kann daher nicht eindeutig entschlüsselt werden!";
 			}
 			else{
+				int determinant = Tools.modInverse(MatrixTools.determinant(keyMatrix), currentAlphabet);
+				if (determinant == 0) {
+					return "Vorsicht! Die Schlüsselmatrix hat keine Inverse. Dein Text kann daher nicht eindeutig verschlüsselt werden!";
+				}
 				return null;
 			}
 		}

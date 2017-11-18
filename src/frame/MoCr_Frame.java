@@ -188,14 +188,13 @@ public class MoCr_Frame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MonkeyCrypt");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setMinimumSize(new java.awt.Dimension(902, 529));
+        setMinimumSize(new java.awt.Dimension(925, 570));
         setName("MoCr_Frame"); // NOI18N
-        setResizable(false);
         setSize(new java.awt.Dimension(600, 450));
 
         MoCr_Gen_DynamicPanel.setLayout(new java.awt.CardLayout());
 
-        MoCr_MainPro_cardPanel.setBackground(new java.awt.Color(153, 153, 255));
+        MoCr_MainPro_cardPanel.setBackground(new java.awt.Color(0, 102, 204));
 
         MoCr_MainPro_static_IOpanel.setOpaque(false);
 
@@ -853,7 +852,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
                 false, true, true, true, true, true
@@ -868,10 +867,10 @@ public class MoCr_Frame extends javax.swing.JFrame {
             }
         });
         MoCr_ADFGX_Matrix.setAutoscrolls(false);
-        MoCr_ADFGX_Matrix.setCellSelectionEnabled(true);
         MoCr_ADFGX_Matrix.setGridColor(new java.awt.Color(0, 0, 0));
         MoCr_ADFGX_Matrix.setOpaque(false);
         MoCr_ADFGX_Matrix.setSelectionBackground(new java.awt.Color(255, 153, 0));
+        MoCr_ADFGX_Matrix.getTableHeader().setReorderingAllowed(false);
         MoCr_ADFGX_Matrix.setUpdateSelectionOnSort(false);
         MoCr_ADFGX_Scroller.setViewportView(MoCr_ADFGX_Matrix);
         if (MoCr_ADFGX_Matrix.getColumnModel().getColumnCount() > 0) {
@@ -1426,10 +1425,10 @@ public class MoCr_Frame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MoCr_DecryptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addComponent(MoCr_MPButtonpanel_Help, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MoCr_GenDyn_MainProListLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(MoCr_GenDyn_MainProListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MoCr_MPButtonpanel_Help, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MoCr_MPButtonpanel_IOChange, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MoCr_MPButtonpanel_ExerciseButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MoCr_Gen_Sidelist, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1458,7 +1457,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
         MoCr_Gen_DidLister.setFont(new java.awt.Font("Constantia", 0, 11)); // NOI18N
         MoCr_Gen_DidLister.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Mathematik", "Steganographie", "Spielsprachen", "Kryptologie", "Kryptoanalyse", "Kryptographie", "Assymetrisch", "RSA", "End-to-End", "Symmetrisch", "Transposition", "Substitution", "Codierung", "Chiffrierung", "Monoalphabetisch", "Caesar", "Multiplikativ", "Polyalphabetisch", "Vigenere", "Enigma", "One-Time-Pad", "Hill", "Affine Chiffre" };
+            String[] strings = { "Mathematik", "Steganographie", "Spielsprachen", "Kryptologie", "Kryptoanalyse", "Kryptographie", "Asymmetrisch", "RSA", "End-to-End", "Symmetrisch", "Transposition", "Substitution", "Codierung", "Chiffrierung", "Monoalphabetisch", "Caesar", "Multiplikativ", "Polyalphabetisch", "Vigenere", "Enigma", "One-Time-Pad", "Hill", "Affine Chiffre" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });

@@ -18,19 +18,24 @@ public class Vigenere extends Chiffre{
 	
 	private String algorithm(String text, String key, String alpha, boolean encrypt){
 		String newtext = "";
+		int k = 0;
 		for (int n = 0; n<text.length(); n++)
 		{	
 			String newChar;
+			
 			if(encrypt == true){
-				newChar = c.encrypt(String.valueOf(text.charAt(n)), String.valueOf(key.charAt(n%key.length())));
+				newChar = c.encrypt(String.valueOf(text.charAt(n)), String.valueOf(key.charAt(k%key.length())));
 			}
 			else{
-				newChar = c.decrypt(String.valueOf(text.charAt(n)), String.valueOf(key.charAt(n%key.length())));
+				newChar = c.decrypt(String.valueOf(text.charAt(n)), String.valueOf(key.charAt(k%key.length())));
 
 			}
 					
-		
+                        
 			newtext += newChar;
+			if (alpha.contains(String.valueOf(text.charAt(n)).toLowerCase())){
+				k++;
+			}
 			
 			
 		}
@@ -38,14 +43,15 @@ public class Vigenere extends Chiffre{
 	}
 	
 	/**
-	 * @param text (Klartext), key (Schluessel)
+	 * @param text (Klartext)
+         * @param key (Schluessel)
 	 * ruft keyinnum auf
 	 * @return algorithm() (Geheimtext)
 	 */
 	
 	public String encrypt(String text, String key)
 	{
-		key = key.toLowerCase();
+                key = key.toLowerCase();
 		currentAlphabet = myAlphabet.getAlphabet();
 		String verified = verify(key, currentAlphabet);
 		/*if (text == null){
