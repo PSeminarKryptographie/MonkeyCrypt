@@ -1,5 +1,6 @@
-<a href="https://codebeat.co/projects/github-com-heptocat-monkeycrypt-master"><img alt="codebeat badge" src="https://codebeat.co/badges/3c3db0c2-0ec6-4298-93cb-8702dfba2942" /></a>
-<img src="https://github.com/PSeminarKryptographie/MonkeyCrypt/blob/master/src/img/graphics/Schriftzug-Bild.png" width="400" height="200" />
+
+![Logo] (https://github.com/PSeminarKryptographie/MonkeyCrypt/blob/master/src/img/graphics/headings/angepasster%20Schriftzug%20des%20Programms.png "MonkeyCrypt")
+
 # MonkeyCrypt
 This modest Java Application aims to teach children the basics of (classical) cryptography, try out different encryption types and practice their skills. It was started by a Project-Seminar group of five German students, and is still a work in progress.
 ### How can I download MonkeyCrypt?
@@ -30,3 +31,5 @@ We still have the issue that texts aren't read into the jar version of the progr
 
 ### This is so cool! Can I contribute to MonkeyCrypt?
 Since MonkeyCrypt is still a school project and we aren't allowed to have external help, we can only accept commits in some sections. In celebration of the Hacktoberfest, we have an open issue good for beginners or translators. Happy Hacking! Read our CONTRIBUTING.md for more!
+
+<a href="https://codebeat.co/projects/github-com-heptocat-monkeycrypt-master"><img alt="codebeat badge" src="https://codebeat.co/badges/3c3db0c2-0ec6-4298-93cb-8702dfba2942" /></a>
