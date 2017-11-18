@@ -1,10 +1,9 @@
 
-![Logo] (https://github.com/PSeminarKryptographie/MonkeyCrypt/blob/master/src/img/graphics/headings/angepasster%20Schriftzug%20des%20Programms.png "MonkeyCrypt")
+# ![alt-text]( https://github.com/PSeminarKryptographie/MonkeyCrypt/blob/master/src/img/graphics/headings/angepasster%20Schriftzug%20des%20Programms.png )
 
-# MonkeyCrypt
 This modest Java Application aims to teach children the basics of (classical) cryptography, try out different encryption types and practice their skills. It was started by a Project-Seminar group of five German students, and is still a work in progress.
 ### How can I download MonkeyCrypt?
-You can either clone and then compile this repository (Main class: Run.java)yourself and be completely up-to-date with the newest version of MonkeyCrypt. 
+You can either [download a .jar](https://github.com/PSeminarKryptographie/MonkeyCrypt/releases "MonkeyCrypt's latest release") you can then simply doubleclick on to run, or you can clone and then compile this repository (Main class: Run.java) yourself and be completely up-to-date with the newest version of MonkeyCrypt.
 Like with all java programs there are multiple ways to compile this repository.
 
 1.  The best way is to have <a href="https://ant.apache.org/manual/running.html">ant</a> installed. Then you can just go in the directory Monkeycrypt and type
