@@ -38,10 +38,9 @@
       <Color id="Standardcursor"/>
     </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[902, 529]"/>
+      <Dimension value="[925, 570]"/>
     </Property>
     <Property name="name" type="java.lang.String" value="MoCr_Frame" noResource="true"/>
-    <Property name="resizable" type="boolean" value="false"/>
     <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[600, 450]"/>
     </Property>
@@ -88,7 +87,7 @@
         <Container class="javax.swing.JPanel" name="MoCr_MainPro_cardPanel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="99" red="99" type="rgb"/>
+              <Color blue="cc" green="66" red="0" type="rgb"/>
             </Property>
           </Properties>
           <AuxValues>
@@ -1225,7 +1224,7 @@
                           <Properties>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="6" rowCount="5">
-                                <Column editable="false" title="" type="java.lang.Object">
+                                <Column editable="false" title="" type="java.lang.String">
                                   <Data value="A"/>
                                   <Data value="D"/>
                                   <Data value="F"/>
@@ -1240,7 +1239,6 @@
                               </Table>
                             </Property>
                             <Property name="autoscrolls" type="boolean" value="false"/>
-                            <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                               <TableColumnModel selectionModel="0">
                                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
@@ -1283,7 +1281,7 @@
                               <Color blue="0" green="99" red="ff" type="rgb"/>
                             </Property>
                             <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
-                              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                              <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
                             </Property>
                             <Property name="updateSelectionOnSort" type="boolean" value="false"/>
                           </Properties>
@@ -1995,10 +1993,10 @@
                       <Component id="MoCr_DecryptButton" min="-2" pref="63" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Component id="MoCr_MPButtonpanel_Help" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="MoCr_MPButtonpanel_Help" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                           <Component id="MoCr_MPButtonpanel_IOChange" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                           <Component id="MoCr_MPButtonpanel_ExerciseButton" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                           <Component id="MoCr_Gen_Sidelist" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
@@ -2176,7 +2174,7 @@
                         <StringItem index="3" value="Kryptologie"/>
                         <StringItem index="4" value="Kryptoanalyse"/>
                         <StringItem index="5" value="Kryptographie"/>
-                        <StringItem index="6" value="Assymetrisch"/>
+                        <StringItem index="6" value="Asymmetrisch"/>
                         <StringItem index="7" value="RSA"/>
                         <StringItem index="8" value="End-to-End"/>
                         <StringItem index="9" value="Symmetrisch"/>
