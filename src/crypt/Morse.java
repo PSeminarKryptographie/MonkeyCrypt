@@ -1,5 +1,4 @@
 package crypt;
-
 public class Morse extends Spielsprache
 {
 
@@ -181,7 +180,7 @@ public class Morse extends Spielsprache
                 {
                     x = "- - . . - -";
                 }
-                else if (t.charAt(i) == '�')
+                else if (t.charAt(i) == '�')//ss
                 {
                     x = ". . . - - . .";
                 }
@@ -225,7 +224,6 @@ public class Morse extends Spielsprache
     
     public String decrypt(String m)
     {
-        //m = m + "  ";
         String t = "";
         String x = "";
         for( int i=0; i<m.length(); i++)
@@ -247,9 +245,62 @@ public class Morse extends Spielsprache
               }
               else if( i + 12 <= m.length()&& m.charAt(i) == '.' && m.charAt(i+2) == '.' && m.charAt(i+4) == '.' && m.charAt(i+6) == '-' && m.charAt(i+8) == '-' && m.charAt(i+10) == '.' && m.charAt(i+12) == '.')
               {
-                  x = "�";
+                  x = "�";  //ss
                   i = i+12;
               }
+              //Ziffern
+              else if( i + 8 <= m.length()&& m.charAt(i) == '.' && m.charAt(i+2) == '-' && m.charAt(i+4) == '-' && m.charAt(i+6) == '-' && m.charAt(i+8) == '-')
+              {
+                  x = "1";
+                  i = i+8;
+              }
+              else if( i + 8 <= m.length()&& m.charAt(i) == '.' && m.charAt(i+2) == '.' && m.charAt(i+4) == '-' && m.charAt(i+6) == '-' && m.charAt(i+8) == '-')
+              {
+                  x = "2";
+                  i = i+8;
+              }
+              else if( i + 8 <= m.length()&& m.charAt(i) == '.' && m.charAt(i+2) == '.' && m.charAt(i+4) == '.' && m.charAt(i+6) == '-' && m.charAt(i+8) == '-')
+              {
+                  x = "3";
+                  i = i+8;
+              }
+              else if( i + 8 <= m.length()&& m.charAt(i) == '.' && m.charAt(i+2) == '.' && m.charAt(i+4) == '.' && m.charAt(i+6) == '.' && m.charAt(i+8) == '-')
+              {
+                  x = "4";
+                  i = i+8;
+              }
+              else if( i + 8 <= m.length()&& m.charAt(i) == '.' && m.charAt(i+2) == '.' && m.charAt(i+4) == '.' && m.charAt(i+6) == '.' && m.charAt(i+8) == '.')
+              {
+                  x = "5";
+                  i = i+8;
+              }
+              else if( i + 8 <= m.length()&& m.charAt(i) == '-' && m.charAt(i+2) == '.' && m.charAt(i+4) == '.' && m.charAt(i+6) == '.' && m.charAt(i+8) == '.')
+              {
+                  x = "6";
+                  i = i+8;
+              }
+              else if( i + 8 <= m.length()&& m.charAt(i) == '-' && m.charAt(i+2) == '-' && m.charAt(i+4) == '.' && m.charAt(i+6) == '.' && m.charAt(i+8) == '.')
+              {
+                  x = "7";
+                  i = i+8;
+              }
+              else if( i + 8 <= m.length()&& m.charAt(i) == '-' && m.charAt(i+2) == '-' && m.charAt(i+4) == '-' && m.charAt(i+6) == '.' && m.charAt(i+8) == '.')
+              {
+                  x = "8";
+                  i = i+8;
+              }
+              else if( i + 8 <= m.length()&& m.charAt(i) == '-' && m.charAt(i+2) == '-' && m.charAt(i+4) == '-' && m.charAt(i+6) == '-' && m.charAt(i+8) == '.')
+              {
+                  x = "9";
+                  i = i+8;
+              }
+              else if( i + 8 <= m.length()&& m.charAt(i) == '-' && m.charAt(i+2) == '-' && m.charAt(i+4) == '-' && m.charAt(i+6) == '-' && m.charAt(i+8) == '-')
+              {
+                  x = "0";
+                  i = i+8;
+              }
+              
+              // Ende Ziffern
                 
                  else if( i + 1 <= m.length())
                   {

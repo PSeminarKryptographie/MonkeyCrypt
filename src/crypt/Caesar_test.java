@@ -15,6 +15,7 @@ public class Caesar_test
 	public static String input = "";
 	public static String key = "";
 	public static String currentAlphabet = "";
+	public static Spaltentransposition st = new Spaltentransposition();
 
 	
 	public Caesar_test(){};
@@ -40,7 +41,8 @@ public class Caesar_test
 	public static String randomString10(String alpha){
 		Random rand = new Random();
 		String randString = "";
-		for (int i=0; i<10; i++){
+		int length = rand.nextInt(20);
+		for (int i=0; i<length; i++){
 			randString += alpha.charAt(rand.nextInt(alpha.length()));
 		}
 		//randString += "!";
@@ -96,7 +98,7 @@ public class Caesar_test
 		
 		/**
 		 * Alphabet wird veraendert
-		 */
+		 
 		
 		myAlphabet.setAlphabet("abc");
 		currentAlphabet = myAlphabet.getAlphabet();
@@ -116,6 +118,33 @@ public class Caesar_test
 		{
 			System.out.printf("true \n");
 		}
-		else {System.out.printf("false \n");}
+		else {System.out.printf("false \n");}*/
+	
+	
+	/**
+	 * Spaltentransposition wird getestet
+	 */
+
+	key = randomString10(currentAlphabet);
+	input = randomString10(currentAlphabet);
+	while (input.length() < key.length()) {
+		input = randomString10(currentAlphabet);
 	}
+	//input = "AaaAaaaaaaaaaa!";
+	encrypted = st.encrypt(input, key);
+	decrypted = st.decrypt(encrypted, key);
+	System.out.printf("Alphabet: %s\n", currentAlphabet);
+	System.out.printf("Klartext: %s\n", input);
+	System.out.printf("Schlüssel: %s\n", key);
+	System.out.printf("ST verschlüsselt: %s\n", encrypted);
+	System.out.printf("ST entschlüsselt: %s\n", decrypted);
+	
+	if (decrypted.equals(input))
+	{
+		System.out.printf("true \n\n");
+	}
+	else {System.out.printf("false \n\n");}
+	
+	
+}
 }

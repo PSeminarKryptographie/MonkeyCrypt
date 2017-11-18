@@ -32,6 +32,19 @@ public class Tools {
 		
 		return Character.toString(alpha.charAt(index)) ;
 	}
+	
+	public static int getArrayIndex(int[] arr,int value) {
+
+        int k=0;
+        for(int i=0;i<arr.length;i++){
+
+            if(arr[i]==value){
+                k=i;
+                break;
+            }
+        }
+    return k;
+	}
 
 	public static int ggT(int a, int b){
 	    if (a == 0){
