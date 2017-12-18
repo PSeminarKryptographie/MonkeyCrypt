@@ -15,6 +15,7 @@ public class Spaltentransposition extends Chiffre{
 	String currentAlphabet;
 	@Override
 	public String encrypt(String text, String key) {
+		length.set(0, text.length());
 		currentAlphabet = myAlphabet.getAlphabet();
 		String verified = verify(key, currentAlphabet);
 		key = key.toLowerCase();
@@ -77,6 +78,7 @@ public class Spaltentransposition extends Chiffre{
 	
 	
 	public String decrypt(String text, String key) {
+		length.set(0, text.length());
 		currentAlphabet = myAlphabet.getAlphabet();
 		String verified = verify(key, currentAlphabet);
 		key = key.toLowerCase();

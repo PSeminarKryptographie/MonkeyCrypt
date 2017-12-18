@@ -15,6 +15,9 @@
         <Menu class="javax.swing.JMenu" name="MoCr_Gen_Choicemenu1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Einstellungen"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new java.awt.Font(CFont, 0, 12)" type="code"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MoCr_Gen_Choicemenu1MouseClicked"/>
@@ -23,6 +26,9 @@
         <Menu class="javax.swing.JMenu" name="MoCr_Gen_Choicemenu2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Impressum"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new java.awt.Font(CFont, 0, 12)" type="code"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MoCr_Gen_Choicemenu2MouseClicked"/>
@@ -127,9 +133,9 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="MoCr_MPstaticIO_ScrollerOut" alignment="0" max="32767" attributes="0"/>
                               <Component id="MoCr_MPstaticIO_ScrollerIn" alignment="0" max="32767" attributes="0"/>
                               <Component id="MoCr_MPstaticIO_Heading" alignment="0" max="32767" attributes="0"/>
+                              <Component id="MoCr_MPstaticIO_ScrollerOut" alignment="1" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -169,15 +175,22 @@
                     <Component class="javax.swing.JTextArea" name="MoCr_MPstaticIO_OutField">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(IOFont, 0, 13)" type="code"/>
+                        </Property>
                         <Property name="lineWrap" type="boolean" value="true"/>
                         <Property name="rows" type="int" value="5"/>
                         <Property name="text" type="java.lang.String" value="Ausgabe"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Hier wird dein ver-/entschl&#xfc;sselter Text angezeigt"/>
                         <Property name="wrapStyleWord" type="boolean" value="true"/>
                       </Properties>
                       <Events>
                         <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="MoCr_MPstaticIO_OutFieldFocusGained"/>
                         <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="MoCr_MPstaticIO_OutFieldFocusLost"/>
                       </Events>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -191,15 +204,22 @@
                     <Component class="javax.swing.JTextArea" name="MoCr_MPstaticIO_InField">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(IOFont, 0, 13)" type="code"/>
+                        </Property>
                         <Property name="lineWrap" type="boolean" value="true"/>
                         <Property name="rows" type="int" value="5"/>
                         <Property name="text" type="java.lang.String" value="Eingabe"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Gib hier deinen Text ein"/>
                         <Property name="wrapStyleWord" type="boolean" value="true"/>
                       </Properties>
                       <Events>
                         <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="MoCr_MPstaticIO_InFieldFocusGained"/>
                         <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="MoCr_MPstaticIO_InFieldFocusLost"/>
                       </Events>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -232,9 +252,9 @@
                           <Component id="MoCr_CaesarSub_Heading" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="MoCr_CaesarSub_LabelSchlüssel" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jLabel2" max="32767" attributes="0"/>
+                                  <Component id="MoCr_CaesarSub_LabelSchlüssel" max="32767" attributes="0"/>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
@@ -287,7 +307,7 @@
                     <Component class="javax.swing.JLabel" name="MoCr_CaesarSub_LabelSchl&#xfc;ssel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                          <Connection code="new java.awt.Font(&quot;Constantia&quot;, 0, 18)" type="code"/>
+                          <Connection code="new java.awt.Font(CFont, 0, 18)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
                         <Property name="text" type="java.lang.String" value="Schl&#xfc;ssel:"/>
@@ -295,14 +315,11 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="MoCr_Caesar_EingabefeldSchl&#xfc;ssel">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="0"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(IOFont, 0, 18)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_Caesar_EingabefeldSchl&#xfc;sselActionPerformed"/>
-                      </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
@@ -323,6 +340,7 @@
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/img/graphics/Pfeil Rechts.png"/>
                         </Property>
+                        <Property name="toolTipText" type="java.lang.String" value="Drehe die innere Scheibe nach rechts"/>
                       </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel1MouseClicked"/>
@@ -333,6 +351,7 @@
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/img/graphics/Pfeil Links.png"/>
                         </Property>
+                        <Property name="toolTipText" type="java.lang.String" value="Drehe die innere Scheibe nach links"/>
                       </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel2MouseClicked"/>
@@ -361,19 +380,16 @@
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="MoCr_MultiplikaitvSub_KeyPointer" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="MoCr_MultiplikativSub_KeyField" min="-2" pref="57" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="MoCr_MultiplikaitvSub_KeyGenButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="MoCr_MultiplikaitvSub_KeyPointer" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="MoCr_MultiplikativSub_Bild" max="32767" attributes="0"/>
+                                      <Component id="MoCr_MultiplikativSub_KeyField" min="-2" pref="57" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                                   </Group>
+                                  <Component id="MoCr_MultiplikativSub_Bild" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="MoCr_MultiplikaitvSub_KeyGenButton" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -383,14 +399,15 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="MoCr_MultiplikativSub_Heading" min="-2" pref="53" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="MoCr_MultiplikaitvSub_KeyPointer" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                                  <Component id="MoCr_MultiplikativSub_KeyField" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="MoCr_MultiplikaitvSub_KeyGenButton" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace pref="32" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="MoCr_MultiplikaitvSub_KeyPointer" pref="40" max="32767" attributes="0"/>
+                                  <Component id="MoCr_MultiplikativSub_KeyField" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="MoCr_MultiplikativSub_Bild" min="-2" pref="365" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="MoCr_MultiplikaitvSub_KeyGenButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="MoCr_MultiplikativSub_Bild" min="-2" pref="310" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -410,8 +427,8 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_MultiplikaitvSub_KeyPointer">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="20" style="0"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 0, 20)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Schl&#xfc;ssel"/>
@@ -419,16 +436,16 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="MoCr_MultiplikativSub_KeyField">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="20" style="0"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(IOFont, 0, 18)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="MoCr_MultiplikaitvSub_KeyGenButton">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="0"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 0, 18)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Schl&#xfc;ssel erzeugen"/>
                       </Properties>
@@ -481,10 +498,10 @@
                               <Component id="MoCr_VigenereSub_Image" min="-2" pref="334" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="MoCr_VigenereSub_EingabefeldSchlüssel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="MoCr_VigenereSub_LabelSchlüssel" alignment="3" max="-2" attributes="0"/>
+                                  <Component id="MoCr_VigenereSub_EingabefeldSchlüssel" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="MoCr_VigenereSub_LabelSchlüssel" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="40" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -510,8 +527,8 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_VigenereSub_LabelSchl&#xfc;ssel">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="0"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 0, 18)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
                         <Property name="text" type="java.lang.String" value="Schl&#xfc;ssel:"/>
@@ -519,8 +536,8 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="MoCr_VigenereSub_EingabefeldSchl&#xfc;ssel">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="0"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(IOFont, 0, 18)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                       </Properties>
@@ -589,8 +606,8 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_OTPSub_LabelSchl&#xfc;ssel">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="0"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 0, 18)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" value="Schl&#xfc;ssel"/>
@@ -606,6 +623,9 @@
                         <Component class="javax.swing.JTextArea" name="MoCr_OTPSub_Area">
                           <Properties>
                             <Property name="columns" type="int" value="20"/>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="new java.awt.Font(IOFont, 0, 18)" type="code"/>
+                            </Property>
                             <Property name="lineWrap" type="boolean" value="true"/>
                             <Property name="rows" type="int" value="5"/>
                           </Properties>
@@ -614,8 +634,8 @@
                     </Container>
                     <Component class="javax.swing.JButton" name="MoCr_OTPSub_Generator">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="0"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 0, 14)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Schl&#xfc;ssel erzeugen"/>
                       </Properties>
@@ -693,8 +713,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_TranspositionMP_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Spaltentransposition"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -708,8 +728,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_TranspositionMP_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Gartenzaun-Transposition"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -723,8 +743,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_TranspositionMP_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Anagramm"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -738,8 +758,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_TranspositionMP_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Doppelw&#xfc;rfel"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -753,8 +773,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_TranspositionMP_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Transposition &#xfc;ber Permutationsmatrix"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -797,7 +817,7 @@
                                       <Component id="MoCr_TranspositionKey_1KeyLabel" min="-2" pref="40" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="MoCr_TranspositionKey_1KeyField" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="179" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="191" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -805,8 +825,8 @@
                           <SubComponents>
                             <Component class="javax.swing.JLabel" name="MoCr_TranspositionKey_1KeyLabel">
                               <Properties>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Constantia" size="14" style="1"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                                 </Property>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
                                 <Property name="text" type="java.lang.String" value="Schl&#xfc;ssel"/>
@@ -814,8 +834,8 @@
                             </Component>
                             <Component class="javax.swing.JTextField" name="MoCr_TranspositionKey_1KeyField">
                               <Properties>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Constantia" size="18" style="0"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="new java.awt.Font(IOFont, 0, 18)" type="code"/>
                                 </Property>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
                               </Properties>
@@ -854,7 +874,7 @@
                                           <Component id="MoCr_TranspositionSub_2KeyField1" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                                           <Component id="MoCr_TranspositionSub_2KeyField2" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="0" pref="172" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="184" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -862,8 +882,8 @@
                           <SubComponents>
                             <Component class="javax.swing.JLabel" name="MoCr_TranspositionSub_2KeyLabel">
                               <Properties>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Constantia" size="14" style="1"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                                 </Property>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
                                 <Property name="text" type="java.lang.String" value="Schl&#xfc;ssel"/>
@@ -871,16 +891,16 @@
                             </Component>
                             <Component class="javax.swing.JTextField" name="MoCr_TranspositionSub_2KeyField1">
                               <Properties>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Constantia" size="18" style="0"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="new java.awt.Font(IOFont, 0, 18)" type="code"/>
                                 </Property>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JTextField" name="MoCr_TranspositionSub_2KeyField2">
                               <Properties>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Constantia" size="18" style="0"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="new java.awt.Font(IOFont, 0, 18)" type="code"/>
                                 </Property>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
                               </Properties>
@@ -944,7 +964,7 @@
                                           <Component id="MoCr_PermSub_Label" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                                           <Component id="MoCr_PermSub_ValueLabel" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="28" max="32767" attributes="0"/>
+                                      <EmptySpace pref="40" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -952,8 +972,8 @@
                           <SubComponents>
                             <Component class="javax.swing.JLabel" name="MoCr_TranspositionSub_MatrixKeyLabel">
                               <Properties>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Constantia" size="14" style="1"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                                 </Property>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
                                 <Property name="text" type="java.lang.String" value="Schl&#xfc;sselmatrix"/>
@@ -961,6 +981,9 @@
                             </Component>
                             <Component class="javax.swing.JTable" name="MoCr_TranspositionSub_MatrixKeyField">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="new java.awt.Font(IOFont, 0, 11)" type="code"/>
+                                </Property>
                                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                   <Table columnCount="4" rowCount="4">
                                     <Column editable="true" title="Title 1" type="java.lang.String"/>
@@ -1004,17 +1027,23 @@
                             </Component>
                             <Component class="javax.swing.JLabel" name="MoCr_PermSub_MinVal">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="new java.awt.Font(CFont, 0, 11)" type="code"/>
+                                </Property>
                                 <Property name="text" type="java.lang.String" value="2"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JLabel" name="MoCr_PermSub_MaxVal">
                               <Properties>
-                                <Property name="text" type="java.lang.String" value="6"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="new java.awt.Font(CFont, 0, 11)" type="code"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="5"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JSlider" name="MoCr_PermSub_Slider">
                               <Properties>
-                                <Property name="maximum" type="int" value="6"/>
+                                <Property name="maximum" type="int" value="5"/>
                                 <Property name="minimum" type="int" value="2"/>
                                 <Property name="toolTipText" type="java.lang.String" value=""/>
                                 <Property name="value" type="int" value="4"/>
@@ -1025,12 +1054,18 @@
                             </Component>
                             <Component class="javax.swing.JLabel" name="MoCr_PermSub_Label">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="new java.awt.Font(CFont, 0, 13)" type="code"/>
+                                </Property>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
                                 <Property name="text" type="java.lang.String" value="Momentane Matrixgr&#xf6;&#xdf;e"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JLabel" name="MoCr_PermSub_ValueLabel">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="new java.awt.Font(CFont, 0, 14)" type="code"/>
+                                </Property>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
                                 <Property name="text" type="java.lang.String" value="4"/>
                               </Properties>
@@ -1055,7 +1090,7 @@
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <EmptySpace min="0" pref="275" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="287" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
@@ -1121,7 +1156,7 @@
                               <Component id="MoCr_ADFGX_Scroller" min="-2" pref="109" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="MoCr_CodierungenSub_ADFGXFiller" min="-2" pref="50" max="-2" attributes="0"/>
-                              <EmptySpace pref="74" max="32767" attributes="0"/>
+                              <EmptySpace pref="102" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1143,8 +1178,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_CodierungenMp_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Morse"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1158,8 +1193,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_CodierungenMp_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Hexadecimalcode (ASCII)"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1173,8 +1208,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_CodierungenMp_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Bin&#xe4;rcode"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1188,8 +1223,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_CodierungenMp_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Alphabetindex-Code"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1203,8 +1238,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_CodierungenMp_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="ADFGX-Code"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1222,6 +1257,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JTable" name="MoCr_ADFGX_Matrix">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="new java.awt.Font(IOFont, 0, 11)" type="code"/>
+                            </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="6" rowCount="5">
                                 <Column editable="false" title="" type="java.lang.String">
@@ -1293,8 +1331,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_CodierungenMp_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Hexadecimalcode -&gt; Bin&#xe4;rcode"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1308,8 +1346,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_CodierungenMp_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Buchstabieralphabet (NATO)"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1320,8 +1358,8 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="MoCr_CodierungenSub_ADFGXFiller">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Ausf&#xfc;llen"/>
                       </Properties>
@@ -1390,8 +1428,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_SpielsprachenMP_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 20)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Bi-Sprache"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1405,8 +1443,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_SpielsprachenMP_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 20)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Bob-Sprache"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1420,8 +1458,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_SpielsprachenMP_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 20)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="L&#xf6;ffelsprache"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1506,6 +1544,9 @@
                     <Component class="javax.swing.JTable" name="MoCr_HillSub_Matrix">
                       <Properties>
                         <Property name="autoCreateRowSorter" type="boolean" value="true"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(IOFont, 0, 11)" type="code"/>
+                        </Property>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="4" rowCount="4">
                             <Column editable="true" title="Title 1" type="java.lang.String"/>
@@ -1554,7 +1595,7 @@
                     </Component>
                     <Component class="javax.swing.JSlider" name="MoCr_HillSub_Slider">
                       <Properties>
-                        <Property name="maximum" type="int" value="6"/>
+                        <Property name="maximum" type="int" value="5"/>
                         <Property name="minimum" type="int" value="2"/>
                         <Property name="paintTicks" type="boolean" value="true"/>
                         <Property name="snapToTicks" type="boolean" value="true"/>
@@ -1568,26 +1609,32 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_HillSub_MinLab">
                       <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 0, 11)" type="code"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="2"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_HillSub_MaxLab">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="6"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 0, 11)" type="code"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="5"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_HillSub_SizeLab">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 0, 14)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Momentane Matrixgr&#xf6;&#xdf;e"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_HillSub_Size">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="4"/>
@@ -1632,7 +1679,7 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="MoCr_SteganoSub_BaconKeyHeading" min="-2" pref="30" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jScrollPane4" pref="327" max="32767" attributes="0"/>
+                              <Component id="jScrollPane4" pref="343" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1655,8 +1702,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_SteganoMP_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 18)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Bacon-Chiffre"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1670,8 +1717,8 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_SteganoMP_Grouper"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 18)" type="code"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Pseudo-Text"/>
                         <Property name="opaque" type="boolean" value="false"/>
@@ -1682,8 +1729,8 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_SteganoSub_BaconKeyHeading">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="20" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 20)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Tarntext f&#xfc;r die Bacon-Chiffre"/>
@@ -1699,6 +1746,9 @@
                         <Component class="javax.swing.JTextArea" name="MoCr_SteganoSub_BaconKey">
                           <Properties>
                             <Property name="columns" type="int" value="20"/>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="new java.awt.Font(IOFont, 0, 13)" type="code"/>
+                            </Property>
                             <Property name="lineWrap" type="boolean" value="true"/>
                             <Property name="rows" type="int" value="5"/>
                             <Property name="wrapStyleWord" type="boolean" value="true"/>
@@ -1726,29 +1776,24 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="MoCr_AffChiffSub_KeyLabel" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="MoCr_AffChiffSub_mLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="MoCr_AffChiffSub_Key1" min="-2" pref="80" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="MoCr_AffChiffSub_Functionpointer" min="-2" pref="148" max="-2" attributes="0"/>
-                              </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="MoCr_AffChiffSub_FuncPre" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="MoCr_AffChiffSub_tLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="MoCr_AffChiffSub_Key2" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="MoCr_AffChiffSub_Function" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="MoCr_AffChiffSub_mLabel" min="-2" pref="54" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="MoCr_AffChiffSub_Key1" min="-2" pref="80" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="MoCr_AffChiffSub_tLabel" min="-2" pref="56" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="MoCr_AffChiffSub_Key2" min="-2" pref="75" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Component id="MoCr_AffiChiffSub_Heading" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="MoCr_AffChiffSub_Functionpointer" min="-2" pref="91" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="MoCr_AffChiffSub_FuncPre" min="-2" pref="74" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="MoCr_AffChiffSub_Function" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
@@ -1791,8 +1836,8 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_AffChiffSub_KeyLabel">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Schl&#xfc;sselbuchstaben"/>
@@ -1800,24 +1845,24 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="MoCr_AffChiffSub_Key1">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="0"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(IOFont, 0, 18)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="MoCr_AffChiffSub_Key2">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="0"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(IOFont, 0, 18)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_AffChiffSub_mLabel">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 18)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="a ="/>
@@ -1825,8 +1870,8 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_AffChiffSub_tLabel">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 18)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="b ="/>
@@ -1834,17 +1879,17 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_AffChiffSub_Functionpointer">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="14" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 14)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="Zuordnungsvorschrift"/>
+                        <Property name="text" type="java.lang.String" value="Funktion"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_AffChiffSub_FuncPre">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 18)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="f(x) ="/>
@@ -1852,8 +1897,8 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_AffChiffSub_Function">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Constantia" size="18" style="1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 1, 18)" type="code"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="2"/>
                       </Properties>
@@ -1912,8 +1957,14 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="jButton1">
                       <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new java.awt.Font(CFont, 0, 12)" type="code"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="Berechne die Buchstabenverteilung!"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1951,6 +2002,9 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="MoCr_Did_Returnerbutton">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new java.awt.Font(CFont, 0, 12)" type="code"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Zur&#xfc;ck zum Hauptprogramm"/>
               </Properties>
               <Events>
@@ -1988,10 +2042,11 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="MoCr_EncryptButton" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="MoCr_DecryptButton" min="-2" pref="63" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="MoCr_EncryptButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="13" max="32767" attributes="0"/>
+                      <Component id="MoCr_DecryptButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -2008,8 +2063,8 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="MoCr_Gen_Sidelist" pref="251" max="32767" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="MoCr_Gen_Sidelist" pref="262" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="MoCr_EncryptButton" min="-2" pref="113" max="-2" attributes="0"/>
                           <Component id="MoCr_DecryptButton" min="-2" pref="113" max="-2" attributes="0"/>
@@ -2037,8 +2092,8 @@
               <SubComponents>
                 <Component class="javax.swing.JList" name="MoCr_Gen_Sidelister">
                   <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Constantia" size="12" style="0"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="new java.awt.Font(CFont, 0, 12)" type="code"/>
                     </Property>
                     <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                       <StringArray count="11">
@@ -2070,10 +2125,11 @@
             </Container>
             <Component class="javax.swing.JButton" name="MoCr_MPButtonpanel_LearnButton">
               <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Constantia" size="12" style="0"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new java.awt.Font(CFont, 0, 12)" type="code"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Lernen"/>
+                <Property name="toolTipText" type="java.lang.String" value="Lerne mehr &#xfc;ber diese Verschl&#xfc;sselung"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_MPButtonpanel_LearnButtonActionPerformed"/>
@@ -2081,10 +2137,11 @@
             </Component>
             <Component class="javax.swing.JButton" name="MoCr_MPButtonpanel_ExerciseButton">
               <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Constantia" size="12" style="0"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new java.awt.Font(CFont, 0, 12)" type="code"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#xdc;ben"/>
+                <Property name="toolTipText" type="java.lang.String" value="&#xdc;be diese Verschl&#xfc;sselung an verschiedenen Beispielen"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_MPButtonpanel_ExerciseButtonActionPerformed"/>
@@ -2092,10 +2149,11 @@
             </Component>
             <Component class="javax.swing.JButton" name="MoCr_MPButtonpanel_IOChange">
               <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Constantia" size="12" style="0"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new java.awt.Font(CFont, 0, 12)" type="code"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Eingabe wechseln"/>
+                <Property name="toolTipText" type="java.lang.String" value="Verschiebt den Text im Ausgabefeld in die Eingabe"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_MPButtonpanel_IOChangeActionPerformed"/>
@@ -2103,7 +2161,11 @@
             </Component>
             <Component class="javax.swing.JButton" name="MoCr_MPButtonpanel_Help">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new java.awt.Font(CFont, 0, 12)" type="code"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hilfe anzeigen"/>
+                <Property name="toolTipText" type="java.lang.String" value="Brauchst du Hilfe? Klicke hier"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_MPButtonpanel_HelpActionPerformed"/>
@@ -2114,9 +2176,11 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/img/graphics/Angepasstes geschlossenes Schloss.png"/>
                 </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Verschl&#xfc;sseln"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MoCr_EncryptButtonMouseClicked"/>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MoCr_EncryptButtonMouseEntered"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="MoCr_DecryptButton">
@@ -2124,9 +2188,11 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/img/graphics/Angepasstes geschlossenes Schloss 2.png"/>
                 </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Entschl&#xfc;sseln"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MoCr_DecryptButtonMouseClicked"/>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MoCr_DecryptButtonMouseEntered"/>
               </Events>
             </Component>
           </SubComponents>
@@ -2141,10 +2207,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="MoCr_Gen_DidList" min="-2" pref="110" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="MoCr_Gen_DidList" alignment="1" pref="160" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -2163,8 +2226,8 @@
               <SubComponents>
                 <Component class="javax.swing.JList" name="MoCr_Gen_DidLister">
                   <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Constantia" size="11" style="0"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="new java.awt.Font(CFont, 0, 12)" type="code"/>
                     </Property>
                     <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                       <StringArray count="23">

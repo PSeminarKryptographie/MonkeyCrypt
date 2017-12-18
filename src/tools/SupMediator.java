@@ -45,8 +45,7 @@ public class SupMediator {
                 case 10: name = "steganographie"; break;
             } break;
             case 2: switch(c) {
-                case 0: name = "enigma"; break;
-                case 1: name = "transposition"; break;
+                case 0: name = "transposition"; break;
             } break;
         }
         return path + name + ".txt";

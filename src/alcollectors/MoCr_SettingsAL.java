@@ -8,6 +8,8 @@ import java.awt.event.*;
 import frame.*;
 import crypt.Alphabet;
 import java.awt.Color;
+import java.awt.Font;
+import javax.swing.ToolTipManager;
 
 /**
  *
@@ -35,6 +37,8 @@ public class MoCr_SettingsAL implements ActionListener {
             localSettings.setVisible(false);
             clearFrame(localSettings.getClearBoxIndex());
             setBgColor(localSettings.MoCr_SettingsFrame_Colourbox.getSelectedIndex());
+            ToolTipManager.sharedInstance().setEnabled(localSettings.MoCr_SettingsFrame_TipCheck.isSelected());
+            setNewSize();
         }
         else {
             if(e.getSource() == localSettings.MoCr_SettingsFrame_ResetButton) {
@@ -70,5 +74,14 @@ public class MoCr_SettingsAL implements ActionListener {
             case 2: localFrame.MoCr_MainPro_cardPanel.setBackground(Color.yellow); break;
             case 3: localFrame.MoCr_MainPro_cardPanel.setBackground(Color.pink); break;            
         }
+    }
+    
+    public void setNewSize() {
+        int i = 13;        
+        try {
+            i = Integer.parseInt(localSettings.SizeField.getText());
+        } catch(Exception e) {}
+        localFrame.MoCr_MPstaticIO_InField.setFont(new Font("Monospaced", Font.PLAIN, i));
+        localFrame.MoCr_MPstaticIO_OutField.setFont(new Font("Monospaced", Font.PLAIN, i));
     }
 }
