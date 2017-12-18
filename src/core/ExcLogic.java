@@ -59,7 +59,8 @@ public class ExcLogic {
         core = new Core();
         lösung = "";
         verschlüsselungsNummer = 0;
-        aufgaben = new Aufgaben[10];
+
+        aufgaben = new Aufgaben[11];
         aufgaben[0] = new CaesarAufgaben();
         aufgaben[1] = new MultiplikativAufgaben();
         aufgaben[2] = new VigenereAufgaben();
@@ -69,6 +70,8 @@ public class ExcLogic {
         aufgaben[6] = new SpielsprachenAufgaben();
         aufgaben[8] = new SteganographieAufgaben();
         aufgaben[9] = new AffineAufgaben();
+        aufgaben[10] = new DefaultAufgaben();
+
     }
     
     public void aufgabenNummerSetzen(int nummer)
@@ -219,6 +222,9 @@ public class ExcLogic {
                 }
             case 9:
                 lösung = core.verschlüsseln(10, text, schlüssel);
+                break;
+            default:
+                lösung = null;
         }
         
         return lösung;

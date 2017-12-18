@@ -12,7 +12,9 @@ public class Core
     Chiffre[] chiffre = {new Caesar(), new Multiplikativ(), new Vigenere(), new OneTimePad(), new Spaltentransposition(), new Gartenzaun(), new ADFGX(), new Hill(), new Permutation(), new Bacon(), new Affine()};
     /**Feld für Spielsprachen*/
     Spielsprache[] spielsprache = {new Anagramm(), new Morse(), new ASCII_Hex(), new ASCII_Bin(), new AlphaIndex(), new BI_language(), new Bobsprache(), new Loeffelsprache(), new BinHex(), new NATO_Alphabet(), new Pseudo_Text()};
-
+    Doppelwuerfel meinDW = new Doppelwuerfel();
+    Haeufigkeitsanalyse meineHA = new Haeufigkeitsanalyse();
+    
     public Core()
     { 
     }
@@ -23,8 +25,7 @@ public class Core
     {
         return chiffre[z].encrypt(in, k);
     }
-    
-    
+       
     //Entschlüsselt die Chiffren
     public String entschlüsseln(int z, String in, String k)
     {
@@ -36,12 +37,26 @@ public class Core
     {
         return spielsprache[z].encrypt(in);
     }
-    
-    
+        
     //Entschlüsselt eine Spielsprache
     public String spielsprache_entschlüsseln(int z, String in)
     {
         return spielsprache[z].decrypt(in);
+    }
+    
+    public String verschlüsseln(String in, String k1, String k2)
+    {
+        return meinDW.encrypt(in, k1, k2);
+    }
+       
+    //Entschlüsselt die Chiffren
+    public String entschlüsseln(String in, String k1, String k2)
+    {
+        return meinDW.decrypt(in, k1, k2);
+    }
+    
+    public String analysieren(String in) {
+        return meineHA.analysieren(in);
     }
 }
   
