@@ -1,0 +1,11 @@
+One-Time-Pad
+
+Der Schluessel des One-Time-Pads ist eine Zeichenkette aus Zeichen des Alphabets.
+
+Der Schluessel sollte genau so lang sein, wie die Eingabe.
+Ein zufälliger Schlüssel in genau dieser Länge kann generiert werden.
+Zufaellig generierte Schluessel sind sicherer.
+
+Zeichen, die nicht im Alphabet enthalten sind, werden nicht verschluesselt.
+
+Der One-Time-Pad ist eine polyalphabetische Substitution.

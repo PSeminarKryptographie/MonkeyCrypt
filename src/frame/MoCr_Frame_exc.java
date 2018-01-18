@@ -292,7 +292,6 @@ public class MoCr_Frame_exc extends javax.swing.JFrame {
         MoCr_exc_Default_überschriftenfenster = new javax.swing.JLabel();
         MoCr_exc_Hilfe = new javax.swing.JButton();
 
-
         setResizable(false);
         setType(java.awt.Window.Type.UTILITY);
 

@@ -1,0 +1,13 @@
+Multiplier cipher
+
+The key of Caesar encryption is a character of the alphabet.
+
+The key of Caesar encryption is a sign of the alphabet.
+
+The key should be coprime to the length of the alphabet.
+A random coprimer key can be generated.
+All keys are coprime to an alphabet that has a prime number as its length.
+
+Characters that are not contained in the alphabet will not be encrypted.
+
+The multiplicative cipher is a monoalphabetic substitution.

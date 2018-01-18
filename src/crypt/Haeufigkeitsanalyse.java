@@ -30,10 +30,11 @@ public class Haeufigkeitsanalyse {
 		String [] keys = (String[]) set_keys.toArray(new String[0]);
 		String newString = "";
 		for (int i = 0; i < dict.size(); i ++) {
-			newString += keys[i];
-			newString += "   ";
-			newString += dict.get(keys[i]).toString();
-			newString += "\n";
+                        newString += "\"" + keys[i] + "\"" + "\t" + dict.get(keys[i]).toString();
+			if(i != dict.size() - 1) {
+                            newString += "\n";
+                        }
+
 		}
 		return newString;
 	}

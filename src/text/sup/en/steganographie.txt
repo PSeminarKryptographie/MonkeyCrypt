@@ -1,0 +1,5 @@
+Steganography
+
+Steganographic procedures have no key.
+
+Bacon: The camouflage text should be five times longer than the input.

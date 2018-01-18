@@ -71,7 +71,6 @@ public class ExcLogic {
         aufgaben[8] = new SteganographieAufgaben();
         aufgaben[9] = new AffineAufgaben();
         aufgaben[10] = new DefaultAufgaben();
-
     }
     
     public void aufgabenNummerSetzen(int nummer)

@@ -31,4 +31,4 @@ A .jar version is available under *releases* (See that tab on the top). This Bet
 We still have the issue that texts aren't read into the jar version of the program. To make it possible, copy the jar into the repository next to the src folder, and it should work.
 
 ### This is so cool! Can I contribute to MonkeyCrypt?
-Since MonkeyCrypt is still a school project and we aren't allowed to have external help, we can only accept commits in some sections. In celebration of the Hacktoberfest, we have an open issue good for beginners or translators. Happy Hacking! Read our CONTRIBUTING.md for more!
+Of course! MonkeyCrypt started off as a school project, but has now been finally released into the codesharing world. We'd especially appreciate help in translating. You can complete the languages we already have or add your own language. Check out our translation issue or Contributing Guidelines for more. If you're interested in contributing to the code, please contact us to let us know what you'd like to work on to avoid redundancies. Help in form of feedback is always appreciated!

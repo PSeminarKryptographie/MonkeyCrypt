@@ -1,0 +1,5 @@
+Steganographie
+
+Steganographische Verfahren besitzen keinen Schlüssel.
+
+Bacon: Der Tarntext sollte fünfmal länger sein als die Eingabe.

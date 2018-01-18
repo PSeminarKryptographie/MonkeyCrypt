@@ -6,11 +6,12 @@
 package frame;
 
 import tools.FrameTools;
-import tools.HtmlReader;
 import tools.CommTools;
 import core.*;
+import core.mwin_modules.CipherModule;
+import core.mwin_modules.GraphicModule;
+import core.mwin_modules.SwitchModule;
 import crypt.Tools;
-import java.awt.Color;
 import javax.swing.ToolTipManager;
 /**
  *
@@ -26,26 +27,27 @@ public class MoCr_Frame extends javax.swing.JFrame {
     MoCr_Frame_Support localSupport;        //lokale Hilfsinstanz
     MoCr_Frame_Settings localSettings;
     MoCr_Frame_exc localExc;
-    Core localCore;                         //lokale Core-Instanz
     static CommTools localTools = new CommTools();
     static FrameTools localFraTools = new FrameTools();
     public WindowLogic localLogic;
-    HtmlReader localDidViewer;
+    public GraphicModule localGModule;
+    public SwitchModule localSModule;
+    public CipherModule localCModule;
 
     
     
     public MoCr_Frame() {
         initComponents();   //Initialisierung der Fensterkomponente
         localLogic = WindowLogic.getInstance();
+        localGModule = new GraphicModule(this);
+        localSModule = new SwitchModule(this);
+        localCModule = new CipherModule(this);
         getContentPane().requestFocusInWindow();
         localCredits = new MoCr_Frame_Credits();    //Initialisierung der lokalen Impressumsinstanz
         localSupport = new MoCr_Frame_Support();
-        localCore = new Core();     //Core wird initialisiert
         localLogic.setIdentificationPair(0, 0);
         localLogic.setMode(true);
         localSettings = new MoCr_Frame_Settings(this);
-        localDidViewer = new HtmlReader(MoCr_Did_HTMLView);
-        localDidViewer.insertHTML(0, true);
         localExc = new MoCr_Frame_exc();
         MoCr_HillSub_Matrix.setShowGrid(true);
         MoCr_TranspositionSub_MatrixKeyField.setShowGrid(true);
@@ -415,11 +417,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
         MoCr_VigenereSub_EingabefeldSchlüssel.setFont(new java.awt.Font(IOFont, 0, 18));
         MoCr_VigenereSub_EingabefeldSchlüssel.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        MoCr_VigenereSub_EingabefeldSchlüssel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MoCr_VigenereSub_EingabefeldSchlüsselActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout MoCr_MPSub_VigenereLayout = new javax.swing.GroupLayout(MoCr_MPSub_Vigenere);
         MoCr_MPSub_Vigenere.setLayout(MoCr_MPSub_VigenereLayout);
@@ -607,11 +604,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
         MoCr_TranspositionSub_2KeyField2.setFont(new java.awt.Font(IOFont, 0, 18));
         MoCr_TranspositionSub_2KeyField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        MoCr_TranspositionSub_2KeyField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MoCr_TranspositionSub_2KeyField2ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout MoCr_TranspositionSub_2KeyLayout = new javax.swing.GroupLayout(MoCr_TranspositionSub_2Key);
         MoCr_TranspositionSub_2Key.setLayout(MoCr_TranspositionSub_2KeyLayout);
@@ -1297,8 +1289,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_AffiChiffSub_Heading1.setFont(new java.awt.Font("Constantia", 1, 28)); // NOI18N
         MoCr_AffiChiffSub_Heading1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MoCr_AffiChiffSub_Heading1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/headings/Schriftzug Kryptoanalyse.png"))); // NOI18N
-
-
         jButton1.setFont(new java.awt.Font(CFont, 0, 12));
         jButton1.setText("Berechne die Buchstabenverteilung!");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -1560,54 +1550,14 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private javax.swing.JPanel getValidChiffrePanel(int z) {
-        javax.swing.JPanel n = null;
-        switch(z) {
-            case 0: n = MoCr_MPSub_Caesar;
-                    localLogic.setIdentificationPair(0, 0);     break;
-            case 1: n = MoCr_MPSub_Multiplikativ;
-                    localLogic.setIdentificationPair(1, 0);     break;
-            case 2:  n = MoCr_MPSub_Vigenere;
-                    localLogic.setIdentificationPair(2, 0);     break;
-            case 3: n = MoCr_MPSub_OTP;
-                    localLogic.setIdentificationPair(3, 0);     break;
-            case 4: n = MoCr_MPSub_Transposition;        
-                    MoCr_TranspositionSub_SpaltelButton.setSelected(true); 
-                    changeTranspositionKeyPanel(0);
-                    localLogic.setIdentificationPair(4, 0);     break;
-            case 5: n = MoCr_MPSub_Codierungen;       
-                    MoCr_CodierungenSub_MorseButton.setSelected(true);
-                    localLogic.setIdentificationPair(1, 1);     break;
-            case 6: n = MoCr_MPSub_Spielsprachen;  
-                    MoCr_SpielsprachenMP_BiButton.setSelected(true);
-                    localLogic.setIdentificationPair(5, 1);     break;
-            case 7: n = MoCr_MPSub_Hill;
-                    localLogic.setIdentificationPair(7, 0);     break;
-            case 8: n = MoCr_MPSub_Steganographie;    
-                    MoCr_SteganoSub_BaconButton.setSelected(true); 
-                    localLogic.setIdentificationPair(9, 0);     break;
-            case 9: n = MoCr_MPSub_AffineChiffre;
-                    localLogic.setIdentificationPair(10, 0);     break;
-            case 10: n = MoCr_MPSub_Kryptoanalyse;
-                    localLogic.setIdentificationPair(0, -1);
-        }           
-        return n;
-    }
-   
     private void MoCr_MPButtonpanel_LearnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_MPButtonpanel_LearnButtonActionPerformed
         // TODO add your handling code here:    
-        localFraTools.adjustCards(MoCr_Gen_DynamicPanel, MoCr_Did_cardPanel);
-        localFraTools.adjustCards(MoCr_Gen_ListPanel, MoCr_GenDyn_DidListPanel);
-        localLogic.setMode(false);
+        localSModule.setLearningPanel();
     }//GEN-LAST:event_MoCr_MPButtonpanel_LearnButtonActionPerformed
 
     private void MoCr_Did_ReturnerbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_Did_ReturnerbuttonActionPerformed
         // TODO add your handling code here:
-        localFraTools.adjustCards(MoCr_Gen_DynamicPanel, MoCr_MainPro_cardPanel);        
-        localFraTools.adjustCards(MoCr_MainPro_changeable, getValidChiffrePanel(localLogic.getState()) );
-        localFraTools.adjustCards(MoCr_Gen_ListPanel, MoCr_GenDyn_MainProList);       
-        localLogic.setMode(true);
+        localSModule.returnToMain();
     }//GEN-LAST:event_MoCr_Did_ReturnerbuttonActionPerformed
 
     private void MoCr_Gen_Choicemenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MoCr_Gen_Choicemenu2MouseClicked
@@ -1653,19 +1603,17 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
     private void MoCr_Gen_Choicemenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MoCr_Gen_Choicemenu1MouseClicked
         // TODO add your handling code here:
-        localSettings.myAL.renew();
+        localSettings.myAL.localIModule.renew();
     }//GEN-LAST:event_MoCr_Gen_Choicemenu1MouseClicked
 
     private void MoCr_Gen_SidelisterMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MoCr_Gen_SidelisterMousePressed
         // TODO add your handling code here:
-        localLogic.setSwitchState(MoCr_Gen_Sidelister.getSelectedIndex());
-        localFraTools.adjustCards(MoCr_MainPro_changeable, getValidChiffrePanel(localLogic.getState())); 
-        localDidViewer.insertHTML(localLogic.getState(), true);
+        localSModule.switchCipherContent(MoCr_Gen_Sidelister.getSelectedIndex());        
     }//GEN-LAST:event_MoCr_Gen_SidelisterMousePressed
 
     private void MoCr_Gen_DidListerMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MoCr_Gen_DidListerMousePressed
         // TODO add your handling code here:
-        localDidViewer.insertHTML(MoCr_Gen_DidLister.getSelectedIndex(), false);
+        localSModule.setLearningContent();
     }//GEN-LAST:event_MoCr_Gen_DidListerMousePressed
 
     private void MoCr_SpielsprachenMP_BiButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_SpielsprachenMP_BiButtonActionPerformed
@@ -1696,31 +1644,31 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private void MoCr_TranspositionSub_SpaltelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_TranspositionSub_SpaltelButtonActionPerformed
         // TODO add your handling code here:
         localLogic.setIdentificationPair(4, 0);
-        changeTranspositionKeyPanel(0);
+        localSModule.changeTranspositionKeyPanel(0);
     }//GEN-LAST:event_MoCr_TranspositionSub_SpaltelButtonActionPerformed
 
     private void MoCr_TranspositionSub_GartenzaunButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_TranspositionSub_GartenzaunButtonActionPerformed
         // TODO add your handling code here:
         localLogic.setIdentificationPair(5, 0);
-        changeTranspositionKeyPanel(0);
+        localSModule.changeTranspositionKeyPanel(0);
     }//GEN-LAST:event_MoCr_TranspositionSub_GartenzaunButtonActionPerformed
 
     private void MoCr_TranspositionSub_AnagrammButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_TranspositionSub_AnagrammButtonActionPerformed
         // TODO add your handling code here:
         localLogic.setIdentificationPair(0, 1);
-        changeTranspositionKeyPanel(-1);
+        localSModule.changeTranspositionKeyPanel(-1);
     }//GEN-LAST:event_MoCr_TranspositionSub_AnagrammButtonActionPerformed
 
     private void MoCr_TranspositionSub_DoppelwürfelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_TranspositionSub_DoppelwürfelButtonActionPerformed
         // TODO add your handling code here:
         localLogic.setIdentificationPair(0, 2);
-        changeTranspositionKeyPanel(1);
+        localSModule.changeTranspositionKeyPanel(1);
     }//GEN-LAST:event_MoCr_TranspositionSub_DoppelwürfelButtonActionPerformed
 
     private void MoCr_TranspositionSub_PermutaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_TranspositionSub_PermutaButtonActionPerformed
         // TODO add your handling code here:
         localLogic.setIdentificationPair(8, 0);
-        changeTranspositionKeyPanel(2);
+        localSModule.changeTranspositionKeyPanel(2);
     }//GEN-LAST:event_MoCr_TranspositionSub_PermutaButtonActionPerformed
 
     private void MoCr_CodierungenSub_MorseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_CodierungenSub_MorseButtonActionPerformed
@@ -1778,84 +1726,18 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_MultiplikativSub_KeyField.setText(k);
     }//GEN-LAST:event_MoCr_MultiplikaitvSub_KeyGenButtonActionPerformed
 
-    private void MoCr_TranspositionSub_2KeyField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_TranspositionSub_2KeyField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MoCr_TranspositionSub_2KeyField2ActionPerformed
-
     private void MoCr_EncryptButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MoCr_EncryptButtonMouseClicked
         // TODO add your handling code here:
-        if(localLogic.getIsUsed() == true) {
-            String in = MoCr_MPstaticIO_InField.getText();  //Eingabe wird ausgelesen
-            MoCr_MPstaticIO_OutField.setText(""); //Ausgabe wird geleert
-            String out = "";
-            int e = localLogic.getencryptionType();
-            int c = localLogic.getChiffrestate();
-        
-            switch(e) {
-                case -1: break;
-                case 0: String k = "";  //für Chiffren gilt: 1 Schlüssel                  
-                    switch(c) {
-                        case 0: k = MoCr_Caesar_EingabefeldSchlüssel.getText(); break;
-                        case 1: k = MoCr_MultiplikativSub_KeyField.getText(); break;
-                        case 2: k = MoCr_VigenereSub_EingabefeldSchlüssel.getText(); break;
-                        case 3: k = MoCr_OTPSub_Area.getText(); break;
-                        case 4: k = MoCr_TranspositionKey_1KeyField.getText(); break;
-                        case 5: k = MoCr_TranspositionKey_1KeyField.getText(); break;
-                        case 6: k = localFraTools.dismantleJTable(MoCr_ADFGX_Matrix, 1); break;
-                        case 7: k = localFraTools.dismantleJTable(MoCr_HillSub_Matrix, 0); break;
-                        case 8: k = localFraTools.dismantleJTable(MoCr_TranspositionSub_MatrixKeyField, 0); break;                       
-                        case 9: k = MoCr_SteganoSub_BaconKey.getText(); break;
-                        case 10:    String k1 = MoCr_AffChiffSub_Key1.getText();
-                                String k2 = MoCr_AffChiffSub_Key2.getText();
-                                k = new StringBuffer(k1).append(k2).toString(); 
-                                MoCr_AffChiffSub_Function.setText(localFraTools.createFunction(k));   break;
-                }
-                out = localCore.verschlüsseln(c, in, k);    break;
-                case 1: out = localCore.spielsprache_verschlüsseln(c, in); break;
-                case 2: out = localCore.verschlüsseln(in, MoCr_TranspositionSub_2KeyField1.getText(), MoCr_TranspositionSub_2KeyField2.getText()); break;
-            }
-            MoCr_MPstaticIO_OutField.setText(out);
-        }
+
+        localCModule.encrypt(true);
+
     }//GEN-LAST:event_MoCr_EncryptButtonMouseClicked
 
     private void MoCr_DecryptButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MoCr_DecryptButtonMouseClicked
         // TODO add your handling code here:
-        if(localLogic.getIsUsed() == true) {
-            String in = MoCr_MPstaticIO_InField.getText();  //Eingabe wird ausgelesen
-            MoCr_MPstaticIO_OutField.setText(""); //Ausgabe wird geleert
-            String out = "";
-            int e = localLogic.getencryptionType();
-            int c = localLogic.getChiffrestate();
-        
-            switch(e) {
-                case -1: break;
-                case 0: String k = "";  //für Chiffren gilt: 1 Schlüssel                  
-                    switch(c) {
-                        case 0: k = MoCr_Caesar_EingabefeldSchlüssel.getText(); break;
-                        case 1: k = MoCr_MultiplikativSub_KeyField.getText(); break;
-                        case 2: k = MoCr_VigenereSub_EingabefeldSchlüssel.getText(); break;
-                        case 3: k = MoCr_OTPSub_Area.getText(); break;
-                        case 4: k = MoCr_TranspositionKey_1KeyField.getText(); break;
-                        case 5: k = MoCr_TranspositionKey_1KeyField.getText(); break;
-                        case 6: k = localFraTools.dismantleJTable(MoCr_ADFGX_Matrix, 1); break;
-                        case 7: k = localFraTools.dismantleJTable(MoCr_HillSub_Matrix, 0); break;
-                        case 8: k = localFraTools.dismantleJTable(MoCr_TranspositionSub_MatrixKeyField, 0); break;
-                        case 9: k = MoCr_SteganoSub_BaconKey.getText(); break;
-                        case 10:    String k1 = MoCr_AffChiffSub_Key1.getText();
-                                String k2 = MoCr_AffChiffSub_Key2.getText();
-                            k = new StringBuffer(k1).append(k2).toString(); break;
-                    }
-                out = localCore.entschlüsseln(c, in, k);    break;
-                case 1: out = localCore.spielsprache_entschlüsseln(c, in); break;
-                case 2: out = localCore.entschlüsseln(in, MoCr_TranspositionSub_2KeyField1.getText(), MoCr_TranspositionSub_2KeyField2.getText()); break;
-            }
-            MoCr_MPstaticIO_OutField.setText(out);
-        }
-    }//GEN-LAST:event_MoCr_DecryptButtonMouseClicked
 
-    private void MoCr_VigenereSub_EingabefeldSchlüsselActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_VigenereSub_EingabefeldSchlüsselActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MoCr_VigenereSub_EingabefeldSchlüsselActionPerformed
+        localCModule.encrypt(false);
+    }//GEN-LAST:event_MoCr_DecryptButtonMouseClicked
 
     private void MoCr_MPstaticIO_InFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_MoCr_MPstaticIO_InFieldFocusGained
         // TODO add your handling code here:
@@ -1890,16 +1772,12 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
-        localLogic.alterDiscMode(false);
-        MoCr_CaesarSub_DiscBack.setIcon(localFraTools.alterDisc(false));
-        MoCr_Caesar_EingabefeldSchlüssel.setText(localFraTools.DiscModetoString());
+        localGModule.switchCounterclockwise();
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         // TODO add your handling code here:
-        localLogic.alterDiscMode(true);
-        MoCr_CaesarSub_DiscBack.setIcon(localFraTools.alterDisc(true));
-        MoCr_Caesar_EingabefeldSchlüssel.setText(localFraTools.DiscModetoString());
+        localGModule.switchClockwise();
     }//GEN-LAST:event_jLabel2MouseClicked
     private void MoCr_EncryptButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MoCr_EncryptButtonMouseEntered
         // TODO add your handling code here:
@@ -1914,58 +1792,12 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         if(localLogic.getIsUsed() == true) {
-            MoCr_MPstaticIO_OutField.setText(localCore.analysieren(MoCr_MPstaticIO_InField.getText()));
+
+            MoCr_MPstaticIO_OutField.setText(localCModule.analysieren(MoCr_MPstaticIO_InField.getText(), 0));
+
         }
     }//GEN-LAST:event_jButton1ActionPerformed
-        
-    private void changeTranspositionKeyPanel(int i) {
-        javax.swing.JPanel l = null;
-            switch(i) {
-                case -1: l = MoCr_TranspositionSub_NoKey; break;
-                case 0: l = MoCr_TranspositionSub_1Key; break;
-                case 1: l = MoCr_TranspositionSub_2Key; break;
-                case 2: l = MoCr_TranspositionSub_MatrixKey; break;
-            }
-        localFraTools.adjustCards(MoCr_TranspositionSub_KeyPanel, l);
-    }
-    
-    public void clearAll() {
-        clearIO();
-        clearKeys();
-    }
-    
-    public void clearLocal() {
-        clearKeys(localLogic.getState());
-    }
-    
-    public void clearKeys() {
-        for(int i = 0; i <= 10; i++) {
-            clearKeys(i);
-        }
-    }
-    public void clearKeys(int p) {
-        switch(p) {
-            case 0: MoCr_Caesar_EingabefeldSchlüssel.setText(""); break;
-            case 1: MoCr_MultiplikativSub_KeyField.setText(""); break;
-            case 2: MoCr_VigenereSub_EingabefeldSchlüssel.setText(""); break;
-            case 3: MoCr_OTPSub_Area.setText("");
-            case 4: MoCr_TranspositionKey_1KeyField.setText("");
-                    MoCr_TranspositionSub_2KeyField1.setText("");
-                    MoCr_TranspositionSub_2KeyField2.setText("");
-                    localFraTools.clearTable(MoCr_TranspositionSub_MatrixKeyField, 0); break;
-            case 5: localFraTools.clearTable(MoCr_ADFGX_Matrix, 1); break;
-            case 6: break;
-            case 7: localFraTools.clearTable(MoCr_HillSub_Matrix, 0); break;
-            case 8: MoCr_SteganoSub_BaconKey.setText(""); break;
-            case 9:MoCr_AffChiffSub_Key1.setText("");
-                    MoCr_AffChiffSub_Key2.setText(""); break;
-        }
-    }
 
-    public void clearIO() {
-        MoCr_MPstaticIO_InField.setText("");
-        MoCr_MPstaticIO_OutField.setText("");
-    }
     /**
      * @param args the command line arguments
      */
@@ -2002,13 +1834,13 @@ public class MoCr_Frame extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable MoCr_ADFGX_Matrix;
+    public javax.swing.JTable MoCr_ADFGX_Matrix;
     private javax.swing.JScrollPane MoCr_ADFGX_Scroller;
     private javax.swing.JLabel MoCr_AffChiffSub_FuncPre;
-    private javax.swing.JLabel MoCr_AffChiffSub_Function;
+    public javax.swing.JLabel MoCr_AffChiffSub_Function;
     private javax.swing.JLabel MoCr_AffChiffSub_Functionpointer;
-    private javax.swing.JTextField MoCr_AffChiffSub_Key1;
-    private javax.swing.JTextField MoCr_AffChiffSub_Key2;
+    public javax.swing.JTextField MoCr_AffChiffSub_Key1;
+    public javax.swing.JTextField MoCr_AffChiffSub_Key2;
     private javax.swing.JLabel MoCr_AffChiffSub_KeyLabel;
     private javax.swing.JLabel MoCr_AffChiffSub_mLabel;
     private javax.swing.JLabel MoCr_AffChiffSub_tLabel;
@@ -2026,27 +1858,27 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private javax.swing.JRadioButton MoCr_CodierungenSub_BinToHexButton;
     private javax.swing.JRadioButton MoCr_CodierungenSub_BinärButton;
     private javax.swing.JLabel MoCr_CodierungenSub_Heading;
-    private javax.swing.JRadioButton MoCr_CodierungenSub_MorseButton;
+    public javax.swing.JRadioButton MoCr_CodierungenSub_MorseButton;
     private javax.swing.JRadioButton MoCr_CodierungenSub_NATOButton;
     private javax.swing.JLabel MoCr_DecryptButton;
-    private javax.swing.JEditorPane MoCr_Did_HTMLView;
+    public javax.swing.JEditorPane MoCr_Did_HTMLView;
     private javax.swing.JButton MoCr_Did_Returnerbutton;
     private javax.swing.JScrollPane MoCr_Did_Scrollpanel;
-    private javax.swing.JPanel MoCr_Did_cardPanel;
+    public javax.swing.JPanel MoCr_Did_cardPanel;
     private javax.swing.JLabel MoCr_EncryptButton;
-    private javax.swing.JPanel MoCr_GenDyn_DidListPanel;
-    private javax.swing.JPanel MoCr_GenDyn_MainProList;
+    public javax.swing.JPanel MoCr_GenDyn_DidListPanel;
+    public javax.swing.JPanel MoCr_GenDyn_MainProList;
     private javax.swing.JMenuBar MoCr_Gen_Choicebar;
     private javax.swing.JMenu MoCr_Gen_Choicemenu1;
     private javax.swing.JMenu MoCr_Gen_Choicemenu2;
     private javax.swing.JScrollPane MoCr_Gen_DidList;
-    private javax.swing.JList<String> MoCr_Gen_DidLister;
-    private javax.swing.JPanel MoCr_Gen_DynamicPanel;
-    private javax.swing.JPanel MoCr_Gen_ListPanel;
+    public javax.swing.JList<String> MoCr_Gen_DidLister;
+    public javax.swing.JPanel MoCr_Gen_DynamicPanel;
+    public javax.swing.JPanel MoCr_Gen_ListPanel;
     private javax.swing.JScrollPane MoCr_Gen_Sidelist;
     private javax.swing.JList<String> MoCr_Gen_Sidelister;
     private javax.swing.JLabel MoCr_HillSub_Heading;
-    private javax.swing.JTable MoCr_HillSub_Matrix;
+    public javax.swing.JTable MoCr_HillSub_Matrix;
     private javax.swing.JLabel MoCr_HillSub_MaxLab;
     private javax.swing.JLabel MoCr_HillSub_MinLab;
     private javax.swing.JLabel MoCr_HillSub_Size;
@@ -2056,32 +1888,32 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private javax.swing.JButton MoCr_MPButtonpanel_Help;
     private javax.swing.JButton MoCr_MPButtonpanel_IOChange;
     private javax.swing.JButton MoCr_MPButtonpanel_LearnButton;
-    private javax.swing.JPanel MoCr_MPSub_AffineChiffre;
-    private javax.swing.JPanel MoCr_MPSub_Caesar;
-    private javax.swing.JPanel MoCr_MPSub_Codierungen;
-    private javax.swing.JPanel MoCr_MPSub_Hill;
-    private javax.swing.JPanel MoCr_MPSub_Kryptoanalyse;
-    private javax.swing.JPanel MoCr_MPSub_Multiplikativ;
-    private javax.swing.JPanel MoCr_MPSub_OTP;
+    public javax.swing.JPanel MoCr_MPSub_AffineChiffre;
+    public javax.swing.JPanel MoCr_MPSub_Caesar;
+    public javax.swing.JPanel MoCr_MPSub_Codierungen;
+    public javax.swing.JPanel MoCr_MPSub_Hill;
+    public javax.swing.JPanel MoCr_MPSub_Kryptoanalyse;
+    public javax.swing.JPanel MoCr_MPSub_Multiplikativ;
+    public javax.swing.JPanel MoCr_MPSub_OTP;
     private javax.swing.JLabel MoCr_MPSub_OTP_Testlabel;
-    private javax.swing.JPanel MoCr_MPSub_Spielsprachen;
-    private javax.swing.JPanel MoCr_MPSub_Steganographie;
-    private javax.swing.JPanel MoCr_MPSub_Transposition;
-    private javax.swing.JPanel MoCr_MPSub_Vigenere;
+    public javax.swing.JPanel MoCr_MPSub_Spielsprachen;
+    public javax.swing.JPanel MoCr_MPSub_Steganographie;
+    public javax.swing.JPanel MoCr_MPSub_Transposition;
+    public javax.swing.JPanel MoCr_MPSub_Vigenere;
     private javax.swing.JLabel MoCr_MPstaticIO_Heading;
     public javax.swing.JTextArea MoCr_MPstaticIO_InField;
     public javax.swing.JTextArea MoCr_MPstaticIO_OutField;
     private javax.swing.JScrollPane MoCr_MPstaticIO_ScrollerIn;
     private javax.swing.JScrollPane MoCr_MPstaticIO_ScrollerOut;
     public javax.swing.JPanel MoCr_MainPro_cardPanel;
-    private javax.swing.JPanel MoCr_MainPro_changeable;
+    public javax.swing.JPanel MoCr_MainPro_changeable;
     private javax.swing.JPanel MoCr_MainPro_static_IOpanel;
     private javax.swing.JButton MoCr_MultiplikaitvSub_KeyGenButton;
     private javax.swing.JLabel MoCr_MultiplikaitvSub_KeyPointer;
     private javax.swing.JLabel MoCr_MultiplikativSub_Bild;
     private javax.swing.JLabel MoCr_MultiplikativSub_Heading;
-    private javax.swing.JTextField MoCr_MultiplikativSub_KeyField;
-    private javax.swing.JTextArea MoCr_OTPSub_Area;
+    public javax.swing.JTextField MoCr_MultiplikativSub_KeyField;
+    public javax.swing.JTextArea MoCr_OTPSub_Area;
     private javax.swing.JButton MoCr_OTPSub_Generator;
     private javax.swing.JLabel MoCr_OTPSub_LabelSchlüssel;
     private javax.swing.JLabel MoCr_PermSub_Label;
@@ -2089,37 +1921,37 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private javax.swing.JLabel MoCr_PermSub_MinVal;
     private javax.swing.JSlider MoCr_PermSub_Slider;
     private javax.swing.JLabel MoCr_PermSub_ValueLabel;
-    private javax.swing.JRadioButton MoCr_SpielsprachenMP_BiButton;
+    public javax.swing.JRadioButton MoCr_SpielsprachenMP_BiButton;
     private javax.swing.JRadioButton MoCr_SpielsprachenMP_BobButton;
     private javax.swing.ButtonGroup MoCr_SpielsprachenMP_Grouper;
     private javax.swing.JRadioButton MoCr_SpielsprachenMP_LöffelButton;
     private javax.swing.JLabel MoCr_SpielsprachenSub_Heading;
     private javax.swing.ButtonGroup MoCr_SteganoMP_Grouper;
-    private javax.swing.JRadioButton MoCr_SteganoSub_BaconButton;
-    private javax.swing.JTextArea MoCr_SteganoSub_BaconKey;
+    public javax.swing.JRadioButton MoCr_SteganoSub_BaconButton;
+    public javax.swing.JTextArea MoCr_SteganoSub_BaconKey;
     private javax.swing.JLabel MoCr_SteganoSub_BaconKeyHeading;
     private javax.swing.JLabel MoCr_SteganoSub_Heading;
     private javax.swing.JRadioButton MoCr_SteganoSub_PseudoButton;
-    private javax.swing.JTextField MoCr_TranspositionKey_1KeyField;
+    public javax.swing.JTextField MoCr_TranspositionKey_1KeyField;
     private javax.swing.JLabel MoCr_TranspositionKey_1KeyLabel;
     private javax.swing.ButtonGroup MoCr_TranspositionMP_Grouper;
-    private javax.swing.JPanel MoCr_TranspositionSub_1Key;
-    private javax.swing.JPanel MoCr_TranspositionSub_2Key;
-    private javax.swing.JTextField MoCr_TranspositionSub_2KeyField1;
-    private javax.swing.JTextField MoCr_TranspositionSub_2KeyField2;
+    public javax.swing.JPanel MoCr_TranspositionSub_1Key;
+    public javax.swing.JPanel MoCr_TranspositionSub_2Key;
+    public javax.swing.JTextField MoCr_TranspositionSub_2KeyField1;
+    public javax.swing.JTextField MoCr_TranspositionSub_2KeyField2;
     private javax.swing.JLabel MoCr_TranspositionSub_2KeyLabel;
     private javax.swing.JRadioButton MoCr_TranspositionSub_AnagrammButton;
     private javax.swing.JRadioButton MoCr_TranspositionSub_DoppelwürfelButton;
     private javax.swing.JRadioButton MoCr_TranspositionSub_GartenzaunButton;
     private javax.swing.JLabel MoCr_TranspositionSub_Heading;
-    private javax.swing.JPanel MoCr_TranspositionSub_KeyPanel;
-    private javax.swing.JPanel MoCr_TranspositionSub_MatrixKey;
-    private javax.swing.JTable MoCr_TranspositionSub_MatrixKeyField;
+    public javax.swing.JPanel MoCr_TranspositionSub_KeyPanel;
+    public javax.swing.JPanel MoCr_TranspositionSub_MatrixKey;
+    public javax.swing.JTable MoCr_TranspositionSub_MatrixKeyField;
     private javax.swing.JLabel MoCr_TranspositionSub_MatrixKeyLabel;
-    private javax.swing.JPanel MoCr_TranspositionSub_NoKey;
+    public javax.swing.JPanel MoCr_TranspositionSub_NoKey;
     private javax.swing.JRadioButton MoCr_TranspositionSub_PermutaButton;
-    private javax.swing.JRadioButton MoCr_TranspositionSub_SpaltelButton;
-    private javax.swing.JTextField MoCr_VigenereSub_EingabefeldSchlüssel;
+    public javax.swing.JRadioButton MoCr_TranspositionSub_SpaltelButton;
+    public javax.swing.JTextField MoCr_VigenereSub_EingabefeldSchlüssel;
     private javax.swing.JLabel MoCr_VigenereSub_Heading;
     private javax.swing.JLabel MoCr_VigenereSub_Image;
     private javax.swing.JLabel MoCr_VigenereSub_LabelSchlüssel;
