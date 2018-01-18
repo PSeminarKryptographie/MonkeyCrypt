@@ -1,7 +1,0 @@
-﻿Vigenere cifra
-
-A chave da cifra do Vignere é uma seqüência de caracteres do alfabeto.
-
-Quanto maior a chave, mais segura é a criptografia!
-
-Os caracteres que não estão contidos no alfabeto não são criptografados.

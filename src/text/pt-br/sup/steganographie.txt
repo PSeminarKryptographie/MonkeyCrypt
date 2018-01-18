@@ -1,5 +1,0 @@
-Esteganografia
-
-Os procedimentos esteganográficos não têm nenhuma chave.
-
-Bacon: o texto de camuflagem deve ser cinco vezes maior do que a entrada.

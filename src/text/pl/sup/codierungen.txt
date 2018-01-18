@@ -1,7 +1,0 @@
-Kodowanie
-
-Kodowanie nie posiada klucza.
-
-Znaki, które nie mogą zostać skonwertowane przez kodowanie, nie zostaną.
-
-Podczas kodowania ADFGX, tabela musi zostać wypełniona znakami.

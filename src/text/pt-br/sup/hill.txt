@@ -1,9 +1,0 @@
-Hill cipher
-
-A chave da cifra Hill é uma matriz, que deve ser completamente preenchida com um caractere do alfabeto.
-
-Quando você criptografa, uma matriz é criada a partir do texto de entrada. Pode ser que a saída criptografada também contenha alguns caracteres. Para garantir um decodificação bem-sucedida, esses caracteres adicionais não devem ser excluídos.
-
-Os caracteres que não estão contidos no alfabeto não são criptografados.
-
-A cifra Hill é uma substituição polialfabética.

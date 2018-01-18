@@ -1,5 +1,0 @@
-Steganographie
-
-Steganographische Verfahren besitzen keinen Schluessel.
-
-Bacon: Der Tarntext sollte fünfmal laenger sein als die Eingabe.
