@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package tools;
+import core.Translator;
 
 /**
  *
@@ -55,7 +56,7 @@ public class DidMediator {
                 case 22: ending = "affine"; break;
             }
         }
-        String out = "/text/de/did/" + ending + "_did.html";
+        String out = "/text/did/" + Translator.getInstance().getcurrentLang() + "/" + ending + "_did.html";
         return out;
     }
 }

@@ -11,7 +11,7 @@ import alcollectors.MoCr_SettingsAL;
  */
 public class MoCr_Frame_Settings extends javax.swing.JFrame {
    
-    MoCr_SettingsAL myAL;
+    public MoCr_SettingsAL myAL;
     String IOFont;
     String CFont;
     
@@ -69,6 +69,8 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
         Heading1 = new javax.swing.JLabel();
         Heading2 = new javax.swing.JLabel();
         SizeField = new javax.swing.JTextField();
+        MoCr_Settings_Lang = new javax.swing.JComboBox<>();
+        MoCr_Settings_LangLabel = new javax.swing.JLabel();
 
         setTitle("Einstellungen");
         setResizable(false);
@@ -109,7 +111,7 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
                 .addComponent(MoCr_SettingsFrame_AlphabetField, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MoCr_SettingsFrame_ResetButton)
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         MoCr_SettingsFrame_TabbedPane.addTab("Verschlüsselung", MoCr_SettingsFrame_CryptoSub);
@@ -138,6 +140,13 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
         SizeField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         SizeField.setText("13");
 
+        MoCr_Settings_Lang.setFont(new java.awt.Font(CFont, 0, 12));
+        MoCr_Settings_Lang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Deutsch", "English", "Italiano", "język polski" }));
+
+        MoCr_Settings_LangLabel.setFont(new java.awt.Font(CFont, 1, 12));
+        MoCr_Settings_LangLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        MoCr_Settings_LangLabel.setText("Sprache");
+
         javax.swing.GroupLayout MoCr_SettingsFrame_DesignSubLayout = new javax.swing.GroupLayout(MoCr_SettingsFrame_DesignSub);
         MoCr_SettingsFrame_DesignSub.setLayout(MoCr_SettingsFrame_DesignSubLayout);
         MoCr_SettingsFrame_DesignSubLayout.setHorizontalGroup(
@@ -149,14 +158,19 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
                         .addComponent(Heading1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(MoCr_SettingsFrame_Colourbox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(MoCr_SettingsFrame_DesignSubLayout.createSequentialGroup()
-                        .addComponent(Heading2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(SizeField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MoCr_SettingsFrame_ClearBox, 0, 285, Short.MAX_VALUE))
+                    .addComponent(MoCr_SettingsFrame_Checkbox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(MoCr_SettingsFrame_TipCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MoCr_SettingsFrame_Checkbox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(MoCr_SettingsFrame_DesignSubLayout.createSequentialGroup()
+                        .addGroup(MoCr_SettingsFrame_DesignSubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Heading2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(MoCr_Settings_LangLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(MoCr_SettingsFrame_DesignSubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(MoCr_SettingsFrame_DesignSubLayout.createSequentialGroup()
+                                .addComponent(SizeField, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(MoCr_SettingsFrame_ClearBox, 0, 281, Short.MAX_VALUE))
+                            .addComponent(MoCr_Settings_Lang, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
         );
         MoCr_SettingsFrame_DesignSubLayout.setVerticalGroup(
             MoCr_SettingsFrame_DesignSubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,11 +184,15 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
                     .addComponent(Heading2)
                     .addComponent(SizeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MoCr_SettingsFrame_ClearBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(MoCr_SettingsFrame_DesignSubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(MoCr_Settings_Lang, javax.swing.GroupLayout.DEFAULT_SIZE, 21, Short.MAX_VALUE)
+                    .addComponent(MoCr_Settings_LangLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(MoCr_SettingsFrame_TipCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(MoCr_SettingsFrame_Checkbox)
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         MoCr_SettingsFrame_TabbedPane.addTab("Darstellung", MoCr_SettingsFrame_DesignSub);
@@ -189,9 +207,9 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(MoCr_SettingsFrame_TabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(MoCr_SettingsFrame_Validation, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(MoCr_SettingsFrame_TabbedPane)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MoCr_SettingsFrame_Validation))
         );
 
         pack();
@@ -211,6 +229,8 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
     private javax.swing.JTabbedPane MoCr_SettingsFrame_TabbedPane;
     public javax.swing.JCheckBox MoCr_SettingsFrame_TipCheck;
     public javax.swing.JButton MoCr_SettingsFrame_Validation;
+    public javax.swing.JComboBox<String> MoCr_Settings_Lang;
+    private javax.swing.JLabel MoCr_Settings_LangLabel;
     public javax.swing.JTextField SizeField;
     // End of variables declaration//GEN-END:variables
 }

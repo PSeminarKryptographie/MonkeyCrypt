@@ -1,0 +1,18 @@
+[Ü]: Kryptologie
+Hallo, ich bin Bob, ein Experte in geheimer Kommunikation und in Allem, was mit ihr zu tun hat. Meine Lieblingsteilgebiet ist die Kryptologie (altgr. kryptós = "veborgen, geheim" und lógos = "Wort, Lehre"). Also ist sie "Die Lehre des Geheimhaltens".
+Die Kryptologie ist der Steganographie sowie den Spielsprachen weitaus überlegen. Warum? Weil sie eine mathematische Disziplin ist! Nur mit der Mathematik kann man die Stärke eines Verfahrens überprüfen oder seine Sicherheit lückenlos beweisen. Außerdem hat sie klare Regeln, die für Computer leicht umzusetzen sind. So muss man nicht alles per Hand machen. Ziemlich praktisch, nicht?
+Wie in der Mathematik gibt es in der Kryptologie Abkürzungen und Formulierungen, die einem faulen Kryptologen (wie mir) Schreibarbeit sparen.
+[Tabelle]
+{
+	Begriff		Erklärung
+	Alphabet A		eine endliche Menge an Zeichen (A = {a, b, c})
+	|A|			Die Mächtigkeit von A = Anzahl von Zeichen in A	(|A|=3)
+	Klartext M		Eine lesbare Zeichenkette (eng. message) "über" A. Das bedeutet das sie nur aus Zeichen im Alphabet besteht.
+	Schlüssel K		Eine Zeichenkette (eng. key)
+	Verschlüsselung E	Verfahren, welches aus M und K den Geheimtext erzeugt
+	Geheimtext C	Eine unlesbare Zeichenkette (eng. ciphertext)
+	Entschlüsselung D	Verfahren zur Wiederherstellung des Klartextes
+
+}
+In der Kryptographie unterscheidet man zwischen KRYPTOGRAPHIE und KRYPTOANALYSE.
+

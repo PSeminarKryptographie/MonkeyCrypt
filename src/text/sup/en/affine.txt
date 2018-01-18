@@ -1,0 +1,16 @@
+Affine cipher
+
+The Affine cipher has two keys, a and b.
+Both are a character of the alphabet.
+
+
+a should be coprime to the length of the alphabet.
+It is possible to generate a random coprime key.
+All keys are coprime to an alphabet, if its length is prime.
+
+
+Characters, which are not part of the alphabet, won't be encrypted.
+
+
+The affine cipher is a monoalphabetic substitution.
+

@@ -5,6 +5,8 @@
  */
 package tools;
 
+import core.Translator;
+
 /**
  *
  * @author Jonas
@@ -12,7 +14,7 @@ package tools;
 public class SupMediator {
     //erstellt String für den relativen Dateipfad
     public String selectSupTxt(int e, int c) {
-        String path = "/text/de/sup/";
+        String path = "/text/sup/" + Translator.getInstance().getcurrentLang() + "/";
         String name = "";
         switch(e) {
             case -1: switch(c) {

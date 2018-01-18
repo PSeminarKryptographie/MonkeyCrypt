@@ -34,9 +34,9 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <Component id="MoCr_SettingsFrame_TabbedPane" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="MoCr_SettingsFrame_Validation" min="-2" pref="27" max="-2" attributes="0"/>
+              <Component id="MoCr_SettingsFrame_TabbedPane" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="MoCr_SettingsFrame_Validation" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -93,7 +93,7 @@
                       <Component id="MoCr_SettingsFrame_AlphabetField" min="-2" pref="56" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="MoCr_SettingsFrame_ResetButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="57" max="32767" attributes="0"/>
+                      <EmptySpace pref="81" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -149,15 +149,23 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="MoCr_SettingsFrame_Colourbox" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="Heading2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="SizeField" min="-2" pref="75" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="MoCr_SettingsFrame_ClearBox" pref="285" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="MoCr_SettingsFrame_TipCheck" max="32767" attributes="0"/>
                           <Component id="MoCr_SettingsFrame_Checkbox" alignment="0" max="32767" attributes="0"/>
+                          <Component id="MoCr_SettingsFrame_TipCheck" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="Heading2" max="32767" attributes="0"/>
+                                  <Component id="MoCr_Settings_LangLabel" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="SizeField" min="-2" pref="79" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="MoCr_SettingsFrame_ClearBox" pref="281" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="MoCr_Settings_Lang" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
@@ -176,11 +184,16 @@
                           <Component id="SizeField" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="MoCr_SettingsFrame_ClearBox" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="MoCr_Settings_Lang" pref="21" max="32767" attributes="0"/>
+                          <Component id="MoCr_Settings_LangLabel" max="32767" attributes="0"/>
+                      </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="MoCr_SettingsFrame_TipCheck" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="MoCr_SettingsFrame_Checkbox" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="70" max="32767" attributes="0"/>
+                      <EmptySpace pref="61" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -272,6 +285,34 @@
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="MoCr_Settings_Lang">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new java.awt.Font(CFont, 0, 12)" type="code"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Deutsch"/>
+                    <StringItem index="1" value="English"/>
+                    <StringItem index="2" value="Italiano"/>
+                    <StringItem index="3" value="j&#x119;zyk polski"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="MoCr_Settings_LangLabel">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new java.awt.Font(CFont, 1, 12)" type="code"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="Sprache"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>

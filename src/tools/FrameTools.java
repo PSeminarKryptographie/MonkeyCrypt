@@ -28,16 +28,6 @@ public class FrameTools {
 			return text;
 		}
 	}
-        /*
-        * @param May, Min
-        * zeichnet auf ein Panel mit CardLayout (May) ein Unterpanel (Min)
-        */
-        public void adjustCards(javax.swing.JPanel May, javax.swing.JPanel Min) {
-            May.removeAll();
-            May.add(Min);
-            May.revalidate();
-            May.repaint();
-        }
         
         public String ADFGX_SpecialCheck(javax.swing.JTable internTable) {
                 int r = internTable.getRowCount();
@@ -139,15 +129,5 @@ public class FrameTools {
     
     public void alterJTable(javax.swing.JTable t, int l) {
         t.setModel(new DefaultTableModel(l, l));
-    }
-    
-    public String DiscModetoString() {
-        return Tools.int2string(WindowLogic.getInstance().getCaesardiscmode(), "abcdefghijklmnopqrstuvwxyz");
-    }
-    
-    public ImageIcon alterDisc(boolean directedLeft) {
-        String nextChar = Tools.int2string(WindowLogic.getInstance().getCaesardiscmode(), "abcdefghijklmnopqrstuvwxyz");
-        String path = "/img/graphics/Drehscheibe Einzelsequenzen/DS_" + nextChar + ".png";
-        return new javax.swing.ImageIcon(getClass().getResource(path));
     }
 }

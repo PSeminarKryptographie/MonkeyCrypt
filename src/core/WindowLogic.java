@@ -19,7 +19,6 @@ public class WindowLogic {
     int chiffrestate;
     int encryptionType;
     boolean ismainmode;
-    int caesardiscmode;
     boolean isused;
        
     private WindowLogic() {
@@ -27,7 +26,6 @@ public class WindowLogic {
         chiffrestate = 0;
         encryptionType = 0;
         ismainmode = true;
-        caesardiscmode = 0;
         isused = false;
     }
     
@@ -70,26 +68,5 @@ public class WindowLogic {
     
     public int getState() {
         return state;
-    }
-    
-    public void setCaesardiscmode(int n) {
-        caesardiscmode = n;
-    }
-    
-    public int getCaesardiscmode() {
-        return caesardiscmode;
-    }
-    
-    public void alterDiscMode(boolean directedLeft) {
-        if(directedLeft == true) {
-            if(caesardiscmode < 25) {
-                caesardiscmode++;
-            } else {caesardiscmode = 0;}
-        }
-        else {
-            if(caesardiscmode > 0) {
-                caesardiscmode--;
-            } else {caesardiscmode = 25;}
-        }
     }
 }

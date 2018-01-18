@@ -1,0 +1,939 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+  
+  
+  
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+
+
+  
+  
+  
+  <title>Simple Page</title>
+</head>
+
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(51, 102, 255);" alink="#000099" link="#000099" vlink="#990099">
+
+
+
+
+<div style="text-align: center;"><span style="font-family: Bitstream Charter;"></span><span style="font-family: Bitstream Charter;"></span><br>
+
+
+
+
+</div>
+
+
+
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr style="font-family: Jamrul;" align="center">
+
+
+
+
+      <td colspan="2"><img style="width: 352px; height: 53px;" alt="SZ Caesar" src="../../../img/graphics/headings/Schriftzug%20Caesar.png"></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr style="font-family: Jamrul;">
+
+
+
+
+      <td style="font-family: Jamrul;" colspan="1"><img style="width: 250px; height: 340px;" alt="Caesar Downscale" src="../../../img/graphics/Caesar_downscale.png"></td>
+
+
+
+
+      <td style="text-align: justify; font-family: Jamrul;"><big>
+      </big>
+      
+      
+      
+      <div style="text-align: left;"><font size="+1">Ave!
+Ich bin Iulius Caesar, ein ber&uuml;hmter r&ouml;mischer
+Feldherr. Du hast sicher schon von mir geh&ouml;rt, immerhin habe
+ich ganz Gallien erobert - Na gut, mit der Ausnahme eines Dorfes, das
+nicht aufh&ouml;rt, mir Widerstand zu leisten, ich gebe es zu.<br>
+
+
+
+Aber
+das ist auch unfair, sie haben einen geheimen Zaubertrank! Doch auch
+ich habe eine Geheimwaffe: Die nach mir benannte
+Caesar-Verschl&uuml;sselung. Damit schicke ich meinen Legionen
+geheime Nachrichten</font><font size="+1">.</font><br>
+
+
+
+      <big>
+      </big></div>
+
+
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr style="font-family: Jamrul;">
+
+
+
+
+      <td colspan="2"><font size="+1">Das funktioniert folgenderma&szlig;en:<br>
+
+
+      <br>
+
+
+      </font>
+      
+      
+      
+      
+      
+      <div style="text-align: left;"><font size="+1">A wird zu E<br>
+
+
+
+B wird zu F<br>
+
+
+
+...<br>
+
+
+
+Z wird zu D<br>
+
+
+      <br>
+
+
+K&ouml;nnt ihr erraten, was folgender Geheimtext bedeutet?</font><big><big><br>
+
+
+
+      <small style="font-family: monospace;"><br>
+
+
+      </small>
+      </big></big><font size="+1"><span style="font-family: monospace;">Geheimtext: &nbsp;Hiv Jimrh peyivx mq Aeph</span><br style="font-family: monospace;">
+
+
+      <span style="font-family: monospace;">
+Klartext: &nbsp; &nbsp;Der Feind lauert im ____</span><br>
+
+
+      <br>
+
+
+Super! Wie du siehst, wird bei der
+Caesar-Verschl&uuml;sselung immer ein Buchstabe mit genau einem anderen
+ersetzt. Deswegen wird dieses Verfahren als monoalphabetische
+Substitution bezeichnet.<br>
+
+
+      <br>
+
+
+Man kann das Ersetzen veranschaulichen, indem man das</font>
+      
+      
+      
+       <font size="+1">normale Alphabet (<span style="font-weight: bold; color: rgb(255, 102, 0);">Klartextalphabet</span>) aufschreibt und darunter ein <span style="font-weight: bold;">Geheimtextalphabet</span>,
+das mit einem beliebigen Buchstaben anf&auml;ngt und entsprechend
+fortgesetzt wird. Dieser erste Buchstabe ist dann der "Schl&uuml;ssel"
+des Geheimtexts.<br>
+
+
+      <br>
+
+
+Hier ein Beispiel mit dem Schl&uuml;ssel <span style="font-weight: bold; color: rgb(255, 255, 51);">D</span>:</font>
+      
+      <br>
+
+
+
+      </div>
+
+
+
+      </td>
+
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td colspan="2">
+      
+      
+      
+      <table style="text-align: left; width: 588px; height: 56px;" border="1" cellpadding="1" cellspacing="2">
+
+
+
+        <tbody>
+
+
+
+          <tr>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>A</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>B</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>C</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>D</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>E</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>F</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>G</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>H</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>I</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>J</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>K</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>L</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>M</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>N</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>O</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>P</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>Q</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>R</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>S</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>T</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>U</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>V</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>W</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>X</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>Y</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big><big>Z</big></big></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="font-family: monospace; background-color: rgb(255, 255, 51); font-weight: bold;"><big><big>d</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>e</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>f</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>g</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>h</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>i</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>j</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>k</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>l</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>m</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>n</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>o</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>p</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>q</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>r</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>s</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>t</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>u</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>v</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>w</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>x</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>y</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>z</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>a</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>b</big></big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big><big>c</big></big></td>
+
+
+
+          </tr>
+
+
+
+        
+        
+        
+        </tbody>
+      
+      
+      
+      </table>
+
+
+
+      </td>
+
+
+
+
+
+    </tr>
+
+
+
+    <tr>
+
+
+
+      <td colspan="2">
+      
+      
+      
+      <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+
+
+        <tbody>
+
+
+
+          <tr>
+
+
+
+            <td><img style="width: 350px; height: 350px;" alt="caesarscheibe a" src="../../../img/graphics/Drehscheibe%20Einzelsequenzen/DS_a.png"></td>
+
+
+
+            <td><font size="+1"><span style="font-family: Jamrul;">Das ist
+eine Caesar-Scheibe. Das Klartextalphabet ist au&szlig;en
+(Gro&szlig;buchstaben), das Geheimtextalphabet innen. Den
+Schl&uuml;ssel siehst du immer unterhalb des Klartextes "A". Drehst du
+an der inneren Scheibe, so ver&auml;ndert sich der Schl&uuml;ssel.</span></font></td>
+
+
+
+          </tr>
+
+
+
+        
+        
+        
+        </tbody>
+      
+      
+      
+      </table>
+
+
+
+      </td>
+
+
+
+    </tr>
+
+
+
+    <tr>
+
+
+
+      <td colspan="2"><big><span style="font-family: Jamrul;"></span></big>
+      
+      
+      
+      <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+
+
+        <tbody>
+
+
+
+          <tr>
+
+
+
+            <td style="background-color: rgb(255, 153, 0);"><font size="+1"><span style="font-family: Comic Sans MS;"><span style="text-decoration: underline;">BASTELTIPP:</span><br>
+
+
+
+So kannst du selbst eine Caesar-Scheibe basteln: Drucke unter
+[Druckvorlagen] das Dokument [Caesar-scheibe] aus. Klebe das Blatt auf
+ein St&uuml;ck Pappe und schneide die beiden Scheiben dann
+sorgf&auml;ltig aus. Lege die beiden Scheiben auf einen Korken und
+befestige sie mit einer Rei&szlig;zwecke in ihrem Mittelpunkt. Fertig
+ist die Caesar-Scheibe!</span></font></td>
+
+
+
+          </tr>
+
+
+
+        
+        
+        
+        </tbody>
+      
+      
+      
+      </table>
+
+
+
+      <big><span style="font-family: Jamrul;"></span><small><span style="font-family: Jamrul;"><small><br>
+
+
+      </small></span></small></big><font size="+1"><span style="font-family: Jamrul;">Nach
+der ganzen Bastelei wird es Zeit zu kl&auml;ren, wie jetzt der
+kryptographische Algorithmus der Caesar-Verschl&uuml;sselung
+funktioniert. Als erstes m&uuml;ssen wir wie gewohnt mit der
+Alphabet-Index Codierung unsere Buchstaben in Zahlen umwandeln (A=0,
+B=1, u.s.w). Mal sehen wie jetzt eine Zuordnung mit den Schl&uuml;ssel <span style="font-weight: bold; color: rgb(255, 255, 51);">D </span><span style="color: rgb(255, 255, 51);"><span style="color: rgb(0, 0, 0);">(=</span></span><span style="font-weight: bold; color: rgb(255, 255, 51);"> 3</span><span style="color: rgb(255, 255, 51);"><span style="color: rgb(0, 0, 0);">)</span></span> aussieht:</span></font></td>
+
+
+
+    </tr>
+
+
+
+    <tr>
+
+
+
+      <td colspan="2">
+      
+      
+      
+      <table style="text-align: left; width: 100%;" border="1" cellpadding="1" cellspacing="1">
+
+
+
+        <tbody>
+
+
+
+          <tr>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>0 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>1 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>2 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>3 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>4 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>5 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>6 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>7 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>8 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>9 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>10</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>11</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>12</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>13</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>14</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>15</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>16</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>17</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>18</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>19</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>20</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>21</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>22</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>23</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>24</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold; color: rgb(255, 102, 0);"><big>25</big></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="font-family: monospace; background-color: rgb(255, 255, 102); font-weight: bold;"><big>3 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>4 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>5 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>6 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>7 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>8 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>9 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>10</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>11</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>12</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>13</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>14</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>14</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>15</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>16</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>17</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>18</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>19</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>20</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>21</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>22</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>23</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>24</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>25</big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>1 </big></td>
+
+
+
+            <td style="font-family: monospace; font-weight: bold;"><big>2 </big></td>
+
+
+
+          </tr>
+
+
+
+        
+        
+        
+        </tbody>
+      
+      
+      
+      </table>
+
+
+
+      <span style="font-family: Jamrul;"><br>
+
+
+      </span></td>
+
+
+
+    </tr>
+
+
+
+    <tr>
+
+
+      <td colspan="2"><font size="+1"><span style="font-family: Jamrul;">F&auml;llt dir eine Regelm&auml;&szlig;igkeit auf? Genau! Um vom <span style="font-weight: bold; color: rgb(255, 102, 0);">Klartextalphabet</span> zum <span style="font-weight: bold;">Geheimtextalphabet</span> zu kommen, muss man immer eine <span style="color: rgb(0, 0, 0);">3</span> dazu addieren. Warum gerade 3? Weil <span style="color: rgb(255, 255, 0); font-weight: bold;">3 </span><span style="color: rgb(0, 0, 0);">(= <span style="color: rgb(255, 255, 0); font-weight: bold;">D</span>) genau unserem Schl&uuml;ssel entspricht. Einzige Ausnahme bild</span>en
+die hohen Zahlen, bei ihnen wird eine Rechenregel angewendet, die
+Modulo genannt wird. Unter MATHEMATIK kannst du mehr dar&uuml;ber
+erfahren. Umgekehrt muss man dann zum Entschl&uuml;sseln einfach den
+Schl&uuml;ssel wieder subtrahieren.</span></font></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+
+      <td colspan="2">
+      
+      
+      
+      <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+
+
+        <tbody>
+
+
+
+          <tr>
+
+
+
+            <td style="background-color: rgb(153, 255, 153);"><font size="+1"><span style="font-family: Jamrul;"></span></font><span style="font-family: Jamrul;"><font size="+1">Bei der
+Caesar-Verschl&uuml;sselung, die man auch Verschiebechiffre nennt, wird
+jedes Klartextzeichen m durch ein um K im Alphabet verschobenes Zeichen
+c ersetzt. Nummeriert man alle Zeichen nach ihrer Stelle im Alphabet
+mit der L&auml;nge n, so gilt:</font><br style="font-family: Jamrul;">
+
+
+
+            </span>
+            
+            
+            
+            <div style="text-align: center; font-family: monospace;"><big><font size="+1"><big>E</big><small><small>k</small></small><big>(m) = (m+k) mod n = c</big></font></big></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+        
+        
+        
+        </tbody>
+      
+      
+      
+      </table>
+
+
+
+      </td>
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+
+
+
+</body>
+</html>
