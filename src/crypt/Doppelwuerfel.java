@@ -4,13 +4,13 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Doppelwuerfel {
-	public Alphabet myAlphabet;
+	public Options myAlphabet;
 	private String currentAlphabet;
 	private List<Integer> length = Arrays.asList(0);
 	private Spaltentransposition t = new Spaltentransposition();
 	public Doppelwuerfel() //constructor
 	{
-		myAlphabet = Alphabet.getInstance();
+		myAlphabet = Options.getInstance();
 	}
 	public String encrypt(String text, String key1, String key2){
 		length.set(0, text.length());

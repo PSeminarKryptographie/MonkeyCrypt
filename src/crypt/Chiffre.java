@@ -11,10 +11,11 @@ import java.util.List;
  *
  */
 public abstract class Chiffre {
-	public Alphabet myAlphabet;
+	public Options myAlphabet;
+	String currentAlphabet;
 	public Chiffre() //constructor
 	{
-		myAlphabet = Alphabet.getInstance();
+		myAlphabet = Options.getInstance();
 	}
 	/**
 	 * Abstrakte Funktion
@@ -35,26 +36,38 @@ public abstract class Chiffre {
 		}
 		else{
 			return true;
-		}
-		
-	}
-	
+		}		
+	}	
 	
 	final boolean checkCoprimes(String text, String alpha){
 		List<Integer> coprimes = Tools.phi(alpha.length());
 		int keynum = Tools.string2int(text, alpha);
 		return (coprimes.contains(keynum));
 	}
+	protected abstract String algorithmEncrypt(String text, String key);
 	
+	protected abstract String algorithmDecrypt(String text, String key);
 	
 	protected abstract String verify(String key, String alphabet);
 	
-	public abstract String encrypt(String text, String key);
-	/**
-	 * Abstrakte Funktion
-	 * @param text (Geheimtext)
-	 * @param key (Schluessel)
-	 * @return Klartext
-	 */
-	public abstract String decrypt(String text, String key);
+	public String encrypt(String text, String key) {
+		key = key.toLowerCase();
+		currentAlphabet = myAlphabet.getAlphabet();
+		String verified = verify(key, currentAlphabet);
+		
+		if (verified != null){
+			return verified;
+		}
+		return algorithmEncrypt(text, key);
+	}
+	
+	public String decrypt(String text, String key) {
+		key = key.toLowerCase();
+		currentAlphabet = myAlphabet.getAlphabet();
+		String verified = verify(key, currentAlphabet);
+		if (verified != null){
+			return verified;
+		}
+		return algorithmDecrypt(text, key);
+	}
 }

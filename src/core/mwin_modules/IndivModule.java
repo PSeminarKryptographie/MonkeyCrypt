@@ -7,7 +7,7 @@ package core.mwin_modules;
 
 import core.Translator;
 import core.WindowLogic;
-import crypt.Alphabet;
+import crypt.Options;
 import frame.MoCr_Frame;
 import frame.MoCr_Frame_Settings;
 import java.awt.Color;
@@ -24,13 +24,13 @@ public class IndivModule {
     MoCr_Frame localFrame;
     MoCr_Frame_Settings localSettings;
     FrameTools localFraTools;
-    Alphabet localAlphabet;
+    Options localAlphabet;
     Color standard;
     
     public IndivModule(MoCr_Frame f, MoCr_Frame_Settings s) {
         localFrame = f;
         localSettings = s;
-        localAlphabet = Alphabet.getInstance();
+        localAlphabet = Options.getInstance();
         localFraTools = new FrameTools();
         standard = localFrame.MoCr_MainPro_cardPanel.getBackground();
     }

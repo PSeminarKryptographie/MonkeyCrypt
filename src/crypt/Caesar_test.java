@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class Caesar_test
 {
-	private static Alphabet myAlphabet;
+	private static Options myAlphabet;
 	public static Caesar c = new Caesar();
 	public static Multiplikativ m = new Multiplikativ();
 	public static Vigenere v = new Vigenere();
@@ -50,7 +50,7 @@ public class Caesar_test
 	}
 	
 	public static void main(String [ ] args){	
-		myAlphabet = Alphabet.getInstance();
+		myAlphabet = Options.getInstance();
 		
 		/**
 		 * Caesar wird getestet

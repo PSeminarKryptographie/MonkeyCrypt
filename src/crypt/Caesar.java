@@ -11,7 +11,6 @@ import java.util.List;
 
 public class Caesar extends Chiffre
 {
-	private String currentAlphabet;
 	List<Integer> length = Arrays.asList(1);
 	/**
 	 * Funktion soll extern nicht aufgerufen werden. Nur ueber Funktionen de und encrypt
@@ -20,14 +19,14 @@ public class Caesar extends Chiffre
 	 * @param alpha
 	 * @return convertedString (veraenderter Text)
 	 */
-	private String algorithm(String text, int key, String alpha){
+	private String algorithm(String text, int key){
 		String newtext = "";
 		for (int n = 0; n<text.length(); n++){ // Character modified one by one	
 			char newChar = text.charAt(n);
 			char lowerChar = Character.toLowerCase(newChar);
 
-			if (alpha.contains(Character.toString(lowerChar))){
-				newChar = alpha.charAt(((alpha.indexOf(lowerChar))+key)%alpha.length());
+			if (currentAlphabet.contains(Character.toString(lowerChar))){
+				newChar = currentAlphabet.charAt(((currentAlphabet.indexOf(lowerChar))+key)%currentAlphabet.length());
 			}
 			else{
 				newChar = lowerChar;
@@ -41,47 +40,20 @@ public class Caesar extends Chiffre
 		}
 		return newtext;
 	}
-	
-	/**
-	 * @param text (Klartext), key (Schluessel)
-	 * kontrolliert Schluessel
-	 * wandelt key in int um
-	 * @return algorithm() (Geheimtext)
-	 */
-	public String encrypt(String text, String key){
-		key = key.toLowerCase();
-		currentAlphabet = myAlphabet.getAlphabet();
-		String verified = verify(key, currentAlphabet);
-		
-		if (verified != null){
-			return verified;
-		}
+	@Override
+	protected String algorithmEncrypt(String text, String key) {
+		System.out.println(currentAlphabet);
 		int keynum = Tools.string2int(key, currentAlphabet);
-		return algorithm(text, keynum, currentAlphabet);
-		
+		return algorithm(text, keynum);
 	}
-	
-	/**
-	 * @param text (Geheimtext)
-	 * @param key (Schluessel)
-	 * kontrolliert Schluessel
-	 * ruft keyinnum auf
-	 * invertiert int key
-	 * @return algorithm() (Klartext)
-	 */
-	public String decrypt(String text, String key){
-		key = key.toLowerCase();
-		currentAlphabet = myAlphabet.getAlphabet();	
-		String verified = verify(key, currentAlphabet);
-		
-		if (verified != null){
-			return verified;
-		}
+
+	@Override
+	protected String algorithmDecrypt(String text, String key) {
 		int keynum = Tools.string2int(key, currentAlphabet);
 		keynum = currentAlphabet.length()-keynum;
-		return algorithm(text, keynum, currentAlphabet);
-			
+		return algorithm(text, keynum);
 	}
+	
 	
 	@Override
 	/**
@@ -98,6 +70,7 @@ public class Caesar extends Chiffre
 			return null;
 		}
 	}
+
 	
 	
 	

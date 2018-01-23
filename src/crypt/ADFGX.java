@@ -7,13 +7,13 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author Matthias
+ * @author caterina
  *
  */
 public class ADFGX extends Chiffre{
 	private List<Integer> length = Arrays.asList(25);
 	
-	private String algorithmEncrypt(String text, String key){
+	protected String algorithmEncrypt(String text, String key){
 		text = text.toLowerCase();
 		String adfgx = "ADFGX";
 		char [] cArray = key.toCharArray();
@@ -41,7 +41,7 @@ public class ADFGX extends Chiffre{
 		}
 		return newString;
 	}
-	private String algorithmDecrypt(String text, String key){
+	protected String algorithmDecrypt(String text, String key){
 		String adfgx = "ADFGX";
 		char [] cArray = key.toCharArray();
 		char[][] table = new char[5][5];
@@ -91,30 +91,8 @@ public class ADFGX extends Chiffre{
 		}
 		return newString;
 	}
-	
-	
-	@Override
-	public String encrypt(String text, String key) {
-		key = key.toLowerCase();
-		String verified = verify(key, "");
-		
-		if (verified != null){
-			return verified;
-		}
-		return algorithmEncrypt(text, key);
-		
-	}
 
-	@Override
-	public String decrypt(String text, String key) {
-		key = key.toLowerCase();
-		String verified = verify(key, "");
-		if (verified != null){
-			return verified;
-		}
-		return algorithmDecrypt(text, key);
-		
-	}
+
 
 	@Override
 	protected String verify(String key, String alphabet) {

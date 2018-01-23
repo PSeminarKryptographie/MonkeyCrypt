@@ -11,47 +11,22 @@ import java.util.List;
  *
  */
 public class Affine extends Chiffre{
-	private String currentAlphabet;
 	private static Multiplikativ m = new Multiplikativ();
 	private static Caesar c = new Caesar();
 	private List<Integer> length = Arrays.asList(2);
 
-	private String algorithmEncrypt(String text, String key){
+	protected String algorithmEncrypt(String text, String key){
 		String a = String.valueOf(key.charAt(0));
 		String b = String.valueOf(key.charAt(1));
 		String mulText = m.encrypt(text, a);
 		return c.encrypt(mulText, b);
 	}
-	private String algorithmDecrypt(String text, String key){
+	protected String algorithmDecrypt(String text, String key){
 		String a = String.valueOf(key.charAt(0));
 		String b = String.valueOf(key.charAt(1));
 		String addText = c.decrypt(text, b);
 		return m.decrypt(addText, a);
 	}
-	
-	public String encrypt(String text, String key){
-		key = key.toLowerCase();
-		currentAlphabet = myAlphabet.getAlphabet();
-		String verified = verify(key, currentAlphabet);
-		if (verified != null){
-			return verified;
-		}
-		return algorithmEncrypt(text, key);
-		
-	}
-
-	@Override
-	public String decrypt(String text, String key) {
-		key = key.toLowerCase();
-		currentAlphabet = myAlphabet.getAlphabet();
-		String verified = verify(key, currentAlphabet);
-		
-		if (verified != null){
-			return verified;
-		}
-		return algorithmDecrypt(text, key);
-
-		}
 
 	@Override
 	protected String verify(String key, String alphabet) {

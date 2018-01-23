@@ -153,4 +153,16 @@ public class Gartenzaun extends Chiffre{
 		
 	}
 
+	@Override
+	protected String algorithmEncrypt(String text, String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected String algorithmDecrypt(String text, String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

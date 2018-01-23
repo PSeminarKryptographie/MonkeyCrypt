@@ -1,22 +1,23 @@
 package crypt;
 /** 
- * Diese Klasse SingleTon ist zum Festlegen vom Alphabet
+ * Diese Klasse SingleTon ist zum Festlegen von den Einstellungen
  * @author caterina
  * 
  *
  */
 
 
-public class Alphabet{
-	private static Alphabet instance = new Alphabet();
-	
-	private String alphabet;
+public class Options{
+	private static Options instance = new Options();
+	private String letters; //uppercase, lowercase, normal, random
+	private String alphabet; 
+	private String exclusion; //none, all, spaces, [user-defined]
 	/**
 	 * make the constructor private so that this class cannot be instantiated
 	 * -> Nur ein Objekt moeglich
 	 */
 
-	private Alphabet(){
+	private Options(){
 		setAlphabet("abcdefghijklmnopqrstuvwxyz"); 
 	}
 
@@ -24,7 +25,7 @@ public class Alphabet{
 	 * Get the only object available
 	 * @return instance
 	 */
-	public static Alphabet getInstance(){
+	public static Options getInstance(){
 		return instance;
 	}
 	/**
@@ -40,6 +41,22 @@ public class Alphabet{
 	 */
 	public void setAlphabet(String myAlphabet) {
 		this.alphabet = myAlphabet;
+	}
+	
+	public void setCase(String c) {
+		letters = c; 
+	}
+	
+	public String getCase() {
+		return letters;
+	}
+	
+	public void setExclusion(String e) {
+		exclusion = e;
+	}
+	
+	public String getExclusion() {
+		return exclusion;
 	}
 
 }

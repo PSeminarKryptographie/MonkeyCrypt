@@ -2,11 +2,11 @@ package crypt;
 
 public class Trans_Test {
 
-	private static Alphabet myAlphabet;
+	private static Options myAlphabet;
 	public static Spaltentransposition st = new Spaltentransposition();
 	
 	public static void main(String [ ] args){
-		myAlphabet = Alphabet.getInstance();
+		myAlphabet = Options.getInstance();
 		myAlphabet.setAlphabet("abcdefghijklmnopqrstuvwxyz.,?");
 		String encrypted = st.encrypt("abcdefghijklmnopqrstuvwxyz", "hallo");
 		System.out.println(encrypted);

@@ -12,11 +12,11 @@ import java.util.List;
  *
  */
 public class CommTools {
-	public Alphabet myAlphabet;
+	public Options myAlphabet;
 	private String currentAlphabet;
 	
 	public CommTools(){
-		myAlphabet = Alphabet.getInstance();
+		myAlphabet = Options.getInstance();
 	}
 	/**
 	 * 

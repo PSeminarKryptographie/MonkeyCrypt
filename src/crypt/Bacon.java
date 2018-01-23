@@ -213,7 +213,7 @@ public class Bacon extends Chiffre
                                             
     {
         String Ausgabe = codieren(Eingabe);
-        Ausgabe = verstecken(Ausgabe,Tarntext); //oben Tarntext optional machen wenns geht
+        Ausgabe = verstecken(Ausgabe, Tarntext); //oben Tarntext optional machen wenns geht
         return Ausgabe;
     }
     
@@ -227,5 +227,17 @@ public class Bacon extends Chiffre
     public String verify(String k, String in) {
         return null;
     }
+
+	@Override
+	protected String algorithmEncrypt(String text, String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected String algorithmDecrypt(String text, String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
    
 }

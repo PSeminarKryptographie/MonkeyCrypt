@@ -2,10 +2,10 @@ package crypt;
 
 public abstract class Spielsprache
 {
-	public Alphabet myAlphabet;
+	public Options myAlphabet;
 	public Spielsprache() //constructor
 	{
-		myAlphabet = Alphabet.getInstance();
+		myAlphabet = Options.getInstance();
 	}
 	public abstract String encrypt(String text);
 	public abstract String decrypt(String text);

@@ -6,7 +6,7 @@
 package tools;
 import core.WindowLogic;
 import crypt.Tools;
-import crypt.Alphabet;
+import crypt.Options;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.ImageIcon;
 /**
@@ -16,7 +16,7 @@ import javax.swing.ImageIcon;
 public class FrameTools {
 
     public String fillTable(String text){        
-                String currentAlphabet = Alphabet.getInstance().getAlphabet();
+                String currentAlphabet = Options.getInstance().getAlphabet();
 		currentAlphabet += "abcdefghiklmnopqrstuvwxyz";
 		
 		String newText = text + currentAlphabet;
@@ -113,7 +113,7 @@ public class FrameTools {
     
     
     public String createFunction(String c) {
-        String currentAlphabet = Alphabet.getInstance().getAlphabet();        
+        String currentAlphabet = Options.getInstance().getAlphabet();        
         if(c.length() == 2) {
             String out = "";
             int co = Tools.string2int(c.valueOf(c.charAt(0)), currentAlphabet);

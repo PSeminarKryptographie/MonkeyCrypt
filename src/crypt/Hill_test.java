@@ -1,11 +1,11 @@
 package crypt;
 
 public class Hill_test {
-	private static Alphabet myAlphabet;
+	private static Options myAlphabet;
 	public static Hill h = new Hill();
 	
 	public static void main(String [ ] args){	
-		myAlphabet = Alphabet.getInstance();
+		myAlphabet = Options.getInstance();
 		myAlphabet.setAlphabet("abcdefghijklmnopqrstuvwxyz.,?");
 		String key = "qaywsxedcrfvtgbnhzujmkiol";
 		String text = "bbbbhhhhjjjjmmmm";
