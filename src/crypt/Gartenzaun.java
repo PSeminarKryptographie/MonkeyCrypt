@@ -37,16 +37,9 @@ public class Gartenzaun extends Chiffre{
 	    	return 2*(depth - 1 - rail);
 	    }
 	}
-	
-	
-	
-	public String encrypt(String text, String key) {
-		String verified = verify(key, "");
-		
-		if (verified != null){
-			return verified;
-		}
-		
+
+
+	protected String algorithmEncrypt(String text, String key) {
 		int depth = Integer.valueOf(key);
 		
 		if (depth == 1 || depth > text.length()/2){
@@ -81,19 +74,10 @@ public class Gartenzaun extends Chiffre{
 			builder.append(s);
 		}	
 		return builder.toString();
-		
-			
 	}
 
-	@Override
-	public String decrypt(String text, String key) {
-		
-		String verified = verify(key, "");
-		
-		if (verified != null){
-			return verified;
-		}
-		
+
+	protected String algorithmDecrypt(String text, String key) {
 		int depth = Integer.valueOf(key);
 		
 		if (depth == 1 || depth > text.length()/2){
@@ -131,8 +115,6 @@ public class Gartenzaun extends Chiffre{
 		    }
 		//System.out.println(Arrays.deepToString(array));
 		return makeString(array);
-		
-		
 	}
 
 	@Override
@@ -152,17 +134,4 @@ public class Gartenzaun extends Chiffre{
 		}
 		
 	}
-
-	@Override
-	protected String algorithmEncrypt(String text, String key) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	protected String algorithmDecrypt(String text, String key) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }

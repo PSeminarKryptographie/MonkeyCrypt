@@ -12,18 +12,9 @@ import java.util.List;
  */
 public class Spaltentransposition extends Chiffre{
 	private List<Integer> length = Arrays.asList(0);
-	String currentAlphabet;
-	@Override
-	public String encrypt(String text, String key) {
-		length.set(0, text.length());
-		currentAlphabet = myAlphabet.getAlphabet();
-		String verified = verify(key, currentAlphabet);
-		key = key.toLowerCase();
-		if (verified != null){
-			return verified;
-		}
-		//make a matrix
-		
+
+
+	protected String algorithmEncrypt(String text, String key) {
 		int width = key.length();
 		if (width == 0) {
 			return text;
@@ -75,16 +66,14 @@ public class Spaltentransposition extends Chiffre{
 		}
 		return Tools.array2string(newArray, currentAlphabet);
 	}
-	
-	
-	public String decrypt(String text, String key) {
+
+
+	protected void setLength(String text) {
 		length.set(0, text.length());
-		currentAlphabet = myAlphabet.getAlphabet();
-		String verified = verify(key, currentAlphabet);
-		key = key.toLowerCase();
-		if (verified != null){
-			return verified;
-		}
+	}
+
+
+	protected String algorithmDecrypt(String text, String key) {
 		if (key.length() == 0) {
 			return text;
 		}
@@ -170,15 +159,6 @@ public class Spaltentransposition extends Chiffre{
 		
 		return Tools.array2string(Tools.flipMatrix(newArray), currentAlphabet);
 	}
-	
-		
-	
-
-	
-	
-	
-	
-	
 
 	@Override
 	protected String verify(String key, String alphabet) {
@@ -195,17 +175,5 @@ public class Spaltentransposition extends Chiffre{
 	}
 
 
-	@Override
-	protected String algorithmEncrypt(String text, String key) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-	@Override
-	protected String algorithmDecrypt(String text, String key) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

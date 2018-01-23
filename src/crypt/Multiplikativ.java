@@ -11,7 +11,6 @@ public class Multiplikativ extends Chiffre{
 	 * @author caterina
 	 *
 	 */
-	private String currentAlphabet;
 	private boolean decrypt;
 	private List<Integer> length = Arrays.asList(1);
 	
@@ -54,53 +53,19 @@ public class Multiplikativ extends Chiffre{
 		}
 		return newtext;
 	}
-	
-	/**
-	 * @param text (Klartext), key (Schluessel)
-	 * wandelt key in int
-	 * @return algorithm() (Geheimtext)
-	 */
-	public String encrypt(String text, String key)
-	{
-		key = key.toLowerCase();
-		currentAlphabet = myAlphabet.getAlphabet();
-		String verified = verify(key, currentAlphabet);
-		
-		if (verified != null){
-			return verified;
-		}	
+
+	protected String algorithmEncrypt(String text, String key) {
 		int keynum = Tools.string2int(key, currentAlphabet);
 		decrypt = false;
 		return algorithm(text, keynum, currentAlphabet);
-
-		
-		
-		
-		
 	}
 	
-	/**
-	 * @param text (Geheimtext)
-	 * @param key (Schluessel)
-	 * wandelt key in int
-	 * invertiert int key
-	 * @return algorithm() (Klartext)
-	 */
-	public String decrypt(String text, String key)
-	{
-		key = key.toLowerCase();
-		currentAlphabet = myAlphabet.getAlphabet();
-		String verified = verify(key, currentAlphabet);
-		
-		if (verified != null){
-			return verified;
-		}
+
+
+	protected String algorithmDecrypt(String text, String key) {
 		int keynum = Tools.string2int(key, currentAlphabet);
 		decrypt = true;
 		return algorithm(text, keynum, currentAlphabet);
-		
-		
-		
 	}
 
 	@Override
@@ -124,17 +89,6 @@ public class Multiplikativ extends Chiffre{
 		}
 	}
 
-	@Override
-	protected String algorithmEncrypt(String text, String key) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	protected String algorithmDecrypt(String text, String key) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }
 	
 

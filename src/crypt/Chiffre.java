@@ -52,6 +52,7 @@ public abstract class Chiffre {
 	
 	public String encrypt(String text, String key) {
 		key = key.toLowerCase();
+		setLength(text);
 		currentAlphabet = myAlphabet.getAlphabet();
 		String verified = verify(key, currentAlphabet);
 		
@@ -61,8 +62,11 @@ public abstract class Chiffre {
 		return algorithmEncrypt(text, key);
 	}
 	
+	private void setLength(String text) {}
+	
 	public String decrypt(String text, String key) {
 		key = key.toLowerCase();
+		setLength(text);
 		currentAlphabet = myAlphabet.getAlphabet();
 		String verified = verify(key, currentAlphabet);
 		if (verified != null){

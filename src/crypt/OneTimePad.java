@@ -11,35 +11,11 @@ import java.util.List;
  *
  */
 public class OneTimePad extends Chiffre {
-	private String currentAlphabet;
 	private List<Integer> length = Arrays.asList(0);
 	private static Vigenere v= new Vigenere();
-	@Override
-	public String encrypt(String text, String key) {
-		key = key.toLowerCase();
-		length = Arrays.asList(text.length());
-		currentAlphabet = myAlphabet.getAlphabet();
-		String verified = verify(key, currentAlphabet);
-		if (verified != null){
-			return verified;
-		}
-		
-		return v.encrypt(text, key);
-		
-		
-	}
 
-	public String decrypt(String text, String key) {
-		key = key.toLowerCase();
+	protected void setLength(String text) {
 		length = Arrays.asList(text.length());
-		currentAlphabet = myAlphabet.getAlphabet();
-		String verified = verify(key, currentAlphabet);
-		if (verified != null){
-			return verified;
-		}
-			
-		return v.decrypt(text, key);
-		
 	}
 	
 
@@ -51,7 +27,6 @@ public class OneTimePad extends Chiffre {
 		if (!checkCharacter(key, alphabet)){
 			return "Vorsicht! Der Schlüssel darf nur Zeichen enthalten, die auch im Alphabet enthalten sind!";
 		}
-		
 		else{
 			return null;
 		}
@@ -59,14 +34,12 @@ public class OneTimePad extends Chiffre {
 
 	@Override
 	protected String algorithmEncrypt(String text, String key) {
-		// TODO Auto-generated method stub
-		return null;
+		return v.encrypt(text, key);
 	}
 
 	@Override
 	protected String algorithmDecrypt(String text, String key) {
-		// TODO Auto-generated method stub
-		return null;
+		return v.decrypt(text, key);
 	}
 
 }

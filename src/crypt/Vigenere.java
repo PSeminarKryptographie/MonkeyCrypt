@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Vigenere extends Chiffre{
-	private String currentAlphabet;
 	public List<Integer> length = Arrays.asList(0);
 	private static Caesar c = new Caesar();
 	
@@ -16,7 +15,7 @@ public class Vigenere extends Chiffre{
 	 * @return convertedString (veraenderter Text)
 	 */
 	
-	private String algorithm(String text, String key, String alpha, boolean encrypt){
+	private String algorithm(String text, String key, boolean encrypt){
 		String newtext = "";
 		int k = 0;
 		for (int n = 0; n<text.length(); n++)
@@ -33,55 +32,13 @@ public class Vigenere extends Chiffre{
 					
                         
 			newtext += newChar;
-			if (alpha.contains(String.valueOf(text.charAt(n)).toLowerCase())){
+			if (currentAlphabet.contains(String.valueOf(text.charAt(n)).toLowerCase())){
 				k++;
 			}
 			
 			
 		}
 		return newtext;
-	}
-	
-	/**
-	 * @param text (Klartext)
-         * @param key (Schluessel)
-	 * ruft keyinnum auf
-	 * @return algorithm() (Geheimtext)
-	 */
-	
-	public String encrypt(String text, String key)
-	{
-                key = key.toLowerCase();
-		currentAlphabet = myAlphabet.getAlphabet();
-		String verified = verify(key, currentAlphabet);
-		/*if (text == null){
-			return "text ist null";
-		}*/
-		if (verified != null){
-			return verified;
-		}
-		key = key.toLowerCase();
-		return algorithm(text, key, currentAlphabet, true);	
-	}
-	
-	/**
-	 * @param text (Geheimtext)
-	 * @param key (Schluessel)
-	 * ruft keyinnum auf
-	 * invertiert int key
-	 * @return algorithm() (Klartext)
-	 */
-	
-	public String decrypt(String text, String key)
-	{
-		key = key.toLowerCase();
-		currentAlphabet = myAlphabet.getAlphabet();
-		String verified = verify(key, currentAlphabet);
-		if (verified != null){
-			return verified;
-		}
-		return algorithm(text, key, currentAlphabet, false);
-		
 	}
 
 	@Override
@@ -104,14 +61,12 @@ public class Vigenere extends Chiffre{
 
 	@Override
 	protected String algorithmEncrypt(String text, String key) {
-		// TODO Auto-generated method stub
-		return null;
+		return algorithm(text, key,  true);
 	}
 
 	@Override
 	protected String algorithmDecrypt(String text, String key) {
-		// TODO Auto-generated method stub
-		return null;
+		return algorithm(text, key, false);
 	}
 
 
