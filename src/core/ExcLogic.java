@@ -59,7 +59,6 @@ public class ExcLogic {
         core = new Core();
         lösung = "";
         verschlüsselungsNummer = 0;
-
         aufgaben = new Aufgaben[11];
         aufgaben[0] = new CaesarAufgaben();
         aufgaben[1] = new MultiplikativAufgaben();

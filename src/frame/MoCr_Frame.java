@@ -278,11 +278,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
         MoCr_Caesar_EingabefeldSchlüssel.setFont(new java.awt.Font(IOFont, 0, 18));
         MoCr_Caesar_EingabefeldSchlüssel.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        MoCr_Caesar_EingabefeldSchlüssel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MoCr_Caesar_EingabefeldSchlüsselActionPerformed(evt);
-            }
-        });
 
         MoCr_CaesarSub_DiscBack.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MoCr_CaesarSub_DiscBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/Drehscheibe Einzelsequenzen/DS_a.png"))); // NOI18N
@@ -1289,6 +1284,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_AffiChiffSub_Heading1.setFont(new java.awt.Font("Constantia", 1, 28)); // NOI18N
         MoCr_AffiChiffSub_Heading1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MoCr_AffiChiffSub_Heading1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/headings/Schriftzug Kryptoanalyse.png"))); // NOI18N
+
         jButton1.setFont(new java.awt.Font(CFont, 0, 12));
         jButton1.setText("Berechne die Buchstabenverteilung!");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -1296,7 +1292,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-
 
         javax.swing.GroupLayout MoCr_MPSub_KryptoanalyseLayout = new javax.swing.GroupLayout(MoCr_MPSub_Kryptoanalyse);
         MoCr_MPSub_Kryptoanalyse.setLayout(MoCr_MPSub_KryptoanalyseLayout);
@@ -1469,7 +1464,6 @@ public class MoCr_Frame extends javax.swing.JFrame {
             .addGroup(MoCr_GenDyn_MainProListLayout.createSequentialGroup()
                 .addComponent(MoCr_Gen_Sidelist, javax.swing.GroupLayout.DEFAULT_SIZE, 262, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-
                 .addGroup(MoCr_GenDyn_MainProListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(MoCr_EncryptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MoCr_DecryptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1550,6 +1544,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
     private void MoCr_MPButtonpanel_LearnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_MPButtonpanel_LearnButtonActionPerformed
         // TODO add your handling code here:    
         localSModule.setLearningPanel();
@@ -1728,14 +1723,11 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
     private void MoCr_EncryptButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MoCr_EncryptButtonMouseClicked
         // TODO add your handling code here:
-
         localCModule.encrypt(true);
-
     }//GEN-LAST:event_MoCr_EncryptButtonMouseClicked
 
     private void MoCr_DecryptButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MoCr_DecryptButtonMouseClicked
         // TODO add your handling code here:
-
         localCModule.encrypt(false);
     }//GEN-LAST:event_MoCr_DecryptButtonMouseClicked
 
@@ -1779,6 +1771,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         // TODO add your handling code here:
         localGModule.switchClockwise();
     }//GEN-LAST:event_jLabel2MouseClicked
+
     private void MoCr_EncryptButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MoCr_EncryptButtonMouseEntered
         // TODO add your handling code here:
         getContentPane().requestFocusInWindow();
@@ -1792,9 +1785,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         if(localLogic.getIsUsed() == true) {
-
             MoCr_MPstaticIO_OutField.setText(localCModule.analysieren(MoCr_MPstaticIO_InField.getText(), 0));
-
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

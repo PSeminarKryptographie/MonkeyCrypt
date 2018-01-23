@@ -34,7 +34,6 @@ public class Haeufigkeitsanalyse {
 			if(i != dict.size() - 1) {
                             newString += "\n";
                         }
-
 		}
 		return newString;
 	}

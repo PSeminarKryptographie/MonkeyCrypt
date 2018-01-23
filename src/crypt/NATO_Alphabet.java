@@ -29,6 +29,7 @@ public class NATO_Alphabet extends Spielsprache {
 	@Override
     public String encrypt(String text) {
 		setup();
+		System.out.println(dict.toString());
 		text = text.toLowerCase();
         String out = "";
         for(int i = 0; i < text.length(); i++) {
