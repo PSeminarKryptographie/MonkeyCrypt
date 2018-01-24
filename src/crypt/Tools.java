@@ -287,6 +287,16 @@ public class Tools {
 		 }
 		 return newText;
 	 }
+	 
+	 public static String removeChars(String text, String exclude){
+		 String newText = "";
+		 for (int i = 0; i < text.length(); i++){
+			 if(!exclude.contains(String.valueOf(text.charAt(i)))){
+				 newText += text.charAt(i);
+			 }
+		 }
+		 return newText;
+	 }
 	 /*private String cleanup(String text, String newText, String alpha){
 			String correctText = "";
 			for (int i = 0; i<newText.length(); i++  ){

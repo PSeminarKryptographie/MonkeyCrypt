@@ -15,7 +15,7 @@ public class Permutation extends Chiffre{
 	private Hill h = new Hill();
 	
 	private String binary2String(String text){
-		currentAlphabet = myAlphabet.getAlphabet();
+		currentAlphabet = myOptions.getAlphabet();
 		String newText = "";
 		for (int i = 0; i < text.length(); i++){
 			if (text.charAt(i)== '0'){	

@@ -18,7 +18,9 @@ public class Options{
 	 */
 
 	private Options(){
-		setAlphabet("abcdefghijklmnopqrstuvwxyz"); 
+		setAlphabet("abcdefghijklmnopqrstuvwxyz");
+		setExclusion("none");
+		setCase("normal");
 	}
 
 	/**
