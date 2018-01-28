@@ -6,10 +6,9 @@ package crypt;
  *
  */
 
-
 public class Options{
 	private static Options instance = new Options();
-	private String letters; //uppercase, lowercase, normal, random
+	private int letters; //1: uppercase, 2: lowercase, 0: normal, 3: random
 	private String alphabet; 
 	private String exclusion; //none, all, spaces, [user-defined]
 	/**
@@ -20,7 +19,7 @@ public class Options{
 	private Options(){
 		setAlphabet("abcdefghijklmnopqrstuvwxyz");
 		setExclusion("none");
-		setCase("normal");
+		setCase(0);
 	}
 
 	/**
@@ -45,11 +44,11 @@ public class Options{
 		this.alphabet = myAlphabet;
 	}
 	
-	public void setCase(String c) {
+	public void setCase(int c) {
 		letters = c; 
 	}
 	
-	public String getCase() {
+	public int getCase() {
 		return letters;
 	}
 	

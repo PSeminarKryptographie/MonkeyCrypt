@@ -49,14 +49,14 @@ public abstract class Chiffre {
 	}
 	
 	final String filterCase(String text) {
-		String c = myOptions.getCase();
-		if (c.equals("uppercase")) {
+		int c = myOptions.getCase();
+		if (c == 1) {
 			return text.toUpperCase();
 		}
-		if (c.equals("lowercase")) {
+		if (c == 2) {
 			return text.toLowerCase();
 		}
-		if (c.equals("random")) {
+		if (c == 3) {
 			String newtext = "";
 			for (int n = 0; n < text.length(); n++) {
 				double r = Math.round(Math.random());

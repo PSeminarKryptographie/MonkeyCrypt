@@ -1,21 +1,26 @@
 Ave! Ich bin Iulius Caesar, ein berühmter römischer Feldherr. Du hast sicher schon von mir gehört, immerhin habe ich ganz Gallien erobert - Na gut, mit der Ausnahme eines Dorfes, das nicht aufhört, mir Widerstand zu leisten, ich gebe es zu. Aber das ist auch unfair, sie haben einen geheimen Zaubertrank! Doch auch ich habe eine Geheimwaffe: Die nach mir benannte Caesar-Verschlüsselung. Damit schicke ich meinen Legionen geheime Nachrichten.
-Das funktioniert folgendermaßen:
 
-A -> E
-B -> F
-...
-Z -> D
-	
-Könnt ihr erraten, was folgender Geheimtext bedeutet?
-Geheimtext:	Hiv Jimrh peyivx mq Aeph
-Klartext:	Der Feind lauert im ____ [Wald]
+Die Caesar-Verschlüsselung ist eine monolapabetische Substitution, bei der man Buchstaben verschiebt. Deswegen wird sie auch Verschiebe-Ciffre genannt.
 
-Super! Wie du siehst, wird bei der Caesar-Verschlüsselung immer ein Buchstabe mit genau einem anderen ersetzt. Deswegen wird dieses Verfahren als monoalphabetische Substitution bezeichnet. Man kann das Ersetzen veranschaulichen, indem man das normale Alphabet aufschreibt und darunter ein Geheimalphabet, das mit einem beliebigen Buchstaben anfängt und entsprechend fortgesetzt wird. Dieser erste Buchstabe ist dann der "Schlüssel" des Geheimtexts.
+Beispiel: Wir verschieben alle Buchstaben um eins nach hinten. Also wird ein A zum B, ein B zum C, ein C zum D und so weiter. Veranschaulichen wir das mal in einer Tabelle. In der oberen Reihe ist das Klartext-Alphabet. In der unteren das Geheimtext-Alphabet.
+
+[Tabelle]
+
+Kannst du mit Hilfe der Tabelle das Wort Caesar verschlüsseln?
+Kannst du mit Hilfe der Tabelle herausfinden, was Mfhjpo bedeutet?
+
+Bei der Caesar-Verschlüsselung darf man Buchstaben beliebig weit schieben. Deswegen legt man den ersten Buchstaben des Geheimtext-Alphabets als den "Schlüssel" fest. Nur mit diesem Schlüssel ist es möglich, Texte wieder zu entschlüsseln.
+
 Hier ein Beispiel mit dem Schlüssel D:
 
 
 
 Das ist eine Caesar-Scheibe. Das Klartextalphabet ist außen (Großbuchstaben), das Geheimtextalphabet innen. Den Schlüssel siehst du immer unterhalb des Klartextes "A". Drehst du an der inneren Scheibe, so verändert sich der Schlüssel.
+
+Mit der Caesar-Scheibe kann man leicht die Caesar-Verschlüsselung anwenden, ohne jedes mal eine Tabelle zeichnen zu müssen.
+So benutzt man die Caesar-Scheibe:
+Verschlüsseln: Drehe deinen Schlüssel unter das große A. Suche dann den Buchstaben, den du verschlüsseln willst im äußeren Ring. Der kleingeschriebene Buchstabe darunter ist dann die Verschlüsselung.
+Entschlüsseln: Drehe deinen Schlüssel unter das große A. Suche den Buchstaben, den du entschlüsseln willst im inneren Ring. Der großgeschriebene Buchstabe darüber ist dann die Entschlüsselung.
 
 Basteltipp: So kannst du selbst eine Caesar-Scheibe basteln: Drucke unter [Druckvorlagen] das Dokument [Caesar-scheibe] aus. Klebe das Blatt auf ein Stück Pappe und schneide die beiden Scheiben dann sorgfältig aus. Lege die beiden Scheiben auf einen Korken und befestige sie mit einer Reißzwecke in ihrem Mittelpunkt. Fertig ist die Caesar-Scheibe!
 
