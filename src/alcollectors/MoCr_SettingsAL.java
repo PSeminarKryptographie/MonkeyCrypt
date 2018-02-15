@@ -5,6 +5,7 @@
  */
 package alcollectors;
 import core.mwin_modules.IndivModule;
+import core.mwin_modules.TranslationModule;
 import java.awt.event.*;
 import frame.*;
 
@@ -15,16 +16,19 @@ import frame.*;
 public class MoCr_SettingsAL implements ActionListener {
    
     public IndivModule localIModule;
+    public TranslationModule localTModule;
     MoCr_Frame_Settings localSettings;
        
     public MoCr_SettingsAL(MoCr_Frame myFrame, MoCr_Frame_Settings mySettings) {
         localIModule = new IndivModule(myFrame, mySettings);
+        localTModule = new TranslationModule(myFrame);
         localSettings = mySettings;
     }
     
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == localSettings.MoCr_SettingsFrame_Validation) {
             localIModule.validate();
+            localTModule.renew();
         }
         else {
             if(e.getSource() == localSettings.MoCr_SettingsFrame_ResetButton) {

@@ -21,7 +21,6 @@ public class MoCr_Frame_Support extends javax.swing.JFrame {
     }
     
     public void refreshSupport() {
-        this.setVisible(true);
         Inserter.readSupTxt(MoCr_Frame_Support_Area, WindowLogic.getInstance().getencryptionType(), WindowLogic.getInstance().getChiffrestate());       
     }
 

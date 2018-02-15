@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package core;
-
 import java.util.Locale;
 import java.util.ResourceBundle;
 /**
@@ -17,24 +16,18 @@ public class Translator {
     static Translator t = new Translator();
     int currentLang;
     
-    private Translator() {
-        currentLang = 0;
-    }
+    private Translator() {currentLang = 0;}
     
-    public static Translator getInstance() {
-        return t;
-    }
+    public static Translator getInstance() {return t;}
     
     public String getString(String k) {
         ResourceBundle rb = ResourceBundle.getBundle("text/local/Bundle", locales[currentLang]);
         return rb.getString(k);
     }
     
-    public void setCurrentLang(int i) {
-        currentLang = i;
-    }
+    public void setCurrentLang(int i) {currentLang = i;}
     
-    public String getcurrentLang() {
-        return locales[currentLang].getLanguage();
-    }
+    public String getcurrentLang() {return locales[currentLang].getLanguage();}
+    
+    public int getLangIndex() {return currentLang;}
 }

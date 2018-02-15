@@ -59,4 +59,6 @@ public class DidMediator {
         String out = "/text/did/" + Translator.getInstance().getcurrentLang() + "/" + ending + "_did.html";
         return out;
     }
+    
+    
 }

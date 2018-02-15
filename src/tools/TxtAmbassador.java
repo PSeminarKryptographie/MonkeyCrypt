@@ -11,7 +11,8 @@ import java.io.*;
  */
 public class TxtAmbassador {
     
-    public static SupMediator med = new SupMediator();
+    public static SupMediator med1 = new SupMediator();
+    public static CredMediator med2 = new CredMediator();
     //liest systemabhängigen Umbruch aus und gibt diesen aus
     public String getLineSeparator() {
         String lineSeparator = System.getProperty("line.separator");
@@ -19,10 +20,11 @@ public class TxtAmbassador {
     }
 
     public void readSupTxt(javax.swing.JTextArea area, int e, int c) {
-        String path = med.selectSupTxt(e, c);
-        String out = readTxt(path);
-        area.setText(out);
-        
+        area.setText(readTxt(med1.selectSupTxt(e, c)));       
+    }
+    
+    public void readCredTxt(javax.swing.JTextArea area) {
+        area.setText(readTxt(med2.rightCredPath()));
     }
     
     public String readTxt(String path) {

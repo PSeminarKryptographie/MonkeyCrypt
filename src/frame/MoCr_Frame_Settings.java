@@ -216,21 +216,21 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Heading1;
-    private javax.swing.JLabel Heading2;
+    public javax.swing.JLabel Heading1;
+    public javax.swing.JLabel Heading2;
     private javax.swing.JTextField MoCr_SettingsFrame_AlphabetField;
-    private javax.swing.JCheckBox MoCr_SettingsFrame_Checkbox;
-    private javax.swing.JComboBox<String> MoCr_SettingsFrame_ClearBox;
+    public javax.swing.JCheckBox MoCr_SettingsFrame_Checkbox;
+    public javax.swing.JComboBox<String> MoCr_SettingsFrame_ClearBox;
     public javax.swing.JComboBox<String> MoCr_SettingsFrame_Colourbox;
     private javax.swing.JPanel MoCr_SettingsFrame_CryptoSub;
     private javax.swing.JPanel MoCr_SettingsFrame_DesignSub;
-    private javax.swing.JLabel MoCr_SettingsFrame_Heading1;
+    public javax.swing.JLabel MoCr_SettingsFrame_Heading1;
     public javax.swing.JButton MoCr_SettingsFrame_ResetButton;
-    private javax.swing.JTabbedPane MoCr_SettingsFrame_TabbedPane;
+    public javax.swing.JTabbedPane MoCr_SettingsFrame_TabbedPane;
     public javax.swing.JCheckBox MoCr_SettingsFrame_TipCheck;
     public javax.swing.JButton MoCr_SettingsFrame_Validation;
     public javax.swing.JComboBox<String> MoCr_Settings_Lang;
-    private javax.swing.JLabel MoCr_Settings_LangLabel;
+    public javax.swing.JLabel MoCr_Settings_LangLabel;
     public javax.swing.JTextField SizeField;
     // End of variables declaration//GEN-END:variables
 }

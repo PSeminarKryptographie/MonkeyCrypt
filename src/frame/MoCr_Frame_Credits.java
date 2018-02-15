@@ -5,18 +5,25 @@
  */
 package frame;
 
+import tools.TxtAmbassador;
+
 /**
  *
  * @author Jonas
  */
 public class MoCr_Frame_Credits extends javax.swing.JFrame {
 
+    public static TxtAmbassador Inserter = new TxtAmbassador();
     /**
      * Creates new form MoCr_Frame_Credits
      */
     public MoCr_Frame_Credits() {
         initComponents();
         this.setVisible(false);
+    }
+    
+    public void refreshCredits() {
+        Inserter.readCredTxt(MoCr_Credits_TextArea);
     }
 
     /**

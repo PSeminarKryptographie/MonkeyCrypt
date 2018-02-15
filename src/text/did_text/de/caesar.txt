@@ -13,6 +13,8 @@ Bei der Caesar-Verschlüsselung darf man Buchstaben beliebig weit schieben. Desw
 
 Hier ein Beispiel mit dem Schlüssel D:
 
+
+
 Das ist eine Caesar-Scheibe. Das Klartextalphabet ist außen (Großbuchstaben), das Geheimtextalphabet innen. Den Schlüssel siehst du immer unterhalb des Klartextes "A". Drehst du an der inneren Scheibe, so verändert sich der Schlüssel.
 
 Mit der Caesar-Scheibe kann man leicht die Caesar-Verschlüsselung anwenden, ohne jedes mal eine Tabelle zeichnen zu müssen.

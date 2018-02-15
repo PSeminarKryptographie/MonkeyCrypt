@@ -23,10 +23,10 @@ public class MoCr_Frame extends javax.swing.JFrame {
      */
     public String IOFont = "Courier New"; //Variable für Font
     public String CFont = "Verdana";
-    MoCr_Frame_Credits localCredits;        //lokale Impressumsinstanz    
-    MoCr_Frame_Support localSupport;        //lokale Hilfsinstanz
-    MoCr_Frame_Settings localSettings;
-    MoCr_Frame_exc localExc;
+    public MoCr_Frame_Credits localCredits;        //lokale Impressumsinstanz    
+    public MoCr_Frame_Support localSupport;        //lokale Hilfsinstanz
+    public MoCr_Frame_Settings localSettings;
+    public MoCr_Frame_exc localExc;
     static CommTools localTools = new CommTools();
     static FrameTools localFraTools = new FrameTools();
     public WindowLogic localLogic;
@@ -271,6 +271,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_CaesarSub_Heading.setFont(new java.awt.Font("Constantia", 1, 28)); // NOI18N
         MoCr_CaesarSub_Heading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MoCr_CaesarSub_Heading.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/headings/Schriftzug Caesar.png"))); // NOI18N
+        MoCr_CaesarSub_Heading.setToolTipText("");
 
         MoCr_CaesarSub_LabelSchlüssel.setFont(new java.awt.Font(CFont, 0, 18));
         MoCr_CaesarSub_LabelSchlüssel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -283,7 +284,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_CaesarSub_DiscBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/Drehscheibe Einzelsequenzen/DS_a.png"))); // NOI18N
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/Pfeil Rechts.png"))); // NOI18N
-        jLabel1.setToolTipText("Drehe die innere Scheibe nach rechts");
+        jLabel1.setToolTipText(null);
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -291,7 +292,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/Pfeil Links.png"))); // NOI18N
-        jLabel2.setToolTipText("Drehe die innere Scheibe nach links");
+        jLabel2.setToolTipText(null);
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel2MouseClicked(evt);
@@ -1154,7 +1155,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
             }
         });
 
-        MoCr_SteganoSub_BaconKeyHeading.setFont(new java.awt.Font(CFont, 1, 20));
+        MoCr_SteganoSub_BaconKeyHeading.setFont(new java.awt.Font(CFont, 1, 16));
         MoCr_SteganoSub_BaconKeyHeading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MoCr_SteganoSub_BaconKeyHeading.setText("Tarntext für die Bacon-Chiffre");
 
@@ -1169,15 +1170,15 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_MPSub_Steganographie.setLayout(MoCr_MPSub_SteganographieLayout);
         MoCr_MPSub_SteganographieLayout.setHorizontalGroup(
             MoCr_MPSub_SteganographieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MoCr_SteganoSub_Heading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(MoCr_MPSub_SteganographieLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(MoCr_MPSub_SteganographieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(MoCr_SteganoSub_BaconButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MoCr_SteganoSub_BaconKeyHeading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane4)
-                    .addComponent(MoCr_SteganoSub_PseudoButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(MoCr_SteganoSub_BaconButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MoCr_SteganoSub_PseudoButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MoCr_SteganoSub_BaconKeyHeading, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
+            .addComponent(MoCr_SteganoSub_Heading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         MoCr_MPSub_SteganographieLayout.setVerticalGroup(
             MoCr_MPSub_SteganographieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1482,7 +1483,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
         MoCr_Gen_DidLister.setFont(new java.awt.Font(CFont, 0, 12));
         MoCr_Gen_DidLister.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Mathematik", "Steganographie", "Spielsprachen", "Kryptologie", "Kryptoanalyse", "Kryptographie", "Asymmetrisch", "RSA", "End-to-End", "Symmetrisch", "Transposition", "Substitution", "Codierung", "Chiffrierung", "Monoalphabetisch", "Caesar", "Multiplikativ", "Polyalphabetisch", "Vigenere", "Enigma", "One-Time-Pad", "Hill", "Affine Chiffre" };
+            String[] strings = { "Mathematik", "Steganographie", "Spielsprachen", "Kryptologie", "Kryptoanalyse", "Kryptographie", "Asymmetrisch", "RSA", "End-to-End", "Symmetrisch", "Transpositionen", "Substitution", "Codierungen", "Chiffrierung", "Monoalphabetisch", "Caesar Chiffre", "Multiplikative Chiffre", "Polyalphabetisch", "Vigenere Chiffre", "Enigma", "One-Time-Pad", "Hill Chiffre", "Affine Chiffre" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -1557,7 +1558,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
     private void MoCr_Gen_Choicemenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MoCr_Gen_Choicemenu2MouseClicked
         // TODO add your handling code here:
-        localCredits.setVisible(true);      
+        localCredits.setVisible(true);
     }//GEN-LAST:event_MoCr_Gen_Choicemenu2MouseClicked
               
     private void MoCr_MPButtonpanel_IOChangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_MPButtonpanel_IOChangeActionPerformed
@@ -1582,6 +1583,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private void MoCr_MPButtonpanel_HelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_MPButtonpanel_HelpActionPerformed
         // TODO add your handling code here:
         localSupport.refreshSupport();
+        localSupport.setVisible(true);
     }//GEN-LAST:event_MoCr_MPButtonpanel_HelpActionPerformed
 
     private void MoCr_CodierungenSub_ADFGXFillerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_CodierungenSub_ADFGXFillerActionPerformed
@@ -1734,7 +1736,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private void MoCr_MPstaticIO_InFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_MoCr_MPstaticIO_InFieldFocusGained
         // TODO add your handling code here:
         if(localLogic.getIsUsed() == false) {
-            if(MoCr_MPstaticIO_InField.getText().equals("Eingabe") == true) {
+            if(MoCr_MPstaticIO_InField.getText().equals(Translator.getInstance().getString("input")) == true) {
                 MoCr_MPstaticIO_InField.setText("");
             }
         }
@@ -1743,14 +1745,14 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private void MoCr_MPstaticIO_InFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_MoCr_MPstaticIO_InFieldFocusLost
         // TODO add your handling code here:
         if(MoCr_MPstaticIO_InField.getText().equals("") == true) {
-            MoCr_MPstaticIO_InField.setText("Eingabe");
+            MoCr_MPstaticIO_InField.setText(Translator.getInstance().getString("input"));
             localLogic.setIsUsed(false);
         } else {localLogic.setIsUsed(true);}
     }//GEN-LAST:event_MoCr_MPstaticIO_InFieldFocusLost
 
     private void MoCr_MPstaticIO_OutFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_MoCr_MPstaticIO_OutFieldFocusGained
         // TODO add your handling code here:
-        if(MoCr_MPstaticIO_OutField.getText().equals("Ausgabe") == true) {
+        if(MoCr_MPstaticIO_OutField.getText().equals(Translator.getInstance().getString("output")) == true) {
             MoCr_MPstaticIO_OutField.setText("");
         }
     }//GEN-LAST:event_MoCr_MPstaticIO_OutFieldFocusGained
@@ -1758,7 +1760,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private void MoCr_MPstaticIO_OutFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_MoCr_MPstaticIO_OutFieldFocusLost
         // TODO add your handling code here:
         if(MoCr_MPstaticIO_OutField.getText().equals("") == true) {
-            MoCr_MPstaticIO_OutField.setText("Ausgabe");
+            MoCr_MPstaticIO_OutField.setText(Translator.getInstance().getString("output"));
         }
     }//GEN-LAST:event_MoCr_MPstaticIO_OutFieldFocusLost
 
@@ -1829,56 +1831,56 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private javax.swing.JScrollPane MoCr_ADFGX_Scroller;
     private javax.swing.JLabel MoCr_AffChiffSub_FuncPre;
     public javax.swing.JLabel MoCr_AffChiffSub_Function;
-    private javax.swing.JLabel MoCr_AffChiffSub_Functionpointer;
+    public javax.swing.JLabel MoCr_AffChiffSub_Functionpointer;
     public javax.swing.JTextField MoCr_AffChiffSub_Key1;
     public javax.swing.JTextField MoCr_AffChiffSub_Key2;
-    private javax.swing.JLabel MoCr_AffChiffSub_KeyLabel;
+    public javax.swing.JLabel MoCr_AffChiffSub_KeyLabel;
     private javax.swing.JLabel MoCr_AffChiffSub_mLabel;
     private javax.swing.JLabel MoCr_AffChiffSub_tLabel;
     private javax.swing.JLabel MoCr_AffiChiffSub_Heading;
     private javax.swing.JLabel MoCr_AffiChiffSub_Heading1;
     public javax.swing.JLabel MoCr_CaesarSub_DiscBack;
     private javax.swing.JLabel MoCr_CaesarSub_Heading;
-    private javax.swing.JLabel MoCr_CaesarSub_LabelSchlüssel;
+    public javax.swing.JLabel MoCr_CaesarSub_LabelSchlüssel;
     public javax.swing.JTextField MoCr_Caesar_EingabefeldSchlüssel;
     private javax.swing.ButtonGroup MoCr_CodierungenMp_Grouper;
-    private javax.swing.JRadioButton MoCr_CodierungenSub_ADFGXButton;
-    private javax.swing.JButton MoCr_CodierungenSub_ADFGXFiller;
-    private javax.swing.JRadioButton MoCr_CodierungenSub_ASCIIButton;
-    private javax.swing.JRadioButton MoCr_CodierungenSub_AlphaButton;
-    private javax.swing.JRadioButton MoCr_CodierungenSub_BinToHexButton;
-    private javax.swing.JRadioButton MoCr_CodierungenSub_BinärButton;
+    public javax.swing.JRadioButton MoCr_CodierungenSub_ADFGXButton;
+    public javax.swing.JButton MoCr_CodierungenSub_ADFGXFiller;
+    public javax.swing.JRadioButton MoCr_CodierungenSub_ASCIIButton;
+    public javax.swing.JRadioButton MoCr_CodierungenSub_AlphaButton;
+    public javax.swing.JRadioButton MoCr_CodierungenSub_BinToHexButton;
+    public javax.swing.JRadioButton MoCr_CodierungenSub_BinärButton;
     private javax.swing.JLabel MoCr_CodierungenSub_Heading;
     public javax.swing.JRadioButton MoCr_CodierungenSub_MorseButton;
-    private javax.swing.JRadioButton MoCr_CodierungenSub_NATOButton;
-    private javax.swing.JLabel MoCr_DecryptButton;
+    public javax.swing.JRadioButton MoCr_CodierungenSub_NATOButton;
+    public javax.swing.JLabel MoCr_DecryptButton;
     public javax.swing.JEditorPane MoCr_Did_HTMLView;
-    private javax.swing.JButton MoCr_Did_Returnerbutton;
+    public javax.swing.JButton MoCr_Did_Returnerbutton;
     private javax.swing.JScrollPane MoCr_Did_Scrollpanel;
     public javax.swing.JPanel MoCr_Did_cardPanel;
-    private javax.swing.JLabel MoCr_EncryptButton;
+    public javax.swing.JLabel MoCr_EncryptButton;
     public javax.swing.JPanel MoCr_GenDyn_DidListPanel;
     public javax.swing.JPanel MoCr_GenDyn_MainProList;
     private javax.swing.JMenuBar MoCr_Gen_Choicebar;
-    private javax.swing.JMenu MoCr_Gen_Choicemenu1;
-    private javax.swing.JMenu MoCr_Gen_Choicemenu2;
+    public javax.swing.JMenu MoCr_Gen_Choicemenu1;
+    public javax.swing.JMenu MoCr_Gen_Choicemenu2;
     private javax.swing.JScrollPane MoCr_Gen_DidList;
     public javax.swing.JList<String> MoCr_Gen_DidLister;
     public javax.swing.JPanel MoCr_Gen_DynamicPanel;
     public javax.swing.JPanel MoCr_Gen_ListPanel;
     private javax.swing.JScrollPane MoCr_Gen_Sidelist;
-    private javax.swing.JList<String> MoCr_Gen_Sidelister;
+    public javax.swing.JList<String> MoCr_Gen_Sidelister;
     private javax.swing.JLabel MoCr_HillSub_Heading;
     public javax.swing.JTable MoCr_HillSub_Matrix;
     private javax.swing.JLabel MoCr_HillSub_MaxLab;
     private javax.swing.JLabel MoCr_HillSub_MinLab;
     private javax.swing.JLabel MoCr_HillSub_Size;
-    private javax.swing.JLabel MoCr_HillSub_SizeLab;
+    public javax.swing.JLabel MoCr_HillSub_SizeLab;
     private javax.swing.JSlider MoCr_HillSub_Slider;
-    private javax.swing.JButton MoCr_MPButtonpanel_ExerciseButton;
-    private javax.swing.JButton MoCr_MPButtonpanel_Help;
-    private javax.swing.JButton MoCr_MPButtonpanel_IOChange;
-    private javax.swing.JButton MoCr_MPButtonpanel_LearnButton;
+    public javax.swing.JButton MoCr_MPButtonpanel_ExerciseButton;
+    public javax.swing.JButton MoCr_MPButtonpanel_Help;
+    public javax.swing.JButton MoCr_MPButtonpanel_IOChange;
+    public javax.swing.JButton MoCr_MPButtonpanel_LearnButton;
     public javax.swing.JPanel MoCr_MPSub_AffineChiffre;
     public javax.swing.JPanel MoCr_MPSub_Caesar;
     public javax.swing.JPanel MoCr_MPSub_Codierungen;
@@ -1899,54 +1901,54 @@ public class MoCr_Frame extends javax.swing.JFrame {
     public javax.swing.JPanel MoCr_MainPro_cardPanel;
     public javax.swing.JPanel MoCr_MainPro_changeable;
     private javax.swing.JPanel MoCr_MainPro_static_IOpanel;
-    private javax.swing.JButton MoCr_MultiplikaitvSub_KeyGenButton;
-    private javax.swing.JLabel MoCr_MultiplikaitvSub_KeyPointer;
+    public javax.swing.JButton MoCr_MultiplikaitvSub_KeyGenButton;
+    public javax.swing.JLabel MoCr_MultiplikaitvSub_KeyPointer;
     private javax.swing.JLabel MoCr_MultiplikativSub_Bild;
     private javax.swing.JLabel MoCr_MultiplikativSub_Heading;
     public javax.swing.JTextField MoCr_MultiplikativSub_KeyField;
     public javax.swing.JTextArea MoCr_OTPSub_Area;
-    private javax.swing.JButton MoCr_OTPSub_Generator;
-    private javax.swing.JLabel MoCr_OTPSub_LabelSchlüssel;
-    private javax.swing.JLabel MoCr_PermSub_Label;
+    public javax.swing.JButton MoCr_OTPSub_Generator;
+    public javax.swing.JLabel MoCr_OTPSub_LabelSchlüssel;
+    public javax.swing.JLabel MoCr_PermSub_Label;
     private javax.swing.JLabel MoCr_PermSub_MaxVal;
     private javax.swing.JLabel MoCr_PermSub_MinVal;
     private javax.swing.JSlider MoCr_PermSub_Slider;
     private javax.swing.JLabel MoCr_PermSub_ValueLabel;
     public javax.swing.JRadioButton MoCr_SpielsprachenMP_BiButton;
-    private javax.swing.JRadioButton MoCr_SpielsprachenMP_BobButton;
+    public javax.swing.JRadioButton MoCr_SpielsprachenMP_BobButton;
     private javax.swing.ButtonGroup MoCr_SpielsprachenMP_Grouper;
-    private javax.swing.JRadioButton MoCr_SpielsprachenMP_LöffelButton;
+    public javax.swing.JRadioButton MoCr_SpielsprachenMP_LöffelButton;
     private javax.swing.JLabel MoCr_SpielsprachenSub_Heading;
     private javax.swing.ButtonGroup MoCr_SteganoMP_Grouper;
     public javax.swing.JRadioButton MoCr_SteganoSub_BaconButton;
     public javax.swing.JTextArea MoCr_SteganoSub_BaconKey;
-    private javax.swing.JLabel MoCr_SteganoSub_BaconKeyHeading;
+    public javax.swing.JLabel MoCr_SteganoSub_BaconKeyHeading;
     private javax.swing.JLabel MoCr_SteganoSub_Heading;
-    private javax.swing.JRadioButton MoCr_SteganoSub_PseudoButton;
+    public javax.swing.JRadioButton MoCr_SteganoSub_PseudoButton;
     public javax.swing.JTextField MoCr_TranspositionKey_1KeyField;
-    private javax.swing.JLabel MoCr_TranspositionKey_1KeyLabel;
+    public javax.swing.JLabel MoCr_TranspositionKey_1KeyLabel;
     private javax.swing.ButtonGroup MoCr_TranspositionMP_Grouper;
     public javax.swing.JPanel MoCr_TranspositionSub_1Key;
     public javax.swing.JPanel MoCr_TranspositionSub_2Key;
     public javax.swing.JTextField MoCr_TranspositionSub_2KeyField1;
     public javax.swing.JTextField MoCr_TranspositionSub_2KeyField2;
-    private javax.swing.JLabel MoCr_TranspositionSub_2KeyLabel;
-    private javax.swing.JRadioButton MoCr_TranspositionSub_AnagrammButton;
-    private javax.swing.JRadioButton MoCr_TranspositionSub_DoppelwürfelButton;
-    private javax.swing.JRadioButton MoCr_TranspositionSub_GartenzaunButton;
+    public javax.swing.JLabel MoCr_TranspositionSub_2KeyLabel;
+    public javax.swing.JRadioButton MoCr_TranspositionSub_AnagrammButton;
+    public javax.swing.JRadioButton MoCr_TranspositionSub_DoppelwürfelButton;
+    public javax.swing.JRadioButton MoCr_TranspositionSub_GartenzaunButton;
     private javax.swing.JLabel MoCr_TranspositionSub_Heading;
     public javax.swing.JPanel MoCr_TranspositionSub_KeyPanel;
     public javax.swing.JPanel MoCr_TranspositionSub_MatrixKey;
     public javax.swing.JTable MoCr_TranspositionSub_MatrixKeyField;
-    private javax.swing.JLabel MoCr_TranspositionSub_MatrixKeyLabel;
+    public javax.swing.JLabel MoCr_TranspositionSub_MatrixKeyLabel;
     public javax.swing.JPanel MoCr_TranspositionSub_NoKey;
-    private javax.swing.JRadioButton MoCr_TranspositionSub_PermutaButton;
+    public javax.swing.JRadioButton MoCr_TranspositionSub_PermutaButton;
     public javax.swing.JRadioButton MoCr_TranspositionSub_SpaltelButton;
     public javax.swing.JTextField MoCr_VigenereSub_EingabefeldSchlüssel;
     private javax.swing.JLabel MoCr_VigenereSub_Heading;
     private javax.swing.JLabel MoCr_VigenereSub_Image;
-    private javax.swing.JLabel MoCr_VigenereSub_LabelSchlüssel;
-    private javax.swing.JButton jButton1;
+    public javax.swing.JLabel MoCr_VigenereSub_LabelSchlüssel;
+    public javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
