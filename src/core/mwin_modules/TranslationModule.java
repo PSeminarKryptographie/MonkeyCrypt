@@ -125,6 +125,7 @@ public class TranslationModule {
         ls.MoCr_SettingsFrame_Validation.setText(Translator.getInstance().getString("savechanges"));
         ls.MoCr_SettingsFrame_TabbedPane.setTitleAt(0, Translator.getInstance().getString("encryption"));
         ls.MoCr_SettingsFrame_TabbedPane.setTitleAt(1, Translator.getInstance().getString("show"));
+        ls.MoCr_SettingsFrame_TabbedPane.setTitleAt(2, Translator.getInstance().getString("exclusion"));
         ls.Heading1.setText(Translator.getInstance().getString("framecol"));
         ls.Heading2.setText(Translator.getInstance().getString("scriptsize"));
         ls.MoCr_Settings_LangLabel.setText(Translator.getInstance().getString("lang"));
@@ -145,6 +146,14 @@ public class TranslationModule {
         bm2.addElement(Translator.getInstance().getString("empty4"));
         bm2.addElement(Translator.getInstance().getString("empty5"));
         ls.MoCr_SettingsFrame_ClearBox.setModel(bm2);
+        ls.AlphOnlyCheckbox.setText(Translator.getInstance().getString("alphonly"));
+        DefaultComboBoxModel bm3 = new DefaultComboBoxModel();
+        bm3.addElement(Translator.getInstance().getString("script1"));
+        bm3.addElement(Translator.getInstance().getString("script2"));
+        bm3.addElement(Translator.getInstance().getString("script3"));
+        bm3.addElement(Translator.getInstance().getString("script4"));
+        ls.ScriptCombobox.setModel(bm3);
+        ls.ExclusionLabel.setText(Translator.getInstance().getString("exclude"));
     }
     
     public void renewTooltips() {

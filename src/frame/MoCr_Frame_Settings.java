@@ -71,6 +71,12 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
         SizeField = new javax.swing.JTextField();
         MoCr_Settings_Lang = new javax.swing.JComboBox<>();
         MoCr_Settings_LangLabel = new javax.swing.JLabel();
+        MoCr_SettingsFrame_ExclusionSub = new javax.swing.JPanel();
+        ExclusionLabel = new javax.swing.JLabel();
+        ExclusionField = new javax.swing.JTextField();
+        AlphOnlyCheckbox = new javax.swing.JCheckBox();
+        ScriptCombobox = new javax.swing.JComboBox<>();
+        NotificatorLabel = new javax.swing.JLabel();
 
         setTitle("Einstellungen");
         setResizable(false);
@@ -111,7 +117,7 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
                 .addComponent(MoCr_SettingsFrame_AlphabetField, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MoCr_SettingsFrame_ResetButton)
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         MoCr_SettingsFrame_TabbedPane.addTab("Verschlüsselung", MoCr_SettingsFrame_CryptoSub);
@@ -192,10 +198,62 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
                 .addComponent(MoCr_SettingsFrame_TipCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(MoCr_SettingsFrame_Checkbox)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         MoCr_SettingsFrame_TabbedPane.addTab("Darstellung", MoCr_SettingsFrame_DesignSub);
+
+        ExclusionLabel.setFont(new java.awt.Font(CFont, 1, 10));
+        ExclusionLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        ExclusionLabel.setText("Folgende Zeichen ausschließen:");
+
+        ExclusionField.setFont(new java.awt.Font(IOFont, 0, 16));
+        ExclusionField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        ExclusionField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                ExclusionFieldKeyReleased(evt);
+            }
+        });
+
+        AlphOnlyCheckbox.setFont(new java.awt.Font(CFont, 1, 12));
+        AlphOnlyCheckbox.setText("Nur Zeichen des Alphabets einschließen");
+        AlphOnlyCheckbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AlphOnlyCheckboxActionPerformed(evt);
+            }
+        });
+
+        ScriptCombobox.setFont(new java.awt.Font(CFont, 1, 12));
+        ScriptCombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Groß-/Kleinschreibung beibehalten", "Ausgabe in Majuskeln", "Ausgabe in Minuskeln", "Zufällige Groß-/Kleinschreibung" }));
+
+        javax.swing.GroupLayout MoCr_SettingsFrame_ExclusionSubLayout = new javax.swing.GroupLayout(MoCr_SettingsFrame_ExclusionSub);
+        MoCr_SettingsFrame_ExclusionSub.setLayout(MoCr_SettingsFrame_ExclusionSubLayout);
+        MoCr_SettingsFrame_ExclusionSubLayout.setHorizontalGroup(
+            MoCr_SettingsFrame_ExclusionSubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MoCr_SettingsFrame_ExclusionSubLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(MoCr_SettingsFrame_ExclusionSubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MoCr_SettingsFrame_ExclusionSubLayout.createSequentialGroup()
+                        .addComponent(ExclusionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ExclusionField))
+                    .addComponent(AlphOnlyCheckbox, javax.swing.GroupLayout.DEFAULT_SIZE, 435, Short.MAX_VALUE)
+                    .addComponent(ScriptCombobox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+        MoCr_SettingsFrame_ExclusionSubLayout.setVerticalGroup(
+            MoCr_SettingsFrame_ExclusionSubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MoCr_SettingsFrame_ExclusionSubLayout.createSequentialGroup()
+                .addGroup(MoCr_SettingsFrame_ExclusionSubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ExclusionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ExclusionField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(AlphOnlyCheckbox)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ScriptCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 84, Short.MAX_VALUE))
+        );
+
+        MoCr_SettingsFrame_TabbedPane.addTab("Ausschluss", MoCr_SettingsFrame_ExclusionSub);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -203,19 +261,39 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(MoCr_SettingsFrame_Validation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(MoCr_SettingsFrame_TabbedPane)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(NotificatorLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(MoCr_SettingsFrame_TabbedPane)
+                .addComponent(MoCr_SettingsFrame_TabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(NotificatorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(MoCr_SettingsFrame_Validation))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void AlphOnlyCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlphOnlyCheckboxActionPerformed
+        // TODO add your handling code here:
+        ExclusionField.setEditable(!AlphOnlyCheckbox.isSelected());
+    }//GEN-LAST:event_AlphOnlyCheckboxActionPerformed
+
+    private void ExclusionFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ExclusionFieldKeyReleased
+        // TODO add your handling code here:
+        String e = ExclusionField.getText();
+        NotificatorLabel.setText(e);
+    }//GEN-LAST:event_ExclusionFieldKeyReleased
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JCheckBox AlphOnlyCheckbox;
+    private javax.swing.JTextField ExclusionField;
+    public javax.swing.JLabel ExclusionLabel;
     public javax.swing.JLabel Heading1;
     public javax.swing.JLabel Heading2;
     private javax.swing.JTextField MoCr_SettingsFrame_AlphabetField;
@@ -224,6 +302,7 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
     public javax.swing.JComboBox<String> MoCr_SettingsFrame_Colourbox;
     private javax.swing.JPanel MoCr_SettingsFrame_CryptoSub;
     private javax.swing.JPanel MoCr_SettingsFrame_DesignSub;
+    private javax.swing.JPanel MoCr_SettingsFrame_ExclusionSub;
     public javax.swing.JLabel MoCr_SettingsFrame_Heading1;
     public javax.swing.JButton MoCr_SettingsFrame_ResetButton;
     public javax.swing.JTabbedPane MoCr_SettingsFrame_TabbedPane;
@@ -231,6 +310,8 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
     public javax.swing.JButton MoCr_SettingsFrame_Validation;
     public javax.swing.JComboBox<String> MoCr_Settings_Lang;
     public javax.swing.JLabel MoCr_Settings_LangLabel;
+    public javax.swing.JLabel NotificatorLabel;
+    public javax.swing.JComboBox<String> ScriptCombobox;
     public javax.swing.JTextField SizeField;
     // End of variables declaration//GEN-END:variables
 }
