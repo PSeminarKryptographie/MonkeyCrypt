@@ -9,4 +9,5 @@ Alle Schluessel sind coprim zu einem Alphabet, der eine Primzahl als Laenge hat.
 
 Zeichen, die nicht im Alphabet enthalten sind, werden nicht verschluesselt.
 
+
 Die Affine Chiffre ist eine monoalphabetische Substitution.

@@ -6,77 +6,651 @@
 
 <body style="color: rgb(0, 0, 0); background-color: rgb(51, 102, 255);" alink="#ccffff" link="#66ffff" vlink="#990099">
 
+
+
 <font size="+1"><span style="font-weight: bold; font-family: Jamrul;"></span></font>
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+
+
   <tbody>
+
+
+
     <tr align="center">
+
+
+
       <td colspan="3"><font style="text-decoration: underline; font-weight: bold;" size="+2"><span style="font-family: Jamrul;">KRYPTOGRAPHIE</span></font></td>
+
+
+
     </tr>
+
+
+
     <tr>
-      <td><img style="width: 131px; height: 251px;" alt="bob" src="../../../img/abe/bob_small.png"></td>
-      <td><img style="width: 153px; height: 250px;" alt="alice" src="../../../img/abe/alice_small.png"></td>
-      <td><font size="+1"><span style="font-family: Jamrul;">Hallo! Ich
+
+
+
+      <td style="text-align: right;"><img style="width: 131px; height: 251px;" alt="bob" src="../../../img/abe/bob_small.png"></td>
+
+
+
+      <td style="text-align: left;"><img style="width: 153px; height: 250px;" alt="alice" src="../../../img/abe/alice_small.png"></td>
+
+
+
+      <td style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">Hallo! Ich
 bin Alice und das ist mein Freund Bob. Vielleicht seid ihr uns beim
-Lernen &uuml;ber die geheime Kommunikation schon begegnet. Wir beide
-sind n&auml;mlich Experten darin, dank der eifers&uuml;chtigen Eva, die
-uns st&auml;ndig nach-spioniert. Doch seit wir uns der Kryptographie
+Lernen &uuml;ber die geheime Kommunikation schon begegnet. Wir
+beide
+sind n&auml;mlich Experten darin, dank der eifers&uuml;chtigen
+Eva, die
+uns st&auml;ndig nach-spioniert. Doch seit wir uns der
+Kryptographie
 bedienen, f&auml;llt ihr das nicht mehr so leicht!</span></font></td>
+
+
+
     </tr>
+
+
+
     <tr>
-      <td colspan="3"><font size="+1"><span style="font-family: Jamrul;">Die
+
+
+
+      <td colspan="3">
+      
+      <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">Die
 Kryptographie (altgr. krypt&oacute;s = "verborgen, geheim" und
 gr&aacute;phein = "schreiben") ist die Wissenschaft der
-Verschl&uuml;sselung von Informationen. Zu ihr geh&ouml;ren eine
-Vielzahl an Verschl&uuml;sselungen, die ihr in der Randspalte finden
+Verschl&uuml;sselung von Informationen. Zu ihr geh&ouml;ren
+eine
+Vielzahl an Verschl&uuml;sselungen, die ihr in der Randspalte
+finden
 k&ouml;nnt. Sie haben aber alle etwas gemeinsam: Alle
-Verschl&uuml;sselungen haben die Aufgabe die </span><span style="font-weight: bold; font-family: Jamrul; color: rgb(255, 0, 0);">Geheimhaltung</span><span style="font-family: Jamrul;">, </span><span style="font-weight: bold; font-family: Jamrul; color: rgb(255, 0, 0);">Authentifizierung</span><span style="font-family: Jamrul;"> oder </span><span style="font-weight: bold; font-family: Jamrul; color: rgb(255, 0, 0);">Integrit&auml;t</span><span style="font-family: Jamrul;"> einer Nachricht zu gew&auml;hren. Das sind alles ganz sch&ouml;n komplizierte W&ouml;rter!</span><br style="font-family: Jamrul;">
-      <span style="font-family: Jamrul;"><br>
+Verschl&uuml;sselungen haben die Aufgabe die </span><span style="font-weight: bold; font-family: Jamrul; color: rgb(255, 0, 0);">Geheimhaltung</span><span style="font-family: Jamrul;">, </span><span style="font-weight: bold; font-family: Jamrul; color: rgb(255, 0, 0);">Authentifizierung</span><span style="font-family: Jamrul;"> oder </span><span style="font-weight: bold; font-family: Jamrul; color: rgb(255, 0, 0);">Integrit&auml;t</span><span style="font-family: Jamrul;"> einer Nachricht zu
+gew&auml;hren. Das sind alles ganz sch&ouml;n komplizierte
+W&ouml;rter!</span></font><br style="font-family: Jamrul;">
+
+      <font size="+1">
+
+      <span style="font-family: Jamrul;"></span></font><br>
+
+      <font size="+1"><span style="font-family: Jamrul;">
+
 Bob und ich haben sie alle am eigenen Leib erfahren. In den folgenden
-Szenarien bin ich der "Sender" und schicke Bob, dem "Empf&auml;nger"
-eine Nachricht, um einen Treffpunkt zu vereinbaren.</span><br style="font-family: Jamrul;">
+Szenarien bin ich der "Sender" und schicke Bob, dem
+"Empf&auml;nger"
+eine Nachricht, um einen Treffpunkt zu vereinbaren.</span></font><br style="font-family: Jamrul;">
+
+      </div>
+
+      <font size="+1">
+
       <span style="text-decoration: underline; font-weight: bold; font-family: Jamrul;"><br>
+
+
+
 Szenario 1 - Geheimhaltung</span><br style="font-family: Jamrul;">
+
+
+
       <span style="font-family: Jamrul;"><br>
-In diesem Szenario m&ouml;chte ich (Alice) meinem Freund Bob eine Nachricht
-schicken, um zu vereinbaren, wo wir uns treffen. Eva aber w&uuml;hlt wie
-gew&ouml;hnlich in seinen Briefkasten herum! Wenn sie diese Nachricht liest
-k&ouml;nnte sie am Treffpunkt auftauchen und uns einen Streich spielen. Ich
-wende also die Geheimhaltung an, damit die Nachricht f&uuml;r Eva unm&ouml;glich
-oder m&ouml;glichst schwer zu verstehen ist.</span><br style="font-family: Jamrul;">
-      <span style="font-weight: bold; text-decoration: underline; font-family: Jamrul;">Szenario 2 - Authentifizierung</span><br style="font-family: Jamrul;">
-      <span style="font-family: Jamrul;">[Abb-authentifizierung]</span><br style="font-family: Jamrul;">
-      <span style="font-family: Jamrul;">Ich schicke Bob wieder eine
+
+      </span></font>
+      
+      <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+
+In diesem Szenario m&ouml;chte ich (Alice) meinem Freund Bob eine
+Nachricht
+schicken, um zu vereinbaren, wo wir uns treffen. Eva aber
+w&uuml;hlt wie
+gew&ouml;hnlich in seinen Briefkasten herum! Wenn sie diese
+Nachricht liest
+k&ouml;nnte sie am Treffpunkt auftauchen und uns einen Streich
+spielen. Ich
+wende also die Geheimhaltung an, damit die Nachricht f&uuml;r Eva
+unm&ouml;glich
+oder m&ouml;glichst schwer zu verstehen ist.</span></font><br>
+
+      <br style="font-family: Jamrul;">
+
+      </div>
+
+      <font size="+1">
+
+      <span style="font-weight: bold; text-decoration: underline; font-family: Jamrul;">Szenario
+2 - Authentifizierung</span><br style="font-family: Jamrul;">
+
+
+
+      <span style="font-family: Jamrul;"><br>
+
+[Abb-authentifizierung]</span><br style="font-family: Jamrul;">
+
+
+
+      <span style="font-family: Jamrul;"><br>
+
+      </span></font>
+      
+      <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">Ich schicke Bob
+wieder eine
 Nachricht. Eva hat sich etwas Neues einfallen lassen. Sie will Bob
 selber eine Nachricht schicken, aber sich als Alice ausgeben. Jetzt hat
-Bob zwei Briefe und wei&szlig; nicht was er tun soll! Ich brauche also
-einen Identit&auml;tsbeweis oder Authentifizierung f&uuml;r meine
+Bob zwei Briefe und wei&szlig; nicht was er tun soll! Ich brauche
+also
+einen Identit&auml;tsbeweis oder Authentifizierung f&uuml;r
+meine
 Briefe, damit Bob &uuml;berpr&uuml;fen kann, welche Nachricht
-tats&auml;chlich von mir stammt.</span><br style="font-family: Jamrul;">
-      <span style="font-weight: bold; text-decoration: underline; font-family: Jamrul;">Szenario 3 - Integrit&auml;t</span><br style="font-family: Jamrul;">
-      <span style="font-family: Jamrul;">[Abb-Integrit&auml;t]</span><br style="font-family: Jamrul;">
-      <span style="font-family: Jamrul;">Wieder schicke ich (Alice)
+tats&auml;chlich von mir stammt.</span></font><br>
+
+      </div>
+
+      <font size="+1"><br style="font-family: Jamrul;">
+
+
+
+      <span style="font-weight: bold; text-decoration: underline; font-family: Jamrul;">Szenario
+3 - Integrit&auml;t</span><br style="font-family: Jamrul;">
+
+
+
+      <span style="font-family: Jamrul;"><br>
+
+[Abb-Integrit&auml;t]</span><br style="font-family: Jamrul;">
+
+
+
+      <span style="font-family: Jamrul;"><br>
+
+      </span></font>
+      
+      <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">Wieder schicke
+ich (Alice)
 meinem Freund eine Nachricht. Eva greift die Nachricht im Briefkasten
 ab, und ver&auml;ndert sie. So schaffen es Bob und ich nie uns zu
-treffen! Die Nachricht muss also erkennbar ihre Integrit&auml;t - das
-bedeutet Unverletzlichkeit - behalten.</span></font></td>
+treffen! Die Nachricht muss also erkennbar ihre Integrit&auml;t -
+das
+bedeutet Unverletzlichkeit - behalten.</span></font><br>
+
+      <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+
+      <font size="+1"><span style="font-family: Jamrul;">
+
+      <br>
+
+      </span></font>
+      
+      <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+
+Das sind also die Ziele einer Verschl&uuml;sselung. Doch was ist so
+eine Verschl&uuml;sselung &uuml;berhaupt und wie legt man sie
+fest?</span></font><br>
+
+      <font size="+1"><span style="font-family: Jamrul;">
+
+      </span></font><br>
+
+      <font size="+1"><span style="font-family: Jamrul;">
+
+Vielleicht erinnerst du dich an die Begriffe, die Bob im Kapitel <span style="font-weight: bold;">KRYPTOLOGIE</span>
+eingef&uuml;hrt hat. Hier seht ihr nochmal die Tabelle:</span></font><br>
+
+      <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+
+      <font size="+1"><span style="font-family: Jamrul;">
+      <br>
+
+
+
+      </span></font>
+      
+      
+      <table style="text-align: left; width: 100%; height: 302px;" border="1" cellpadding="2" cellspacing="2">
+
+
+
+        <tbody>
+
+
+
+          <tr>
+
+
+
+            <td style="font-weight: bold; font-family: monospace;"><font size="+1">Begriff</font></td>
+
+
+
+            <td style="font-weight: bold; font-family: monospace;"><font size="+1">Abk&uuml;rzung</font></td>
+
+
+
+            <td style="font-weight: bold; font-family: monospace;"><font size="+1">Erkl&auml;rung</font></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">Alphabet</font></td>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">A</font></td>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">eine endliche Menge an Zeichen (z.B. A = {a, b,
+c}).</font></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">M&auml;chtigkeit</font></td>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">|A|</font></td>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">Die L&auml;nge (M&auml;chtigkeit) von A.
+Das ist die Anzahl von Zeichen in A (z.B. |A| = 3).</font></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">Klartext</font></td>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">M</font></td>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">Eine lesb</font><font size="+1">are Zeichenkette</font><font size="+1"> (eng. message)
+"&uuml;ber" A. Das bedeutet das sie nur aus Zeichen des Alphabets
+besteht.</font></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">Schl&uuml;ssel</font></td>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">K</font></td>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">Eine Zeichenkette (eng. key).</font></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">Verschl&uuml;sselung</font></td>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">E</font></td>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">Verfahren, welches aus M und K den Geheimtext
+erzeugt.</font></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">Geheimtext</font></td>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">C</font></td>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">Eine unlesbare Zeichenkette (eng. ciphertext).</font></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">Entschl&uuml;sselung</font></td>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">D</font></td>
+
+
+
+            <td style="font-family: monospace;"><font size="+1">Verfahren zur Wiederherstellung des Klartextes.</font></td>
+
+
+
+          </tr>
+
+
+
+        
+        
+        </tbody>
+      
+      
+      </table>
+
+
+
+      <font size="+1"><span style="font-family: Jamrul;"><br>
+
+      </span></font>
+      
+      <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+
+Hier wurde die Verschl&uuml;sselung E als <span style="font-style: italic;">Verfahren</span> beschrieben.
+Tats&auml;chlich nennt man sie auch&nbsp;<span style="font-weight: bold; text-decoration: underline;">Kryptographisches Verfahren</span>.
+Zu einem solchen Verfahren geh&ouml;ren ein <span style="font-weight: bold;">Algorithmus</span> und ein
+      <span style="font-weight: bold;">Protokoll</span>.</span></font><br>
+
+      <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+
+      <font size="+1"><span style="font-family: Jamrul;">
+      <br>
+
+
+      </span></font>
+      
+      
+      <div style="text-align: center;"><font style="text-decoration: underline;" size="+1"><span style="font-family: Jamrul;">Der Kryptographische Algorithmus</span></font><br>
+
+      <br>
+
+
+      <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+
+
+      
+      
+      <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+Ein Kryptographischer Algorithmus ist eigentlich nichts anderes als
+eine mathematische Funktion, also eine Berechnungsvorschrift. Das
+k&ouml;nnen wir uns ein bisschen wie eine Maschine vorstellen. In
+diese Maschine kann man eine Zeichenkette einschleusen, den Klartext M,
+und bekommt den Geheimtext zur&uuml;ck. Mathematisch schreibt man
+das so:</span></font><br>
+
+      <font size="+1"><span style="font-family: Jamrul;">
+      </span></font></div>
+
+
+      
+      
+      <div style="text-align: center;"><font size="+1"><span style="font-family: Jamrul;"><span style="font-family: Courier New; font-weight: bold;">
+E(M) = C</span></span></font><br>
+
+
+      <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+
+
+      
+      
+      <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+Dabei ist <span style="font-family: Courier New; font-weight: bold;">E</span> die Maschine, also das kryptographische Verfahren, das in
+der Klammer&nbsp;</span></font><font size="+1"><span style="font-family: Jamrul;"><span style="font-family: Courier New; font-weight: bold;">(M)</span></span></font><font size="+1"><span style="font-family: Jamrul;"> der "Input" und als Ergebnis </span></font><font size="+1"><span style="font-family: Jamrul;"><span style="font-family: Courier New; font-weight: bold;">C </span></span></font><font size="+1"><span style="font-family: Jamrul;">der "Output". In gleicher
+Weise funktioniert auch die Entschl&uuml;sselung:</span></font><br>
+
+      <font size="+1"><span style="font-family: Jamrul;">
+      </span></font></div>
+
+
+      
+      
+      <div style="text-align: left;">
+      
+      
+      <div style="text-align: center;"><font size="+1"><span style="font-family: Jamrul;"><span style="font-family: Courier New; font-weight: bold;">
+D(C)=M</span></span></font><br>
+
+
+      </div>
+
+
+      <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+
+
+      
+      
+      <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+Damit bei der Entschl&uuml;sselung auch wirklich wieder der
+Klartext herauskommt, brauchen beide Funktionen eine wichtige
+Eigenschaft: <span style="font-style: italic;">Injektivit&auml;t</span>. Das bedeutet, dass zwei
+verschiedene Eingaben in E() keinen gleiches Ergebnis haben
+k&ouml;nnen. Nur dann gilt:</span></font><br>
+
+      <font size="+1"><span style="font-family: Jamrul;">
+      </span></font></div>
+
+
+      
+      
+      <div style="text-align: center;"><font size="+1"><span style="font-family: Jamrul;"><span style="font-weight: bold; font-family: Courier New;">
+D(E(M))=C</span></span></font><br>
+
+
+      <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+
+
+      
+      
+      <div style="text-align: right;">
+      
+      <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+Wenn du noch Erkl&auml;rungen zu diesen ganzen mathematischen
+Begriffen brauchst, dr&uuml;cke in der Randspalte auf MATHEMATIK.</span></font><br>
+
+      </div>
+
+      <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+
+      <font size="+1"><span style="font-family: Jamrul;">
+      <br>
+
+      </span></font>
+      
+      <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+Doch was ist jetzt der Unterschied der Kryptographie zu anderen Formen
+der geheimen Kommunikation, wie zu den Codierungen oder Spielsprachen?
+Stellen wir
+uns die Situation mal vor.</span></font><br>
+
+      <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+
+      <font size="+1"><span style="font-family: Jamrul;">
+
+      <br>
+
+[diagramm]<br>
+
+      <br>
+
+      </span></font>
+      
+      <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">Alice schickt mir eine Nachricht. Den Algorithmus symbolisieren wir mit
+einer Kiste, die nach einem bestimmten Verfahren auf- und zugemacht
+werden kann. Die Nachricht ist also in dieser Kiste. Wieder lauert Eva
+dem Postboten hinterher und bekommt die Kiste zu fassen. Nun
+wei&szlig; sie zwar nicht, wie die Kiste aufgemacht wird, sie kann
+aber genaues wie Alice und ich in die B&uuml;cherei gehen und sich
+informieren. Hat sie einmal rausgekriegt, wie unser Algorithmus
+funktioniert, kann sie ungest&ouml;rt unsere Nachricht lesen. Und
+weil sie unseren Algorithmus nun kennt, kann sie auch in Zukunft all
+unsere Nachrichten lesen. Das w&auml;re doch furchtbar! Genau
+dieses Problem hat man, wenn man Spielsprachen verwendet.</span></font><br>
+
+      <font size="+1"><span style="font-family: Jamrul;">
+
+Die L&ouml;sung? Ganz einfach: Unsere Kiste braucht einen
+Schl&uuml;ssel. Jetzt wei&szlig; Eva zwar, wie man die Kiste
+aufmacht, n&auml;mlich Schl&uuml;ssel einstecken und drehen.
+Trotzdem kann sie diesen Algorithmus nicht durchf&uuml;hren, weil
+sie den Schl&uuml;ssel nicht hat! Das Problem ist also
+gel&ouml;st, und wir haben eine VerSCHL&Uuml;SSELung.</span></font><br>
+
+      <font size="+1"><span style="font-family: Jamrul;">
+
+Bei Verschl&uuml;sselungen kann man zwei Typen unterscheiden. Es
+gibt Symmetrische Verschl&uuml;sselungen. Dabei haben Alice und ich
+denselben Schl&uuml;ssel. Bei Asymmetrischen
+Verschl&uuml;sselungen haben wir zwei verschiedene
+Schl&uuml;ssel. Wie das bitte geht? Indem ihr die beiden Themen in
+der Randspalte anklickt, k&ouml;nnt ihr mehr dar&uuml;ber
+erfahren.</span></font><br>
+
+      <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+
+      <font size="+1"><span style="font-family: Jamrul;">
+      <br>
+
+      </span></font>
+      
+      <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+
+Jetzt fehlt nicht mehr viel bis zur fertigen V<br>
+
+erschl&uuml;sselung.
+Wir brauchen nur noch ein Protokoll, damit alles in
+gr&uuml;ndlicher und gleicher Art abl&auml;uft. Dazu
+geh&ouml;rt etwa, wie die Schl&uuml;ssel ausgetauscht werden
+sollen, oder welche Zwischenspieler, z.B. Eva oder einen Postboten, es
+gibt. Das ist aber gar nicht kompliziert, denn das stellt man einfach,
+wie vorhin auch, mit Bildern und Diagrammen dar.</span></font></div>
+
+      </td>
+
+
+
     </tr>
+
+
+
     <tr>
+
+
+
       <td colspan="3"></td>
+
+
+
     </tr>
+
+
+
     <tr>
+
+
+
       <td colspan="3"></td>
+
+
+
     </tr>
+
+
+
     <tr>
+
+
+
       <td colspan="3" rowspan="1"></td>
+
+
+
     </tr>
+
+
+
     <tr>
+
+
+
       <td colspan="3" rowspan="1"></td>
+
+
+
     </tr>
+
+
+
     <tr>
+
+
+
       <td colspan="3" rowspan="1"></td>
+
+
+
     </tr>
+
+
+
+  
+  
   </tbody>
 </table>
+
+
+
 <font size="+1"><span style="font-weight: bold; font-family: Jamrul;"></span></font><font size="+1"><span style="font-family: Jamrul;"><span style="font-style: italic;"></span></span><span style="font-family: Jamrul; font-style: italic;"></span></font>
 </body>
 </html>

@@ -15,7 +15,8 @@ public class OneTimePad extends Chiffre {
 	private static Vigenere v= new Vigenere();
 
 	protected void setLength(String text) {
-		length = Arrays.asList(text.length());
+		String newString = filterExclusions(text);
+		length = Arrays.asList(newString.length());
 	}
 	
 
@@ -34,11 +35,13 @@ public class OneTimePad extends Chiffre {
 
 	@Override
 	protected String algorithmEncrypt(String text, String key) {
+		setLength(text);
 		return v.encrypt(text, key);
 	}
 
 	@Override
 	protected String algorithmDecrypt(String text, String key) {
+		setLength(text);
 		return v.decrypt(text, key);
 	}
 
