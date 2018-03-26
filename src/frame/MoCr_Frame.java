@@ -128,7 +128,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_CodierungenSub_Heading = new javax.swing.JLabel();
         MoCr_CodierungenSub_MorseButton = new javax.swing.JRadioButton();
         MoCr_CodierungenSub_ASCIIButton = new javax.swing.JRadioButton();
-        MoCr_CodierungenSub_BinärButton = new javax.swing.JRadioButton();
+        MoCr_CodierungenSub_BinaerButton = new javax.swing.JRadioButton();
         MoCr_CodierungenSub_AlphaButton = new javax.swing.JRadioButton();
         MoCr_CodierungenSub_ADFGXButton = new javax.swing.JRadioButton();
         MoCr_ADFGX_Scroller = new javax.swing.JScrollPane();
@@ -140,7 +140,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_SpielsprachenSub_Heading = new javax.swing.JLabel();
         MoCr_SpielsprachenMP_BiButton = new javax.swing.JRadioButton();
         MoCr_SpielsprachenMP_BobButton = new javax.swing.JRadioButton();
-        MoCr_SpielsprachenMP_LöffelButton = new javax.swing.JRadioButton();
+        MoCr_SpielsprachenMP_LoeffelButton = new javax.swing.JRadioButton();
         MoCr_MPSub_Hill = new javax.swing.JPanel();
         MoCr_HillSub_Heading = new javax.swing.JLabel();
         MoCr_HillSub_Matrix = new javax.swing.JTable();
@@ -811,13 +811,13 @@ public class MoCr_Frame extends javax.swing.JFrame {
             }
         });
 
-        MoCr_CodierungenMp_Grouper.add(MoCr_CodierungenSub_BinärButton);
-        MoCr_CodierungenSub_BinärButton.setFont(new java.awt.Font(CFont, 1, 14));
-        MoCr_CodierungenSub_BinärButton.setText("Binärcode");
-        MoCr_CodierungenSub_BinärButton.setOpaque(false);
-        MoCr_CodierungenSub_BinärButton.addActionListener(new java.awt.event.ActionListener() {
+        MoCr_CodierungenMp_Grouper.add(MoCr_CodierungenSub_BinaerButton);
+        MoCr_CodierungenSub_BinaerButton.setFont(new java.awt.Font(CFont, 1, 14));
+        MoCr_CodierungenSub_BinaerButton.setText("Binärcode");
+        MoCr_CodierungenSub_BinaerButton.setOpaque(false);
+        MoCr_CodierungenSub_BinaerButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MoCr_CodierungenSub_BinärButtonActionPerformed(evt);
+                MoCr_CodierungenSub_BinaerButtonActionPerformed(evt);
             }
         });
 
@@ -921,7 +921,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
             .addGroup(MoCr_MPSub_CodierungenLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(MoCr_MPSub_CodierungenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(MoCr_CodierungenSub_BinärButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MoCr_CodierungenSub_BinaerButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(MoCr_CodierungenSub_MorseButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(MoCr_ADFGX_Scroller, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(MoCr_CodierungenSub_ASCIIButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -943,7 +943,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(MoCr_CodierungenSub_ASCIIButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(MoCr_CodierungenSub_BinärButton)
+                .addComponent(MoCr_CodierungenSub_BinaerButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(MoCr_CodierungenSub_BinToHexButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -987,13 +987,13 @@ public class MoCr_Frame extends javax.swing.JFrame {
             }
         });
 
-        MoCr_SpielsprachenMP_Grouper.add(MoCr_SpielsprachenMP_LöffelButton);
-        MoCr_SpielsprachenMP_LöffelButton.setFont(new java.awt.Font(CFont, 1, 20));
-        MoCr_SpielsprachenMP_LöffelButton.setText("Löffelsprache");
-        MoCr_SpielsprachenMP_LöffelButton.setOpaque(false);
-        MoCr_SpielsprachenMP_LöffelButton.addActionListener(new java.awt.event.ActionListener() {
+        MoCr_SpielsprachenMP_Grouper.add(MoCr_SpielsprachenMP_LoeffelButton);
+        MoCr_SpielsprachenMP_LoeffelButton.setFont(new java.awt.Font(CFont, 1, 20));
+        MoCr_SpielsprachenMP_LoeffelButton.setText("Löffelsprache");
+        MoCr_SpielsprachenMP_LoeffelButton.setOpaque(false);
+        MoCr_SpielsprachenMP_LoeffelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MoCr_SpielsprachenMP_LöffelButtonActionPerformed(evt);
+                MoCr_SpielsprachenMP_LoeffelButtonActionPerformed(evt);
             }
         });
 
@@ -1009,7 +1009,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
                         .addComponent(MoCr_SpielsprachenMP_BiButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .addComponent(MoCr_SpielsprachenMP_BobButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MoCr_SpielsprachenMP_LöffelButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(MoCr_SpielsprachenMP_LoeffelButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         MoCr_MPSub_SpielsprachenLayout.setVerticalGroup(
             MoCr_MPSub_SpielsprachenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1020,7 +1020,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(MoCr_SpielsprachenMP_BobButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(MoCr_SpielsprachenMP_LöffelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MoCr_SpielsprachenMP_LoeffelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 292, Short.MAX_VALUE))
         );
 
@@ -1623,7 +1623,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         localLogic.setIdentificationPair(6, 1);
     }//GEN-LAST:event_MoCr_SpielsprachenMP_BobButtonActionPerformed
 
-    private void MoCr_SpielsprachenMP_LöffelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_SpielsprachenMP_LöffelButtonActionPerformed
+    private void MoCr_SpielsprachenMP_LoeffelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_SpielsprachenMP_LöffelButtonActionPerformed
         // TODO add your handling code here:
         localLogic.setIdentificationPair(7, 1);
     }//GEN-LAST:event_MoCr_SpielsprachenMP_LöffelButtonActionPerformed
@@ -1678,7 +1678,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         localLogic.setIdentificationPair(2, 1);
     }//GEN-LAST:event_MoCr_CodierungenSub_ASCIIButtonActionPerformed
 
-    private void MoCr_CodierungenSub_BinärButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_CodierungenSub_BinärButtonActionPerformed
+    private void MoCr_CodierungenSub_BinaerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_CodierungenSub_BinärButtonActionPerformed
         // TODO add your handling code here:
         localLogic.setIdentificationPair(3, 1);
     }//GEN-LAST:event_MoCr_CodierungenSub_BinärButtonActionPerformed
@@ -1849,7 +1849,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
     public javax.swing.JRadioButton MoCr_CodierungenSub_ASCIIButton;
     public javax.swing.JRadioButton MoCr_CodierungenSub_AlphaButton;
     public javax.swing.JRadioButton MoCr_CodierungenSub_BinToHexButton;
-    public javax.swing.JRadioButton MoCr_CodierungenSub_BinärButton;
+    public javax.swing.JRadioButton MoCr_CodierungenSub_BinaerButton;
     private javax.swing.JLabel MoCr_CodierungenSub_Heading;
     public javax.swing.JRadioButton MoCr_CodierungenSub_MorseButton;
     public javax.swing.JRadioButton MoCr_CodierungenSub_NATOButton;
@@ -1917,7 +1917,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
     public javax.swing.JRadioButton MoCr_SpielsprachenMP_BiButton;
     public javax.swing.JRadioButton MoCr_SpielsprachenMP_BobButton;
     private javax.swing.ButtonGroup MoCr_SpielsprachenMP_Grouper;
-    public javax.swing.JRadioButton MoCr_SpielsprachenMP_LöffelButton;
+    public javax.swing.JRadioButton MoCr_SpielsprachenMP_LoeffelButton;
     private javax.swing.JLabel MoCr_SpielsprachenSub_Heading;
     private javax.swing.ButtonGroup MoCr_SteganoMP_Grouper;
     public javax.swing.JRadioButton MoCr_SteganoSub_BaconButton;

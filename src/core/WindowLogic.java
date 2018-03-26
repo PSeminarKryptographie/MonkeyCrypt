@@ -5,9 +5,6 @@
  */
 package core;
 
-import crypt.Tools;
-import javax.swing.ImageIcon;
-
 /**
  *
  * @author Jonas

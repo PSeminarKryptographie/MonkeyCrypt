@@ -16,20 +16,20 @@ public class AffineAufgaben extends Aufgaben{
         super(3);
         
         anweisungstext[0] = "Hallo";
-        schlüssel[0] = "bc";
+        schluessel[0] = "bc";
         aufgabentyp[0] = 2;
         
         anweisungstext[1] = "Affine, das ist doch wunderbar";
-        schlüssel[1] = "lz";
+        schluessel[1] = "lz";
         aufgabentyp[1] = 3;
         
         anweisungstext[2] = "Vorerst letze Aufgabe";
-        schlüssel[2] = "bh";
+        schluessel[2] = "bh";
         aufgabentyp[2] = 1;
         
         for(int i = 0; i < anweisungstext.length; i++)
         {
-            verschlüsselungstyp[i] = 1;
+            verschluesselungstyp[i] = 1;
         }
                 
     }

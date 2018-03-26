@@ -13,28 +13,28 @@ public abstract class Aufgaben {
     
     String[] anweisungstext;
     int[] aufgabentyp;
-    String[] schlüssel;
+    String[] schluessel;
     /**Gibt an ob die Verschlüsselung Chiffre, Spielsprache oder eine Sonstige ist
      * 1: Chiffre
      * 2: Spielsprache
      * 3: Sonstige
     */
-    int[] verschlüsselungstyp;
+    int[] verschluesselungstyp;
     
     /**
      * Gibt an in welcher Verschlüsselung der Text verschlüsselt werden soll
      * Nur relevant wenn in einem Panel mehrere Verschlüsselungen sind
      */
-    int[] verschlüsselungsNummer;
+    int[] verschluesselungsNummer;
     
     
     public Aufgaben(int anzahl)
     {
         anweisungstext = new String[anzahl];
         aufgabentyp = new int[anzahl];
-        schlüssel = new String[anzahl];
-        verschlüsselungstyp = new int[anzahl];
-        verschlüsselungsNummer = new int[anzahl];
+        schluessel = new String[anzahl];
+        verschluesselungstyp = new int[anzahl];
+        verschluesselungsNummer = new int[anzahl];
     }
     
     public int aufgabenzahlGeben()
@@ -47,9 +47,9 @@ public abstract class Aufgaben {
         return anweisungstext[n];
     }
     
-    public String schlüsselGeben(int n)
+    public String schluesselGeben(int n)
     {
-        return schlüssel[n];
+        return schluessel[n];
     }
     
     public int aufgabentypGeben(int n)
@@ -57,13 +57,13 @@ public abstract class Aufgaben {
         return aufgabentyp[n];
     }
     
-    public int verschlüsselungstypGeben(int n)
+    public int verschluesselungstypGeben(int n)
     {
-        return verschlüsselungstyp[n];
+        return verschluesselungstyp[n];
     }
     
-    public int verschlüsselungsNummerGeben(int n)
+    public int verschluesselungsNummerGeben(int n)
     {
-        return verschlüsselungsNummer[n];
+        return verschluesselungsNummer[n];
     }
 }

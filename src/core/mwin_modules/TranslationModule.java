@@ -55,7 +55,7 @@ public class TranslationModule {
         localFrame.MoCr_PermSub_Label.setText(Translator.getInstance().getString("matrixsize"));
         localFrame.MoCr_CodierungenSub_MorseButton.setText(Translator.getInstance().getString("code1"));
         localFrame.MoCr_CodierungenSub_ASCIIButton.setText(Translator.getInstance().getString("code2"));
-        localFrame.MoCr_CodierungenSub_BinärButton.setText(Translator.getInstance().getString("code3"));
+        localFrame.MoCr_CodierungenSub_BinaerButton.setText(Translator.getInstance().getString("code3"));
         localFrame.MoCr_CodierungenSub_BinToHexButton.setText(Translator.getInstance().getString("code4"));
         localFrame.MoCr_CodierungenSub_AlphaButton.setText(Translator.getInstance().getString("code5"));
         localFrame.MoCr_CodierungenSub_NATOButton.setText(Translator.getInstance().getString("code6"));
@@ -63,7 +63,7 @@ public class TranslationModule {
         localFrame.MoCr_CodierungenSub_ADFGXFiller.setText(Translator.getInstance().getString("fill"));
         localFrame.MoCr_SpielsprachenMP_BiButton.setText(Translator.getInstance().getString("fun1"));
         localFrame.MoCr_SpielsprachenMP_BobButton.setText(Translator.getInstance().getString("fun2"));
-        localFrame.MoCr_SpielsprachenMP_LöffelButton.setText(Translator.getInstance().getString("fun3"));
+        localFrame.MoCr_SpielsprachenMP_LoeffelButton.setText(Translator.getInstance().getString("fun3"));
         localFrame.MoCr_HillSub_SizeLab.setText(Translator.getInstance().getString("matrixsize"));
         localFrame.MoCr_SteganoSub_BaconButton.setText(Translator.getInstance().getString("stegano1"));
         localFrame.MoCr_SteganoSub_PseudoButton.setText(Translator.getInstance().getString("stegano2"));

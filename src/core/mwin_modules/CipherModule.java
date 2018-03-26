@@ -37,7 +37,7 @@ public class CipherModule {
         
             switch(e) {
                 case -1: break;
-                case 0: String k = "";  //für Chiffren gilt: 1 Schlüssel                  
+                case 0: String k = "";  //fuer Chiffren gilt: 1 Schluessel                  
                     switch(c) {
                         case 0: k = localFrame.MoCr_Caesar_EingabefeldSchluessel.getText(); break;
                         case 1: k = localFrame.MoCr_MultiplikativSub_KeyField.getText(); break;
@@ -55,10 +55,10 @@ public class CipherModule {
                                 localFrame.MoCr_AffChiffSub_Function.setText(localFraTools.createFunction(k));   break;
                     }
                     if(d == true) {
-                out = localCore.verschlüsseln(c, in, k);} else {out = localCore.entschlüsseln(c, in, k);}    break;
-                case 1: if(d == true) {out = localCore.spielsprache_verschlüsseln(c, in);} else {out = localCore.spielsprache_entschlüsseln(c, in);} break;
-                case 2: if(d == true) {out = localCore.verschlüsseln(in, localFrame.MoCr_TranspositionSub_2KeyField1.getText(), localFrame.MoCr_TranspositionSub_2KeyField2.getText());} 
-                else {out = localCore.entschlüsseln(in, localFrame.MoCr_TranspositionSub_2KeyField1.getText(), localFrame.MoCr_TranspositionSub_2KeyField2.getText());}break;
+                out = localCore.verschluesseln(c, in, k);} else {out = localCore.entschluesseln(c, in, k);}    break;
+                case 1: if(d == true) {out = localCore.spielsprache_verschluesseln(c, in);} else {out = localCore.spielsprache_entschluesseln(c, in);} break;
+                case 2: if(d == true) {out = localCore.verschluesseln(in, localFrame.MoCr_TranspositionSub_2KeyField1.getText(), localFrame.MoCr_TranspositionSub_2KeyField2.getText());} 
+                else {out = localCore.entschluesseln(in, localFrame.MoCr_TranspositionSub_2KeyField1.getText(), localFrame.MoCr_TranspositionSub_2KeyField2.getText());}break;
             }
             localFrame.MoCr_MPstaticIO_OutField.setText(out);
         }

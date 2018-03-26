@@ -21,36 +21,36 @@ public class Core
     
     
     /**Verschlüsselt die Chiffren*/
-    public String verschlüsseln(int z, String in, String k)
+    public String verschluesseln(int z, String in, String k)
     {
         return chiffre[z].encrypt(in, k);
     }
        
     //Entschlüsselt die Chiffren
-    public String entschlüsseln(int z, String in, String k)
+    public String entschluesseln(int z, String in, String k)
     {
         return chiffre[z].decrypt(in, k);
     }
     
     //Verschlüsselt eine Spielsprache
-    public String spielsprache_verschlüsseln(int z, String in)
+    public String spielsprache_verschluesseln(int z, String in)
     {
         return spielsprache[z].encrypt(in);
     }
         
     //Entschlüsselt eine Spielsprache
-    public String spielsprache_entschlüsseln(int z, String in)
+    public String spielsprache_entschluesseln(int z, String in)
     {
         return spielsprache[z].decrypt(in);
     }
     
-    public String verschlüsseln(String in, String k1, String k2)
+    public String verschluesseln(String in, String k1, String k2)
     {
         return meinDW.encrypt(in, k1, k2);
     }
        
     //Entschlüsselt die Chiffren
-    public String entschlüsseln(String in, String k1, String k2)
+    public String entschluesseln(String in, String k1, String k2)
     {
         return meinDW.decrypt(in, k1, k2);
     }

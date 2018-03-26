@@ -54,7 +54,6 @@ public class DrawGraph extends JPanel {
             int x1 = (int) (i * xScale + padding + labelPadding);
             int y1 = (int) ((getMaxScore() - scores.get(i)) * yScale + padding);
             graphPoints.add(new Point(x1, y1));
-            System.out.println(getWidth());
         }
 
         // draw white background
@@ -164,7 +163,7 @@ public class DrawGraph extends JPanel {
     }
 
     public static void createAndShowGui(int a, int b, int mod, String bezeichner, String key) {
-    private static void createAndShowGui(int a, int b, int mod) {
+
         List<Integer> scores = new ArrayList<>();
         
         for (int i = 0; i < mod; i++) {
@@ -178,20 +177,8 @@ public class DrawGraph extends JPanel {
         JFrame frame = new JFrame(bezeichner);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add(mainPanel);
-        mainPanel.setPreferredSize(new Dimension(800, 600));
-        JFrame frame = new JFrame("DrawGraph");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(mainPanel);
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
-
-    public static void main(String[] args) {
-      SwingUtilities.invokeLater(new Runnable() {
-         public void run() {
-            createAndShowGui(1, 6, 26);
-         }
-      });
-   }
 }

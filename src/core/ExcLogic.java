@@ -13,52 +13,52 @@ import aufgabentexte.*;
  */
 public class ExcLogic {
     
-    /**Unverschlüsselter Text der Aufgabe*/
+    /**Unverschluesselter Text der Aufgabe*/
     String anweisungstext;
-    /**Verschlüsselter Text der Aufgabe*/
-    String lösung;
+    /**Verschluesselter Text der Aufgabe*/
+    String loesung;
     /**
      * Typ der Aufgabe:
-     * 1: Text muss verschlüsselt werden
-     * 2: Text muss entschlüsselt werden
-     * 3: Schlüssel muss herausgefunden werden
+     * 1: Text muss verschluesselt werden
+     * 2: Text muss entschluesselt werden
+     * 3: Schluessel muss herausgefunden werden
      */
     int aufgabentyp;
     /**Nummer der Aufgabe*/
     int aufgabenNummer;
-    /**Zu verwendender Schlüssel*/
-    String schlüssel;
+    /**Zu verwendender Schluessel*/
+    String schluessel;
     Core core;
     /**Klassen in denen die Aufgabentexte gespeichert sind*/
     Aufgaben[] aufgaben;
-    /** Nummer der Verschlüsselung
+    /** Nummer der Verschluesselung
      * 0: Caesar
      * 1: Multiplikativ
      * 2: Vigenere
      * 4: OneTimePad
      * 7: Spielsprache
      */
-    int verschlüsselung;
+    int verschluesselung;
     /**
-     * Gibt an welchem Typ die Verschlüsselung angehört
+     * Gibt an welchem Typ die Verschluesselung angehoert
      * 1: Chiffre
      * 2: Spielsprache
      * 3: Sonstige
      */
-    int verschlüsselungstyp;
+    int verschluesselungstyp;
     
-    /**Gibt bei mehreren Verschlüsselungen in einem Panel deren Nummer an*/
-    int verschlüsselungsNummer;
+    /**Gibt bei mehreren Verschluesselungen in einem Panel deren Nummer an*/
+    int verschluesselungsNummer;
     
     public ExcLogic()
     {
         aufgabenNummer = 0;
         aufgabentyp = 0;
         anweisungstext = "";
-        schlüssel = "";
+        schluessel = "";
         core = new Core();
-        lösung = "";
-        verschlüsselungsNummer = 0;
+        loesung = "";
+        verschluesselungsNummer = 0;
         aufgaben = new Aufgaben[11];
         aufgaben[0] = new CaesarAufgaben();
         aufgaben[1] = new MultiplikativAufgaben();
@@ -92,151 +92,151 @@ public class ExcLogic {
         return anweisungstext;
     }
     
-    public String schlüsselGeben()
+    public String schluesselGeben()
     {
-        return schlüssel;
+        return schluessel;
     }
     
-    public String LösungGeben()
+    public String LoesungGeben()
     {
-        return lösung;
+        return loesung;
     }
     
-    public int verschlüsselungGeben()
+    public int verschluesselungGeben()
     {
-        return verschlüsselung;
+        return verschluesselung;
     }
     
-    public int verschlüsselungstypGeben()
+    public int verschluesselungstypGeben()
     {
-        return verschlüsselungstyp;
+        return verschluesselungstyp;
     }
     
-    public int verschlüsselungsNummerGeben()
+    public int verschluesselungsNummerGeben()
     {
-        return verschlüsselungsNummer;
+        return verschluesselungsNummer;
     }
  
     /**
-  * Schaltet in die nächtse Aufgabe weiter
+  * Schaltet in die naechtse Aufgabe weiter
   */   
     public void AufgabeWeiterschalten()
     {
-        if(aufgabenNummer <= aufgaben[verschlüsselung].aufgabenzahlGeben())
+        if(aufgabenNummer <= aufgaben[verschluesselung].aufgabenzahlGeben())
         {
-            anweisungstext = aufgaben[verschlüsselung].anweisungstextGeben(aufgabenNummer);
-            schlüssel = aufgaben[verschlüsselung].schlüsselGeben(aufgabenNummer);
-            aufgabentyp = aufgaben[verschlüsselung].aufgabentypGeben(aufgabenNummer);
-            verschlüsselungstyp = aufgaben[verschlüsselung].verschlüsselungstypGeben(aufgabenNummer);
-            verschlüsselungsNummer = aufgaben[verschlüsselung].verschlüsselungsNummerGeben(aufgabenNummer);
+            anweisungstext = aufgaben[verschluesselung].anweisungstextGeben(aufgabenNummer);
+            schluessel = aufgaben[verschluesselung].schluesselGeben(aufgabenNummer);
+            aufgabentyp = aufgaben[verschluesselung].aufgabentypGeben(aufgabenNummer);
+            verschluesselungstyp = aufgaben[verschluesselung].verschluesselungstypGeben(aufgabenNummer);
+            verschluesselungsNummer = aufgaben[verschluesselung].verschluesselungsNummerGeben(aufgabenNummer);
             
             aufgabenNummer = aufgabenNummer + 1;
         }
         else
         {
             anweisungstext = "";
-            schlüssel = "";
+            schluessel = "";
             aufgabentyp = 0;
             aufgabenNummer = 0;
         }
-        lösung = LösungErstellen(anweisungstext, schlüssel);
+        loesung = LoesungErstellen(anweisungstext, schluessel);
                 
     }
     
-    public String LösungErstellen(String text, String schlüssel)
+    public String LoesungErstellen(String text, String schluessel)
     {
-        switch(verschlüsselung)
+        switch(verschluesselung)
         {
             case 0:
-                lösung =  core.verschlüsseln(0, text, schlüssel);
+                loesung =  core.verschluesseln(0, text, schluessel);
                 break;
             case 1:
-                lösung = core.verschlüsseln(1, text, schlüssel);
+                loesung = core.verschluesseln(1, text, schluessel);
                 break;
             case 2:
-                lösung = core.verschlüsseln(2, text, schlüssel);
+                loesung = core.verschluesseln(2, text, schluessel);
                 break;
             case 3:
-                lösung = core.verschlüsseln(3, text, schlüssel);
+                loesung = core.verschluesseln(3, text, schluessel);
                 break;
             case 4:
-                switch(verschlüsselungsNummer)
+                switch(verschluesselungsNummer)
                 {
                     case 1:
-                        lösung = core.verschlüsseln(4, text, schlüssel);
+                        loesung = core.verschluesseln(4, text, schluessel);
                         break;
                     case 2:
-                        lösung = core.verschlüsseln(5, text, schlüssel);
+                        loesung = core.verschluesseln(5, text, schluessel);
                         break;
                 }
                 break;
             case 5:
-                switch(verschlüsselungsNummer)
+                switch(verschluesselungsNummer)
                 {
                     case 1:
-                        lösung = core.spielsprache_verschlüsseln(1, text);
+                        loesung = core.spielsprache_verschluesseln(1, text);
                         break;
                     case 2:
-                        lösung = core.spielsprache_verschlüsseln(2, text);
+                        loesung = core.spielsprache_verschluesseln(2, text);
                         break;
                     case 3:
-                        lösung = core.spielsprache_verschlüsseln(3, text);
+                        loesung = core.spielsprache_verschluesseln(3, text);
                         break;
                     case 4:
-                        lösung = core.spielsprache_verschlüsseln(8, text);
+                        loesung = core.spielsprache_verschluesseln(8, text);
                         break;
                     case 5:
-                        lösung = core.spielsprache_verschlüsseln(4, text);
+                        loesung = core.spielsprache_verschluesseln(4, text);
                         break;
                     case 6:
-                        lösung = core.spielsprache_verschlüsseln(9, text);
+                        loesung = core.spielsprache_verschluesseln(9, text);
                         break;
                 
                 }
                 break;
             case 6:
-                switch(verschlüsselungsNummer)
+                switch(verschluesselungsNummer)
                 {
                     case 1:
-                        lösung = core.spielsprache_verschlüsseln(5, text);
+                        loesung = core.spielsprache_verschluesseln(5, text);
                         break;
                     case 2:
-                        lösung = core.spielsprache_verschlüsseln(6, text);
+                        loesung = core.spielsprache_verschluesseln(6, text);
                         break;
                     case 3:
-                        lösung = core.spielsprache_verschlüsseln(7, text);
+                        loesung = core.spielsprache_verschluesseln(7, text);
                         break;
                 }
                 break;
             case 8:
-                switch(verschlüsselungsNummer)
+                switch(verschluesselungsNummer)
                 {
                     case 1:
-                        lösung = core.verschlüsseln(9, text, schlüssel);
+                        loesung = core.verschluesseln(9, text, schluessel);
                         break;
                     case 2:
-                        lösung = core.spielsprache_verschlüsseln(10, text);
+                        loesung = core.spielsprache_verschluesseln(10, text);
                         break;
                 }
             case 9:
-                lösung = core.verschlüsseln(10, text, schlüssel);
+                loesung = core.verschluesseln(10, text, schluessel);
                 break;
             default:
-                lösung = null;
+                loesung = null;
         }
         
-        return lösung;
+        return loesung;
     }
     
     /**
-     * Generiert die Lösung für die Aufgabe
+     * Generiert die Loesung fuer die Aufgabe
      */
-    public String LösungGenerieren()
+    public String LoesungGenerieren()
     {
         String ausgabe = "";
         if(aufgabentyp == 1)
         {
-            ausgabe = lösung;
+            ausgabe = loesung;
         }
         else if(aufgabentyp == 2)
         {
@@ -244,25 +244,25 @@ public class ExcLogic {
         }
         else if(aufgabentyp == 3)
         {
-            ausgabe = schlüssel;
+            ausgabe = schluessel;
         }
         else
         {
-            ausgabe = "Lösung leider nicht erstellbar";
+            ausgabe = "Loesung leider nicht erstellbar";
         }
         return ausgabe;
     }
     
     
-    public boolean EingabePrüfen(String eingabe)
+    public boolean EingabePruefen(String eingabe)
     {
-        return eingabe.equals(LösungGenerieren());
+        return eingabe.equals(LoesungGenerieren());
     }
     
     
-    public void VerschlüsselungSetzen(int zahl)
+    public void VerschluesselungSetzen(int zahl)
     {
-        verschlüsselung = zahl;
+        verschluesselung = zahl;
         aufgabenNummer = 0;
     }
     

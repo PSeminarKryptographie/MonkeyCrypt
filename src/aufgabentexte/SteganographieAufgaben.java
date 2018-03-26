@@ -11,7 +11,7 @@ package aufgabentexte;
  */
 public class SteganographieAufgaben extends Aufgaben {
    /**
-     * * Zahlen der Verschlüsselungsnummer entsprechen folgenden Verschlüsselungen:
+     * * Zahlen der Verschluesselungsnummer entsprechen folgenden Verschluesselungen:
      * 1: Bacon
      * 2: Pseudo-Text
      */
@@ -20,23 +20,23 @@ public class SteganographieAufgaben extends Aufgaben {
     {
         super(2);
         
-        anweisungstext[0] = "Bacon finde den Schlüssel";
+        anweisungstext[0] = "Bacon finde den schluessel";
         aufgabentyp[0] = 3;
-        schlüssel[0] = "Hallo";
-        verschlüsselungsNummer[0] = 1;
+        schluessel[0] = "Hallo";
+        verschluesselungsNummer[0] = 1;
         
-        anweisungstext[1] = "Bacontext verschlüsseln";
+        anweisungstext[1] = "Bacontext verschluesseln";
         aufgabentyp[1] = 1;
-        schlüssel[1] = "asdfjklö";
-        verschlüsselungsNummer[1] = 1;
+        schluessel[1] = "asdfjklö";
+        verschluesselungsNummer[1] = 1;
         
         for(int i = 0; i < anweisungstext.length; i++)
         {
-            if(verschlüsselungsNummer[i] == 1)
+            if(verschluesselungsNummer[i] == 1)
             {
-                verschlüsselungstyp[i] = 1;
+                verschluesselungstyp[i] = 1;
             }
-            else {verschlüsselungstyp[i] = 2;}
+            else {verschluesselungstyp[i] = 2;}
         }
         
     }
