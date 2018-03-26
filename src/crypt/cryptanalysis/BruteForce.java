@@ -1,4 +1,4 @@
-package cryptanalysis;
+package crypt.cryptanalysis;
 
 public class BruteForce {
 

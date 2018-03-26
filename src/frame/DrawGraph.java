@@ -177,6 +177,7 @@ public class DrawGraph extends JPanel {
         JFrame frame = new JFrame(bezeichner);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add(mainPanel);
+
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

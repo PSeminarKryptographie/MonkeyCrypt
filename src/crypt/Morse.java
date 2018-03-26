@@ -180,19 +180,19 @@ public class Morse extends Spielsprache
                 {
                     x = "- - . . - -";
                 }
-                else if (t.charAt(i) == '�')//ss
+                else if (t.charAt(i) == 'ß')//ss
                 {
                     x = ". . . - - . .";
                 }
-                else if (t.charAt(i) == '�')//ae
+                else if (t.charAt(i) == 'ä')//ae
                 {
                     x = ". - . -";
                 }
-                else if (t.charAt(i) == '�')//oe
+                else if (t.charAt(i) == 'ö')//oe
                 {
                     x = "- - - .";
                 }
-                else if (t.charAt(i) == '�')//ue
+                else if (t.charAt(i) == 'ü')//ue
                 {
                     x = ". . - -";
                 }
@@ -325,7 +325,7 @@ public class Morse extends Spielsprache
                                                 }
                                                 else if (m.charAt(i+6) == '.')
                                                 {
-                                                    x = "�";       //oe
+                                                    x = "ö";       //oe
                                                     i = i+6;
                                                 }
                                                 else if (m.charAt(i+6) == ' ')
@@ -463,7 +463,7 @@ public class Morse extends Spielsprache
                                             {
                                                 if (m.charAt(i+6) == '-')
                                                 {
-                                                    x = "�";    //ue
+                                                    x = "ü";    //ue
                                                     i = i+6;
                                                 }
                                                 else if (m.charAt(i+6) == '.')

@@ -361,7 +361,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
             }
         });
 
-        MoCr_MultiplikativSub_Bild.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/Alice Schwarz-Weiß.png"))); // NOI18N
+        MoCr_MultiplikativSub_Bild.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/Alice Schwarz-Weiss.png"))); // NOI18N
 
         javax.swing.GroupLayout MoCr_MPSub_MultiplikativLayout = new javax.swing.GroupLayout(MoCr_MPSub_Multiplikativ);
         MoCr_MPSub_Multiplikativ.setLayout(MoCr_MPSub_MultiplikativLayout);
@@ -405,7 +405,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_VigenereSub_Heading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MoCr_VigenereSub_Heading.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/headings/Schriftzug Vigenére.png"))); // NOI18N
 
-        MoCr_VigenereSub_Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/Vigenère-Tabelle.png"))); // NOI18N
+        MoCr_VigenereSub_Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/Vigenere-Tabelle.png"))); // NOI18N
 
         MoCr_VigenereSub_LabelSchluessel.setFont(new java.awt.Font(CFont, 0, 18));
         MoCr_VigenereSub_LabelSchluessel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
