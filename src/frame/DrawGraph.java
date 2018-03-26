@@ -163,7 +163,6 @@ public class DrawGraph extends JPanel {
     }
 
     public static void createAndShowGui(int a, int b, int mod, String bezeichner, String key) {
-
         List<Integer> scores = new ArrayList<>();
         
         for (int i = 0; i < mod; i++) {
