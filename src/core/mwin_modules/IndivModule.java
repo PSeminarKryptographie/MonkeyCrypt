@@ -100,9 +100,9 @@ public class IndivModule {
     }
     public void clearKeys(int p) {
         switch(p) {
-            case 0: localFrame.MoCr_Caesar_EingabefeldSchlüssel.setText(""); break;
+            case 0: localFrame.MoCr_Caesar_EingabefeldSchluessel.setText(""); break;
             case 1: localFrame.MoCr_MultiplikativSub_KeyField.setText(""); break;
-            case 2: localFrame.MoCr_VigenereSub_EingabefeldSchlüssel.setText(""); break;
+            case 2: localFrame.MoCr_VigenereSub_EingabefeldSchluessel.setText(""); break;
             case 3: localFrame.MoCr_OTPSub_Area.setText("");
             case 4: localFrame.MoCr_TranspositionKey_1KeyField.setText("");
                     localFrame.MoCr_TranspositionSub_2KeyField1.setText("");

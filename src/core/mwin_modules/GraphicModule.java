@@ -25,13 +25,13 @@ public class GraphicModule {
     public void switchCounterclockwise() {
         alterDiscMode(false);
         localFrame.MoCr_CaesarSub_DiscBack.setIcon(alterDisc(false));
-        localFrame.MoCr_Caesar_EingabefeldSchlüssel.setText(DiscModetoString());
+        localFrame.MoCr_Caesar_EingabefeldSchluessel.setText(DiscModetoString());
     }
     
     public void switchClockwise() {
         alterDiscMode(true);
         localFrame.MoCr_CaesarSub_DiscBack.setIcon(alterDisc(true));
-        localFrame.MoCr_Caesar_EingabefeldSchlüssel.setText(DiscModetoString());
+        localFrame.MoCr_Caesar_EingabefeldSchluessel.setText(DiscModetoString());
     }
     
     

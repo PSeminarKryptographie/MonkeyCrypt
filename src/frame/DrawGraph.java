@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.GridLayout;
 import java.awt.Point;
 import java.awt.RenderingHints;
 import java.awt.Stroke;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
@@ -161,6 +163,7 @@ public class DrawGraph extends JPanel {
         return scores;
     }
 
+    public static void createAndShowGui(int a, int b, int mod, String bezeichner, String key) {
     private static void createAndShowGui(int a, int b, int mod) {
         List<Integer> scores = new ArrayList<>();
         
@@ -170,6 +173,11 @@ public class DrawGraph extends JPanel {
            
         }
         DrawGraph mainPanel = new DrawGraph(scores);
+        mainPanel.add(new JLabel(key));
+        mainPanel.setPreferredSize(new Dimension(800, 600));
+        JFrame frame = new JFrame(bezeichner);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().add(mainPanel);
         mainPanel.setPreferredSize(new Dimension(800, 600));
         JFrame frame = new JFrame("DrawGraph");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

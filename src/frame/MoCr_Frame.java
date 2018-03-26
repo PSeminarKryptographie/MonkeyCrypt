@@ -78,8 +78,8 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_MainPro_changeable = new javax.swing.JPanel();
         MoCr_MPSub_Caesar = new javax.swing.JPanel();
         MoCr_CaesarSub_Heading = new javax.swing.JLabel();
-        MoCr_CaesarSub_LabelSchlüssel = new javax.swing.JLabel();
-        MoCr_Caesar_EingabefeldSchlüssel = new javax.swing.JTextField();
+        MoCr_CaesarSub_LabelSchluessel = new javax.swing.JLabel();
+        MoCr_Caesar_EingabefeldSchluessel = new javax.swing.JTextField();
         MoCr_CaesarSub_DiscBack = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -92,11 +92,11 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_MPSub_Vigenere = new javax.swing.JPanel();
         MoCr_VigenereSub_Heading = new javax.swing.JLabel();
         MoCr_VigenereSub_Image = new javax.swing.JLabel();
-        MoCr_VigenereSub_LabelSchlüssel = new javax.swing.JLabel();
-        MoCr_VigenereSub_EingabefeldSchlüssel = new javax.swing.JTextField();
+        MoCr_VigenereSub_LabelSchluessel = new javax.swing.JLabel();
+        MoCr_VigenereSub_EingabefeldSchluessel = new javax.swing.JTextField();
         MoCr_MPSub_OTP = new javax.swing.JPanel();
         MoCr_MPSub_OTP_Testlabel = new javax.swing.JLabel();
-        MoCr_OTPSub_LabelSchlüssel = new javax.swing.JLabel();
+        MoCr_OTPSub_LabelSchluessel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         MoCr_OTPSub_Area = new javax.swing.JTextArea();
         MoCr_OTPSub_Generator = new javax.swing.JButton();
@@ -105,7 +105,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_TranspositionSub_SpaltelButton = new javax.swing.JRadioButton();
         MoCr_TranspositionSub_GartenzaunButton = new javax.swing.JRadioButton();
         MoCr_TranspositionSub_AnagrammButton = new javax.swing.JRadioButton();
-        MoCr_TranspositionSub_DoppelwürfelButton = new javax.swing.JRadioButton();
+        MoCr_TranspositionSub_DoppelwuerfelButton = new javax.swing.JRadioButton();
         MoCr_TranspositionSub_PermutaButton = new javax.swing.JRadioButton();
         MoCr_TranspositionSub_KeyPanel = new javax.swing.JPanel();
         MoCr_TranspositionSub_1Key = new javax.swing.JPanel();
@@ -212,7 +212,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_MPstaticIO_OutField.setLineWrap(true);
         MoCr_MPstaticIO_OutField.setRows(5);
         MoCr_MPstaticIO_OutField.setText("Ausgabe");
-        MoCr_MPstaticIO_OutField.setToolTipText("Hier wird dein ver-/entschlüsselter Text angezeigt");
+        MoCr_MPstaticIO_OutField.setToolTipText("Hier wird dein ver-/entschluesselter Text angezeigt");
         MoCr_MPstaticIO_OutField.setWrapStyleWord(true);
         MoCr_MPstaticIO_OutField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -273,12 +273,12 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_CaesarSub_Heading.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/headings/Schriftzug Caesar.png"))); // NOI18N
         MoCr_CaesarSub_Heading.setToolTipText("");
 
-        MoCr_CaesarSub_LabelSchlüssel.setFont(new java.awt.Font(CFont, 0, 18));
-        MoCr_CaesarSub_LabelSchlüssel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        MoCr_CaesarSub_LabelSchlüssel.setText("Schlüssel:");
+        MoCr_CaesarSub_LabelSchluessel.setFont(new java.awt.Font(CFont, 0, 18));
+        MoCr_CaesarSub_LabelSchluessel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        MoCr_CaesarSub_LabelSchluessel.setText("Schlüssel:");
 
-        MoCr_Caesar_EingabefeldSchlüssel.setFont(new java.awt.Font(IOFont, 0, 18));
-        MoCr_Caesar_EingabefeldSchlüssel.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        MoCr_Caesar_EingabefeldSchluessel.setFont(new java.awt.Font(IOFont, 0, 18));
+        MoCr_Caesar_EingabefeldSchluessel.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         MoCr_CaesarSub_DiscBack.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MoCr_CaesarSub_DiscBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/Drehscheibe Einzelsequenzen/DS_a.png"))); // NOI18N
@@ -309,7 +309,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(MoCr_MPSub_CaesarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MoCr_CaesarSub_LabelSchlüssel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(MoCr_CaesarSub_LabelSchluessel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(MoCr_MPSub_CaesarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MoCr_MPSub_CaesarLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -317,7 +317,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(MoCr_MPSub_CaesarLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MoCr_Caesar_EingabefeldSchlüssel, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(MoCr_Caesar_EingabefeldSchluessel, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         MoCr_MPSub_CaesarLayout.setVerticalGroup(
@@ -332,8 +332,8 @@ public class MoCr_Frame extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MoCr_MPSub_CaesarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(MoCr_CaesarSub_LabelSchlüssel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MoCr_Caesar_EingabefeldSchlüssel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MoCr_CaesarSub_LabelSchluessel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MoCr_Caesar_EingabefeldSchluessel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
@@ -407,12 +407,12 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
         MoCr_VigenereSub_Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/Vigenère-Tabelle.png"))); // NOI18N
 
-        MoCr_VigenereSub_LabelSchlüssel.setFont(new java.awt.Font(CFont, 0, 18));
-        MoCr_VigenereSub_LabelSchlüssel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        MoCr_VigenereSub_LabelSchlüssel.setText("Schlüssel:");
+        MoCr_VigenereSub_LabelSchluessel.setFont(new java.awt.Font(CFont, 0, 18));
+        MoCr_VigenereSub_LabelSchluessel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        MoCr_VigenereSub_LabelSchluessel.setText("Schlüssel:");
 
-        MoCr_VigenereSub_EingabefeldSchlüssel.setFont(new java.awt.Font(IOFont, 0, 18));
-        MoCr_VigenereSub_EingabefeldSchlüssel.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        MoCr_VigenereSub_EingabefeldSchluessel.setFont(new java.awt.Font(IOFont, 0, 18));
+        MoCr_VigenereSub_EingabefeldSchluessel.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         javax.swing.GroupLayout MoCr_MPSub_VigenereLayout = new javax.swing.GroupLayout(MoCr_MPSub_Vigenere);
         MoCr_MPSub_Vigenere.setLayout(MoCr_MPSub_VigenereLayout);
@@ -420,9 +420,9 @@ public class MoCr_Frame extends javax.swing.JFrame {
             MoCr_MPSub_VigenereLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MoCr_MPSub_VigenereLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(MoCr_VigenereSub_LabelSchlüssel, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MoCr_VigenereSub_LabelSchluessel, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(MoCr_VigenereSub_EingabefeldSchlüssel, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MoCr_VigenereSub_EingabefeldSchluessel, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(MoCr_VigenereSub_Heading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(MoCr_MPSub_VigenereLayout.createSequentialGroup()
@@ -438,8 +438,8 @@ public class MoCr_Frame extends javax.swing.JFrame {
                 .addComponent(MoCr_VigenereSub_Image, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
                 .addGroup(MoCr_MPSub_VigenereLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(MoCr_VigenereSub_EingabefeldSchlüssel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MoCr_VigenereSub_LabelSchlüssel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MoCr_VigenereSub_EingabefeldSchluessel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MoCr_VigenereSub_LabelSchluessel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 34, Short.MAX_VALUE))
         );
 
@@ -451,9 +451,9 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_MPSub_OTP_Testlabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MoCr_MPSub_OTP_Testlabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/headings/Schriftzug One-Time-Pad.png"))); // NOI18N
 
-        MoCr_OTPSub_LabelSchlüssel.setFont(new java.awt.Font(CFont, 0, 18));
-        MoCr_OTPSub_LabelSchlüssel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        MoCr_OTPSub_LabelSchlüssel.setText("Schlüssel");
+        MoCr_OTPSub_LabelSchluessel.setFont(new java.awt.Font(CFont, 0, 18));
+        MoCr_OTPSub_LabelSchluessel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        MoCr_OTPSub_LabelSchluessel.setText("Schlüssel");
 
         MoCr_OTPSub_Area.setColumns(20);
         MoCr_OTPSub_Area.setFont(new java.awt.Font(IOFont, 0, 18));
@@ -479,7 +479,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
                 .addGroup(MoCr_MPSub_OTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(MoCr_MPSub_OTPLayout.createSequentialGroup()
-                        .addComponent(MoCr_OTPSub_LabelSchlüssel)
+                        .addComponent(MoCr_OTPSub_LabelSchluessel)
                         .addGap(18, 18, 18)
                         .addComponent(MoCr_OTPSub_Generator)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -493,7 +493,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(MoCr_MPSub_OTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(MoCr_OTPSub_LabelSchlüssel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MoCr_OTPSub_LabelSchluessel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MoCr_OTPSub_Generator, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(181, Short.MAX_VALUE))
         );
@@ -536,13 +536,13 @@ public class MoCr_Frame extends javax.swing.JFrame {
             }
         });
 
-        MoCr_TranspositionMP_Grouper.add(MoCr_TranspositionSub_DoppelwürfelButton);
-        MoCr_TranspositionSub_DoppelwürfelButton.setFont(new java.awt.Font(CFont, 1, 14));
-        MoCr_TranspositionSub_DoppelwürfelButton.setText("Doppelwürfel");
-        MoCr_TranspositionSub_DoppelwürfelButton.setOpaque(false);
-        MoCr_TranspositionSub_DoppelwürfelButton.addActionListener(new java.awt.event.ActionListener() {
+        MoCr_TranspositionMP_Grouper.add(MoCr_TranspositionSub_DoppelwuerfelButton);
+        MoCr_TranspositionSub_DoppelwuerfelButton.setFont(new java.awt.Font(CFont, 1, 14));
+        MoCr_TranspositionSub_DoppelwuerfelButton.setText("Doppelwürfel");
+        MoCr_TranspositionSub_DoppelwuerfelButton.setOpaque(false);
+        MoCr_TranspositionSub_DoppelwuerfelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MoCr_TranspositionSub_DoppelwürfelButtonActionPerformed(evt);
+                MoCr_TranspositionSub_DoppelwuerfelButtonActionPerformed(evt);
             }
         });
 
@@ -759,7 +759,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
                     .addGroup(MoCr_MPSub_TranspositionLayout.createSequentialGroup()
                         .addComponent(MoCr_TranspositionSub_KeyPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                         .addContainerGap())
-                    .addComponent(MoCr_TranspositionSub_DoppelwürfelButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MoCr_TranspositionSub_DoppelwuerfelButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(MoCr_TranspositionSub_PermutaButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(MoCr_TranspositionSub_SpaltelButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
             .addComponent(MoCr_TranspositionSub_Heading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -775,7 +775,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(MoCr_TranspositionSub_AnagrammButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(MoCr_TranspositionSub_DoppelwürfelButton)
+                .addComponent(MoCr_TranspositionSub_DoppelwuerfelButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(MoCr_TranspositionSub_PermutaButton)
                 .addGap(18, 18, 18)
@@ -1656,7 +1656,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         localSModule.changeTranspositionKeyPanel(-1);
     }//GEN-LAST:event_MoCr_TranspositionSub_AnagrammButtonActionPerformed
 
-    private void MoCr_TranspositionSub_DoppelwürfelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_TranspositionSub_DoppelwürfelButtonActionPerformed
+    private void MoCr_TranspositionSub_DoppelwuerfelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoCr_TranspositionSub_DoppelwürfelButtonActionPerformed
         // TODO add your handling code here:
         localLogic.setIdentificationPair(0, 2);
         localSModule.changeTranspositionKeyPanel(1);
@@ -1841,8 +1841,8 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private javax.swing.JLabel MoCr_AffiChiffSub_Heading1;
     public javax.swing.JLabel MoCr_CaesarSub_DiscBack;
     private javax.swing.JLabel MoCr_CaesarSub_Heading;
-    public javax.swing.JLabel MoCr_CaesarSub_LabelSchlüssel;
-    public javax.swing.JTextField MoCr_Caesar_EingabefeldSchlüssel;
+    public javax.swing.JLabel MoCr_CaesarSub_LabelSchluessel;
+    public javax.swing.JTextField MoCr_Caesar_EingabefeldSchluessel;
     private javax.swing.ButtonGroup MoCr_CodierungenMp_Grouper;
     public javax.swing.JRadioButton MoCr_CodierungenSub_ADFGXButton;
     public javax.swing.JButton MoCr_CodierungenSub_ADFGXFiller;
@@ -1908,7 +1908,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
     public javax.swing.JTextField MoCr_MultiplikativSub_KeyField;
     public javax.swing.JTextArea MoCr_OTPSub_Area;
     public javax.swing.JButton MoCr_OTPSub_Generator;
-    public javax.swing.JLabel MoCr_OTPSub_LabelSchlüssel;
+    public javax.swing.JLabel MoCr_OTPSub_LabelSchluessel;
     public javax.swing.JLabel MoCr_PermSub_Label;
     private javax.swing.JLabel MoCr_PermSub_MaxVal;
     private javax.swing.JLabel MoCr_PermSub_MinVal;
@@ -1934,7 +1934,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
     public javax.swing.JTextField MoCr_TranspositionSub_2KeyField2;
     public javax.swing.JLabel MoCr_TranspositionSub_2KeyLabel;
     public javax.swing.JRadioButton MoCr_TranspositionSub_AnagrammButton;
-    public javax.swing.JRadioButton MoCr_TranspositionSub_DoppelwürfelButton;
+    public javax.swing.JRadioButton MoCr_TranspositionSub_DoppelwuerfelButton;
     public javax.swing.JRadioButton MoCr_TranspositionSub_GartenzaunButton;
     private javax.swing.JLabel MoCr_TranspositionSub_Heading;
     public javax.swing.JPanel MoCr_TranspositionSub_KeyPanel;
@@ -1944,10 +1944,10 @@ public class MoCr_Frame extends javax.swing.JFrame {
     public javax.swing.JPanel MoCr_TranspositionSub_NoKey;
     public javax.swing.JRadioButton MoCr_TranspositionSub_PermutaButton;
     public javax.swing.JRadioButton MoCr_TranspositionSub_SpaltelButton;
-    public javax.swing.JTextField MoCr_VigenereSub_EingabefeldSchlüssel;
+    public javax.swing.JTextField MoCr_VigenereSub_EingabefeldSchluessel;
     private javax.swing.JLabel MoCr_VigenereSub_Heading;
     private javax.swing.JLabel MoCr_VigenereSub_Image;
-    public javax.swing.JLabel MoCr_VigenereSub_LabelSchlüssel;
+    public javax.swing.JLabel MoCr_VigenereSub_LabelSchluessel;
     public javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

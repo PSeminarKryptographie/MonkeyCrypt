@@ -39,9 +39,9 @@ public class CipherModule {
                 case -1: break;
                 case 0: String k = "";  //für Chiffren gilt: 1 Schlüssel                  
                     switch(c) {
-                        case 0: k = localFrame.MoCr_Caesar_EingabefeldSchlüssel.getText(); break;
+                        case 0: k = localFrame.MoCr_Caesar_EingabefeldSchluessel.getText(); break;
                         case 1: k = localFrame.MoCr_MultiplikativSub_KeyField.getText(); break;
-                        case 2: k = localFrame.MoCr_VigenereSub_EingabefeldSchlüssel.getText(); break;
+                        case 2: k = localFrame.MoCr_VigenereSub_EingabefeldSchluessel.getText(); break;
                         case 3: k = localFrame.MoCr_OTPSub_Area.getText(); break;
                         case 4: k = localFrame.MoCr_TranspositionKey_1KeyField.getText(); break;
                         case 5: k = localFrame.MoCr_TranspositionKey_1KeyField.getText(); break;
