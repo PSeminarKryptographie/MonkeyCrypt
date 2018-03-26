@@ -21,9 +21,4 @@ public class readDict {
 		        }
 		    in.close();
 	}
-	
-	public static void main(String[] args) throws Exception
-    {
-		readDict.searchWord();
-    }
 }

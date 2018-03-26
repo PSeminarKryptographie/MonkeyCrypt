@@ -403,7 +403,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
 
         MoCr_VigenereSub_Heading.setFont(new java.awt.Font("Constantia", 1, 28)); // NOI18N
         MoCr_VigenereSub_Heading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MoCr_VigenereSub_Heading.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/headings/Schriftzug Vigenére.png"))); // NOI18N
+        MoCr_VigenereSub_Heading.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/headings/Schriftzug Vigenere.png"))); // NOI18N
 
         MoCr_VigenereSub_Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graphics/Vigenere-Tabelle.png"))); // NOI18N
 
