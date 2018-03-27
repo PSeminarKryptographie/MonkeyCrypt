@@ -145,8 +145,8 @@
         <Container class="javax.swing.JPanel" name="MoCr_SettingsFrame_DesignSub">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Darstellung">
-                <Property name="tabTitle" type="java.lang.String" value="Darstellung"/>
+              <JTabbedPaneConstraints tabName="Fenster">
+                <Property name="tabTitle" type="java.lang.String" value="Fenster"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -345,8 +345,8 @@
         <Container class="javax.swing.JPanel" name="MoCr_SettingsFrame_ExclusionSub">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Ausschluss">
-                <Property name="tabTitle" type="java.lang.String" value="Ausschluss"/>
+              <JTabbedPaneConstraints tabName="Darstellung">
+                <Property name="tabTitle" type="java.lang.String" value="Darstellung"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -407,6 +407,9 @@
               <Events>
                 <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="ExclusionFieldKeyReleased"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JCheckBox" name="AlphOnlyCheckbox">
               <Properties>

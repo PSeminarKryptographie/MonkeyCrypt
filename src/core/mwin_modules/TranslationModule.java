@@ -75,7 +75,7 @@ public class TranslationModule {
     }
     
     public void renewListM() {
-        DefaultListModel lm = new DefaultListModel();
+        DefaultListModel<String> lm = new DefaultListModel<String>();
         lm.add(0, Translator.getInstance().getString("caesar"));
         lm.add(1, Translator.getInstance().getString("multi"));
         lm.add(2, Translator.getInstance().getString("vigenere"));
@@ -91,7 +91,7 @@ public class TranslationModule {
     }
     
     public void renewListD() {
-        DefaultListModel lm = new DefaultListModel();
+        DefaultListModel<String> lm = new DefaultListModel<String>();
         lm.add(0, Translator.getInstance().getString("maths"));
         lm.add(1, Translator.getInstance().getString("steganography"));
         lm.add(2, Translator.getInstance().getString("fun"));
@@ -131,7 +131,7 @@ public class TranslationModule {
         ls.MoCr_Settings_LangLabel.setText(Translator.getInstance().getString("lang"));
         ls.MoCr_SettingsFrame_TipCheck.setText(Translator.getInstance().getString("tip"));
         ls.MoCr_SettingsFrame_Checkbox.setText(Translator.getInstance().getString("resize"));
-        DefaultComboBoxModel bm1 = new DefaultComboBoxModel();
+        DefaultComboBoxModel<String> bm1 = new DefaultComboBoxModel<String>();
         bm1.addElement(Translator.getInstance().getString("blue"));
         bm1.addElement(Translator.getInstance().getString("green"));
         bm1.addElement(Translator.getInstance().getString("yellow"));
@@ -139,7 +139,7 @@ public class TranslationModule {
         int index = ls.MoCr_SettingsFrame_Colourbox.getSelectedIndex();
         ls.MoCr_SettingsFrame_Colourbox.setModel(bm1);
         ls.MoCr_SettingsFrame_Colourbox.setSelectedIndex(index);
-        DefaultComboBoxModel bm2 = new DefaultComboBoxModel();
+        DefaultComboBoxModel<String> bm2 = new DefaultComboBoxModel<String>();
         bm2.addElement(Translator.getInstance().getString("empty1"));
         bm2.addElement(Translator.getInstance().getString("empty2"));
         bm2.addElement(Translator.getInstance().getString("empty3"));
@@ -147,7 +147,7 @@ public class TranslationModule {
         bm2.addElement(Translator.getInstance().getString("empty5"));
         ls.MoCr_SettingsFrame_ClearBox.setModel(bm2);
         ls.AlphOnlyCheckbox.setText(Translator.getInstance().getString("alphonly"));
-        DefaultComboBoxModel bm3 = new DefaultComboBoxModel();
+        DefaultComboBoxModel<String> bm3 = new DefaultComboBoxModel<String>();
         bm3.addElement(Translator.getInstance().getString("script1"));
         bm3.addElement(Translator.getInstance().getString("script2"));
         bm3.addElement(Translator.getInstance().getString("script3"));

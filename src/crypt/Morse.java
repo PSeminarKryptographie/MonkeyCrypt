@@ -509,7 +509,6 @@ public class Morse extends Spielsprache
                           else if ( m.charAt(i) == ' ')
                           {
                               x = " ";
-                              i = i;
                           }
                           
                           
@@ -609,7 +608,6 @@ public class Morse extends Spielsprache
                          else if ( m.charAt(i) == ' ')
                           {
                               x = " ";
-                              i = i;
                           }
                          
                          
@@ -655,7 +653,6 @@ public class Morse extends Spielsprache
                       else if ( m.charAt(i) == ' ')
                           {
                               x = " ";
-                              i = i;
                           }
                     
                   }
@@ -670,7 +667,6 @@ public class Morse extends Spielsprache
                 else if ( m.charAt(i) == ' ')
                           {
                               x = " ";
-                              i = i;
                           }
                          
                

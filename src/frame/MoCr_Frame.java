@@ -11,8 +11,6 @@ import core.*;
 import core.mwin_modules.CipherModule;
 import core.mwin_modules.GraphicModule;
 import core.mwin_modules.SwitchModule;
-import crypt.Tools;
-import javax.swing.ToolTipManager;
 /**
  *
  * @author Jonas

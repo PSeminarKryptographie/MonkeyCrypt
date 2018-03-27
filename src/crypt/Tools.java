@@ -5,7 +5,6 @@ package crypt;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -238,6 +237,16 @@ public class Tools {
 		return contains;
 	}
 	
+        public static boolean checkString(String text, String alpha){
+	 text = text.toLowerCase();
+		boolean contains = true;
+		for (int i = 0; i<text.length(); i++){
+			if (!alpha.contains(String.valueOf(text.charAt(i)))){
+				contains = false;
+			} else {contains = true;}
+		}
+		return contains;
+	}
 	 
 	 public static int maxIndex(int[] array) {
 		    int max = array[0];

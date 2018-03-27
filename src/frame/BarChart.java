@@ -4,9 +4,6 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
  
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -82,16 +79,5 @@ public class BarChart extends JPanel {
     }
   }
   
-  public static void main(String[] args) {
-		double [] a = {2, 4.5, 6, 8};
-		String [] n = {"a", "b", "c", "d"};
-		BarChart newPanel = new BarChart(a, n, "mein Graph");
-		newPanel.setPreferredSize(new Dimension(600, 300));
-		JFrame frame = new JFrame("Häufigkeitsanalyse");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(newPanel);
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-  }
+  
 }

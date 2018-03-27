@@ -1,14 +1,11 @@
 package frame;
 
 import java.awt.GridLayout;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.SwingUtilities;
 public class DrawTable extends JFrame
 {
     public DrawTable(String firstrow, String secondrow, String title, String key) {

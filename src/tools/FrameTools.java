@@ -4,11 +4,9 @@
  * and open the template in the editor.
  */
 package tools;
-import core.WindowLogic;
 import crypt.Tools;
 import crypt.Options;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.ImageIcon;
 /**
  *
  * @author Jonas
@@ -56,7 +54,7 @@ public class FrameTools {
         int counter = 0;
         for(int i = 0; i < r; i++){           
             for(int w = 1; w < c; w++){
-                String nov = in.valueOf(in.charAt(counter));
+                String nov = String.valueOf(in.charAt(counter));
                 internTable.setValueAt(nov, i, w);
                 counter = counter + 1;
             }
@@ -116,8 +114,8 @@ public class FrameTools {
         String currentAlphabet = Options.getInstance().getAlphabet();        
         if(c.length() == 2) {
             String out = "";
-            int co = Tools.string2int(c.valueOf(c.charAt(0)), currentAlphabet);
-            int y = Tools.string2int(c.valueOf(c.charAt(1)), currentAlphabet);
+            int co = Tools.string2int(String.valueOf(c.charAt(0)), currentAlphabet);
+            int y = Tools.string2int(String.valueOf(c.charAt(1)), currentAlphabet);
             out = Integer.toString(co) + "*x +" + Integer.toString(y);
             
             return out;

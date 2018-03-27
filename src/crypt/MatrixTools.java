@@ -1,6 +1,5 @@
 package crypt;
 
-import java.util.Arrays;
 
 public class MatrixTools {
 	public static int[][] mulMatrix(int[][] a, int[][] b) {

@@ -5,6 +5,7 @@
 package core;
 
 import crypt.*;
+import crypt.cryptanalysis.Haeufigkeitsanalyse;
 
 public class Core
 {

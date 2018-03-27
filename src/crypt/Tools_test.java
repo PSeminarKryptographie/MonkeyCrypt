@@ -3,7 +3,6 @@
  */
 package crypt;
 import tools.CommTools;
-import core.*;
 
 
 /**

@@ -52,7 +52,6 @@ public class Hex_Bin extends Spielsprache
     String StringzuAchterpacks(String BinEingabe)
     {
         BinEingabe = BinEingabe + " ";//
-        int zaehler = 0;
         String Ergebnis = "";
         String nullen = "";
         String x = "";

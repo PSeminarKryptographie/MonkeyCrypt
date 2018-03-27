@@ -6,22 +6,20 @@ import java.awt.Dimension;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.GridLayout;
 import java.awt.Point;
 import java.awt.RenderingHints;
 import java.awt.Stroke;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
 
 import crypt.Options;
 
 public class DrawGraph extends JPanel {
-    private int padding = 25;
+	private static final long serialVersionUID = 1L;
+	private int padding = 25;
     private int labelPadding = 25;
     private Color lineColor = new Color(44, 102, 230, 180);
     private Color pointColor = new Color(100, 100, 100, 180);
