@@ -15,8 +15,9 @@ public class Translator {
     Locale[] locales = {new Locale("de", "DE"), new Locale("en", "GB"), new Locale("it", "IT"), new Locale("pl", "PL")};
     static Translator t = new Translator();
     int currentLang;
+    int lastLang;
     
-    private Translator() {currentLang = 0;}
+    private Translator() {currentLang = 0; lastLang = 0;}
     
     public static Translator getInstance() {return t;}
     
@@ -25,9 +26,11 @@ public class Translator {
         return rb.getString(k);
     }
     
-    public void setCurrentLang(int i) {currentLang = i;}
+    public void setCurrentLang(int i) {lastLang = currentLang; currentLang = i;}
     
     public String getcurrentLang() {return locales[currentLang].getLanguage();}
     
-    public int getLangIndex() {return currentLang;}
+    public int getcurrentLangIndex() {return currentLang;}
+    
+    public int getlastLangIndex() {return lastLang;}
 }

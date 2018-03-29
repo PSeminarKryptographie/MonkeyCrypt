@@ -210,11 +210,6 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
 
         ExclusionField.setFont(new java.awt.Font(IOFont, 0, 16));
         ExclusionField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ExclusionField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                ExclusionFieldKeyReleased(evt);
-            }
-        });
 
         AlphOnlyCheckbox.setFont(new java.awt.Font(CFont, 1, 12));
         AlphOnlyCheckbox.setText("Nur Zeichen des Alphabets einschließen");
@@ -285,21 +280,13 @@ public class MoCr_Frame_Settings extends javax.swing.JFrame {
         ExclusionField.setEditable(!AlphOnlyCheckbox.isSelected());
     }//GEN-LAST:event_AlphOnlyCheckboxActionPerformed
 
-    private void ExclusionFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ExclusionFieldKeyReleased
-        // TODO add your handling code here:
-        String e = ExclusionField.getText();
-        e = Tools.removeDoubles(e);
-        e = Tools.removeChars(e, Options.getInstance().getAlphabet());
-        ExclusionField.setText(e);
-    }//GEN-LAST:event_ExclusionFieldKeyReleased
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JCheckBox AlphOnlyCheckbox;
     public javax.swing.JTextField ExclusionField;
     public javax.swing.JLabel ExclusionLabel;
     public javax.swing.JLabel Heading1;
     public javax.swing.JLabel Heading2;
-    private javax.swing.JTextField MoCr_SettingsFrame_AlphabetField;
+    public javax.swing.JTextField MoCr_SettingsFrame_AlphabetField;
     public javax.swing.JCheckBox MoCr_SettingsFrame_Checkbox;
     public javax.swing.JComboBox<String> MoCr_SettingsFrame_ClearBox;
     public javax.swing.JComboBox<String> MoCr_SettingsFrame_Colourbox;

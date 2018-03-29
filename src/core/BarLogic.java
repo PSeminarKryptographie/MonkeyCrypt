@@ -2,54 +2,43 @@ package core;
 
 import java.awt.Dimension;
 import java.awt.GridLayout;
-import java.util.Arrays;
 import java.util.LinkedHashMap;
 
-import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import crypt.Options;
 import crypt.cryptanalysis.Haeufigkeitsanalyse;
 import frame.BarChart;
+import tools.TxtAmbassador;
 
 public class BarLogic {
+	public Options myOptions;
+	String currentAlphabet;
+	public BarLogic() //constructor
+	{
+		myOptions = Options.getInstance();
+	}
+	
 	public BarChart haefigkeitsgraph() {
-		double [] probs = {5.58,
-				1.96,
-				3.16,
-				4.98,
-				16.93,
-				1.49,
-				3.02,
-				4.98,
-				8.02,
-				0.24,
-				1.32,
-				3.60,
-				2.55,
-				10.53,
-				2.24,
-				0.67,
-				0.02,
-				6.89,
-				6.42,
-				5.79,
-				3.83,
-				0.84,
-				1.78,
-				0.05,
-				0.05,
-				1.21,
-				0.54,
-				0.30,
-				0.65,
-				0.37};
-		String [] letters = "abcdefghijklmnopqrstuvwxyzäöüß".split("");
-		return new BarChart(probs, letters, "");
+		currentAlphabet = myOptions.getAlphabet();
+		TxtAmbassador a = new TxtAmbassador();
+		String [] values = a.readTxt("/text/freq/de/frequency.txt").split(",");
+		double[] probs = new double[currentAlphabet.length()];
+		String [] letters = "abcdefghijklmnopqrstuvwxyzàâáåäãąæœçĉćčďðèéêëęěĝğĥîìíïıĵłñńňòöôóõøřŝşśšßťþùúûŭüůýźżž".split("");
+		for (int i = 0; i<values.length; i++) {
+			try {
+				int index = currentAlphabet.indexOf(letters[i]);
+				probs[index] = Double.valueOf(values[i]);
+			}
+			catch(Exception e){	
+			}
+		}
+				return new BarChart(probs, currentAlphabet.split(""), "");
 	}
 	public BarChart haefigkeitsgraph(String text) {
 		Haeufigkeitsanalyse h = new Haeufigkeitsanalyse();
-		LinkedHashMap <String, Integer> map = h.makeMap(text);
+		LinkedHashMap <String, Integer> map = h.rawAnalyse(text);
 		Integer [] values = map.values().toArray(new Integer[map.size()]);
 		String [] letters = map.keySet().toArray(new String[map.size()]);
 		double [] probs = new double[values.length];
@@ -62,15 +51,19 @@ public class BarLogic {
 				
 			}
 		}
-		System.out.println(Arrays.toString(probs));
 		
 		return new BarChart(probs, letters, "mein Graph");
 	}
 	
 	
+	
+	
 	public static void main(String[] args) {
+		final Options myOptions;
+		myOptions = Options.getInstance();
 		BarLogic b = new BarLogic();
-		BarChart newPanel = b.haefigkeitsgraph("Hallo zusammen. Das ist ein durchschnittlicher Deutscher text");
+		myOptions.setAlphabet("aäbcdefghijklmnoöpqrsßtuüvwxyz");
+		BarChart newPanel = b.haefigkeitsgraph("Hallo zusammen. Das ist ein ganz langer durchschnittlicher Deutscher text. Ich mache ihn mal ein bisschen länger, nur um den Graph etwas interesanter zu gestalten. So, das sollte genug sein.");
 		BarChart secondPanel = b.haefigkeitsgraph();
 		newPanel.setPreferredSize(new Dimension(600, 300));
 		secondPanel.setPreferredSize(new Dimension(800, 300));

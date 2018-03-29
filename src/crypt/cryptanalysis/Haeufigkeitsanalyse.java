@@ -1,9 +1,6 @@
 package crypt.cryptanalysis;
 
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -18,7 +15,6 @@ public class Haeufigkeitsanalyse {
 		myOptions = Options.getInstance();
 	}
 	public LinkedHashMap<String, Integer> makeMap(String text) {
-		text = Tools.removeChars(text, " ");
 		text = text.toLowerCase();
 		currentAlphabet = myOptions.getAlphabet();
 		LinkedHashMap <String, Integer> dict = new LinkedHashMap<String, Integer>();
@@ -40,6 +36,22 @@ public class Haeufigkeitsanalyse {
 		}
 		
 		return dict;
+	}
+
+	public LinkedHashMap<String, Integer> rawAnalyse(String text){
+		LinkedHashMap<String, Integer> map = makeMap(text);
+		map = alphaonly(map);
+		System.out.println(map);
+		return map;
+	}
+	
+	public LinkedHashMap<String, Integer> alphaonly(LinkedHashMap<String, Integer> map) {
+		LinkedHashMap<String, Integer> newmap = new LinkedHashMap<String, Integer>();;
+		for (int i = 0; i < currentAlphabet.length(); i ++) {
+			String b = String.valueOf(currentAlphabet.charAt(i));
+			newmap.put(b, map.get(b));
+		}
+		return newmap;
 	}
 	
 	public String analysieren(String text) {

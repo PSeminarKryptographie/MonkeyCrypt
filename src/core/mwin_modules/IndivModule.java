@@ -8,6 +8,7 @@ package core.mwin_modules;
 import core.Translator;
 import core.WindowLogic;
 import crypt.Options;
+import crypt.Tools;
 import frame.MoCr_Frame;
 import frame.MoCr_Frame_Settings;
 import java.awt.Color;
@@ -36,20 +37,36 @@ public class IndivModule {
     }
     
     public void validate() {
-        changeResizability(localSettings.isCheckboxSelected());
-        localAlphabet.setAlphabet(localSettings.getAlphabetInput());
-        localSettings.setVisible(false);
-        clearFrame(localSettings.getClearBoxIndex());
-        setBgColor(localSettings.MoCr_SettingsFrame_Colourbox.getSelectedIndex());
-        ToolTipManager.sharedInstance().setEnabled(localSettings.MoCr_SettingsFrame_TipCheck.isSelected());
-        Translator.getInstance().setCurrentLang(localSettings.MoCr_Settings_Lang.getSelectedIndex());
-        setNewSize();
+        if(this.verify()) {
+            changeResizability(localSettings.isCheckboxSelected());
+            localAlphabet.setAlphabet(localSettings.getAlphabetInput());
+            this.setExclusion();
+            localAlphabet.setCase(localSettings.ScriptCombobox.getSelectedIndex());
+            localSettings.setVisible(false);
+            clearFrame(localSettings.getClearBoxIndex());
+            setBgColor(localSettings.MoCr_SettingsFrame_Colourbox.getSelectedIndex());
+            ToolTipManager.sharedInstance().setEnabled(localSettings.MoCr_SettingsFrame_TipCheck.isSelected());
+            Translator.getInstance().setCurrentLang(localSettings.MoCr_Settings_Lang.getSelectedIndex());
+            setNewSize();
+        }
+    }
+    
+    public boolean verify() {
+        String e = localSettings.ExclusionField.getText();
+        e = Tools.removeDoubles(e);
+        String a = localSettings.MoCr_SettingsFrame_AlphabetField.getText();
+        a = Tools.removeDoubles(a);
+        if(Tools.checkString(e, a) || localSettings.AlphOnlyCheckbox.isSelected()) {
+            localSettings.ExclusionField.setText(e);
+            localSettings.MoCr_SettingsFrame_AlphabetField.setText(a);
+            localSettings.NotificatorLabel.setText("");
+            return true;
+        } else {localSettings.NotificatorLabel.setText("Überprüfe bitte Alphabet und Ausschluss!"); return false;}
     }
     
     public void renew() {
         localSettings.setVisible(true);
-        localSettings.renewalRoutine(localAlphabet.getAlphabet());
-        
+        localSettings.renewalRoutine(localAlphabet.getAlphabet());      
     }
     
     public void clearFrame(int i) {
@@ -120,5 +137,18 @@ public class IndivModule {
     public void clearIO() {
         localFrame.MoCr_MPstaticIO_InField.setText("");
         localFrame.MoCr_MPstaticIO_OutField.setText("");
+    }
+    
+    public void setExclusion() {
+        String e = localSettings.ExclusionField.getText();
+        if(localSettings.AlphOnlyCheckbox.isSelected()) {
+            localAlphabet.setExclusion("all");
+        } else { if(e.equals("")) {
+            localAlphabet.setExclusion("none");
+        } else { if(e.equals(" ")) {
+            localAlphabet.setExclusion("spaces");
+        } else { localAlphabet.setExclusion(e); }
+            }
+        }
     }
 }

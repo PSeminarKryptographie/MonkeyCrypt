@@ -239,13 +239,15 @@ public class Tools {
 	
         public static boolean checkString(String text, String alpha){
 	 text = text.toLowerCase();
-		boolean contains = true;
-		for (int i = 0; i<text.length(); i++){
-			if (!alpha.contains(String.valueOf(text.charAt(i)))){
-				contains = false;
-			} else {contains = true;}
-		}
-		return contains;
+		boolean notcontains = true;
+                if(text.length() > 0) {
+                    for (int i = 0; i<text.length(); i++){
+                            if (alpha.contains(String.valueOf(text.charAt(i)))){
+                                	notcontains = false;
+                            }
+                    }
+                }
+                return notcontains;
 	}
 	 
 	 public static int maxIndex(int[] array) {

@@ -20,6 +20,8 @@ public class TranslationModule {
     }
     
     public void renew() {
+        Translator t = Translator.getInstance();
+        if(t.getcurrentLangIndex() != t.getlastLangIndex()) {   
             renewFrame();
             renewListM();
             renewListD();
@@ -27,6 +29,7 @@ public class TranslationModule {
             localFrame.localCredits.refreshCredits();
             localFrame.localSupport.refreshSupport();
             renewTooltips();
+        }
     }
     
     public void renewFrame() {
