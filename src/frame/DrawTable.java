@@ -1,14 +1,17 @@
 package frame;
 
-import java.awt.GridLayout;
-
-import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-public class DrawTable extends JFrame
+public class DrawTable extends JPanel
 {
-    public DrawTable(String firstrow, String secondrow, String title, String key) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public DrawTable(String firstrow, String secondrow, String key) {
     	 
     	 String [] column = new String [firstrow.length()];
     	 Object [] array1 = new Object [secondrow.length()];
@@ -26,13 +29,7 @@ public class DrawTable extends JFrame
          //add the table to the frame
          
          JScrollPane j = new JScrollPane(table);
-         this.setLayout(new GridLayout(2, 0));
          this.add(new JLabel(" key: " + key));
-         this.add(j);
-         this.setTitle(title);
-         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);       
-         this.setBounds(0, 0, 500, 150);
-         this.setVisible(true);
-         
+         this.add(j);    
     }   
 }

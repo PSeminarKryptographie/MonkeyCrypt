@@ -24,7 +24,9 @@ public class UtilLogic {
 			fehlerMeldung(verify);
 		}
 		else {
-			new DrawTable(currentAlphabet, monos[cipher].encrypt(currentAlphabet, key), bezeichner[cipher], key);
+			
+			//DrawTable ist jetzt ein JPanel
+			//new DrawTable(currentAlphabet, monos[cipher].encrypt(currentAlphabet, key), bezeichner[cipher], key);
 		}
 	}
 	protected void fehlerMeldung(String text) {
@@ -55,8 +57,9 @@ public class UtilLogic {
 				b = a;
 				a = 1;
 			}
-			String function = "E(x) = " + a + "x + " + b;
-			DrawGraph.createAndShowGui(a, b, currentAlphabet.length(), bezeichner[cipher], function);
+			//DrawGraph jetzt im Konstruktor. Funktion wird von alleine initialisiert.
+			//String function = "E(x) = " + a + "x + " + b;
+			//DrawGraph.createAndShowGui(a, b, currentAlphabet.length(), bezeichner[cipher], function);
 		}
 	}
 	

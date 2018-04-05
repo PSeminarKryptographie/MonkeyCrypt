@@ -11,7 +11,7 @@ import java.awt.RenderingHints;
 import java.awt.Stroke;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JFrame;
+
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -31,11 +31,22 @@ public class DrawGraph extends JPanel {
     private Options myOptions;
     private String currentAlphabet;
 
-    public DrawGraph(List<Integer> scores) {
+    public DrawGraph(int a, int b) {
     	myOptions = Options.getInstance();
-    	this.scores = scores;
+    	
         currentAlphabet = myOptions.getAlphabet();
         numberYDivisions = currentAlphabet.length()-1;
+        int mod = currentAlphabet.length();
+    	List<Integer> scores = new ArrayList<>();
+    	this.scores = scores;
+        for (int i = 0; i < mod; i++) {
+            
+           scores.add((a*i+b)%mod);
+           
+        }
+        String function = "f(x) = " + a + "*x + " + b;
+        this.add(new JLabel(function));
+        this.setPreferredSize(new Dimension(800, 600));
     }
 
     @Override
@@ -158,25 +169,5 @@ public class DrawGraph extends JPanel {
 
     public List<Integer> getScores() {
         return scores;
-    }
-
-    public static void createAndShowGui(int a, int b, int mod, String bezeichner, String key) {
-        List<Integer> scores = new ArrayList<>();
-        
-        for (int i = 0; i < mod; i++) {
-            
-           scores.add((a*i+b)%mod);
-           
-        }
-        DrawGraph mainPanel = new DrawGraph(scores);
-        mainPanel.add(new JLabel(key));
-        mainPanel.setPreferredSize(new Dimension(800, 600));
-        JFrame frame = new JFrame(bezeichner);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(mainPanel);
-        
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-    }
+    } 
 }

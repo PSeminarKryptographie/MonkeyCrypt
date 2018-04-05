@@ -54,6 +54,22 @@ public class Haeufigkeitsanalyse {
 		return newmap;
 	}
 	
+	public LinkedHashMap<String, Integer> rawAnalyse(String text){
+		LinkedHashMap<String, Integer> map = makeMap(text);
+		map = alphaonly(map);
+		System.out.println(map);
+		return map;
+	}
+	
+	public LinkedHashMap<String, Integer> alphaonly(LinkedHashMap<String, Integer> map) {
+		LinkedHashMap<String, Integer> newmap = new LinkedHashMap<String, Integer>();;
+		for (int i = 0; i < currentAlphabet.length(); i ++) {
+			String b = String.valueOf(currentAlphabet.charAt(i));
+			newmap.put(b, map.get(b));
+		}
+		return newmap;
+	}
+	
 	public String analysieren(String text) {
 		Map<String, Integer> dict = makeMap(text);
 		Set<String> set_keys = dict.keySet();
