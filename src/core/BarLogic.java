@@ -20,7 +20,7 @@ public class BarLogic {
 		myOptions = Options.getInstance();
 	}
 	
-	public BarChart haefigkeitsgraph() {
+	public BarChart haeufigkeitsgraph() {
 		currentAlphabet = myOptions.getAlphabet();
 		TxtAmbassador a = new TxtAmbassador();
 		String [] values = a.readTxt("/text/freq/de/frequency.txt").split(",");
@@ -36,7 +36,7 @@ public class BarLogic {
 		}
 				return new BarChart(probs, currentAlphabet.split(""), "");
 	}
-	public BarChart haefigkeitsgraph(String text) {
+	public BarChart haeufigkeitsgraph(String text) {
 		Haeufigkeitsanalyse h = new Haeufigkeitsanalyse();
 		LinkedHashMap <String, Integer> map = h.rawAnalyse(text);
 		Integer [] values = map.values().toArray(new Integer[map.size()]);
@@ -63,8 +63,8 @@ public class BarLogic {
 		myOptions = Options.getInstance();
 		BarLogic b = new BarLogic();
 		myOptions.setAlphabet("aäbcdefghijklmnoöpqrsßtuüvwxyz");
-		BarChart newPanel = b.haefigkeitsgraph("Hallo zusammen. Das ist ein ganz langer durchschnittlicher Deutscher text. Ich mache ihn mal ein bisschen länger, nur um den Graph etwas interesanter zu gestalten. So, das sollte genug sein.");
-		BarChart secondPanel = b.haefigkeitsgraph();
+		BarChart newPanel = b.haeufigkeitsgraph("Hallo zusammen. Das ist ein ganz langer durchschnittlicher Deutscher text. Ich mache ihn mal ein bisschen länger, nur um den Graph etwas interesanter zu gestalten. So, das sollte genug sein.");
+		BarChart secondPanel = b.haeufigkeitsgraph();
 		newPanel.setPreferredSize(new Dimension(600, 300));
 		secondPanel.setPreferredSize(new Dimension(800, 300));
 		JFrame frame = new JFrame("Häufigkeitsanalyse");
