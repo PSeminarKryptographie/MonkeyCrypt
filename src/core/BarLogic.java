@@ -52,7 +52,7 @@ public class BarLogic {
 			}
 		}
 		
-		return new BarChart(probs, letters, "mein Graph");
+		return new BarChart(probs, letters, "Häufigkeitsanalyse zu meinem Text");
 	}
 	
 	

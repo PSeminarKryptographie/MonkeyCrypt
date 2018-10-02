@@ -1,0 +1,9 @@
+Hill Chiffre
+
+Der Schluessel der Hill Chiffre ist eine Matrix, die vollstaendig mit jeweils einem Zeichen des Alphabets gefuellt werden muss.
+
+Beim Verschluesseln wird eine Matrix aus dem Eingabe-Text erstellt. Es kann deswegen sein, dass die verschluesselte Ausgabe einige Zeichen zusaetzlich enthaelt. Um eine gelungene Entschluesselung zu gewaehren sollten diese zusaetzlichen Zeichen nicht geloescht werden.
+
+Zeichen, die nicht im Alphabet enthalten sind, werden nicht verschluesselt.
+
+Die Hill Chiffre ist eine polyalphabetische Substitution.

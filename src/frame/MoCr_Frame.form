@@ -26,6 +26,17 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Menu>
+        <Menu class="javax.swing.JMenu" name="Toolsmenu">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Werkzeuge"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ToolsmenuMouseClicked"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Menu>
         <Menu class="javax.swing.JMenu" name="MoCr_Gen_Choicemenu2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Impressum"/>
@@ -269,7 +280,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jLabel2" max="32767" attributes="0"/>
-                                  <Component id="MoCr_CaesarSub_LabelSchlüssel" max="32767" attributes="0"/>
+                                  <Component id="MoCr_CaesarSub_LabelSchluessel" max="32767" attributes="0"/>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
@@ -279,7 +290,7 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="MoCr_Caesar_EingabefeldSchlüssel" min="-2" pref="44" max="-2" attributes="0"/>
+                                      <Component id="MoCr_Caesar_EingabefeldSchluessel" min="-2" pref="44" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -299,8 +310,8 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="MoCr_CaesarSub_LabelSchlüssel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="MoCr_Caesar_EingabefeldSchlüssel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="MoCr_CaesarSub_LabelSchluessel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="MoCr_Caesar_EingabefeldSchluessel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="17" max="32767" attributes="0"/>
                           </Group>
@@ -320,7 +331,7 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="MoCr_CaesarSub_LabelSchl&#xfc;ssel">
+                    <Component class="javax.swing.JLabel" name="MoCr_CaesarSub_LabelSchluessel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                           <Connection code="new java.awt.Font(CFont, 0, 18)" type="code"/>
@@ -332,7 +343,7 @@
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="MoCr_Caesar_EingabefeldSchl&#xfc;ssel">
+                    <Component class="javax.swing.JTextField" name="MoCr_Caesar_EingabefeldSchluessel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                           <Connection code="new java.awt.Font(IOFont, 0, 18)" type="code"/>
@@ -491,7 +502,7 @@
                     <Component class="javax.swing.JLabel" name="MoCr_MultiplikativSub_Bild">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/img/graphics/Alice Schwarz-Wei&#xdf;.png"/>
+                          <Image iconType="3" name="/img/graphics/Alice Schwarz-Weiss.png"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -515,9 +526,9 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="MoCr_VigenereSub_LabelSchlüssel" min="-2" pref="104" max="-2" attributes="0"/>
+                              <Component id="MoCr_VigenereSub_LabelSchluessel" min="-2" pref="104" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="MoCr_VigenereSub_EingabefeldSchlüssel" min="-2" pref="121" max="-2" attributes="0"/>
+                              <Component id="MoCr_VigenereSub_EingabefeldSchluessel" min="-2" pref="121" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Component id="MoCr_VigenereSub_Heading" alignment="0" max="32767" attributes="0"/>
@@ -536,8 +547,8 @@
                               <Component id="MoCr_VigenereSub_Image" min="-2" pref="334" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="MoCr_VigenereSub_EingabefeldSchlüssel" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Component id="MoCr_VigenereSub_LabelSchlüssel" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="MoCr_VigenereSub_EingabefeldSchluessel" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="MoCr_VigenereSub_LabelSchluessel" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
                           </Group>
@@ -552,18 +563,18 @@
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/img/graphics/headings/Schriftzug Vigen&#xe9;re.png"/>
+                          <Image iconType="3" name="/img/graphics/headings/Schriftzug Vigenere.png"/>
                         </Property>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="MoCr_VigenereSub_Image">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/img/graphics/Vigen&#xe8;re-Tabelle.png"/>
+                          <Image iconType="3" name="/img/graphics/Vigenere-Tabelle.png"/>
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="MoCr_VigenereSub_LabelSchl&#xfc;ssel">
+                    <Component class="javax.swing.JLabel" name="MoCr_VigenereSub_LabelSchluessel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                           <Connection code="new java.awt.Font(CFont, 0, 18)" type="code"/>
@@ -575,7 +586,7 @@
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="MoCr_VigenereSub_EingabefeldSchl&#xfc;ssel">
+                    <Component class="javax.swing.JTextField" name="MoCr_VigenereSub_EingabefeldSchluessel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                           <Connection code="new java.awt.Font(IOFont, 0, 18)" type="code"/>
@@ -610,7 +621,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jScrollPane1" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="MoCr_OTPSub_LabelSchlüssel" min="-2" max="-2" attributes="0"/>
+                                      <Component id="MoCr_OTPSub_LabelSchluessel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="MoCr_OTPSub_Generator" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -628,7 +639,7 @@
                               <Component id="jScrollPane1" min="-2" pref="207" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="MoCr_OTPSub_LabelSchlüssel" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                  <Component id="MoCr_OTPSub_LabelSchluessel" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                   <Component id="MoCr_OTPSub_Generator" alignment="3" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace pref="181" max="32767" attributes="0"/>
@@ -648,7 +659,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="MoCr_OTPSub_LabelSchl&#xfc;ssel">
+                    <Component class="javax.swing.JLabel" name="MoCr_OTPSub_LabelSchluessel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                           <Connection code="new java.awt.Font(CFont, 0, 18)" type="code"/>
@@ -723,7 +734,7 @@
                                       <Component id="MoCr_TranspositionSub_KeyPanel" pref="0" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="MoCr_TranspositionSub_DoppelwürfelButton" max="32767" attributes="0"/>
+                                  <Component id="MoCr_TranspositionSub_DoppelwuerfelButton" max="32767" attributes="0"/>
                                   <Component id="MoCr_TranspositionSub_PermutaButton" alignment="0" max="32767" attributes="0"/>
                                   <Component id="MoCr_TranspositionSub_SpaltelButton" alignment="0" max="32767" attributes="0"/>
                               </Group>
@@ -742,7 +753,7 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="MoCr_TranspositionSub_AnagrammButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="MoCr_TranspositionSub_DoppelwürfelButton" min="-2" max="-2" attributes="0"/>
+                              <Component id="MoCr_TranspositionSub_DoppelwuerfelButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="MoCr_TranspositionSub_PermutaButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
@@ -818,7 +829,7 @@
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JRadioButton" name="MoCr_TranspositionSub_Doppelw&#xfc;rfelButton">
+                    <Component class="javax.swing.JRadioButton" name="MoCr_TranspositionSub_DoppelwuerfelButton">
                       <Properties>
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_TranspositionMP_Grouper"/>
@@ -830,7 +841,7 @@
                         <Property name="opaque" type="boolean" value="false"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_TranspositionSub_Doppelw&#xfc;rfelButtonActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_TranspositionSub_DoppelwuerfelButtonActionPerformed"/>
                       </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -1226,7 +1237,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="MoCr_CodierungenSub_BinärButton" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="MoCr_CodierungenSub_BinaerButton" alignment="0" max="32767" attributes="0"/>
                                   <Component id="MoCr_CodierungenSub_MorseButton" alignment="0" max="32767" attributes="0"/>
                                   <Component id="MoCr_ADFGX_Scroller" alignment="0" pref="0" max="32767" attributes="0"/>
                                   <Component id="MoCr_CodierungenSub_ASCIIButton" alignment="0" max="32767" attributes="0"/>
@@ -1253,7 +1264,7 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="MoCr_CodierungenSub_ASCIIButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="MoCr_CodierungenSub_BinärButton" min="-2" max="-2" attributes="0"/>
+                              <Component id="MoCr_CodierungenSub_BinaerButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="MoCr_CodierungenSub_BinToHexButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -1319,7 +1330,7 @@
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JRadioButton" name="MoCr_CodierungenSub_Bin&#xe4;rButton">
+                    <Component class="javax.swing.JRadioButton" name="MoCr_CodierungenSub_BinaerButton">
                       <Properties>
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_CodierungenMp_Grouper"/>
@@ -1331,7 +1342,7 @@
                         <Property name="opaque" type="boolean" value="false"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_CodierungenSub_Bin&#xe4;rButtonActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_CodierungenSub_BinaerButtonActionPerformed"/>
                       </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -1531,7 +1542,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="MoCr_SpielsprachenMP_BobButton" max="32767" attributes="0"/>
-                                  <Component id="MoCr_SpielsprachenMP_LöffelButton" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="MoCr_SpielsprachenMP_LoeffelButton" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -1545,7 +1556,7 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="MoCr_SpielsprachenMP_BobButton" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="MoCr_SpielsprachenMP_LöffelButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="MoCr_SpielsprachenMP_LoeffelButton" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="292" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -1599,7 +1610,7 @@
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JRadioButton" name="MoCr_SpielsprachenMP_L&#xf6;ffelButton">
+                    <Component class="javax.swing.JRadioButton" name="MoCr_SpielsprachenMP_LoeffelButton">
                       <Properties>
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="MoCr_SpielsprachenMP_Grouper"/>
@@ -1611,7 +1622,7 @@
                         <Property name="opaque" type="boolean" value="false"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_SpielsprachenMP_L&#xf6;ffelButtonActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoCr_SpielsprachenMP_LoeffelButtonActionPerformed"/>
                       </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

@@ -1,0 +1,8 @@
+﻿Caesar cipher
+
+The key of Caesar encryption is a sign of the alphabet.
+
+Characters that are not contained in the alphabet are not encrypted.
+
+
+The Caesar cipher is a monoalphabetic substitution.

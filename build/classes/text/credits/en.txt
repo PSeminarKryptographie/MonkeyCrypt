@@ -1,0 +1,10 @@
+This applet was created during the
+P-Seminar "Softwareprojekt" of the
+Nikolaus-Kopernikus-Gymnasiums Weißenhorn
+
+Coding:	GUI:	Design:
+Caterina C.	Simon S.	Clemens S.
+Matthias G.	Jonas M.
+
+Partner: Fachschaft Mathematik
+Person of contact: S. Breins

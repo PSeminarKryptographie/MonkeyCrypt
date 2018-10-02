@@ -18,14 +18,14 @@ import javax.swing.JPanel;
 import crypt.Options;
 
 public class DrawGraph extends JPanel {
-	private static final long serialVersionUID = 1L;
-	private int padding = 25;
+    private static final long serialVersionUID = 1L;
+    private int padding = 25;
     private int labelPadding = 25;
     private Color lineColor = new Color(44, 102, 230, 180);
     private Color pointColor = new Color(100, 100, 100, 180);
     private Color gridColor = new Color(200, 200, 200, 200);
     private static final Stroke GRAPH_STROKE = new BasicStroke(2f);
-    private int pointWidth = 8;
+    private int pointWidth = 7;
     private int numberYDivisions;
     private List<Integer> scores;
     private Options myOptions;
@@ -51,12 +51,12 @@ public class DrawGraph extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
+    	super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-        double xScale = (getWidth() - (2 * padding) - labelPadding) / (scores.size() - 1);
-        double yScale = (getHeight() - 2 * padding - labelPadding) / (getMaxScore() - getMinScore());
+        double xScale = ((double) getWidth() - (2 * padding) - labelPadding) / (scores.size() - 1);
+        double yScale = ((double) getHeight() - 2 * padding - labelPadding) / (getMaxScore() - getMinScore());
 
         List<Point> graphPoints = new ArrayList<>();
         for (int i = 0; i < scores.size(); i++) {

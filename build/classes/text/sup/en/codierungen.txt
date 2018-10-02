@@ -1,0 +1,9 @@
+Encodings
+
+
+Encodings have no key.
+
+Characters which can not be converted by encoding are not encoded.
+
+For ADFGX encryption, a table must be filled with characters.
+

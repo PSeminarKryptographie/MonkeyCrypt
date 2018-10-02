@@ -1,0 +1,16 @@
+Transposition
+
+The keys of the transpositions are different:
+
+The key of the gap translocation is a string of characters of the alphabet.
+
+The key of the garden fence transposition (the "depth" of the fence) is a natural number.
+
+Anagrams do not need a key. A clear decryption is not possible here.
+
+The double cube has two keys. Both are a string of characters of the alphabet.
+
+The key of transposition by permutation is a matrix that must be filled with the numbers 1 or 0. Per row and column can only be 0.
+
+When you encrypt, a matrix is created from the input text. It may be that the encrypted output contains some characters in addition. To ensure a successful decryption these additional characters should not be deleted.
+

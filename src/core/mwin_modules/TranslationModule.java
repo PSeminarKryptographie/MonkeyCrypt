@@ -75,6 +75,7 @@ public class TranslationModule {
         localFrame.MoCr_AffChiffSub_Functionpointer.setText(Translator.getInstance().getString("function"));
         localFrame.jButton1.setText(Translator.getInstance().getString("distribution"));
         localFrame.MoCr_Did_Returnerbutton.setText(Translator.getInstance().getString("back"));
+        localFrame.Toolsmenu.setText(Translator.getInstance().getString("tools"));
     }
     
     public void renewListM() {

@@ -78,6 +78,4 @@ public class BarChart extends JPanel {
       g.drawString(names[i], x, y);
     }
   }
-  
-  
 }
