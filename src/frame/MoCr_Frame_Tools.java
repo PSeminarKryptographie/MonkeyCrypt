@@ -22,13 +22,13 @@ public class MoCr_Frame_Tools extends javax.swing.JFrame {
         initComponents();
         localUtils = new UtilLogic();
     }
-    
+ /*   
     public void renew(String a, int b) {
         CommTools.adjustCards(ToolsPanel, SubContainer);
-        CommTools.adjustCards(TableSub, localUtils.initTable("", b)); //Debugging
-        CommTools.adjustCards(GraphSub, localUtils.initGraph("", b)); //Debugging
+        CommTools.adjustCards(TableSub, localUtils.initTable(a, b)); //Debugging
+        CommTools.adjustCards(GraphSub, localUtils.initGraph(a, b)); //Debugging
         this.setVisible(true);
-    }
+    }*/
 
     /**
      * This method is called from within the constructor to initialize the form.
