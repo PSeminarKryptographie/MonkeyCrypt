@@ -25,8 +25,13 @@ public class MoCr_Frame_Tools extends javax.swing.JFrame {
  /*   
     public void renew(String a, int b) {
         CommTools.adjustCards(ToolsPanel, SubContainer);
+<<<<<<< HEAD
         CommTools.adjustCards(TableSub, localUtils.initTable(a, b)); //Debugging
         CommTools.adjustCards(GraphSub, localUtils.initGraph(a, b)); //Debugging
+=======
+        CommTools.adjustCards(TableSub, localUtils.initTable("", b)); //Debugging
+        CommTools.adjustCards(GraphSub, localUtils.initGraph("", b)); //Debugging
+>>>>>>> 57273377f36dddbee16046a9934f4e666002ca4c
         this.setVisible(true);
     }*/
 
