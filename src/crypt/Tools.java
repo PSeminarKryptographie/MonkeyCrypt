@@ -311,13 +311,12 @@ public class Tools {
 		 return newText;
 	 }
          
-         public static Map mapDict(String mutatables, String[] encoded) {
+         public static Map mapDict(String[] arr1, String[] arr2) {
             Map <String, String> dict = new HashMap<>();
             
-             for(int i = 0; i < mutatables.length(); i++) {
-                dict.put(String.valueOf(mutatables.charAt(i)), encoded[i]);
-                dict.put(encoded[i], String.valueOf(mutatables.charAt(i)));
-            }
+             for(int i = 0; i < arr1.length; i++) {
+                dict.put(arr1[i], arr2[i]);
+              }
              
              return dict;
         }
