@@ -1,229 +1,48 @@
 package crypt;
+
+import java.util.ArrayList;
+import java.util.Map;
+
+
 public class Morse extends Spielsprache
 {
-
+    private Map <String, String> dict;
+    
+    String mutatables = "abcdefghijklmnopqrstuvwxyz1234567890?.,ßäöü ";
+    String[] encoded = {". -", "- . . .", "- . - .", "- . .", ".", ". . - .", "- - .", ". . . .", ". .", ". - - -",
+    "- . -", ". - . .", "- -", "- .", "- - -", ". - - .", "- - . -", ". - .", ". . .", "-", ". . -", ". . . -",
+    ". - -", "- . . -", "- . - -", "- - . .", ". - - - -", ". . - - -", ". . . - -", ". . . . -", ". . . . .",
+    "- . . . .", "- - . . .", "- - - . .", "- - - - .", "- - - - -", ". . - - . .", ". - . - . -", "- - . . - -",
+    ". . . - - . .", ". - . -", "- - - .", ". . - -", " "
+    };
+    
+    
     public Morse()
     {
-        
+        this.dict = Tools.mapDict(mutatables, encoded);
     }
- 
-    
-    /*public void CharToMorse()
-    {
-        if (t.charAt(i) = "a")
-        t.charAt(i) = ".-";
-        "b" = "-...";
-        "c" = "-.-.";
-    }*/
-    
-    
-    
-    
+   
+    @Override
     public String encrypt(String t)
-    {   t = t.toLowerCase();
-        String m = "";
-        String x = "";
-            for( int i=0; i<t.length(); i++)
-            {
-                if (t.charAt(i) == 'a')
-                {
-                    x = ". -";
-                }
-                else if (t.charAt(i) == 'b')
-                {
-                    x = "- . . .";
-                }
-                else if (t.charAt(i) == 'c')
-                {
-                    x = "- . - .";
-                }
-                else if (t.charAt(i) == 'd')
-                {
-                    x = "- . .";
-                }
-                else if (t.charAt(i) == 'e')
-                {
-                    x = ".";
-                }
-                else if (t.charAt(i) == 'f')
-                {
-                    x = ". . - .";
-                }
-                else if (t.charAt(i) == 'g')
-                {
-                    x = "- - .";
-                }
-                else if (t.charAt(i) == 'h')
-                {
-                    x = ". . . .";
-                }
-                else if (t.charAt(i) == 'i')
-                {
-                    x = ". .";
-                }
-                else if (t.charAt(i) == 'j')
-                {
-                    x = ". - - -";
-                }
-                else if (t.charAt(i) == 'k')
-                {
-                    x = "- . -";
-                }
-                else if (t.charAt(i) == 'l')
-                {
-                    x = ". - . .";
-                }
-                else if (t.charAt(i) == 'm')
-                {
-                    x = "- -";
-                }
-                else if (t.charAt(i) == 'n')
-                {
-                    x = "- .";
-                }
-                else if (t.charAt(i) == 'o')
-                {
-                    x = "- - -";
-                }
-                else if (t.charAt(i) == 'p')
-                {
-                    x = ". - - .";
-                }
-                else if (t.charAt(i) == 'q')
-                {
-                    x = "- - . -";
-                }
-                else if (t.charAt(i) == 'r')
-                {
-                    x = ". - .";
-                }
-                else if (t.charAt(i) == 's')
-                {
-                    x = ". . .";
-                }
-                else if (t.charAt(i) == 't')
-                {
-                    x = "-";
-                }
-                else if (t.charAt(i) == 'u')
-                {
-                    x = ". . -";
-                }
-                else if (t.charAt(i) == 'v')
-                {
-                    x = ". . . -";
-                }
-                else if (t.charAt(i) == 'w')
-                {
-                    x = ". - -";
-                }
-                else if (t.charAt(i) == 'x')
-                {
-                    x = "- . . -";
-                }
-                else if (t.charAt(i) == 'y')
-                {
-                    x = "- . - -";
-                }
-                else if (t.charAt(i) == 'z')
-                {
-                    x = "- - . .";
-                }
-                else if (t.charAt(i) == '1')
-                {
-                    x = ". - - - -";
-                }else if (t.charAt(i) == '2')
-                {
-                    x = ". . - - -";
-                }
-                else if (t.charAt(i) == '3')
-                {
-                    x = ". . . - -";
-                }
-                else if (t.charAt(i) == '4')
-                {
-                    x = ". . . . -";
-                }
-                else if (t.charAt(i) == '5')
-                {
-                    x = ". . . . .";
-                }
-                else if (t.charAt(i) == '6')
-                {
-                    x = "- . . . .";
-                }
-                else if (t.charAt(i) == '7')
-                {
-                    x = "- - . . .";
-                }
-                else if (t.charAt(i) == '8')
-                {
-                    x = "- - - . .";
-                }
-                else if (t.charAt(i) == '9')
-                {
-                    x = "- - - - .";
-                }
-                else if (t.charAt(i) == '0')
-                {
-                    x = "- - - - -";
-                }
-                else if (t.charAt(i) == '?')
-                {
-                    x = ". . - - . .";
-                }
-                else if (t.charAt(i) == '.')
-                {
-                    x = ". - . - . -";
-                }
-                else if (t.charAt(i) == ',')
-                {
-                    x = "- - . . - -";
-                }
-                else if (t.charAt(i) == 'ß')//ss
-                {
-                    x = ". . . - - . .";
-                }
-                else if (t.charAt(i) == 'ä')//ae
-                {
-                    x = ". - . -";
-                }
-                else if (t.charAt(i) == 'ö')//oe
-                {
-                    x = "- - - .";
-                }
-                else if (t.charAt(i) == 'ü')//ue
-                {
-                    x = ". . - -";
-                }
-                else if (t.charAt(i) == ' ')
-                {
-                    x = " "; //1 Pausen -> 7 Pausen nach Wort
-                }
-                else
-                {
-                    x = "t.charAt(i)";
-                }
-                
-                if (m == "")
-                {
-                    m = m + x;
-                }
-                else 
-                {
-                    m = m + "   " + x; //3 Pausen da am Ende eines Zeichens keine Pause steht aber zwischen mehreren Zeichen je 3 Pausen festgelegt sind
-                }
-                x = ""; //zur Sicherheit dass vor jeder neuen Belegung nichts in x steht
-            }      
-        return m;         
+    {          
+        t = t.toLowerCase();
+        String out = "";
+        
+        for(int i = 0; i < t.length(); i++) {
+        	if (mutatables.contains(String.valueOf(t.charAt(i)))){
+        		out += dict.get(String.valueOf(t.charAt(i))) + "   ";
+        	}
+        	else{
+        		out += t.charAt(i);
+        	}
+        }
+        
+        return out.trim();
     }
-
     
-    
-    
-    
+    @Override
     public String decrypt(String m)
-    {
+    {        
         String t = "";
         String x = "";
         for( int i=0; i<m.length(); i++)
@@ -245,7 +64,7 @@ public class Morse extends Spielsprache
               }
               else if( i + 12 <= m.length()&& m.charAt(i) == '.' && m.charAt(i+2) == '.' && m.charAt(i+4) == '.' && m.charAt(i+6) == '-' && m.charAt(i+8) == '-' && m.charAt(i+10) == '.' && m.charAt(i+12) == '.')
               {
-                  x = "�";  //ss
+                  x = "ß";  //ss
                   i = i+12;
               }
               //Ziffern
@@ -436,7 +255,7 @@ public class Morse extends Spielsprache
                                             {
                                                 if (m.charAt(i+6) == '-')
                                                 {
-                                                    x = "�";    //ae
+                                                    x = "ä";    //ae
                                                     i = i+6;
                                                 }
                                                 else if (m.charAt(i+6) == '.')
@@ -685,8 +504,43 @@ public class Morse extends Spielsprache
                
                
         return t;
+        
+        /*
+        
+            String test = "- . .   - . .       .";
+            test = test.trim();
+            ArrayList<String> words = new ArrayList<>();
+        
+            try{
+                while(test.length() != 0) {
+                    String word = test.substring(0, test.indexOf("       "));
+                    words.add(word);
+                    test = test.replace(word + "       ", "");
+                    words.add(" ");
+                }
+            } catch(Exception e) {words.add(test);}
+        
+            ArrayList<String> characters = new ArrayList<>();
+        
+            for(int i = 0; i < words.size(); i++) {
+                String singleword = words.get(i);
+                try{
+                    while(singleword.length() != 0) {
+                        String singlechar = singleword.substring(0, singleword.indexOf("   "));
+                        characters.add(singlechar);
+                        singleword = singleword.replace(singlechar + "   ", "");
+                    }   
+                } catch(Exception e) {characters.add(singleword);}
+            }
+        
+            String out = "";
+            String currentChar = "";
+        
+            for(int i = 0; i <= characters.size(); i++) {
+                currentChar = characters.get(i);
+                out = out + dict.get(currentChar);
+                currentChar = "";
+            }
+        */
       }
     }    
-
-
-

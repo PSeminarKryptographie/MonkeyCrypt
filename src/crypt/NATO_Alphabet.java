@@ -7,33 +7,28 @@ package crypt;
 
 import java.util.Arrays;
 
-import java.util.HashMap;
-
 import java.util.Map;
+
 
 /**
  *
  * @author Jonas
  */
 public class NATO_Alphabet extends Spielsprache {
-	private Map <String, String> dict = new HashMap<String, String>();
+	private Map <String, String> dict;
 	private String alphabet = "abcdefghijklmnopqrstuvwxyzäöü ";
 	private String [] nato = {"Alfa", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel","India","Juliett","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor",  "Whiskey","X-Ray","Yankee","Zulu","Alfa Echo","Oscar Echo","Uniform Echo", ""};
-	
-	private void setup(){
-		for(int i = 0; i < alphabet.length(); i++) {
-			 dict.put(String.valueOf(alphabet.charAt(i)), nato[i]);
-			 dict.put(nato[i], String.valueOf(alphabet.charAt(i)));
-		}
-	}
+
+    public NATO_Alphabet() {
+        this.dict = Tools.mapDict(alphabet, nato);
+    }
+        
 	@Override
     public String encrypt(String text) {
-		setup();
-		System.out.println(dict.toString());
 		text = text.toLowerCase();
         String out = "";
         for(int i = 0; i < text.length(); i++) {
-        	if (alphabet.contains(String.valueOf(text.charAt(i)))){
+        	if (dict.containsKey(String.valueOf(text.charAt(i)))){
         		out += dict.get(String.valueOf(text.charAt(i))) + " ";
         	}
         	else{
@@ -45,7 +40,7 @@ public class NATO_Alphabet extends Spielsprache {
     
     @Override
     public String decrypt(String text) {
-        setup();
+         
         String out = "";
         String word = "";
         for(int i = 0; i < text.length(); i++) {
@@ -68,5 +63,5 @@ public class NATO_Alphabet extends Spielsprache {
         	}
         }
         return out;
-    }
+    } 
 }
