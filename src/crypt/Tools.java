@@ -7,6 +7,8 @@ package crypt;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author caterina
@@ -308,6 +310,18 @@ public class Tools {
 		 }
 		 return newText;
 	 }
+         
+         public static Map mapDict(String mutatables, String[] encoded) {
+            Map <String, String> dict = new HashMap<>();
+            
+             for(int i = 0; i < mutatables.length(); i++) {
+                dict.put(String.valueOf(mutatables.charAt(i)), encoded[i]);
+                dict.put(encoded[i], String.valueOf(mutatables.charAt(i)));
+            }
+             
+             return dict;
+        }
+
 	 /*private String cleanup(String text, String newText, String alpha){
 			String correctText = "";
 			for (int i = 0; i<newText.length(); i++  ){
