@@ -11,6 +11,7 @@ public class Morse extends Spielsprache
     private Map <String, String> codeToChar;
 
     String[] mutatables = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "?", ".", ",", "ß", "ä", "ö", "ü", " "};
+
     String[] encoded = {". -", "- . . .", "- . - .", "- . .", ".", ". . - .", "- - .", ". . . .", ". .", ". - - -",
     "- . -", ". - . .", "- -", "- .", "- - -", ". - - .", "- - . -", ". - .", ". . .", "-", ". . -", ". . . -",
     ". - -", "- . . -", "- . - -", "- - . .", ". - - - -", ". . - - -", ". . . - -", ". . . . -", ". . . . .",
@@ -38,14 +39,12 @@ public class Morse extends Spielsprache
         	else{
         		out += t.charAt(i);
         	}
-        }
-        
+        }        
         return out.trim();
     }
     
     @Override
-    public String decrypt(String m)
-    {   
+    public String decrypt(String m) {   
             String in = m.trim();
            
             ArrayList<String> words = new ArrayList<>();
@@ -72,8 +71,7 @@ public class Morse extends Spielsprache
                         singleword = singleword.replaceFirst(singlechar + "   ", "");
                     }   
                 } catch(Exception e) {characters.add(singleword);}
-            }
-        
+
             String out = "";
             String currentChar = "";
         

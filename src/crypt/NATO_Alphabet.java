@@ -7,15 +7,14 @@ package crypt;
 
 import java.util.Arrays;
 import java.util.HashMap;
-
 import java.util.Map;
-
 
 /**
  *
  * @author Jonas
  */
 public class NATO_Alphabet extends Spielsprache {
+
 	private Map <String, String> dict = new HashMap<>();
 	private String[] alphabet = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "ä", "ö", "ü", " "};
 	private String [] nato = {"Alfa", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel","India","Juliett","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor",  "Whiskey","X-Ray","Yankee","Zulu","Alfa Echo","Oscar Echo","Uniform Echo", ""};
