@@ -1,11 +1,12 @@
 package crypt;
 
+import java.util.ArrayList;
 import java.util.Map;
-import java.util.HashMap;
+
 
 public class Morse extends Spielsprache
 {
-    private Map <String, String> dict = new HashMap<>();
+    private Map <String, String> dict;
     
     String mutatables = "abcdefghijklmnopqrstuvwxyz1234567890?.,ßäöü ";
     String[] encoded = {". -", "- . . .", "- . - .", "- . .", ".", ". . - .", "- - .", ". . . .", ". .", ". - - -",
@@ -14,44 +15,34 @@ public class Morse extends Spielsprache
     "- . . . .", "- - . . .", "- - - . .", "- - - - .", "- - - - -", ". . - - . .", ". - . - . -", "- - . . - -",
     ". . . - - . .", ". - . -", "- - - .", ". . - -", " "
     };
-        
+    
+    
     public Morse()
     {
-        this.setup();
-    } 
-    
-    private void setup(){
-	    for(int i = 0; i < mutatables.length(); i++) {
-            dict.put(String.valueOf(mutatables.charAt(i)), encoded[i]);
-            dict.put(encoded[i], String.valueOf(mutatables.charAt(i)));
-	    }
+        this.dict = Tools.mapDict(mutatables, encoded);
     }
-    
+   
+    @Override
     public String encrypt(String t)
     {          
         t = t.toLowerCase();
         String out = "";
         
         for(int i = 0; i < t.length(); i++) {
-            System.out.println("Betrachte " + t.charAt(i));
         	if (mutatables.contains(String.valueOf(t.charAt(i)))){
         		out += dict.get(String.valueOf(t.charAt(i))) + "   ";
-                        System.out.println(out);
         	}
         	else{
         		out += t.charAt(i);
         	}
         }
         
-        return out;
+        return out.trim();
     }
-
     
-    
-    
-    
+    @Override
     public String decrypt(String m)
-    {
+    {        
         String t = "";
         String x = "";
         for( int i=0; i<m.length(); i++)
@@ -73,7 +64,7 @@ public class Morse extends Spielsprache
               }
               else if( i + 12 <= m.length()&& m.charAt(i) == '.' && m.charAt(i+2) == '.' && m.charAt(i+4) == '.' && m.charAt(i+6) == '-' && m.charAt(i+8) == '-' && m.charAt(i+10) == '.' && m.charAt(i+12) == '.')
               {
-                  x = "�";  //ss
+                  x = "ß";  //ss
                   i = i+12;
               }
               //Ziffern
@@ -513,5 +504,43 @@ public class Morse extends Spielsprache
                
                
         return t;
+        
+        /*
+        
+            String test = "- . .   - . .       .";
+            test = test.trim();
+            ArrayList<String> words = new ArrayList<>();
+        
+            try{
+                while(test.length() != 0) {
+                    String word = test.substring(0, test.indexOf("       "));
+                    words.add(word);
+                    test = test.replace(word + "       ", "");
+                    words.add(" ");
+                }
+            } catch(Exception e) {words.add(test);}
+        
+            ArrayList<String> characters = new ArrayList<>();
+        
+            for(int i = 0; i < words.size(); i++) {
+                String singleword = words.get(i);
+                try{
+                    while(singleword.length() != 0) {
+                        String singlechar = singleword.substring(0, singleword.indexOf("   "));
+                        characters.add(singlechar);
+                        singleword = singleword.replace(singlechar + "   ", "");
+                    }   
+                } catch(Exception e) {characters.add(singleword);}
+            }
+        
+            String out = "";
+            String currentChar = "";
+        
+            for(int i = 0; i <= characters.size(); i++) {
+                currentChar = characters.get(i);
+                out = out + dict.get(currentChar);
+                currentChar = "";
+            }
+        */
       }
     }    
