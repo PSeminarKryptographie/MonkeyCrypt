@@ -11,7 +11,6 @@ public class Morse extends Spielsprache
     private Map <String, String> codeToChar;
 
     String[] mutatables = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "?", ".", ",", "ß", "ä", "ö", "ü", " "};
-
     String[] encoded = {". -", "- . . .", "- . - .", "- . .", ".", ". . - .", "- - .", ". . . .", ". .", ". - - -",
     "- . -", ". - . .", "- -", "- .", "- - -", ". - - .", "- - . -", ". - .", ". . .", "-", ". . -", ". . . -",
     ". - -", "- . . -", "- . - -", "- - . .", ". - - - -", ". . - - -", ". . . - -", ". . . . -", ". . . . .",
@@ -39,17 +38,28 @@ public class Morse extends Spielsprache
         	else{
         		out += t.charAt(i);
         	}
-        }        
+        }
+        
         return out.trim();
     }
     
     @Override
-    public String decrypt(String m) {   
-            String in = m.trim();
-           
+    public String decrypt(String m)
+    {   
+            String in = m.trim();           
             ArrayList<String> words = new ArrayList<>();
         
-            try{
+            divideToWords(in, words);
+        
+            ArrayList<String> characters = new ArrayList<>();
+        
+            divideToChars(words, characters);
+            
+            return convertToDecodedString(characters);
+      }
+    
+    public void divideToWords(String in, ArrayList<String> words) {
+        try{
                 while(in.length() != 0) {
                     String word = in.substring(0, in.indexOf("       "));
                     words.add(word);
@@ -57,30 +67,30 @@ public class Morse extends Spielsprache
                     words.add(" ");
                 }
             } catch(Exception e) {words.add(in);}
-        
-            ArrayList<String> characters = new ArrayList<>();
-        
-            for(int i = 0; i < words.size(); i++) {
+    }
+    
+    public void divideToChars(ArrayList<String> words, ArrayList<String> chars) {
+        for(int i = 0; i < words.size(); i++) {
                 String singleword = words.get(i);
-                System.out.println("Betrachte: " + singleword);
                 try{
                     while(singleword.length() != 0) {
                         String singlechar = singleword.substring(0, singleword.indexOf("   "));
-                        System.out.println("Extrahiere: " + singlechar);
-                        characters.add(singlechar);
+                        chars.add(singlechar);
                         singleword = singleword.replaceFirst(singlechar + "   ", "");
                     }   
-                } catch(Exception e) {characters.add(singleword);}
-
+                } catch(Exception e) {chars.add(singleword);}
+            }
+    }
+    
+    public String convertToDecodedString(ArrayList<String> characters) {
             String out = "";
             String currentChar = "";
         
             for(int i = 0; i < characters.size(); i++) {
                 currentChar = characters.get(i);
                 out = out + codeToChar.get(currentChar);
-                currentChar = "";
             }
             
             return out;
-      } 
-}   
+    }
+}
