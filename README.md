@@ -1,5 +1,5 @@
 
-<a href="https://codebeat.co/projects/github-com-heptocat-monkeycrypt-master"><img alt="codebeat badge" src="https://codebeat.co/badges/3c3db0c2-0ec6-4298-93cb-8702dfba2942" /></a>
+<a href="https://codebeat.co/projects/github-com-pseminarkryptographie-monkeycrypt-master-45559034-40d5-43df-ac50-dee5355e05b8"><img alt="codebeat badge" src="https://codebeat.co/badges/94ab665d-edf8-43b1-bc0a-874b25b88d29" /></a>
 
 # MonkeyCrypt
 
