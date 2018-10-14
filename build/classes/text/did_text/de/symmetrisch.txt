@@ -1,0 +1,13 @@
+Da bin ich wieder, Bob, Experte in der Geheimhaltung von Nachrichten. Über Symmetrische Verschlüsselungen zu lernen ist ein toller Weg, um in die Kryptographie einzusteigen. Vielleicht hast du unter KRYPTOGRAPHIE schon gelernt was eine Verschlüsselung ist und was sie braucht, nämlich einen Kryptographischen Algorithmus und ein Protokoll. Dadurch kann ein Text in einem geregelten Verfahren verändert und unverständlich gemacht werden.
+Damit Eva unsere Nachrichten nicht lesen kann, selbst wenn sie weiß, wie die Verschlüsselung funktioniert, brauchen wir einen Schlüssel. Bei Symmetrischen Verschlüsselungen haben Alice und ich den gleichen Schlüssel.
+[Graphik]
+Stellen wir uns vor, die Nachricht befindet sich in einer Kiste, die mit einem Schloss versehen ist. Sowohl Alice als auch ich selbst können mit unserem Schlüssel die Kiste auf- und zumachen. Sollte Eva aber die Kiste in die Finger bekommen, so ist sie verschlossen und unleserlich. Genau nach diesem Prinzip funktionieren alle Symmetrische Verschlüsselungen.
+Doch wie funktioniert das ohne eine Kiste? Wir ersetzen die Kiste durch den Algorithmus, eine mathematische Funktion! Das können wir uns ein bisschen wie eine Maschine vorstellen. In diese Maschine kann man zwei Zeichenketten einschleusen, den Klartext M und den Schlüssel K. Zurück bekommt man dann den Geheimtext C. Mathematisch schreibt man das so:
+Ek(M)=C
+Dabei ist E die Maschine, also das kryptographische Verfahren, das in der Klammer der "Input" und als Ergebnis der "Output". Weil die Machine zum Funktionieren auch einen Schlüssel braucht, schreiben wir klein k daneben. So machen das Mathematiker eben.
+In gleicher Weise funktioniert auch die Entschlüsselung:
+Dk(C)=M
+Damit bei der Entschlüsselung auch wirklich wieder der Klartext herauskommt, brauchen beide Funktionen eine wichtige Eigenschaft: Injektivität. Das bedeutet, dass zwei verschiedene Eingaben in E() kein gleiches Ergebnis haben können. Nur dann gilt:
+Dk(Ek(M))=C
+Wenn du noch Erklärungen zu diesen ganzen mathematischen Begriffen brauchst, drücke in der Randspalte auf MATHEMATIK.
+Alle Symmetrische Verschlüsselungen funktionieren nach diesen Vorschriften. Trotzdem gibt es ganz viele unterschiedliche Algorithmen. Manche von ihnen ersetzen Buchstaben. Das nennt man SUBSTITUTION, und wurde schon von den alten Römern verwendet. Auch modernere Verschlüsselungen funktionieren auf diese Weise. Anstatt Buchstaben zu ersetzen kann man sie auch vermischen. Das nennt man TRANSPOSITION. Diese Verschlüsselungsart ist noch älter und wurde im Antiken Griechenland eingesetzt. Durch das Umschalten an der Randspalte kannst du mehr über diese Verfahren lernen.

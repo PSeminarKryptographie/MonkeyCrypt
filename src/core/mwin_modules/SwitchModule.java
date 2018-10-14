@@ -8,6 +8,7 @@ package core.mwin_modules;
 import core.WindowLogic;
 import frame.MoCr_Frame;
 import tools.HtmlReader;
+import tools.CommTools;
 
 /**
  *
@@ -29,9 +30,9 @@ public class SwitchModule {
     }
     
     public void returnToMain() {
-        adjustCards(localFrame.MoCr_Gen_DynamicPanel, localFrame.MoCr_MainPro_cardPanel);        
-        adjustCards(localFrame.MoCr_MainPro_changeable, getValidChiffrePanel(WindowLogic.getInstance().getState()) );
-        adjustCards(localFrame.MoCr_Gen_ListPanel, localFrame.MoCr_GenDyn_MainProList);       
+        CommTools.adjustCards(localFrame.MoCr_Gen_DynamicPanel, localFrame.MoCr_MainPro_cardPanel);        
+        CommTools.adjustCards(localFrame.MoCr_MainPro_changeable, getValidChiffrePanel(WindowLogic.getInstance().getState()) );
+        CommTools.adjustCards(localFrame.MoCr_Gen_ListPanel, localFrame.MoCr_GenDyn_MainProList);       
         WindowLogic.getInstance().setMode(true);
     }
     
@@ -42,15 +43,15 @@ public class SwitchModule {
     }
     
     public void setDidPanel() { //may cause lag
-        adjustCards(localFrame.MoCr_Gen_DynamicPanel, localFrame.MoCr_Did_cardPanel);
-        adjustCards(localFrame.MoCr_Gen_ListPanel, localFrame.MoCr_GenDyn_DidListPanel);
+        CommTools.adjustCards(localFrame.MoCr_Gen_DynamicPanel, localFrame.MoCr_Did_cardPanel);
+        CommTools.adjustCards(localFrame.MoCr_Gen_ListPanel, localFrame.MoCr_GenDyn_DidListPanel);
         WindowLogic.getInstance().setMode(false);
     }
     
     public void switchCipherContent(int t) {
         WindowLogic localLogic = WindowLogic.getInstance();
         localLogic.setSwitchState(t);
-        adjustCards(localFrame.MoCr_MainPro_changeable, getValidChiffrePanel(localLogic.getState())); 
+        CommTools.adjustCards(localFrame.MoCr_MainPro_changeable, getValidChiffrePanel(localLogic.getState())); 
     }
     
     public void changeTranspositionKeyPanel(int i) {
@@ -61,7 +62,7 @@ public class SwitchModule {
                 case 1: l = localFrame.MoCr_TranspositionSub_2Key; break;
                 case 2: l = localFrame.MoCr_TranspositionSub_MatrixKey; break;
             }
-        adjustCards(localFrame.MoCr_TranspositionSub_KeyPanel, l);
+        CommTools.adjustCards(localFrame.MoCr_TranspositionSub_KeyPanel, l);
     }
     
     private javax.swing.JPanel getValidChiffrePanel(int z) {
@@ -98,11 +99,4 @@ public class SwitchModule {
         }           
         return n;
     }
-    
-    public void adjustCards(javax.swing.JPanel May, javax.swing.JPanel Min) {
-            May.removeAll();
-            May.add(Min);
-            May.revalidate();
-            May.repaint();
-        }
 }

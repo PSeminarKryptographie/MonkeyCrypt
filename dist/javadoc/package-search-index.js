@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"alcollectors"},{"l":"aufgabentexte"},{"l":"core"},{"l":"core.mwin_modules"},{"l":"crypt"},{"l":"crypt.cryptanalysis"},{"l":"crypt.maths"},{"l":"frame"},{"l":"tools"}]

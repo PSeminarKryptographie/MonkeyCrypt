@@ -25,6 +25,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
     public MoCr_Frame_Support localSupport;        //lokale Hilfsinstanz
     public MoCr_Frame_Settings localSettings;
     public MoCr_Frame_exc localExc;
+    public MoCr_Frame_Tools localToolWin;
     static CommTools localTools = new CommTools();
     static FrameTools localFraTools = new FrameTools();
     public WindowLogic localLogic;
@@ -46,6 +47,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         localLogic.setIdentificationPair(0, 0);
         localLogic.setMode(true);
         localSettings = new MoCr_Frame_Settings(this);
+        localToolWin = new MoCr_Frame_Tools();
         localExc = new MoCr_Frame_exc();
         MoCr_HillSub_Matrix.setShowGrid(true);
         MoCr_TranspositionSub_MatrixKeyField.setShowGrid(true);
@@ -186,6 +188,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_Gen_DidLister = new javax.swing.JList<>();
         MoCr_Gen_Choicebar = new javax.swing.JMenuBar();
         MoCr_Gen_Choicemenu1 = new javax.swing.JMenu();
+        Toolsmenu = new javax.swing.JMenu();
         MoCr_Gen_Choicemenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -210,7 +213,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
         MoCr_MPstaticIO_OutField.setLineWrap(true);
         MoCr_MPstaticIO_OutField.setRows(5);
         MoCr_MPstaticIO_OutField.setText("Ausgabe");
-        MoCr_MPstaticIO_OutField.setToolTipText("Hier wird dein ver-/entschluesselter Text angezeigt");
+        MoCr_MPstaticIO_OutField.setToolTipText("Hier wird dein ver-/entschlüsselter Text angezeigt");
         MoCr_MPstaticIO_OutField.setWrapStyleWord(true);
         MoCr_MPstaticIO_OutField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -1515,6 +1518,14 @@ public class MoCr_Frame extends javax.swing.JFrame {
         });
         MoCr_Gen_Choicebar.add(MoCr_Gen_Choicemenu1);
 
+        Toolsmenu.setText("Werkzeuge");
+        Toolsmenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ToolsmenuMouseClicked(evt);
+            }
+        });
+        MoCr_Gen_Choicebar.add(Toolsmenu);
+
         MoCr_Gen_Choicemenu2.setText("Impressum");
         MoCr_Gen_Choicemenu2.setFont(new java.awt.Font(CFont, 0, 12));
         MoCr_Gen_Choicemenu2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1789,6 +1800,21 @@ public class MoCr_Frame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void ToolsmenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ToolsmenuMouseClicked
+        // TODO add your handling code here:
+        String key = ""; int ciph = -1;
+        if(localLogic.getencryptionType() == 0) {
+            switch(localLogic.getChiffrestate()) {
+                case 0: key = MoCr_Caesar_EingabefeldSchluessel.getText(); ciph = 0; break;
+                case 1: key = MoCr_MultiplikativSub_KeyField.getText(); ciph = 1; break;
+                case 10: key = new StringBuffer(MoCr_AffChiffSub_Key1.getText()).append(MoCr_AffChiffSub_Key2.getText()).toString(); 
+                            ciph = 2; break;
+                default: break;
+            }
+        }
+        localToolWin.renew(key, ciph);
+    }//GEN-LAST:event_ToolsmenuMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1946,6 +1972,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
     private javax.swing.JLabel MoCr_VigenereSub_Heading;
     private javax.swing.JLabel MoCr_VigenereSub_Image;
     public javax.swing.JLabel MoCr_VigenereSub_LabelSchluessel;
+    public javax.swing.JMenu Toolsmenu;
     public javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

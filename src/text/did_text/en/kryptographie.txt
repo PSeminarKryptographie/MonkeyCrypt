@@ -1,5 +1,5 @@
-[Ü]: Cryptography
-Hi, I'm Bob, an expert in secret communication and everything that relates. My favourite area is cryptography (from Greek kryptós = "hidden secret", graphein = "writing", or "-logia = "study", respectively). Essentially, "the study of secrecy".
+[U]: Cryptography
+Hi, I'm Bob, an expert in secret communication and everything that relates. My favorite area is cryptography (from Greek kryptós = "hidden secret", graphein = "writing", or "-logia = "study", respectively). Essentially, "the study of secrecy".
 Cryptography is far superior to steganography as well as secret languages. Why? Because it is a mathematical discipline! Only mathematics can be used to test the strength or prove the certainty of a procedure completely. In addition, it has clear rules that are easy to implement for computers so that you don't have to do everything by hand. Quite practical, right?
 Like in mathematics, there are abbreviations and phrasing in cryptography that save lazy cryptographers (like me) from having to write too much.
 [Table]
@@ -10,7 +10,7 @@ Like in mathematics, there are abbreviations and phrasing in cryptography that s
 	Message M		A readable string of characters "over" A. This means that it only consists of characters in the alphabet.
 	Key K			A string.
 	Encoding E		A procedure that creates the secret text from M and K.
-	Ciphertext C	An illegible string.
+	Cipher text C	An illegible string.
 	Decryption D	A procedure for restoring the message.
 
 }

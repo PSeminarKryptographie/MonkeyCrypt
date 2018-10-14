@@ -1,7 +1,616 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1> Cryptography </h1>
-This is the learning panel for cryptography.
-</body>
-</html>
+    <head>
+    </head>
+    
+    
+    <body style="color: rgb(0, 0, 0); background-color: rgb(51, 102, 255);" alink="#ccffff" link="#66ffff" vlink="#990099">
+    
+    
+    
+    <font size="+1"><span style="font-weight: bold; font-family: Jamrul;"></span></font>
+    <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+    
+    
+    
+      <tbody>
+    
+    
+    
+        <tr align="center">
+    
+    
+    
+          <td colspan="3"><font style="text-decoration: underline; font-weight: bold;" size="+2"><span style="font-family: Jamrul;">CRYPTOGRAPHY</span></font></td>
+    
+    
+    
+        </tr>
+    
+    
+    
+        <tr>
+    
+    
+    
+          <td style="text-align: right;"><img style="width: 131px; height: 251px;" alt="bob" src="../../../img/abe/bob_small.png"></td>
+    
+    
+    
+          <td style="text-align: left;"><img style="width: 153px; height: 250px;" alt="alice" src="../../../img/abe/alice_small.png"></td>
+    
+    
+    
+          <td style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">Hello! I am Alice and this is my friend Bob.
+             Maybe you have already met us while learning about the secret communication.
+             Both of us are experts in it, thanks to the jealous Eve, who is constantly spying on us.
+             But since we use cryptography, it's not that easy anymore!</span></font></td>
+    
+    
+    
+        </tr>
+    
+    
+    
+        <tr>
+    
+    
+    
+          <td colspan="3">
+          
+          <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">Cryptography 
+            (ancient krypt&oacute;s = "hidden, secret" and gr&aacute;phein = "write") is the science of encrypting information. 
+            It includes a variety of encryptions that you can find in the margin column. 
+            However, they all have something in common: 
+            All encryptions have the task of ensuring the secrecy, authentication or integrity of a message. 
+            These are all pretty complicated words!
+            </span></font><br style="font-family: Jamrul;">
+    
+          <font size="+1">
+    
+          <span style="font-family: Jamrul;"></span></font><br>
+    
+          <font size="+1"><span style="font-family: Jamrul;">
+    
+            Bob and I have experienced them all firsthand.
+            In the following scenarios, I am the "sender" and send Bob, the "receiver" a message to arrange a meeting place.
+        </span></font><br style="font-family: Jamrul;">
+    
+          </div>
+    
+          <font size="+1">
+    
+          <span style="text-decoration: underline; font-weight: bold; font-family: Jamrul;"><br>
+    
+    
+    
+    Scenario 1 - Secrecy</span><br style="font-family: Jamrul;">
+    
+    
+    
+          <span style="font-family: Jamrul;"><br>
+    
+          </span></font>
+          
+          <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+    In this scenario, I (Alice) would like to send a message to my friend Bob to agree where we will meet. 
+    Eva, however, rummages in his mailbox as usual! If she reads this message, she might show up at the rendezvous and play a trick on us. 
+    So I use secrecy, so that the message for Eva is impossible or difficult to understand.</span></font><br>
+    
+          <br style="font-family: Jamrul;">
+    
+          </div>
+    
+          <font size="+1">
+    
+          <span style="font-weight: bold; text-decoration: underline; font-family: Jamrul;">Scenario
+    2 - Authentication</span><br style="font-family: Jamrul;">
+    
+    
+    
+          <span style="font-family: Jamrul;"><br>
+    
+          </span><br style="font-family: Jamrul;">
+    
+    
+    
+          <span style="font-family: Jamrul;"><br>
+    
+          </span></font>
+          
+          <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+            I need to send Bob a message again.
+            Eva has come up with something new.
+            She wants to send a message to Bob too, but pretending to be Alice.
+            Now Bob has two letters and does not know what to do!
+            So I need proof of identity or authentication for my letters so that Bob can check which message actually came from me.</span></font><br>
+    
+          </div>
+    
+          <font size="+1"><br style="font-family: Jamrul;">
+    
+    
+    
+          <span style="font-weight: bold; text-decoration: underline; font-family: Jamrul;">Scenario
+    3 - Integrity</span><br style="font-family: Jamrul;">
+    
+    
+    
+          <span style="font-family: Jamrul;"><br>
+    
+          </span><br style="font-family: Jamrul;">
+    
+    
+    
+          <span style="font-family: Jamrul;"><br>
+    
+          </span></font>
+          
+          <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+            Again, I (Alice) send my friend Bob a message.
+            Eva picks up the message in the mailbox, and changes it.
+            That's how Bob and I manage to never meet each other!
+            The message must therefore clearly retain its integrity - that means inviolability.</span></font><br>
+    
+          <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+    
+          <font size="+1"><span style="font-family: Jamrul;">
+    
+          <br>
+    
+          </span></font>
+          
+          <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+     
+          </span></font><br>
+    
+          <font size="+1"><span style="font-family: Jamrul;">
+    
+          </span></font><br>
+    
+          <font size="+1"><span style="font-family: Jamrul;">
+    
+            So these are the goals of encryption.
+            But what is such an encryption at all and how do you define it?
+            Perhaps you remember the terms that Bob introduced in the chapter on <span style="font-weight: bold;">CRYPTOLOGY</span>.
+            Here is the table again:</span></font><br>
+    
+          <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+    
+          <font size="+1"><span style="font-family: Jamrul;">
+          <br>
+    
+    
+    
+          </span></font>
+          
+          
+          <table style="text-align: left; width: 100%; height: 302px;" border="1" cellpadding="2" cellspacing="2">
+    
+    
+    
+            <tbody>
+    
+    
+    
+              <tr>
+    
+    
+    
+                <td style="font-weight: bold; font-family: monospace;"><font size="+1">Term</font></td>
+    
+    
+    
+                <td style="font-weight: bold; font-family: monospace;"><font size="+1">Abbreviation</font></td>
+    
+    
+    
+                <td style="font-weight: bold; font-family: monospace;"><font size="+1">Description</font></td>
+    
+    
+    
+              </tr>
+    
+    
+    
+              <tr>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">Alphabet</font></td>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">A</font></td>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">a finite set of characters (eg A = {a, b, c}).</font></td>
+    
+    
+    
+              </tr>
+    
+    
+    
+              <tr>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">Cardinality</font></td>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">|A|</font></td>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">The length (width) of A. This is the number of characters in A (eg | A | = 3).</font></td>
+    
+    
+    
+              </tr>
+    
+    
+    
+              <tr>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">Plain Text</font></td>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">M</font></td>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">A simple string "over" A. This means that it only consists of characters of the alphabet.</font></td>
+    
+    
+    
+              </tr>
+    
+    
+    
+              <tr>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">Key</font></td>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">K</font></td>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">A string (Eg. "key").</font></td>
+    
+    
+    
+              </tr>
+    
+    
+    
+              <tr>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">Encoding</font></td>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">E</font></td>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">Method which generates the cipher text from M and K.</font></td>
+    
+    
+    
+              </tr>
+    
+    
+    
+              <tr>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">Cipher Text</font></td>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">C</font></td>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">An unreadable string (Eg. C#&DFDFDharf3413b##$@).</font></td>
+    
+    
+    
+              </tr>
+    
+    
+    
+              <tr>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">Decryption</font></td>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">D</font></td>
+    
+    
+    
+                <td style="font-family: monospace;"><font size="+1">Procedure for recovering the plain text.</font></td>
+    
+    
+    
+              </tr>
+    
+    
+    
+            
+            
+            </tbody>
+          
+          
+          </table>
+    
+    
+    
+          <font size="+1"><span style="font-family: Jamrul;"><br>
+    
+          </span></font>
+          
+          <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+    
+          Here, the encryption E was described as a <span style="font-style: italic;">method</span>  . 
+          In fact, they are also called <span style="font-weight: bold; text-decoration: underline;">Cryptographic Methods</span>.
+          Such a method includes an <span style="font-weight: bold;">Algorithm</span> and a
+          <span style="font-weight: bold;">Protocol</span>.</span></font><br>
+    
+          <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+    
+          <font size="+1"><span style="font-family: Jamrul;">
+          <br>
+    
+    
+          </span></font>
+          
+          
+          <div style="text-align: center;"><font style="text-decoration: underline;" size="+1"><span style="font-family: Jamrul;">The Cryptographic Algorithm</span></font><br>
+    
+          <br>
+    
+    
+          <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+    
+    
+          
+          
+          <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+            A cryptographic algorithm is really nothing more than a mathematical function, ie a calculation rule. 
+            We can imagine that bit like a machine. In this machine you can insert a string, the plaintext M, and get back the cipher text. 
+            Mathematically, it is written like this:</span></font><br>
+    
+          <font size="+1"><span style="font-family: Jamrul;">
+          </span></font></div>
+    
+    
+          
+          
+          <div style="text-align: center;"><font size="+1"><span style="font-family: Jamrul;"><span style="font-family: Courier New; font-weight: bold;">
+    E(M) = C</span></span></font><br>
+    
+    
+          <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+    
+    
+          
+          
+          <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+    Here <span style="font-family: Courier New; font-weight: bold;">E</span> is the machine, ie the cryptographic method. In the parenthesis </span></font><font size="+1">
+    <span style="font-family: Jamrul;"><span style="font-family: Courier New; font-weight: bold;">(M)</span></span></font><font size="+1">
+    <span style="font-family: Jamrul;">  the "input" and </span></font><font size="+1">
+    <span style="font-family: Jamrul;">
+    <span style="font-family: Courier New; font-weight: bold;">C </span></span></font><font size="+1"><span style="font-family: Jamrul;">as the "Output".
+    Decryption works in the same way:</span></font><br>
+    
+          <font size="+1"><span style="font-family: Jamrul;">
+          </span></font></div>
+    
+    
+          
+          
+          <div style="text-align: left;">
+          
+          
+          <div style="text-align: center;"><font size="+1"><span style="font-family: Jamrul;"><span style="font-family: Courier New; font-weight: bold;">
+    D(C)=M</span></span></font><br>
+    
+    
+          </div>
+    
+    
+          <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+    
+    
+          
+          
+          <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+                In order for the decryption to be really clear, both functions need an important feature: 
+                <span style="font-style: italic;">Injectivity</span>. This means that two different inputs in E () can not have the same result. 
+                Only then:</span></font><br>
+    
+          <font size="+1"><span style="font-family: Jamrul;">
+          </span></font></div>
+    
+    
+          
+          
+          <div style="text-align: center;"><font size="+1"><span style="font-family: Jamrul;"><span style="font-weight: bold; font-family: Courier New;">
+    D(E(M))=C</span></span></font><br>
+    
+    
+          <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+    
+    
+          
+          
+          <div style="text-align: right;">
+          
+          <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+                If you still need explanations of all these mathematical terms, press MATHEMATICS in the margin column.
+            </span></font><br>
+    
+          </div>
+    
+          <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+    
+          <font size="+1"><span style="font-family: Jamrul;">
+          <br>
+    
+          </span></font>
+          
+          <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+                But what is the difference between cryptography and other forms of secret communication, as well as codings or languages? Let's imagine the situation.
+            </span></font><br>
+    
+          <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+    
+          <font size="+1"><span style="font-family: Jamrul;">
+    
+          <br>
+    
+    <br>
+    
+          <br>
+    
+          </span></font>
+          
+          <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+                Alice sends me a message. 
+                We symbolize the algorithm with a box that can be opened and closed according to a specific procedure. 
+                The message is in this box. Again Eva goes after the postman and gets the box. 
+                Although she does not know how to open the box, she can go to the library and get information about the algorithm. 
+                Once she has figured out how our algorithm works, she can read our message undisturbed. 
+                And because she knows our algorithm now, she will be able to read all our messages in the future. 
+                That would be terrible! 
+                This is exactly the problem when using simple languages.</span></font><br>
+    
+          <font size="+1"><span style="font-family: Jamrul;">
+    
+                The solution? Quite simply: our box needs a key. 
+                Now, although Eva knows how to open the box, namely plug in key and turn, she can not perform this algorithm because she does not have the key! 
+                So the problem is solved and we have a SOLUTION. </span></font><br>
+    
+          <font size="+1"><span style="font-family: Jamrul;">
+    
+                With encryption one can observe two types. 
+                There are symmetric encryptions. 
+                Alice and I have the same key. 
+                For asymmetric encryptions we have two different keys. 
+                How is that possible? 
+                By clicking on the two topics in the margin column, you can learn more about it.
+            </span></font><br>
+    
+          <font size="+1"><span style="font-family: Jamrul;"></span></font></div>
+    
+          <font size="+1"><span style="font-family: Jamrul;">
+          <br>
+    
+          </span></font>
+          
+          <div style="text-align: justify;"><font size="+1"><span style="font-family: Jamrul;">
+    
+            Now not much is left to be completed.<br>
+    
+            All we need to do is keep a log so that everything runs smoothly and in the same way. 
+            This includes, for example, how the keys are to be exchanged, or which intermediate players, eg Eva or a postman, exist. 
+            But that's not complicated at all, because that's easy to do, just like before, with pictures and diagrams.
+
+    </span></font></div>
+    
+          </td>
+    
+    
+    
+        </tr>
+    
+    
+    
+        <tr>
+    
+    
+    
+          <td colspan="3"></td>
+    
+    
+    
+        </tr>
+    
+    
+    
+        <tr>
+    
+    
+    
+          <td colspan="3"></td>
+    
+    
+    
+        </tr>
+    
+    
+    
+        <tr>
+    
+    
+    
+          <td colspan="3" rowspan="1"></td>
+    
+    
+    
+        </tr>
+    
+    
+    
+        <tr>
+    
+    
+    
+          <td colspan="3" rowspan="1"></td>
+    
+    
+    
+        </tr>
+    
+    
+    
+        <tr>
+    
+    
+    
+          <td colspan="3" rowspan="1"></td>
+    
+    
+    
+        </tr>
+    
+    
+    
+      
+      
+      </tbody>
+    </table>
+    
+    
+    
+    <font size="+1"><span style="font-weight: bold; font-family: Jamrul;"></span></font><font size="+1"><span style="font-family: Jamrul;"><span style="font-style: italic;"></span></span><span style="font-family: Jamrul; font-style: italic;"></span></font>
+    </body>
+    </html>
+    

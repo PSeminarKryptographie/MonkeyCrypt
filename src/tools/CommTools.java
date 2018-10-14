@@ -38,4 +38,11 @@ public class CommTools {
 		String pool = Tools.list2String(coprimes, currentAlphabet, false);
 		return Tools.generieren(laenge, pool);
 	}
+        
+        public static void adjustCards(javax.swing.JPanel May, javax.swing.JPanel Min) {
+            May.removeAll();
+            May.add(Min);
+            May.revalidate();
+            May.repaint();
+        }
 }

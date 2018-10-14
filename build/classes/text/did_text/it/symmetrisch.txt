@@ -1,0 +1,13 @@
+Sono tornato - Bob, esperto nella segretezza delle notizie. Imparare la crittografia simmetrica è un ottimo modo per entrare nel mondo della crittografia. Forse hai già imparato da CRITTOGRAFIA cosa sia una cifratura e di cosa abbia bisogno: un algoritmo crittografico e un protocollo. In questo modo, un testo può essere modificato e reso incomprensibile in modo controllato.
+Per impedire a Eva di leggere i nostri messaggi - anche se sa come funziona la crittografia - abbiamo bisogno di una chiave. Utilizzando la crittografia simmetrica, Alice e io abbiamo la stessa chiave.
+[Figura]
+Immaginiamo che il messaggio sia in una scatola con una serratura. Sia Alice che io possiamo usare la nostra chiave per aprire la scatola. Ma se Eve ottiene una scatola, è chiusa e il messaggio è illeggibile. È esattamente come funziona la crittografia simmetrica.
+Ma come funziona senza una scatola? Noi sostituiamo la scatola con un algoritmo, una funzione matematica! Possiamo visualizzarlo come una macchina: questa macchina prende due stringhe, il messaggio M e la chiave K, e stampa il testo cifrato C. Matematicamente è scritto come:
+Ek(M) = C
+Qui, E è la macchina (l'algoritmo crittografico), che prende l'"input" nelle parentesi e ne risulta l'"output". Poiché la macchina ha bisogno di una chiave per lavorare, scriviamo una 'k' accanto alla E.
+La decrittazione funziona allo stesso modo:
+Dk(C) = M
+Per ottenere il nostro messaggio dal testo cifrato, entrambe le funzioni hanno bisogno di una proprietà importante: Iniettività. Ciò significa che due diversi input in E() non possono avere lo stesso risultato.
+Dk(Ek(M)) = C
+Se hai bisogno di spiegazioni per questi termini matematici, premi il pulsante MATEMATICA nella colonna al margine.
+Tutte le crittografie simmetriche funzionano secondo queste regole. Tuttavia, ci sono una grande varietà di algoritmi. Alcuni di essi sostituiscono lettere - questo è chiamato SOSTITUZIONE, ed è stato già utilizzato dagli antichi Romani. Anche la crittografia moderna funziona in questo modo. Invece di sostituire le lettere, puoi anche mescolarle - questo è chiamato TRANSPOSIZIONE. Questo tipo di crittografia è ancora più vecchio ed è stato utilizzato nella Grecia antica. Puoi scoprire di più su queste procedure controllando la colonna al margine.

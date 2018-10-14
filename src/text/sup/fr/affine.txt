@@ -1,0 +1,15 @@
+Chiffre affiné
+
+Le chiffre affine a deux clés, a et b.
+Les deux sont un caractère de l'alphabet.
+
+
+a devrait être coprime à la longueur de l'alphabet.
+Il est possible de générer une clé de coprime aléatoire.
+Toutes les clés sont associées à un alphabet, si sa longueur est première.
+
+
+Les caractères, qui ne font pas partie de l'alphabet, ne seront pas cryptés.
+
+
+Le chiffre affine est une substitution monoalphabétique.
