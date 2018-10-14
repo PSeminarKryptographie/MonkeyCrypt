@@ -12,7 +12,9 @@ import java.util.ResourceBundle;
  */
 public class Translator {
    
-    Locale[] locales = {new Locale("de", "DE"), new Locale("en", "GB"), new Locale("it", "IT"), new Locale("pl", "PL")};
+    Locale[] locales = {new Locale("de", "DE"), new Locale("en", "GB"), new Locale("it", "IT"), 
+    new Locale("el", "GR"), new Locale("es", "ES"), new Locale("fi", "FI"), new Locale("fr", "FR"),
+    new Locale("ru", "RU"), new Locale("sv", "SV")};
     static Translator t = new Translator();
     int currentLang;
     int lastLang;
