@@ -7,6 +7,8 @@ package crypt;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author caterina
@@ -308,6 +310,17 @@ public class Tools {
 		 }
 		 return newText;
 	 }
+         
+         public static Map mapDict(String[] arr1, String[] arr2) {
+            Map <String, String> dict = new HashMap<>();
+            
+             for(int i = 0; i < arr1.length; i++) {
+                dict.put(arr1[i], arr2[i]);
+              }
+             
+             return dict;
+        }
+
 	 /*private String cleanup(String text, String newText, String alpha){
 			String correctText = "";
 			for (int i = 0; i<newText.length(); i++  ){
