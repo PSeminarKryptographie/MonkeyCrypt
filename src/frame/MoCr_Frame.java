@@ -1812,7 +1812,7 @@ public class MoCr_Frame extends javax.swing.JFrame {
                 default: break;
             }
         }
-        localToolWin.renew(key, ciph);
+        //localToolWin.renew(key, ciph);
     }//GEN-LAST:event_ToolsmenuMouseClicked
 
     /**
