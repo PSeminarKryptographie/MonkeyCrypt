@@ -59,10 +59,16 @@ public class Haeufigkeitsanalyse {
 		String [] keys = (String[]) set_keys.toArray(new String[0]);
 		String newString = "";
 		for (int i = 0; i < dict.size(); i ++) {
-                        newString += "\"" + keys[i] + "\"" + "\t" + dict.get(keys[i]).toString();
-			if(i != dict.size() - 1) {
-                            newString += "\n";
-                        }
+            Integer anzahl = dict.get(keys[i]);            
+			newString += "\"" + keys[i] + "\"" + "\t" + anzahl.toString();
+			if(i != dict.size()) {
+				for (int j = 0; j < 50; j ++) {
+					if(((double) anzahl/text.length())*100-2*j > 0) {
+						newString += "#";
+					}
+				}
+				newString += "\n";
+            }
 		}
 		return newString;
 	}
