@@ -18,7 +18,7 @@ to make a jar file, or
 
 to run it right away.
 
-2. Manually compile. We still have the issue that texts aren't read into the program if you compile normally, so this is not recommended. However this works without having to aditionally install anything.
+2. Manually compile. We still have the issue that texts aren't read into the program if you compile normally, so this is not recommended. However this works without having to additionally install anything.
 
 > ~/<your_path>/MonkeyCrypt/src/$ **javac Run.java**
 >
